@@ -30,14 +30,15 @@ const TakeANote: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const editRef = useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
     const savedNotes = localStorage.getItem('taskNotes');
     if (savedNotes) {
-      const parsedNotes = JSON.parse(savedNotes).map((note: Omit<Note, 'createdAt'> & { createdAt: string }) => ({
-        ...note,
-        createdAt: new Date(note.createdAt),
-      }));
+      const parsedNotes = JSON.parse(savedNotes).map(
+        (note: Omit<Note, 'createdAt'> & { createdAt: string }) => ({
+          ...note,
+          createdAt: new Date(note.createdAt),
+        })
+      );
       setNotes(parsedNotes);
     }
   }, []);
@@ -93,11 +94,13 @@ const TakeANote: React.FC = () => {
 
   const handleSaveEdit = () => {
     if (editingNoteId) {
-      setNotes(notes.map(note =>
-        note.id === editingNoteId
-          ? { ...note, title: editTitle.trim(), content: editContent.trim() }
-          : note
-      ));
+      setNotes(
+        notes.map((note) =>
+          note.id === editingNoteId
+            ? { ...note, title: editTitle.trim(), content: editContent.trim() }
+            : note
+        )
+      );
       setEditingNoteId(null);
       setEditTitle('');
       setEditContent('');
@@ -112,7 +115,7 @@ const TakeANote: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="w-full max-w-4xl mx-auto">
+    <div ref={containerRef} className="w-full max-w-2xl mx-auto">
       {/* Take a Note Input */}
       <div className="mb-6">
         {!isExpanded ? (
@@ -155,11 +158,11 @@ const TakeANote: React.FC = () => {
       {notes.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {notes.map((note) => (
-            <div key={note.id} className="h-32">
+            <div key={note.id} className="h-[180px]">
               {editingNoteId === note.id ? (
                 <div
                   ref={editRef}
-                  className={`${note.backgroundColor} border rounded-lg p-4 shadow-lg transition-all duration-200 h-full flex flex-col`}
+                  className={`${note.backgroundColor} border rounded-lg p-4 shadow-lg transition-all duration-200 h-full flex flex-col overflow-hidden`}
                 >
                   <input
                     type="text"
@@ -174,7 +177,7 @@ const TakeANote: React.FC = () => {
                     value={editContent}
                     onChange={(e) => setEditContent(e.target.value)}
                     onKeyPress={handleEditKeyPress}
-                    className="w-full p-2 border-none outline-none bg-transparent resize-none placeholder-gray-400 dark:placeholder-gray-500 flex-1 overflow-hidden"
+                    className="w-full p-2 border-none outline-none bg-transparent resize-none placeholder-gray-400 dark:placeholder-gray-500 flex-1 overflow-y-auto"
                     placeholder="Take a note..."
                   />
                   <div className="flex justify-end mt-2 flex-shrink-0">
@@ -189,17 +192,19 @@ const TakeANote: React.FC = () => {
               ) : (
                 <div
                   onClick={() => handleEditNote(note)}
-                  className={`${note.backgroundColor} border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer h-full flex flex-col`}
+                  className={`${note.backgroundColor} border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer h-full flex flex-col overflow-hidden`}
                 >
                   {note.title && (
-                    <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
+                    <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2 flex-shrink-0">
                       {note.title}
                     </h3>
                   )}
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    {note.content}
-                  </p>
-                  <div className="mt-auto text-xs text-gray-500 dark:text-gray-400">
+                  <div className="flex-1 overflow-y-auto">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm break-words">
+                      {note.content}
+                    </p>
+                  </div>
+                  <div className="mt-auto text-xs text-gray-500 dark:text-gray-400 flex-shrink-0">
                     {note.createdAt.toLocaleDateString()}
                   </div>
                 </div>

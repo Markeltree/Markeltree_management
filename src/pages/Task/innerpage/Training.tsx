@@ -7,6 +7,7 @@ import { trainings } from "../component/trainings";
 import ColorFull from "../../../components/ui/button/ColorFull";
 import { FiPlus } from "react-icons/fi";
 import AddTrainingModal from "../component/AddTrainingModal";
+import LearningProgressBar from "../component/LearningProgressBar";
 
 const Training = () => {
   const [activeTab, setActiveTab] = useState("basic");
@@ -59,6 +60,8 @@ const Training = () => {
           </div>
         )}
       </div>
+      <div className="text-center flex justify-center"><LearningProgressBar progress={90} /></div>
+
 
       <AddTrainingModal
         isOpen={isAddModalOpen}
