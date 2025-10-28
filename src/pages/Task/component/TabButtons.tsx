@@ -3,6 +3,7 @@ import React from "react";
 const defaultTabs = [
   { id: "Board", label: "Board" },
   { id: "Training", label: "Training" },
+  { id: "Necessary Information", label: "Necessary Information" },
 ];
 
 interface TabButtonsProps {
