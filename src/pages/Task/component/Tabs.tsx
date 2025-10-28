@@ -4,6 +4,7 @@ import Training from "../innerpage/Training";
 import TabButtons from "./TabButtons";
 import TakeANote from "./TakeANote";
 import NecessaryInformation from "../innerpage/NecessaryInformation";
+import Notes from "../innerpage/Notes";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Board");
@@ -17,6 +18,8 @@ const Tabs = () => {
         return <Training />;
         case "Necessary Information":
         return <NecessaryInformation />;
+         case "Notes":
+        return <Notes />;
       default:
         return null;
     }

@@ -4,6 +4,7 @@ const defaultTabs = [
   { id: "Board", label: "Board" },
   { id: "Training", label: "Training" },
   { id: "Necessary Information", label: "Necessary Information" },
+  { id: "Notes", label: "Notes" },
 ];
 
 interface TabButtonsProps {
