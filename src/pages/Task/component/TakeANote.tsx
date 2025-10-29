@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router';
 
 interface Note {
   id: string;
@@ -19,41 +20,22 @@ const noteColors = [
   'bg-indigo-100 border-indigo-200',
 ];
 
-const TakeANote: React.FC = () => {
+interface TakeANoteProps {
+  notes: Note[];
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+}
+
+const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [editingNoteId, setEditingNoteId] = useState<string | null>(null);
-  const [editTitle, setEditTitle] = useState('');
-  const [editContent, setEditContent] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
-  const editRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const savedNotes = localStorage.getItem('taskNotes');
-    if (savedNotes) {
-      const parsedNotes = JSON.parse(savedNotes).map(
-        (note: Omit<Note, 'createdAt'> & { createdAt: string }) => ({
-          ...note,
-          createdAt: new Date(note.createdAt),
-        })
-      );
-      setNotes(parsedNotes);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('taskNotes', JSON.stringify(notes));
-  }, [notes]);
-
-  useEffect(() => {
+  React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(event.target as Node) && isExpanded) {
         setIsExpanded(false);
-      }
-      if (editRef.current && !editRef.current.contains(event.target as Node) && editingNoteId) {
-        handleSaveEdit();
       }
     };
 
@@ -61,7 +43,7 @@ const TakeANote: React.FC = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isExpanded, editingNoteId]);
+  }, [isExpanded]);
 
   const handleAddNote = () => {
     if (title.trim() || content.trim()) {
@@ -86,33 +68,6 @@ const TakeANote: React.FC = () => {
     }
   };
 
-  const handleEditNote = (note: Note) => {
-    setEditingNoteId(note.id);
-    setEditTitle(note.title);
-    setEditContent(note.content);
-  };
-
-  const handleSaveEdit = () => {
-    if (editingNoteId) {
-      setNotes(
-        notes.map((note) =>
-          note.id === editingNoteId
-            ? { ...note, title: editTitle.trim(), content: editContent.trim() }
-            : note
-        )
-      );
-      setEditingNoteId(null);
-      setEditTitle('');
-      setEditContent('');
-    }
-  };
-
-  const handleEditKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSaveEdit();
-    }
-  };
 
   return (
     <div ref={containerRef} className="w-full max-w-2xl mx-auto">
@@ -156,63 +111,16 @@ const TakeANote: React.FC = () => {
       </div>
 
       {notes.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {notes.map((note) => (
-            <div key={note.id} className="h-[180px]">
-              {editingNoteId === note.id ? (
-                <div
-                  ref={editRef}
-                  className={`${note.backgroundColor} border rounded-lg p-4 shadow-lg transition-all duration-200 h-full flex flex-col overflow-hidden`}
-                >
-                  <input
-                    type="text"
-                    value={editTitle}
-                    onChange={(e) => setEditTitle(e.target.value)}
-                    onKeyPress={handleEditKeyPress}
-                    className="w-full mb-2 p-2 text-lg font-medium border-none outline-none bg-transparent placeholder-gray-400 dark:placeholder-gray-500 flex-shrink-0"
-                    placeholder="Title"
-                    autoFocus
-                  />
-                  <textarea
-                    value={editContent}
-                    onChange={(e) => setEditContent(e.target.value)}
-                    onKeyPress={handleEditKeyPress}
-                    className="w-full p-2 border-none outline-none bg-transparent resize-none placeholder-gray-400 dark:placeholder-gray-500 flex-1 overflow-y-auto"
-                    placeholder="Take a note..."
-                  />
-                  <div className="flex justify-end mt-2 flex-shrink-0">
-                    <button
-                      onClick={handleSaveEdit}
-                      className="px-4 py-1 bg-[#5D5FEF] text-white rounded-lg hover:bg-[#4a4cd1] transition-colors duration-200 font-medium text-sm"
-                    >
-                      Save
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <div
-                  onClick={() => handleEditNote(note)}
-                  className={`${note.backgroundColor} border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer h-full flex flex-col overflow-hidden`}
-                >
-                  {note.title && (
-                    <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2 flex-shrink-0">
-                      {note.title}
-                    </h3>
-                  )}
-                  <div className="flex-1 overflow-y-auto">
-                    <p className="text-gray-700 dark:text-gray-300 text-sm break-words">
-                      {note.content}
-                    </p>
-                  </div>
-                  <div className="mt-auto text-xs text-gray-500 dark:text-gray-400 flex-shrink-0">
-                    {note.createdAt.toLocaleDateString()}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="flex justify-center">
+          <button
+            onClick={() => navigate('/notes')}
+            className="px-6 py-2 bg-[#5D5FEF] text-white rounded-lg hover:bg-[#4a4cd1] transition-colors duration-200 font-medium"
+          >
+            View All Notes ({notes.length})
+          </button>
         </div>
       )}
+
     </div>
   );
 };

@@ -1,14 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import Board from "../innerpage/Board";
 import Training from "../innerpage/Training";
 import TabButtons from "./TabButtons";
 import TakeANote from "./TakeANote";
 import NecessaryInformation from "../innerpage/NecessaryInformation";
-import Notes from "../innerpage/Notes";
+
+interface Note {
+  id: string;
+  title: string;
+  content: string;
+  createdAt: Date;
+  backgroundColor: string;
+}
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Board");
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedNotes = localStorage.getItem('taskNotes');
+    if (savedNotes) {
+      const parsedNotes = JSON.parse(savedNotes).map(
+        (note: Omit<Note, 'createdAt'> & { createdAt: string }) => ({
+          ...note,
+          createdAt: new Date(note.createdAt),
+        })
+      );
+      setNotes(parsedNotes);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('taskNotes', JSON.stringify(notes));
+  }, [notes]);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -18,8 +44,6 @@ const Tabs = () => {
         return <Training />;
         case "Necessary Information":
         return <NecessaryInformation />;
-         case "Notes":
-        return <Notes />;
       default:
         return null;
     }
@@ -33,9 +57,17 @@ const Tabs = () => {
           <div className="flex justify-center sm:justify-start w-full sm:w-auto">
             <TabButtons activeTab={activeTab} onTabChange={setActiveTab} />
           </div>
-          <div className="flex flex-row sm:justify-end sm:flex-row items-center gap-3 w-full sm:w-auto ">
-            <TakeANote />
+          <div className="flex flex-col sm:justify-end sm:flex-col items-center w-full sm:w-auto ">
+            <TakeANote notes={notes} setNotes={setNotes} />
+            <span
+              className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium"
+              onClick={() => navigate('/notes')}
+            >
+              View all notes
+            </span>
+
           </div>
+          
         </div>
 
         <div>{renderContent()}</div>

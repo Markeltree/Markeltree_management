@@ -4,8 +4,10 @@ import { FcGoogle } from "react-icons/fc";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import coypIcon from "../../../../public/images/task/copy.png";
 
-const copyToClipboard = (text: string) => {
+const copyToClipboard = (text: string, setShowTooltip: (show: boolean) => void) => {
   navigator.clipboard.writeText(text);
+  setShowTooltip(true);
+  setTimeout(() => setShowTooltip(false), 2000);
 };
 
 const accounts = [
@@ -63,6 +65,8 @@ const SocialCard = ({ name, icon }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("Loremipsum@gmail.com");
   const [password, setPassword] = useState("Dolor@12345");
+  const [showEmailTooltip, setShowEmailTooltip] = useState(false);
+  const [showPasswordTooltip, setShowPasswordTooltip] = useState(false);
 
   return (
     <div
@@ -84,12 +88,19 @@ const SocialCard = ({ name, icon }) => {
             className="w-full outline-none text-sm text-gray-700 dark:text-gray-300 bg-transparent"
           />
         </div>
-        <button
-          onClick={() => copyToClipboard(email)}
-          className="mt-2 ml-2 hover:opacity-75 transition-opacity"
-        >
-          <img src={coypIcon} alt="copy icon" />
-        </button>
+        <div className="relative">
+          <button
+            onClick={() => copyToClipboard(email, setShowEmailTooltip)}
+            className="mt-2 ml-2 hover:opacity-75 transition-opacity"
+          >
+            <img src={coypIcon} alt="copy icon" />
+          </button>
+          {showEmailTooltip && (
+            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded shadow-lg z-10">
+              Copied!
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="flex flex-row justify-between">
@@ -108,12 +119,19 @@ const SocialCard = ({ name, icon }) => {
             {showPassword ? <FiEyeOff /> : <FiEye />}
           </button>
         </div>
-        <button
-          onClick={() => copyToClipboard(password)}
-          className="mt-2 ml-2 hover:opacity-75 transition-opacity"
-        >
-          <img src={coypIcon} alt="copy icon" />
-        </button>
+        <div className="relative">
+          <button
+            onClick={() => copyToClipboard(password, setShowPasswordTooltip)}
+            className="mt-2 ml-2 hover:opacity-75 transition-opacity"
+          >
+            <img src={coypIcon} alt="copy icon" />
+          </button>
+          {showPasswordTooltip && (
+            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded shadow-lg z-10">
+              Copied!
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

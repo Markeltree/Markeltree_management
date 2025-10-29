@@ -49,6 +49,7 @@ import HelpCenter from "./pages/HelpCenter";
 import Feedback from "./pages/Feedback";
 import TaskLayout from "./pages/Task/TaskLayout";
 import MyTask from "./pages/Task/innerpage/MyTask";
+import Notes from "./pages/Task/innerpage/Notes";
 
 export default function App() {
   return (
@@ -102,6 +103,8 @@ export default function App() {
             <Route path="/task" element={<TaskLayout />}>
               <Route index element={<MyTask />} />
             </Route>
+
+            <Route path="/notes" element={<Notes />} />
 
             <Route path="/settings" element={<Settings />}></Route>
 
