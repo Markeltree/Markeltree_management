@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router';
 
 interface Note {
   id: string;
@@ -30,7 +29,6 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
 
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -110,16 +108,6 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
         )}
       </div>
 
-      {notes.length > 0 && (
-        <div className="flex justify-center">
-          <button
-            onClick={() => navigate('/notes')}
-            className="px-6 py-2 bg-[#5D5FEF] text-white rounded-lg hover:bg-[#4a4cd1] transition-colors duration-200 font-medium"
-          >
-            View All Notes ({notes.length})
-          </button>
-        </div>
-      )}
 
     </div>
   );

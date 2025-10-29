@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router";
 import Board from "../innerpage/Board";
 import Training from "../innerpage/Training";
 import TabButtons from "./TabButtons";
 import TakeANote from "./TakeANote";
 import NecessaryInformation from "../innerpage/NecessaryInformation";
+import { Navigate, useNavigate } from "react-router";
 
 interface Note {
   id: string;
@@ -59,13 +59,12 @@ const Tabs = () => {
           </div>
           <div className="flex flex-col sm:justify-end sm:flex-col items-center w-full sm:w-auto ">
             <TakeANote notes={notes} setNotes={setNotes} />
-            <span
+        <span
               className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium"
               onClick={() => navigate('/notes')}
             >
               View all notes
             </span>
-
           </div>
           
         </div>
