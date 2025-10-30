@@ -107,7 +107,7 @@ const Notes: React.FC = () => {
   return (
     <>
       <div className="p-4 sm:p-6 bg-white dark:bg-[#0D0D0D] min-h-screen">
-        <div className="grid grid-cols-4 md:grid-cols-2 max-sm:grid-cols-1 justify-between items-center gap-3">
+        <div className="grid grid-cols-3 lg:grid-cols-3 max-sm:grid-cols-1 items-center gap-3">
           <div className="">
             <HeadingTwo text="My Notes" className="text-[#333333] dark:text-white" />
           </div>
@@ -154,10 +154,8 @@ const Notes: React.FC = () => {
               )}
             </div>
             </div>
-            <div>
+            <div className="flex flex-row">
               <SearchInput />
-            </div>
-            <div>
               <Export
                 BtnName="Filters"
                 icon={IoFilterOutline}
