@@ -794,3 +794,22 @@ line-height: 18px;
   color: rgba(51, 51, 51, 0.5);
 
 }
+
+/* Custom slim and rounded scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9ff; /* light background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d6f5; /* light purple tone */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfe6;
+}
