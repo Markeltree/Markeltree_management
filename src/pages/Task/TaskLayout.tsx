@@ -3,7 +3,7 @@ import { Outlet } from 'react-router'
 
 const TaskLayout = () => {
   return (
-    <Outlet />
+      <Outlet />
   )
 }
 

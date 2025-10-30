@@ -83,6 +83,7 @@ const Notes: React.FC = () => {
 
   useEffect(() => {
     localStorage.setItem("taskNotes", JSON.stringify(notes));
+    window.dispatchEvent(new CustomEvent("notesUpdated"));
   }, [notes]);
 
   const handleDeleteNote = (noteId: string) => {

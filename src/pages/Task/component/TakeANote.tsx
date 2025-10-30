@@ -72,24 +72,6 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, set
       setTitle('');
       setContent('');
       setIsExpanded(false);
-
-      const currentNotes = editingNote
-        ? notes.map(note =>
-            note.id === editingNote.id
-              ? { ...note, title: title.trim(), content: content.trim() }
-              : note
-          )
-        : [{
-            id: Date.now().toString(),
-            title: title.trim(),
-            content: content.trim(),
-            createdAt: new Date(),
-            backgroundColor: noteColors[Math.floor(Math.random() * noteColors.length)],
-          }, ...notes];
-
-      localStorage.setItem("taskNotes", JSON.stringify(currentNotes));
-      // Dispatch event to notify all components
-      window.dispatchEvent(new CustomEvent("notesUpdated"));
     }
   };
 

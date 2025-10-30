@@ -102,9 +102,8 @@ export default function App() {
 
             <Route path="/task" element={<TaskLayout />}>
               <Route index element={<MyTask />} />
+              <Route path="notes" element={<Notes />} />
             </Route>
-
-            <Route path="/notes" element={<Notes />} />
 
             <Route path="/settings" element={<Settings />}></Route>
 
@@ -156,4 +155,3 @@ export default function App() {
     </>
   );
 }
-

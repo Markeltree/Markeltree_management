@@ -5,7 +5,7 @@ import TabButtons from "./TabButtons";
 import TakeANote from "./TakeANote";
 import NecessaryInformation from "../innerpage/NecessaryInformation";
 import NoteCard from "./NoteCard";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate } from "react-router";
 
 interface Note {
   id: string;
@@ -20,7 +20,6 @@ const Tabs = () => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [editingNote, setEditingNote] = useState<Note | null>(null);
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     const savedNotes = localStorage.getItem("taskNotes");
@@ -60,26 +59,6 @@ const Tabs = () => {
     };
   }, []);
 
-  // Listen for notes updates from other components
-  useEffect(() => {
-    const handleNotesUpdated = () => {
-      const savedNotes = localStorage.getItem("taskNotes");
-      if (savedNotes) {
-        const parsedNotes = JSON.parse(savedNotes).map(
-          (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
-            ...note,
-            createdAt: new Date(note.createdAt),
-          })
-        );
-        setNotes(parsedNotes);
-      }
-    };
-
-    window.addEventListener("notesUpdated", handleNotesUpdated);
-    return () => {
-      window.removeEventListener("notesUpdated", handleNotesUpdated);
-    };
-  }, []);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -107,7 +86,7 @@ const Tabs = () => {
             <div className="flex">
               <button
               className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium text-right bg-transparent border-none"
-              onClick={() => navigate("/notes")}
+              onClick={() => navigate("/task/notes")}
             >
               View all notes
             </button>
