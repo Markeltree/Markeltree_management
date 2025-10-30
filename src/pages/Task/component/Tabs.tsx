@@ -20,10 +20,10 @@ const Tabs = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const savedNotes = localStorage.getItem('taskNotes');
+    const savedNotes = localStorage.getItem("taskNotes");
     if (savedNotes) {
       const parsedNotes = JSON.parse(savedNotes).map(
-        (note: Omit<Note, 'createdAt'> & { createdAt: string }) => ({
+        (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
           ...note,
           createdAt: new Date(note.createdAt),
         })
@@ -33,7 +33,7 @@ const Tabs = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('taskNotes', JSON.stringify(notes));
+    localStorage.setItem("taskNotes", JSON.stringify(notes));
   }, [notes]);
 
   const renderContent = () => {
@@ -42,13 +42,12 @@ const Tabs = () => {
         return <Board />;
       case "Training":
         return <Training />;
-        case "Necessary Information":
+      case "Necessary Information":
         return <NecessaryInformation />;
       default:
         return null;
     }
   };
-
 
   return (
     <div className="w-full">
@@ -59,14 +58,13 @@ const Tabs = () => {
           </div>
           <div className="flex flex-col sm:justify-end sm:flex-col items-center w-full sm:w-auto ">
             <TakeANote notes={notes} setNotes={setNotes} />
-        <span
+            <span
               className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium"
-              onClick={() => navigate('/notes')}
+              onClick={() => navigate("/notes")}
             >
               View all notes
             </span>
           </div>
-          
         </div>
 
         <div>{renderContent()}</div>

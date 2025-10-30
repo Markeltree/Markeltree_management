@@ -5,6 +5,7 @@ import Export from "../component/Export";
 import { IoFilterOutline } from "react-icons/io5";
 import FilterModal from "../component/FilterModal";
 import SearchInput from "../component/SearchInput";
+import { DragDropContext, Droppable, Draggable, DropResult } from "@hello-pangea/dnd";
 
 interface Note {
   id: string;
@@ -53,6 +54,16 @@ const Notes: React.FC = () => {
     console.log("Applied filters:", filters);
   };
 
+  const handleDragEnd = (result: DropResult) => {
+    if (!result.destination) return;
+
+    const items = Array.from(notes);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    setNotes(items);
+  };
+
   const handleAddNote = () => {
     if (title.trim() || content.trim()) {
       const newNote: Note = {
@@ -96,9 +107,11 @@ const Notes: React.FC = () => {
   return (
     <>
       <div className="p-4 sm:p-6 bg-white dark:bg-[#0D0D0D] min-h-screen">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between max-sm:flex-col">
-          <HeadingTwo text="My Notes" className="text-[#333333] dark:text-white" />
-          <div className="flex flex-row justify-between sm:flex-row sm:items-center gap-3 max-sm:flex-col">
+        <div className="grid grid-cols-4 justify-between items-center gap-3">
+          <div className="">
+            <HeadingTwo text="My Notes" className="text-[#333333] dark:text-white" />
+          </div>
+          <div className="flex flex-row justify-between sm:flex-row sm:items-center gap-3 max-sm:flex-col bg-white">
             {/* Take a Note Input */}
             <div
               ref={containerRef}
@@ -140,6 +153,7 @@ const Notes: React.FC = () => {
                 </div>
               )}
             </div>
+            </div>
             <div>
               <SearchInput />
             </div>
@@ -151,19 +165,38 @@ const Notes: React.FC = () => {
               />
             </div>
           </div>
-        </div>
 
         <div className="mt-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-            {notes.map((note) => (
-              <NoteCard
-                key={note.id}
-                title={note.title || "Untitled"}
-                description={note.content}
-                onDelete={() => handleDeleteNote(note.id)}
-              />
-            ))}
-          </div>
+          <DragDropContext onDragEnd={handleDragEnd}>
+            <Droppable droppableId="notes" direction="horizontal">
+              {(provided) => (
+                <div
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4"
+                >
+                  {notes.map((note, index) => (
+                    <Draggable key={note.id} draggableId={note.id} index={index}>
+                      {(provided) => (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                        >
+                          <NoteCard
+                            title={note.title || "Untitled"}
+                            description={note.content}
+                            onDelete={() => handleDeleteNote(note.id)}
+                          />
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                </div>
+              )}
+            </Droppable>
+          </DragDropContext>
         </div>
       </div>
       <FilterModal

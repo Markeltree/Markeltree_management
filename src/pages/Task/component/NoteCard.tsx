@@ -1,5 +1,5 @@
 import React from "react";
-import { Trash2 } from "lucide-react";
+import { Trash2, GripVertical } from "lucide-react";
 
 interface NoteCardProps {
   title: string;
@@ -9,7 +9,10 @@ interface NoteCardProps {
 
 const NoteCard: React.FC<NoteCardProps> = ({ title, description, onDelete }) => {
   return (
-    <div className="bg-[#FFF9F0] rounded-xl p-4 shadow-sm relative w-[314px]">
+    <div className="bg-[#FFF9F0] rounded-xl p-4 shadow-sm relative w-[314px] cursor-move">
+      <div className="absolute top-2 left-2 text-gray-400">
+        <GripVertical size={16} />
+      </div>
       <button
         onClick={onDelete}
         className="absolute top-2 right-2 text-gray-600 hover:text-black"
