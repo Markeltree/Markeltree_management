@@ -4,7 +4,8 @@ import Training from "../innerpage/Training";
 import TabButtons from "./TabButtons";
 import TakeANote from "./TakeANote";
 import NecessaryInformation from "../innerpage/NecessaryInformation";
-import { Navigate, useNavigate } from "react-router";
+import NoteCard from "./NoteCard";
+import { useNavigate, useLocation } from "react-router";
 
 interface Note {
   id: string;
@@ -17,7 +18,9 @@ interface Note {
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Board");
   const [notes, setNotes] = useState<Note[]>([]);
+  const [editingNote, setEditingNote] = useState<Note | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const savedNotes = localStorage.getItem("taskNotes");
@@ -34,7 +37,49 @@ const Tabs = () => {
 
   useEffect(() => {
     localStorage.setItem("taskNotes", JSON.stringify(notes));
+    window.dispatchEvent(new CustomEvent("notesUpdated"));
   }, [notes]);
+
+  useEffect(() => {
+    const handleNotesUpdated = () => {
+      const savedNotes = localStorage.getItem("taskNotes");
+      if (savedNotes) {
+        const parsedNotes = JSON.parse(savedNotes).map(
+          (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
+            ...note,
+            createdAt: new Date(note.createdAt),
+          })
+        );
+        setNotes(parsedNotes);
+      }
+    };
+
+    window.addEventListener("notesUpdated", handleNotesUpdated);
+    return () => {
+      window.removeEventListener("notesUpdated", handleNotesUpdated);
+    };
+  }, []);
+
+  // Listen for notes updates from other components
+  useEffect(() => {
+    const handleNotesUpdated = () => {
+      const savedNotes = localStorage.getItem("taskNotes");
+      if (savedNotes) {
+        const parsedNotes = JSON.parse(savedNotes).map(
+          (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
+            ...note,
+            createdAt: new Date(note.createdAt),
+          })
+        );
+        setNotes(parsedNotes);
+      }
+    };
+
+    window.addEventListener("notesUpdated", handleNotesUpdated);
+    return () => {
+      window.removeEventListener("notesUpdated", handleNotesUpdated);
+    };
+  }, []);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -49,6 +94,7 @@ const Tabs = () => {
     }
   };
 
+
   return (
     <div className="w-full">
       <div className="flex flex-col gap-4">
@@ -57,17 +103,42 @@ const Tabs = () => {
             <TabButtons activeTab={activeTab} onTabChange={setActiveTab} />
           </div>
           <div className="flex flex-col sm:justify-end sm:flex-col items-end w-full sm:w-auto ">
-            <TakeANote notes={notes} setNotes={setNotes} />
+            <TakeANote notes={notes} setNotes={setNotes} editingNote={editingNote} setEditingNote={setEditingNote} />
             <div className="flex">
-              <span
-              className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium text-right"
+              <button
+              className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium text-right bg-transparent border-none"
               onClick={() => navigate("/notes")}
             >
               View all notes
-            </span>
+            </button>
             </div>
           </div>
         </div>
+
+        {/* Display recent notes */}
+        {notes.length > 0 && (
+          <div className="mt-4">
+            <h3 className="text-lg font-semibold mb-2">Recent Notes</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {notes.slice(0, 6).map((note) => (
+                <NoteCard
+                  key={note.id}
+                  title={note.title || "Untitled"}
+                  description={note.content}
+                  onSave={(newTitle, newDescription) => {
+                    const updatedNotes = notes.map(n =>
+                      n.id === note.id
+                        ? { ...n, title: newTitle, content: newDescription }
+                        : n
+                    );
+                    setNotes(updatedNotes);
+                  }}
+                  onDelete={() => setNotes(notes.filter(n => n.id !== note.id))}
+                />
+              ))}
+            </div>
+          </div>
+        )}
 
         <div>{renderContent()}</div>
       </div>

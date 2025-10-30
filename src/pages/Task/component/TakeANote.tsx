@@ -9,22 +9,17 @@ interface Note {
 }
 
 const noteColors = [
-  'bg-yellow-100 border-yellow-200',
-  'bg-pink-100 border-pink-200',
-  'bg-blue-100 border-blue-200',
-  'bg-green-100 border-green-200',
-  'bg-purple-100 border-purple-200',
-  'bg-orange-100 border-orange-200',
-  'bg-teal-100 border-teal-200',
-  'bg-indigo-100 border-indigo-200',
+  '#FFEAD5',
 ];
 
 interface TakeANoteProps {
   notes: Note[];
   setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  editingNote?: Note | null;
+  setEditingNote?: React.Dispatch<React.SetStateAction<Note | null>>;
 }
 
-const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
+const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, setEditingNote }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -34,6 +29,9 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
     const handleClickOutside = (event: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(event.target as Node) && isExpanded) {
         setIsExpanded(false);
+        if (setEditingNote) setEditingNote(null);
+        setTitle('');
+        setContent('');
       }
     };
 
@@ -41,21 +39,57 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isExpanded]);
+  }, [isExpanded, setEditingNote]);
+
+  React.useEffect(() => {
+    if (editingNote) {
+      setTitle(editingNote.title);
+      setContent(editingNote.content);
+      setIsExpanded(true);
+    }
+  }, [editingNote]);
 
   const handleAddNote = () => {
     if (title.trim() || content.trim()) {
-      const newNote: Note = {
-        id: Date.now().toString(),
-        title: title.trim(),
-        content: content.trim(),
-        createdAt: new Date(),
-        backgroundColor: noteColors[Math.floor(Math.random() * noteColors.length)],
-      };
-      setNotes([newNote, ...notes]);
+      if (editingNote) {
+        const updatedNotes = notes.map(note =>
+          note.id === editingNote.id
+            ? { ...note, title: title.trim(), content: content.trim() }
+            : note
+        );
+        setNotes(updatedNotes);
+        if (setEditingNote) setEditingNote(null);
+      } else {
+        const newNote: Note = {
+          id: Date.now().toString(),
+          title: title.trim(),
+          content: content.trim(),
+          createdAt: new Date(),
+          backgroundColor: noteColors[Math.floor(Math.random() * noteColors.length)],
+        };
+        setNotes([newNote, ...notes]);
+      }
       setTitle('');
       setContent('');
       setIsExpanded(false);
+
+      const currentNotes = editingNote
+        ? notes.map(note =>
+            note.id === editingNote.id
+              ? { ...note, title: title.trim(), content: content.trim() }
+              : note
+          )
+        : [{
+            id: Date.now().toString(),
+            title: title.trim(),
+            content: content.trim(),
+            createdAt: new Date(),
+            backgroundColor: noteColors[Math.floor(Math.random() * noteColors.length)],
+          }, ...notes];
+
+      localStorage.setItem("taskNotes", JSON.stringify(currentNotes));
+      // Dispatch event to notify all components
+      window.dispatchEvent(new CustomEvent("notesUpdated"));
     }
   };
 
@@ -69,7 +103,6 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
 
   return (
     <div ref={containerRef} className="w-full max-w-2xl mx-auto">
-      {/* Take a Note Input */}
       <div className="mb-6">
         {!isExpanded ? (
           <div 

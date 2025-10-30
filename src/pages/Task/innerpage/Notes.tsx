@@ -5,7 +5,13 @@ import Export from "../component/Export";
 import { IoFilterOutline } from "react-icons/io5";
 import FilterModal from "../component/FilterModal";
 import SearchInput from "../component/SearchInput";
-import { DragDropContext, Droppable, Draggable, DropResult } from "@hello-pangea/dnd";
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from "@hello-pangea/dnd";
+import { useLocation } from "react-router";
 
 interface Note {
   id: string;
@@ -16,6 +22,8 @@ interface Note {
 }
 
 const Notes: React.FC = () => {
+  const location = useLocation();
+  const editNote = location.state?.editNote as Note | undefined;
   const [notes, setNotes] = useState<Note[]>([]);
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [appliedFilters, setAppliedFilters] = useState({
@@ -26,20 +34,52 @@ const Notes: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [editingNote, setEditingNote] = useState<Note | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const savedNotes = localStorage.getItem("taskNotes");
-    if (savedNotes) {
-      const parsedNotes = JSON.parse(savedNotes).map(
-        (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
-          ...note,
-          createdAt: new Date(note.createdAt),
-        })
-      );
-      setNotes(parsedNotes);
-    }
+    const loadNotes = () => {
+      const savedNotes = localStorage.getItem("taskNotes");
+      if (savedNotes) {
+        const parsedNotes = JSON.parse(savedNotes).map(
+          (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
+            ...note,
+            createdAt: new Date(note.createdAt),
+          })
+        );
+        setNotes(parsedNotes);
+      }
+    };
+
+    loadNotes();
+
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === "taskNotes") {
+        loadNotes();
+      }
+    };
+
+    const handleNotesUpdated = () => {
+      loadNotes();
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    window.addEventListener("notesUpdated", handleNotesUpdated);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("notesUpdated", handleNotesUpdated);
+    };
   }, []);
+
+  useEffect(() => {
+    if (editNote) {
+      setEditingNote(editNote);
+      setTitle(editNote.title);
+      setContent(editNote.content);
+      setIsExpanded(true);
+    }
+  }, [editNote]);
 
   useEffect(() => {
     localStorage.setItem("taskNotes", JSON.stringify(notes));
@@ -66,14 +106,24 @@ const Notes: React.FC = () => {
 
   const handleAddNote = () => {
     if (title.trim() || content.trim()) {
-      const newNote: Note = {
-        id: Date.now().toString(),
-        title: title.trim(),
-        content: content.trim(),
-        createdAt: new Date(),
-        backgroundColor: "#FFF9F0",
-      };
-      setNotes([newNote, ...notes]);
+      if (editingNote) {
+        const updatedNotes = notes.map((note) =>
+          note.id === editingNote.id
+            ? { ...note, title: title.trim(), content: content.trim() }
+            : note
+        );
+        setNotes(updatedNotes);
+        setEditingNote(null);
+      } else {
+        const newNote: Note = {
+          id: Date.now().toString(),
+          title: title.trim(),
+          content: content.trim(),
+          createdAt: new Date(),
+          backgroundColor: "#FFEAD5",
+        };
+        setNotes([newNote, ...notes]);
+      }
       setTitle("");
       setContent("");
       setIsExpanded(false);
@@ -106,23 +156,25 @@ const Notes: React.FC = () => {
 
   return (
     <>
-      <div className="p-4 sm:p-6 bg-white dark:bg-[#0D0D0D] min-h-screen">
+    <div className="p-4 sm:p-6 bg-white dark:bg-[#0D0D0D] min-h-screen z-50">
         <div className="grid grid-cols-3 lg:grid-cols-3 max-sm:grid-cols-1 items-center gap-3">
           <div className="">
-            <HeadingTwo text="My Notes" className="text-[#333333] dark:text-white" />
+            <HeadingTwo
+              text="My Notes"
+              className="text-[#333333] dark:text-white"
+            />
           </div>
           <div className="flex flex-row justify-between sm:flex-row sm:items-center gap-3 max-sm:flex-col">
             {/* Take a Note Input */}
-            <div
-              ref={containerRef}
-              className="w-full max-w-2xl mx-auto"
-            >
+            <div ref={containerRef} className="w-full max-w-2xl mx-auto">
               {!isExpanded ? (
                 <div
                   onClick={() => setIsExpanded(true)}
                   className="w-full p-2 sm:p-2 border border-gray-300 dark:border-gray-600 rounded-lg cursor-text hover:shadow-md transition-shadow duration-20 dark:bg-gray-800"
                 >
-                  <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-[16px]">Take a note...</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-[16px]">
+                    Take a note...
+                  </p>
                 </div>
               ) : (
                 <div className="dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-3 sm:p-4 transition-all duration-200">
@@ -153,16 +205,16 @@ const Notes: React.FC = () => {
                 </div>
               )}
             </div>
-            </div>
-            <div className="flex flex-row">
-              <SearchInput />
-              <Export
-                BtnName="Filters"
-                icon={IoFilterOutline}
-                onClick={() => setIsFilterModalOpen(true)}
-              />
-            </div>
           </div>
+          <div className="flex flex-row">
+            <SearchInput />
+            <Export
+              BtnName="Filters"
+              icon={IoFilterOutline}
+              onClick={() => setIsFilterModalOpen(true)}
+            />
+          </div>
+        </div>
 
         <div className="mt-6">
           <DragDropContext onDragEnd={handleDragEnd}>
@@ -173,23 +225,45 @@ const Notes: React.FC = () => {
                   ref={provided.innerRef}
                   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4"
                 >
-                  {notes.map((note, index) => (
-                    <Draggable key={note.id} draggableId={note.id} index={index}>
-                      {(provided) => (
-                        <div
-                          ref={provided.innerRef}
-                          {...provided.draggableProps}
-                          {...provided.dragHandleProps}
-                        >
-                          <NoteCard
-                            title={note.title || "Untitled"}
-                            description={note.content}
-                            onDelete={() => handleDeleteNote(note.id)}
-                          />
-                        </div>
-                      )}
-                    </Draggable>
-                  ))}
+                  {notes
+                    .sort(
+                      (a, b) =>
+                        new Date(b.createdAt).getTime() -
+                        new Date(a.createdAt).getTime()
+                    )
+                    .map((note, index) => (
+                      <Draggable
+                        key={note.id}
+                        draggableId={note.id}
+                        index={index}
+                      >
+                        {(provided) => (
+                          <div
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                          >
+                            <NoteCard
+                              title={note.title || "Untitled"}
+                              description={note.content}
+                              onSave={(newTitle, newDescription) => {
+                                const updatedNotes = notes.map((n) =>
+                                  n.id === note.id
+                                    ? {
+                                        ...n,
+                                        title: newTitle,
+                                        content: newDescription,
+                                      }
+                                    : n
+                                );
+                                setNotes(updatedNotes);
+                              }}
+                              onDelete={() => handleDeleteNote(note.id)}
+                            />
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
                   {provided.placeholder}
                 </div>
               )}
