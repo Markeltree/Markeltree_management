@@ -72,9 +72,9 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes }) => {
       {/* Take a Note Input */}
       <div className="mb-6">
         {!isExpanded ? (
-          <div
+          <div 
             onClick={() => setIsExpanded(true)}
-            className="w-full p-2 border border-gray-300 rounded-lg cursor-text hover:shadow-md transition-shadow duration-200 bg-white dark:bg-gray-800 dark:border-gray-600"
+            className="w-[300px] p-2 border border-gray-300 rounded-lg cursor-text hover:shadow-md transition-shadow duration-200 bg-white dark:bg-gray-800 dark:border-gray-600"
           >
             <p className="text-gray-500 dark:text-gray-400 text-[16px]">Take a note...</p>
           </div>

@@ -107,11 +107,11 @@ const Notes: React.FC = () => {
   return (
     <>
       <div className="p-4 sm:p-6 bg-white dark:bg-[#0D0D0D] min-h-screen">
-        <div className="grid grid-cols-4 justify-between items-center gap-3">
+        <div className="grid grid-cols-4 md:grid-cols-2 max-sm:grid-cols-1 justify-between items-center gap-3">
           <div className="">
             <HeadingTwo text="My Notes" className="text-[#333333] dark:text-white" />
           </div>
-          <div className="flex flex-row justify-between sm:flex-row sm:items-center gap-3 max-sm:flex-col bg-white">
+          <div className="flex flex-row justify-between sm:flex-row sm:items-center gap-3 max-sm:flex-col">
             {/* Take a Note Input */}
             <div
               ref={containerRef}

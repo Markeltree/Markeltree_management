@@ -56,14 +56,16 @@ const Tabs = () => {
           <div className="flex justify-center sm:justify-start w-full sm:w-auto">
             <TabButtons activeTab={activeTab} onTabChange={setActiveTab} />
           </div>
-          <div className="flex flex-col sm:justify-end sm:flex-col items-center w-full sm:w-auto ">
+          <div className="flex flex-col sm:justify-end sm:flex-col items-end w-full sm:w-auto ">
             <TakeANote notes={notes} setNotes={setNotes} />
-            <span
-              className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium"
+            <div className="flex">
+              <span
+              className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium text-right"
               onClick={() => navigate("/notes")}
             >
               View all notes
             </span>
+            </div>
           </div>
         </div>
 
