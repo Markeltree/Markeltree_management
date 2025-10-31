@@ -16,7 +16,6 @@ const VideoArea = ({ data }: { data: TrainingData }) => {
         data.status === "Completed" ? "opacity-75" : ""
       }`}
     >
-      {/* Video/Content Section */}
       <div className="relative rounded-xl overflow-hidden h-[150px] sm:h-[160px] md:h-[180px] lg:h-[200px] flex items-center justify-center bg-white">
         <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-[#5A5FEF] text-white text-[10px] sm:text-[11px] font-semibold px-2 sm:px-3 py-1 rounded-[6px]">
           {data.status}
@@ -32,7 +31,6 @@ const VideoArea = ({ data }: { data: TrainingData }) => {
         </div>
       </div>
 
-      {/* Details Section */}
       <div className="mt-3 sm:mt-4 flex flex-col space-y-2">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
           <h3 className="text-[14px] sm:text-[16px] font-semibold text-[#0D0D0D] dark:text-white">

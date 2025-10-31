@@ -62,7 +62,6 @@ const Notes: React.FC = () => {
     };
 
     const handleNotesUpdated = (e: CustomEvent) => {
-      // Only load notes if the event didn't originate from this component
       if (!e.detail?.skipReload) {
         loadNotes();
       }
@@ -88,14 +87,12 @@ const Notes: React.FC = () => {
   }, [editNote]);
 
   useEffect(() => {
-    // Skip saving on initial mount to prevent infinite loop
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return;
     }
 
     localStorage.setItem("taskNotes", JSON.stringify(notes));
-    // Dispatch event with flag to prevent reload in the same component instance
     window.dispatchEvent(new CustomEvent("notesUpdated", { detail: { skipReload: true } }));
   }, [notes]);
 
@@ -179,7 +176,6 @@ const Notes: React.FC = () => {
             />
           </div>
           <div className="flex flex-row justify-between sm:flex-row sm:items-center gap-3 max-sm:flex-col">
-            {/* Take a Note Input */}
             <div ref={containerRef} className="w-full max-w-2xl mx-auto">
               {!isExpanded ? (
                 <div

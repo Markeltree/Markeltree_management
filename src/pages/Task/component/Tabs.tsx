@@ -105,7 +105,6 @@ const Tabs = () => {
           </div>
         </div>
 
-        {/* Display recent notes */}
         {notes.length > 0 && (
           <div className="mt-4">
             <h3 className="text-lg font-semibold mb-2">Recent Notes</h3>
