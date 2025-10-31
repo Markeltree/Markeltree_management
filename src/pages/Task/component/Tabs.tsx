@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Board from "../innerpage/Board";
 import Training from "../innerpage/Training";
 import TabButtons from "./TabButtons";
@@ -20,6 +20,7 @@ const Tabs = () => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [editingNote, setEditingNote] = useState<Note | null>(null);
   const navigate = useNavigate();
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
     const savedNotes = localStorage.getItem("taskNotes");
@@ -35,27 +36,37 @@ const Tabs = () => {
   }, []);
 
   useEffect(() => {
+    // Skip saving on initial mount to prevent infinite loop
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
     localStorage.setItem("taskNotes", JSON.stringify(notes));
-    window.dispatchEvent(new CustomEvent("notesUpdated"));
+    // Dispatch event with flag to prevent reload in the same component instance
+    window.dispatchEvent(new CustomEvent("notesUpdated", { detail: { skipReload: true } }));
   }, [notes]);
 
   useEffect(() => {
-    const handleNotesUpdated = () => {
-      const savedNotes = localStorage.getItem("taskNotes");
-      if (savedNotes) {
-        const parsedNotes = JSON.parse(savedNotes).map(
-          (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
-            ...note,
-            createdAt: new Date(note.createdAt),
-          })
-        );
-        setNotes(parsedNotes);
+    const handleNotesUpdated = (e: CustomEvent) => {
+      // Only load notes if the event didn't originate from this component
+      if (!e.detail?.skipReload) {
+        const savedNotes = localStorage.getItem("taskNotes");
+        if (savedNotes) {
+          const parsedNotes = JSON.parse(savedNotes).map(
+            (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
+              ...note,
+              createdAt: new Date(note.createdAt),
+            })
+          );
+          setNotes(parsedNotes);
+        }
       }
     };
 
-    window.addEventListener("notesUpdated", handleNotesUpdated);
+    window.addEventListener("notesUpdated", handleNotesUpdated as EventListener);
     return () => {
-      window.removeEventListener("notesUpdated", handleNotesUpdated);
+      window.removeEventListener("notesUpdated", handleNotesUpdated as EventListener);
     };
   }, []);
 
@@ -86,7 +97,7 @@ const Tabs = () => {
             <div className="flex">
               <button
               className="cursor-pointer text-[#5D5FEF] hover:text-[#4a4cd1] font-medium text-right bg-transparent border-none"
-              onClick={() => navigate("/task/notes")}
+              onClick={() => navigate("/notes")}
             >
               View all notes
             </button>
@@ -98,8 +109,8 @@ const Tabs = () => {
         {notes.length > 0 && (
           <div className="mt-4">
             <h3 className="text-lg font-semibold mb-2">Recent Notes</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {notes.slice(0, 6).map((note) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {notes.slice(0, 3).map((note) => (
                 <NoteCard
                   key={note.id}
                   title={note.title || "Untitled"}

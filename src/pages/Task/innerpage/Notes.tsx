@@ -36,6 +36,8 @@ const Notes: React.FC = () => {
   const [content, setContent] = useState("");
   const [editingNote, setEditingNote] = useState<Note | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
+  const lastEditNoteIdRef = useRef<string | null>(null);
 
   useEffect(() => {
     const loadNotes = () => {
@@ -59,21 +61,25 @@ const Notes: React.FC = () => {
       }
     };
 
-    const handleNotesUpdated = () => {
-      loadNotes();
+    const handleNotesUpdated = (e: CustomEvent) => {
+      // Only load notes if the event didn't originate from this component
+      if (!e.detail?.skipReload) {
+        loadNotes();
+      }
     };
 
     window.addEventListener("storage", handleStorageChange);
-    window.addEventListener("notesUpdated", handleNotesUpdated);
+    window.addEventListener("notesUpdated", handleNotesUpdated as EventListener);
 
     return () => {
       window.removeEventListener("storage", handleStorageChange);
-      window.removeEventListener("notesUpdated", handleNotesUpdated);
+      window.removeEventListener("notesUpdated", handleNotesUpdated as EventListener);
     };
   }, []);
 
   useEffect(() => {
-    if (editNote) {
+    if (editNote && editNote.id !== lastEditNoteIdRef.current) {
+      lastEditNoteIdRef.current = editNote.id;
       setEditingNote(editNote);
       setTitle(editNote.title);
       setContent(editNote.content);
@@ -82,8 +88,15 @@ const Notes: React.FC = () => {
   }, [editNote]);
 
   useEffect(() => {
+    // Skip saving on initial mount to prevent infinite loop
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
     localStorage.setItem("taskNotes", JSON.stringify(notes));
-    window.dispatchEvent(new CustomEvent("notesUpdated"));
+    // Dispatch event with flag to prevent reload in the same component instance
+    window.dispatchEvent(new CustomEvent("notesUpdated", { detail: { skipReload: true } }));
   }, [notes]);
 
   const handleDeleteNote = (noteId: string) => {

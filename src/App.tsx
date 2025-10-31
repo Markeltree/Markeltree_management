@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
 import NotFound from "./pages/OtherPage/NotFound";
@@ -102,8 +102,9 @@ export default function App() {
 
             <Route path="/task" element={<TaskLayout />}>
               <Route index element={<MyTask />} />
-              <Route path="notes" element={<Notes />} />
             </Route>
+
+            <Route path="/notes" element={<Notes />} />
 
             <Route path="/settings" element={<Settings />}></Route>
 
