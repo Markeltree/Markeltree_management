@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import HeadingOne from "../../../components/ui/heading/HeadinhOne";
-import SearchInput from "../../../components/form/SearchInput";
+import HeadingOne from "../../../new-components/ui/heading/HeadinhOne";
+import SearchInput from "../../../new-components/form/SearchInput";
 import TabButtons from "../component/TabButtons";
 import VideoArea from "../component/VideoArea";
 import { trainings } from "../component/trainings";
-import ColorFull from "../../../components/ui/button/ColorFull";
+import ColorFull from "../../../new-components/ui/button/ColorFull";
 import { FiPlus } from "react-icons/fi";
 import AddTrainingModal from "../component/AddTrainingModal";
 import LearningProgressBar from "../component/LearningProgressBar";
+import { useModal } from "../../../context/ModalContext";
 
 const Training = () => {
   const [activeTab, setActiveTab] = useState("basic");
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const modalContext = useModal();
+  const openModal = modalContext?.openModal;
 
   const tabs = [
     { id: "basic", label: "Basic" },
@@ -34,7 +36,19 @@ const Training = () => {
             icon={FiPlus}
             bgColor="bg-[#5D5FEF]"
             textColor="text-white"
-            onClick={() => setIsAddModalOpen(true)}
+            fontSize="text-xs"
+            className="rounded-full"
+            onClick={(e) => {
+              e?.currentTarget?.blur();
+              if (openModal) {
+                openModal(AddTrainingModal, {
+                  // sizeClass: "max-w-2xl max-h-[90vh]",
+                  sizeClass: "w-[85%] md:w-[50%]",
+                });
+              } else {
+                console.error("Modal context is not available. Make sure ModalProvider wraps the component.");
+              }
+            }}
           />
         </div>
       </div>
@@ -61,12 +75,6 @@ const Training = () => {
         )}
       </div>
       <div className="text-center flex justify-center"><LearningProgressBar progress={90} /></div>
-
-
-      <AddTrainingModal
-        isOpen={isAddModalOpen}
-        onClose={() => setIsAddModalOpen(false)}
-      />
     </div>
   );
 };

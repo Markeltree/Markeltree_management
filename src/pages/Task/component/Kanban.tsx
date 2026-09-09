@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   DragDropContext,
   Droppable,
@@ -6,8 +6,8 @@ import {
   DropResult,
 } from "@hello-pangea/dnd";
 import { MessageCircle, Plus } from "lucide-react";
-import user from "../../../../public/images/user/user-38.png";
-import star from "../../../../public/images/task/star.png";
+const user = "/images/user/user-38.png";
+const star = "/images/task/star.png";
 
 type Task = {
   id: string;
@@ -33,16 +33,16 @@ type User = {
 };
 
 const users: User[] = [
-  { name: "John Doe", image: "../../../../public/images/user/user-01.jpg" },
-  { name: "Jane Smith", image: "../../../../public/images/user/user-02.jpg" },
-  { name: "Alice Johnson", image: "../../../../public/images/user/user-03.jpg" },
-  { name: "Bob Brown", image: "../../../../public/images/user/user-04.jpg" },
-  { name: "Charlie Wilson", image: "../../../../public/images/user/user-05.jpg" },
-  { name: "Diana Lee", image: "../../../../public/images/user/user-06.jpg" },
-  { name: "Eve Davis", image: "../../../../public/images/user/user-07.jpg" },
-  { name: "Frank Miller", image: "../../../../public/images/user/user-08.jpg" },
-  { name: "Grace Garcia", image: "../../../../public/images/user/user-09.jpg" },
-  { name: "Henry Martinez", image: "../../../../public/images/user/user-10.jpg" },
+  { name: "John Doe", image: "/images/user/user-01.jpg" },
+  { name: "Jane Smith", image: "/images/user/user-02.jpg" },
+  { name: "Alice Johnson", image: "/images/user/user-03.jpg" },
+  { name: "Bob Brown", image: "/images/user/user-04.jpg" },
+  { name: "Charlie Wilson", image: "/images/user/user-05.jpg" },
+  { name: "Diana Lee", image: "/images/user/user-06.jpg" },
+  { name: "Eve Davis", image: "/images/user/user-07.jpg" },
+  { name: "Frank Miller", image: "/images/user/user-08.jpg" },
+  { name: "Grace Garcia", image: "/images/user/user-09.jpg" },
+  { name: "Henry Martinez", image: "/images/user/user-10.jpg" },
 ];
 
 export default function Kanban({

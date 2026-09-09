@@ -39,7 +39,7 @@ const ExtraBreakModal = ({
         <div className="flex justify-end gap-2">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-gray-300 dark:bg-gray-600 text-black dark:text-white rounded"
+            className="px-4 py-2 bg-gray-300 dark:bg-gray-600 text-black dark:text-white rounded-lg"
           >
             Cancel
           </button>
@@ -49,7 +49,7 @@ const ExtraBreakModal = ({
               onClose();
               setExtraBreakReason("");
             }}
-            className="px-4 py-2 bg-[#27C840] text-white rounded"
+            className="px-4 py-2 bg-[#27C840] text-white rounded-lg"
           >
             Start Break
           </button>

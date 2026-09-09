@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from "react";
+
 
 const BreakButton = ({ isBreakTimerActive, breakTimeRemaining, formatTime, onOpenModal, onExtraBreak }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -9,7 +10,7 @@ const BreakButton = ({ isBreakTimerActive, breakTimeRemaining, formatTime, onOpe
       <button
         onClick={() => !isBreakTimerActive && setIsDropdownOpen(!isDropdownOpen)}
         disabled={isBreakTimerActive}
-        className={`w-full text-[14px] font-medium px-4 h-9 rounded-[4px] transition-all duration-300 hover:-translate-y-0.5 ${
+        className={`w-full text-[14px] font-medium px-4 h-9 rounded-lg transition-all duration-300 hover:-translate-y-0.5 ${
           isBreakTimerActive
             ? "bg-gray-400 cursor-not-allowed text-white"
             : "bg-[#27C840] hover:bg-[#27C840]/80 text-white"

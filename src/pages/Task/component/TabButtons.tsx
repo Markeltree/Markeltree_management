@@ -20,19 +20,34 @@ const TabButtons: React.FC<TabButtonsProps> = ({
   return (
     <>
     <div className="inline-flex items-center gap-1 sm:gap-2 bg-[#F2F2FE] dark:bg-[#1a1a1a] rounded-full p-1 overflow-x-auto">
-      {tabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => onTabChange(tab.id)}
-          className={`px-4 sm:px-10 py-1 sm:py-2 max-sm:px-5 font-medium max-sm:text-[10px] text-[12px] sm:text-[15px] whitespace-nowrap transition-all duration-300 rounded-full ${
-            activeTab === tab.id
-              ? "bg-[#5D5FEF] text-white shadow-md"
-              : "text-[#2B2B2B] dark:text-white hover:text-[#5D5FEF]"
-          }`}
-        >
-          {tab.label}
-        </button>
-      ))}
+      {tabs.map((tab) => {
+        // Use strict equality to ensure exact match
+        const isActive = activeTab === tab.id;
+        return (
+          <button
+            key={tab.id}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onTabChange(tab.id);
+            }}
+            type="button"
+            className={`px-4 sm:px-10 py-1 sm:py-2 max-sm:px-5 font-medium max-sm:text-[10px] text-[12px] sm:text-[15px] whitespace-nowrap transition-all duration-300 rounded-full ${
+              isActive
+                ? "!bg-[#5D5FEF] !text-white shadow-md"
+                : "!bg-transparent text-[#2B2B2B] dark:text-white hover:text-[#5D5FEF]"
+            }`}
+            style={{
+              backgroundColor: isActive ? '#5D5FEF' : 'transparent',
+              color: isActive ? '#ffffff' : undefined,
+            }}
+            aria-pressed={isActive}
+            data-active={isActive}
+          >
+            {tab.label}
+          </button>
+        );
+      })}
     </div>
     </>
   );

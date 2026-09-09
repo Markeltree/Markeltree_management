@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 
 interface Note {
   id: string;
@@ -6,6 +6,7 @@ interface Note {
   content: string;
   createdAt: Date;
   backgroundColor: string;
+  pinned?: boolean;
 }
 
 const noteColors = [
@@ -21,17 +22,27 @@ interface TakeANoteProps {
 
 const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, setEditingNote }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanding, setIsExpanding] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const handleClose = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsExpanded(false);
+      setIsClosing(false);
+      if (setEditingNote) setEditingNote(null);
+      setTitle('');
+      setContent('');
+    }, 300);
+  }, [setEditingNote]);
+
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node) && isExpanded) {
-        setIsExpanded(false);
-        if (setEditingNote) setEditingNote(null);
-        setTitle('');
-        setContent('');
+      if (containerRef.current && !containerRef.current.contains(event.target as Node) && isExpanded && !isClosing) {
+        handleClose();
       }
     };
 
@@ -39,15 +50,32 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, set
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isExpanded, setEditingNote]);
+  }, [isExpanded, isClosing, handleClose]);
 
   React.useEffect(() => {
     if (editingNote) {
       setTitle(editingNote.title);
       setContent(editingNote.content);
-      setIsExpanded(true);
+      setIsExpanding(true);
+      setTimeout(() => {
+        setIsExpanded(true);
+        setTimeout(() => {
+          setIsExpanding(false);
+        }, 300);
+      }, 300);
     }
   }, [editingNote]);
+
+  const handleExpand = () => {
+    setIsExpanding(true);
+    setTimeout(() => {
+      setIsExpanded(true);
+      setTimeout(() => {
+        setIsExpanding(false);
+      }, 300);
+    }, 300);
+  };
+
 
   const handleAddNote = () => {
     if (title.trim() || content.trim()) {
@@ -66,12 +94,13 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, set
           content: content.trim(),
           createdAt: new Date(),
           backgroundColor: noteColors[Math.floor(Math.random() * noteColors.length)],
+          pinned: false,
         };
         setNotes([newNote, ...notes]);
       }
       setTitle('');
       setContent('');
-      setIsExpanded(false);
+      handleClose();
     }
   };
 
@@ -88,13 +117,21 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, set
       <div className="mb-6">
         {!isExpanded ? (
           <div 
-            onClick={() => setIsExpanded(true)}
-            className="w-[300px] p-2 border border-gray-300 rounded-lg cursor-text hover:shadow-md transition-shadow duration-200 bg-white dark:bg-gray-800 dark:border-gray-600"
+            onClick={handleExpand}
+            className="w-[300px] p-2 border border-gray-300 rounded-lg cursor-text hover:shadow-md transition-all duration-300 bg-white dark:bg-gray-800 dark:border-gray-600 opacity-100 scale-100"
           >
             <p className="text-gray-500 dark:text-gray-400 text-[16px]">Take a note...</p>
           </div>
         ) : (
-          <div className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-2 transition-all duration-200">
+          <div 
+            className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-2"
+            style={{
+              animation: isExpanding 
+                ? 'expandNote 0.3s ease-out forwards' 
+                : isClosing 
+                ? 'collapseNote 0.3s ease-in forwards' 
+                : 'none'
+            }}>
             <input
               type="text"
               placeholder="Title"
@@ -122,8 +159,28 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, set
           </div>
         )}
       </div>
-
-
+      <style>{`
+        @keyframes expandNote {
+          from {
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+        @keyframes collapseNote {
+          from {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+          }
+        }
+      `}</style>
     </div>
   );
 };

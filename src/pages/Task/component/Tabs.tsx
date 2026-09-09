@@ -13,10 +13,22 @@ interface Note {
   content: string;
   createdAt: Date;
   backgroundColor: string;
+  pinned?: boolean;
 }
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("Board");
+  const [activeTab, setActiveTab] = useState<string>("Board");
+  
+  const handleTabChange = React.useCallback((tab: string) => {
+    // Use functional update to ensure we're always working with the latest state
+    setActiveTab((currentTab) => {
+      // Only update if different to prevent unnecessary re-renders
+      if (currentTab !== tab) {
+        return tab;
+      }
+      return currentTab;
+    });
+  }, []);
   const [notes, setNotes] = useState<Note[]>([]);
   const [editingNote, setEditingNote] = useState<Note | null>(null);
   const navigate = useNavigate();
@@ -29,6 +41,7 @@ const Tabs = () => {
         (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
           ...note,
           createdAt: new Date(note.createdAt),
+          pinned: note.pinned || false,
         })
       );
       setNotes(parsedNotes);
@@ -90,7 +103,7 @@ const Tabs = () => {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between flex-wrap gap-3 w-full">
           <div className="flex justify-center sm:justify-start w-full sm:w-auto">
-            <TabButtons activeTab={activeTab} onTabChange={setActiveTab} />
+            <TabButtons activeTab={activeTab} onTabChange={handleTabChange} />
           </div>
           <div className="flex flex-col sm:justify-end sm:flex-col items-end w-full sm:w-auto ">
             <TakeANote notes={notes} setNotes={setNotes} editingNote={editingNote} setEditingNote={setEditingNote} />
@@ -107,25 +120,77 @@ const Tabs = () => {
 
         {notes.length > 0 && (
           <div className="mt-4">
-            <h3 className="text-lg font-semibold mb-2">Recent Notes</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {notes.slice(0, 3).map((note) => (
-                <NoteCard
-                  key={note.id}
-                  title={note.title || "Untitled"}
-                  description={note.content}
-                  onSave={(newTitle, newDescription) => {
-                    const updatedNotes = notes.map(n =>
-                      n.id === note.id
-                        ? { ...n, title: newTitle, content: newDescription }
-                        : n
-                    );
-                    setNotes(updatedNotes);
-                  }}
-                  onDelete={() => setNotes(notes.filter(n => n.id !== note.id))}
-                />
-              ))}
-            </div>
+            <h2 className="text-xl font-semibold mb-4">Notes</h2>
+            {(() => {
+              const pinnedNotes = notes.filter(note => note.pinned);
+              const recentNotes = notes.filter(note => !note.pinned);
+              
+              return (
+                <>
+                  {pinnedNotes.length > 0 && (
+                    <div className="mb-6">
+                      <h4 className="text-base font-medium mb-2">Pinned Notes</h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {pinnedNotes.slice(0, 3).map((note) => (
+                          <NoteCard
+                            key={note.id}
+                            title={note.title || "Untitled"}
+                            description={note.content}
+                            isPinned={note.pinned || false}
+                            onPin={() => {
+                              const updatedNotes = notes.map(n =>
+                                n.id === note.id ? { ...n, pinned: !n.pinned } : n
+                              );
+                              setNotes(updatedNotes);
+                            }}
+                            onSave={(newTitle, newDescription) => {
+                              const updatedNotes = notes.map(n =>
+                                n.id === note.id
+                                  ? { ...n, title: newTitle, content: newDescription }
+                                  : n
+                              );
+                              setNotes(updatedNotes);
+                            }}
+                            onDelete={() => setNotes(notes.filter(n => n.id !== note.id))}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {recentNotes.length > 0 && (
+                    <div>
+                      <h4 className="text-base font-medium mb-2">Recent Notes</h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {recentNotes.slice(0, 3).map((note) => (
+                          <NoteCard
+                            key={note.id}
+                            title={note.title || "Untitled"}
+                            description={note.content}
+                            isPinned={note.pinned || false}
+                            onPin={() => {
+                              const updatedNotes = notes.map(n =>
+                                n.id === note.id ? { ...n, pinned: !n.pinned } : n
+                              );
+                              setNotes(updatedNotes);
+                            }}
+                            onSave={(newTitle, newDescription) => {
+                              const updatedNotes = notes.map(n =>
+                                n.id === note.id
+                                  ? { ...n, title: newTitle, content: newDescription }
+                                  : n
+                              );
+                              setNotes(updatedNotes);
+                            }}
+                            onDelete={() => setNotes(notes.filter(n => n.id !== note.id))}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </div>
         )}
 

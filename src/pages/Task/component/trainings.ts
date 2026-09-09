@@ -8,7 +8,8 @@ export interface TrainingData {
   thumbnail: string;
   avatar?: string;
 }
-import pdfIcon from '../../../../public/images/task/pdf.png'
+
+const pdfIcon = '/images/task/pdf.png';
 
 export const trainings: TrainingData[] = [
   {

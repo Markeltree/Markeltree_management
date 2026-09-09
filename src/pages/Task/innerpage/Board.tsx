@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import SearchInput from "../component/SearchInput";
 import Export from "../component/Export";
 import { FiPlusCircle } from "react-icons/fi";
@@ -90,7 +90,7 @@ const Board = () => {
   };
 
   useEffect(() => {
-    let interval = null;
+    let interval: number | null = null;
 
     if (isBreakTimerActive && breakTimeRemaining > 0) {
       interval = window.setInterval(() => {
@@ -105,7 +105,9 @@ const Board = () => {
       }, 1000);
     }
 
-    return () => interval && clearInterval(interval);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
   }, [isBreakTimerActive, breakTimeRemaining]);
 
   useEffect(() => {

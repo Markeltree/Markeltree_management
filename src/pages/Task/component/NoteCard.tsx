@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { Trash2, GripVertical, Check, X } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 interface NoteCardProps {
   title: string;
   description: string;
   onDelete: () => void;
   onSave?: (title: string, description: string) => void;
+  onPin?: () => void;
+  isPinned?: boolean;
 }
 
-const NoteCard: React.FC<NoteCardProps> = ({ title, description, onDelete, onSave }) => {
+const NoteCard: React.FC<NoteCardProps> = ({ title, description, onDelete, onSave, onPin, isPinned = false }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editTitle, setEditTitle] = useState(title);
   const [editDescription, setEditDescription] = useState(description);
@@ -75,15 +78,34 @@ const NoteCard: React.FC<NoteCardProps> = ({ title, description, onDelete, onSav
       <div className="absolute top-2 left-2 text-gray-400">
         <GripVertical size={16} />
       </div>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          onDelete();
-        }}
-        className="absolute top-2 right-2 text-gray-600 hover:text-black"
-      >
-        <Trash2 size={16} />
-      </button>
+      <div className="absolute top-2 right-2 flex gap-1">
+        {onPin && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onPin();
+            }}
+            className={`flex items-center justify-center ${isPinned ? 'text-[#5D5FEF]' : 'text-gray-600 hover:text-black'}`}
+          >
+            <Icon 
+              icon="mynaui:pin" 
+              width="16" 
+              height="16" 
+              style={{ color: isPinned ? '#5D5FEF' : '#4b5563' }} 
+              className={isPinned ? 'text-[#5D5FEF]' : 'text-gray-600'} 
+            />
+          </button>
+        )}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onDelete();
+          }}
+          className="text-gray-600 hover:text-black"
+        >
+          <Trash2 size={16} />
+        </button>
+      </div>
       <h3 className="font-semibold text-lg mb-2">{title}</h3>
       <p className="text-sm text-gray-700 leading-relaxed">{description}</p>
     </div>

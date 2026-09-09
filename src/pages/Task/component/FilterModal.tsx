@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Modal } from '../../../components/ui/modal';
-import Button from '../../../components/ui/button/Button';
-import HeadingTwo from '../../../components/ui/heading/HeadingTwo';
+import { Modal } from '../../../new-components/ui/modal';
+import Button from '../../../new-components/ui/button/Button';
+import HeadingTwo from '../../../new-components/ui/heading/HeadingTwo';
 import { ChevronDown } from 'lucide-react';
 
 interface Filters {

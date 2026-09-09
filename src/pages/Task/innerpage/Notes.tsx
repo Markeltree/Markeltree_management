@@ -11,7 +11,8 @@ import {
   Draggable,
   DropResult,
 } from "@hello-pangea/dnd";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
+import { Icon } from "@iconify/react";
 
 interface Note {
   id: string;
@@ -19,10 +20,12 @@ interface Note {
   content: string;
   createdAt: Date;
   backgroundColor: string;
+  pinned?: boolean;
 }
 
 const Notes: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const editNote = location.state?.editNote as Note | undefined;
   const [notes, setNotes] = useState<Note[]>([]);
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
@@ -32,6 +35,8 @@ const Notes: React.FC = () => {
     assignee: [],
   });
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanding, setIsExpanding] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [editingNote, setEditingNote] = useState<Note | null>(null);
@@ -47,6 +52,7 @@ const Notes: React.FC = () => {
           (note: Omit<Note, "createdAt"> & { createdAt: string }) => ({
             ...note,
             createdAt: new Date(note.createdAt),
+            pinned: note.pinned || false,
           })
         );
         setNotes(parsedNotes);
@@ -82,7 +88,13 @@ const Notes: React.FC = () => {
       setEditingNote(editNote);
       setTitle(editNote.title);
       setContent(editNote.content);
-      setIsExpanded(true);
+      setIsExpanding(true);
+      setTimeout(() => {
+        setIsExpanded(true);
+        setTimeout(() => {
+          setIsExpanding(false);
+        }, 300);
+      }, 300);
     }
   }, [editNote]);
 
@@ -115,6 +127,27 @@ const Notes: React.FC = () => {
     setNotes(items);
   };
 
+  const handleExpand = () => {
+    setIsExpanding(true);
+    setTimeout(() => {
+      setIsExpanded(true);
+      setTimeout(() => {
+        setIsExpanding(false);
+      }, 300);
+    }, 300);
+  };
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsExpanded(false);
+      setIsClosing(false);
+      setTitle("");
+      setContent("");
+      if (editingNote) setEditingNote(null);
+    }, 300);
+  };
+
   const handleAddNote = () => {
     if (title.trim() || content.trim()) {
       if (editingNote) {
@@ -132,12 +165,11 @@ const Notes: React.FC = () => {
           content: content.trim(),
           createdAt: new Date(),
           backgroundColor: "#FFEAD5",
+          pinned: false,
         };
         setNotes([newNote, ...notes]);
       }
-      setTitle("");
-      setContent("");
-      setIsExpanded(false);
+      handleClose();
     }
   };
 
@@ -153,9 +185,10 @@ const Notes: React.FC = () => {
       if (
         containerRef.current &&
         !containerRef.current.contains(event.target as Node) &&
-        isExpanded
+        isExpanded &&
+        !isClosing
       ) {
-        setIsExpanded(false);
+        handleClose();
       }
     };
 
@@ -163,13 +196,20 @@ const Notes: React.FC = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isExpanded]);
+  }, [isExpanded, isClosing]);
 
   return (
     <>
     <div className="p-4 sm:p-6 bg-white dark:bg-[#0D0D0D] min-h-screen z-50">
         <div className="grid grid-cols-3 lg:grid-cols-3 max-sm:grid-cols-1 items-center gap-3">
-          <div className="">
+          <div className="flex items-center gap-3">
+            <h1
+              className="text-[#5D5FEF] text-[14px] flex flex-row items-center gap-1 cursor-pointer hover:underline"
+              onClick={() => navigate(-1)}
+            >
+              <Icon icon="ion:arrow-back-outline" width="18" height="18" />
+              {/* Back */}
+            </h1>
             <HeadingTwo
               text="My Notes"
               className="text-[#333333] dark:text-white"
@@ -179,15 +219,24 @@ const Notes: React.FC = () => {
             <div ref={containerRef} className="w-full max-w-2xl mx-auto">
               {!isExpanded ? (
                 <div
-                  onClick={() => setIsExpanded(true)}
-                  className="w-full p-2 sm:p-2 border border-gray-300 dark:border-gray-600 rounded-lg cursor-text hover:shadow-md transition-shadow duration-20 dark:bg-gray-800"
+                  onClick={handleExpand}
+                  className="w-full p-2 sm:p-2 border border-gray-300 dark:border-gray-600 rounded-lg cursor-text hover:shadow-md transition-all duration-300 dark:bg-gray-800 bg-white"
                 >
                   <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-[16px]">
                     Take a note...
                   </p>
                 </div>
               ) : (
-                <div className="dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-3 sm:p-4 transition-all duration-200">
+                <div 
+                  className="dark:bg-gray-800 bg-white border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-3 sm:p-4"
+                  style={{
+                    animation: isExpanding 
+                      ? 'expandNote 0.3s ease-out forwards' 
+                      : isClosing 
+                      ? 'collapseNote 0.3s ease-in forwards' 
+                      : 'none'
+                  }}
+                >
                   <input
                     type="text"
                     placeholder="Title"
@@ -215,6 +264,28 @@ const Notes: React.FC = () => {
                 </div>
               )}
             </div>
+            <style>{`
+              @keyframes expandNote {
+                from {
+                  opacity: 0;
+                  transform: scale(0.95) translateY(-10px);
+                }
+                to {
+                  opacity: 1;
+                  transform: scale(1) translateY(0);
+                }
+              }
+              @keyframes collapseNote {
+                from {
+                  opacity: 1;
+                  transform: scale(1) translateY(0);
+                }
+                to {
+                  opacity: 0;
+                  transform: scale(0.95) translateY(-10px);
+                }
+              }
+            `}</style>
           </div>
           <div className="flex flex-row">
             <SearchInput />
@@ -228,56 +299,140 @@ const Notes: React.FC = () => {
 
         <div className="mt-6">
           <DragDropContext onDragEnd={handleDragEnd}>
-            <Droppable droppableId="notes" direction="horizontal">
-              {(provided) => (
-                <div
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4"
-                >
-                  {notes
-                    .sort(
-                      (a, b) =>
-                        new Date(b.createdAt).getTime() -
-                        new Date(a.createdAt).getTime()
-                    )
-                    .map((note, index) => (
-                      <Draggable
-                        key={note.id}
-                        draggableId={note.id}
-                        index={index}
-                      >
+            {(() => {
+              const pinnedNotes = notes.filter(note => note.pinned);
+              const recentNotes = notes.filter(note => !note.pinned);
+              
+              return (
+                <>
+                  {pinnedNotes.length > 0 && (
+                    <div className="mb-6">
+                      <h4 className="text-base font-medium mb-4">Pinned Notes</h4>
+                      <Droppable droppableId="pinned-notes" direction="horizontal">
                         {(provided) => (
                           <div
+                            {...provided.droppableProps}
                             ref={provided.innerRef}
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
+                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4"
                           >
-                            <NoteCard
-                              title={note.title || "Untitled"}
-                              description={note.content}
-                              onSave={(newTitle, newDescription) => {
-                                const updatedNotes = notes.map((n) =>
-                                  n.id === note.id
-                                    ? {
-                                        ...n,
-                                        title: newTitle,
-                                        content: newDescription,
-                                      }
-                                    : n
-                                );
-                                setNotes(updatedNotes);
-                              }}
-                              onDelete={() => handleDeleteNote(note.id)}
-                            />
+                            {pinnedNotes
+                              .sort(
+                                (a, b) =>
+                                  new Date(b.createdAt).getTime() -
+                                  new Date(a.createdAt).getTime()
+                              )
+                              .map((note, index) => (
+                                <Draggable
+                                  key={note.id}
+                                  draggableId={note.id}
+                                  index={index}
+                                >
+                                  {(provided) => (
+                                    <div
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                    >
+                                      <NoteCard
+                                        title={note.title || "Untitled"}
+                                        description={note.content}
+                                        isPinned={note.pinned || false}
+                                        onPin={() => {
+                                          const updatedNotes = notes.map((n) =>
+                                            n.id === note.id ? { ...n, pinned: !n.pinned } : n
+                                          );
+                                          setNotes(updatedNotes);
+                                        }}
+                                        onSave={(newTitle, newDescription) => {
+                                          const updatedNotes = notes.map((n) =>
+                                            n.id === note.id
+                                              ? {
+                                                  ...n,
+                                                  title: newTitle,
+                                                  content: newDescription,
+                                                }
+                                              : n
+                                          );
+                                          setNotes(updatedNotes);
+                                        }}
+                                        onDelete={() => handleDeleteNote(note.id)}
+                                      />
+                                    </div>
+                                  )}
+                                </Draggable>
+                              ))}
+                            {provided.placeholder}
                           </div>
                         )}
-                      </Draggable>
-                    ))}
-                  {provided.placeholder}
-                </div>
-              )}
-            </Droppable>
+                      </Droppable>
+                    </div>
+                  )}
+                  
+                  {recentNotes.length > 0 && (
+                    <div>
+                      <h4 className="text-base font-medium mb-4">Recent Notes</h4>
+                      <Droppable droppableId="recent-notes" direction="horizontal">
+                        {(provided) => (
+                          <div
+                            {...provided.droppableProps}
+                            ref={provided.innerRef}
+                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4"
+                          >
+                            {recentNotes
+                              .sort(
+                                (a, b) =>
+                                  new Date(b.createdAt).getTime() -
+                                  new Date(a.createdAt).getTime()
+                              )
+                              .map((note, index) => (
+                                <Draggable
+                                  key={note.id}
+                                  draggableId={note.id}
+                                  index={pinnedNotes.length + index}
+                                >
+                                  {(provided) => (
+                                    <div
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                    >
+                                      <NoteCard
+                                        title={note.title || "Untitled"}
+                                        description={note.content}
+                                        isPinned={note.pinned || false}
+                                        onPin={() => {
+                                          const updatedNotes = notes.map((n) =>
+                                            n.id === note.id ? { ...n, pinned: !n.pinned } : n
+                                          );
+                                          setNotes(updatedNotes);
+                                        }}
+                                        onSave={(newTitle, newDescription) => {
+                                          const updatedNotes = notes.map((n) =>
+                                            n.id === note.id
+                                              ? {
+                                                  ...n,
+                                                  title: newTitle,
+                                                  content: newDescription,
+                                                }
+                                              : n
+                                          );
+                                          setNotes(updatedNotes);
+                                        }}
+                                        onDelete={() => handleDeleteNote(note.id)}
+                                      />
+                                    </div>
+                                  )}
+                                </Draggable>
+                              ))}
+                            {provided.placeholder}
+                          </div>
+                        )}
+                      </Droppable>
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </DragDropContext>
         </div>
       </div>

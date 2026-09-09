@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { X, Paperclip, ChevronDown } from "lucide-react";
-import user from "../../../../public/images/user/user-38.png";
-import mgsIcon from "../../../../public/images/task/msg.png";
+const user = "/images/user/user-38.png";
+const mgsIcon = "/images/task/msg.png";
 
 const comments = [
   {
@@ -154,7 +154,7 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
         <button
           onClick={handleCreateTask}
           disabled={isSubmitting}
-          className="font-medium border bg-[#5D5FEF] text-white text-center py-3 rounded-sm border-[#5D5FE1]/10 hover:border-[#5D5FEF] hover:shadow-md hover:shadow-[#5D5FEF]/30 dark:bg-[#7476F1]/10 dark:text-[#7476F1] dark:hover:border-[#5D5FEF]/30 dark:hover:shadow-md dark:hover:shadow-[#fff]/30 flex items-center gap-2 px-4 h-9 min-w-[120px] sm:min-w-[140px] transition-all overflow-hidden w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+          className="font-medium border bg-[#5D5FEF] text-white text-center py-3 rounded-lg border-[#5D5FE1]/10 hover:border-[#5D5FEF] hover:shadow-md hover:shadow-[#5D5FEF]/30 dark:bg-[#7476F1]/10 dark:text-[#7476F1] dark:hover:border-[#5D5FEF]/30 dark:hover:shadow-md dark:hover:shadow-[#fff]/30 flex items-center gap-2 px-4 h-9 min-w-[120px] sm:min-w-[140px] transition-all overflow-hidden w-auto disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? "Creating..." : "Create Task"}
         </button>
