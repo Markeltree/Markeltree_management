@@ -16,6 +16,7 @@ import MessageNotification from "./components/MessageNotification";
 
 // Auth
 const Landing = lazy(() => import("./pages/Landing"));
+const Demo = lazy(() => import("./pages/demo/Demo"));
 const Login = lazy(() => import("./pages/Login"));
 const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
 const Reset = lazy(() => import("./pages/Reset"));
@@ -47,6 +48,7 @@ function App() {
           <Suspense fallback={<Loading fullscreen />}>
             <Routes>
               <Route path="/" element={<Landing />} />
+              <Route path="/demo" element={<Demo />} />
               <Route path="/login" element={<Login />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset" element={<Reset />} />

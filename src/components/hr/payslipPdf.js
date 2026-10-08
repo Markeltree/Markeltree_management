@@ -17,7 +17,7 @@ export async function downloadPayslipPdf(slip, companyName = "Markeltree") {
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const W = doc.internal.pageSize.getWidth();
 
-  doc.setFillColor(93, 95, 239);
+  doc.setFillColor(9, 191, 100);
   doc.rect(0, 0, W, 70, "F");
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(18);
@@ -58,7 +58,7 @@ export async function downloadPayslipPdf(slip, companyName = "Markeltree") {
     body,
     foot: [["Total earnings", money(grossTotal, cur), "Total deductions", money(slip.totalDeductions, cur)]],
     theme: "grid",
-    headStyles: { fillColor: [93, 95, 239] },
+    headStyles: { fillColor: [9, 191, 100] },
     footStyles: { fillColor: [244, 246, 249], textColor: [30, 30, 50], fontStyle: "bold" },
     styles: { fontSize: 10 },
     columnStyles: { 1: { halign: "right" }, 3: { halign: "right" } },
