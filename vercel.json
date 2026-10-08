@@ -4,9 +4,6 @@
   "installCommand": "npm install && npm install --prefix server",
   "buildCommand": "npm --prefix server run build && npm run build",
   "outputDirectory": "dist",
-  "regions": [
-    "sin1"
-  ],
   "functions": {
     "api/index.js": {
       "maxDuration": 30,
