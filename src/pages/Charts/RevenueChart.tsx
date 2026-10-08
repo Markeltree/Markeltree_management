@@ -62,7 +62,7 @@ const ProjectedRevenueVsExpensesChart: React.FC<{
       <div className="flex flex-wrap justify-between items-center mb-3">
         <HeadingOne fontWeight="font-bold" fontSize="text-[20px]" text="Projected Revenue vs. Expenses" />
         <select
-          className="bg-[#4f46e5] text-white rounded-lg px-4 py-2 text-[12px] hover:bg-[#fff] hover:text-[#4f46e5] hover:border-[#5D5FEF] border-1 font-medium focus:outline-none shadow dark:text-[#0D0D0D] dark:border-[#0D0D0D] dark:bg-[#fff] dark:hover:bg-[#5D5FEF]dark:bg-[#5D5FEF] dark:hover:text-[#5D5FEF] dark:hover:border-[#000] dark:hover:border-[1px] dark:ring-gray-700/50 dark:hover:ring-gray-700/50"
+          className="bg-[#4f46e5] text-white rounded-lg px-4 py-2 text-[12px] hover:bg-[#fff] hover:text-[#4f46e5] hover:border-[#09BF64] border-1 font-medium focus:outline-none shadow dark:text-[#0D0D0D] dark:border-[#0D0D0D] dark:bg-[#fff] dark:hover:bg-[#09BF64]dark:bg-[#09BF64] dark:hover:text-[#09BF64] dark:hover:border-[#000] dark:hover:border-[1px] dark:ring-gray-700/50 dark:hover:ring-gray-700/50"
           value={selectedPeriod}
           onChange={e => onChangePeriod?.(e.target.value)}
         >

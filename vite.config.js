@@ -8,4 +8,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), 
     },
   },
+  server: {
+    // Same-origin API in development so the httpOnly refresh cookie works.
+    proxy: {
+      '/api': { target: process.env.VITE_API_PROXY || 'http://localhost:4000', changeOrigin: true },
+    },
+  },
 });

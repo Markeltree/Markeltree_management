@@ -6,7 +6,7 @@ const HeadingThree = ({
   className = "",
   size = "text-[16px] sm:text-[16px]",
   weight = "font-medium",
-  color = "text-[#737791]",
+  color = "text-[#6F7C74]",
 }) => {
   return (
     <h3 className={`${size} ${weight} ${color} ${className} dark:text-white`}>

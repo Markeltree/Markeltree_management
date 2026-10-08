@@ -7,8 +7,8 @@ export default function VerifyAccountForm() {
   return (
     <>
       {/* <PageMeta
-        title="CFR | ERP - Admin Dashboard"
-        description="CFR | ERP - Admin Dashboard - ReactJs"
+        title="Markeltree | ERP - Admin Dashboard"
+        description="Markeltree | ERP - Admin Dashboard - ReactJs"
       /> */}
       <AuthLayout imageSrc="/woman-laptop.png">
         <VerifyAccount />

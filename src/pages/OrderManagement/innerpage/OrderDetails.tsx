@@ -11,7 +11,7 @@ const OrderDetails = () => {
       {/* Top Header */}
       <div className="flex flex-row md:flex-row justify-between items-center mb-4">
         <div>
-          <h2 className="text-[14px] font-medium text-[#5D5FEF]">
+          <h2 className="text-[14px] font-medium text-[#09BF64]">
             Order Management : #9645761
           </h2>
         </div>
@@ -30,7 +30,7 @@ const OrderDetails = () => {
             onClick={onCustomize}
             text="Generate Invoice"
             icon={FiPlus}
-            bgColor="bg-[#5D5FEF]"
+            bgColor="bg-[#09BF64]"
             textColor="text-white"
           />
           {isModalOpen && <ModalsFlow />}
@@ -42,9 +42,9 @@ const OrderDetails = () => {
           <TransitBtn text="Transit" />
           <TransitBtn text="Paid" />
         </div>
-        <div className="flex flex-row mb-5 justify-between rounded-md border border-[#5D5FEF] bg-[#5D5FEF]/8 px-6 py-6 sm:flex-row">
+        <div className="flex flex-row mb-5 justify-between rounded-md border border-[#09BF64] bg-[#09BF64]/8 px-6 py-6 sm:flex-row">
           <div>
-            <h2 className="poppins-regular text-[20px] text-[#131330]">
+            <h2 className="poppins-regular text-[20px] text-[#0E1A12]">
               #9645sssss9761
             </h2>
             <Paragragh
@@ -53,7 +53,7 @@ const OrderDetails = () => {
             />
           </div>
           <div>
-            <h2 className="poppins-regular text-[20px] text-[#131330]">Yes</h2>
+            <h2 className="poppins-regular text-[20px] text-[#0E1A12]">Yes</h2>
             <Paragragh
               color={"text-[#475156]"}
               para={"Invoice sent to customer"}

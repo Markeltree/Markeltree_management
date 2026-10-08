@@ -51,9 +51,9 @@ const CustomPaginator = ({
   const pageItems = buildPages();
 
   const activeCircle =
-    "flex items-center justify-center rounded-full bg-[#5D5FEF] text-white dark:text-[#0D0D0D] w-6 h-6 text-xs";
-  const inactiveText = "text-[#666666] dark:text-[#B7BFEA] text-xs sm:text-sm";
-  const navButton = "text-[#666666] text-sm px-1 hover:text-[#5D5FEF]";
+    "flex items-center justify-center rounded-full bg-[#09BF64] text-white dark:text-[#0D0D0D] w-6 h-6 text-xs";
+  const inactiveText = "text-[#666666] dark:text-[#B5E6C9] text-xs sm:text-sm";
+  const navButton = "text-[#666666] text-sm px-1 hover:text-[#09BF64]";
 
   return (
     <nav

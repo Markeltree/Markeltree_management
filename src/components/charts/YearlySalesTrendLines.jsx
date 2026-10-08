@@ -10,7 +10,7 @@ const statusColorMap = {
 
 export default function YearlySalesTrendLines({ data, height = 300 }) {
   const { darkMode } = useTheme();
-  const themeTextColor = darkMode ? "#737791" : "#737791";
+  const themeTextColor = darkMode ? "#6F7C74" : "#6F7C74";
 
   const categories = Object.keys(data);
 

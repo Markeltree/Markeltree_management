@@ -97,7 +97,7 @@ export default function CreateTaskModal({ closeModal }) {
 
   return (
     <div className="space-y-3">
-      <h1 className="text-[18px] text-[#151D48] dark:text-[#B7BFEA] font-bold">
+      <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
         Create Task
       </h1>
       <div className="flex flex-col lg:flex-row justify-between w-full gap-3">
@@ -108,9 +108,9 @@ export default function CreateTaskModal({ closeModal }) {
           placeholder="Update inventory"
           value={task}
           onChange={(e) => setTask(e.target.value)}
-          inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+          inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
           containerClass="w-full flex flex-col gap-1 pl-1"
-          labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+          labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
         />
       </div>
 
@@ -129,7 +129,7 @@ export default function CreateTaskModal({ closeModal }) {
           <ActionButton
             label="Cancel"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
             onClick={closeModal}
           />
         </div>
@@ -137,7 +137,7 @@ export default function CreateTaskModal({ closeModal }) {
           <ActionButton
             label="Save"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
             onClick={handleSave}
           />
         </div>

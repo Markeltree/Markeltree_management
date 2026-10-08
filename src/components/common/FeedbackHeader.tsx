@@ -74,7 +74,7 @@ const FeedbackHeader: React.FC<FeedbackHeaderProps> = ({
           <ColorFull
             text="Add New Order"
             icon={FiPlus}
-            bgColor="bg-[#5D5FEF]"
+            bgColor="bg-[#09BF64]"
             textColor="text-white"
             onClick={onAddNewOrder}
           />

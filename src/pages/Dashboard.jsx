@@ -1078,7 +1078,7 @@ export default function Dashboard() {
           animation="wave"
           className="rounded-xl dark:bg-[#2C2C2CAA] mb-2"
         />
-        <div className="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-3">
+        <div className="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-3">
           <div className="flex flex-row gap-2">
             <Skeleton
               // height="10px"
@@ -1103,7 +1103,7 @@ export default function Dashboard() {
             />
           </div>
         </div>
-        <div className="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-3">
+        <div className="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-3">
           <div className="flex flex-row gap-2">
             <Skeleton
               // height="10px"
@@ -1128,7 +1128,7 @@ export default function Dashboard() {
             />
           </div>
         </div>
-        <div className="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-3">
+        <div className="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-3">
           <div className="flex flex-row gap-2">
             <Skeleton
               // height="10px"
@@ -1326,7 +1326,7 @@ export default function Dashboard() {
           animation="wave"
           className="rounded-xl dark:bg-[#2C2C2CAA] mb-2"
         />
-        <div className="w-full h-[80px] bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-3">
+        <div className="w-full h-[80px] bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-3">
           <div className="flex flex-col gap-2">
             <Skeleton
               height="10px"
@@ -1342,7 +1342,7 @@ export default function Dashboard() {
             />
           </div>
         </div>
-        <div className="w-full h-[80px] bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-3">
+        <div className="w-full h-[80px] bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-3">
           <div className="flex flex-col gap-2">
             <Skeleton
               height="10px"
@@ -1358,7 +1358,7 @@ export default function Dashboard() {
             />
           </div>
         </div>
-        <div className="w-full h-[80px] bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-3">
+        <div className="w-full h-[80px] bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-3">
           <div className="flex flex-col gap-2">
             <Skeleton
               height="10px"
@@ -1688,7 +1688,7 @@ export default function Dashboard() {
             header={
               <>
                 <div className="flex w-full items-center">
-                  <h1 className="text-[18px] font-bold text-[#151D48] dark:text-[#EEF1FF] ">
+                  <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
                     System Health
                   </h1>
                 </div>
@@ -1696,7 +1696,7 @@ export default function Dashboard() {
                   <DropdownButton
                     defaultOption={healthPeriod}
                     options={["This Week", "This Month", "This Year"]}
-                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#5D5FEF] to-[#353689] border-none focus:outline-none focus:ring-0"
+                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
                     dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[105px]"
                     optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                     onChange={(value) => setHealthPeriod(value)}
@@ -1742,7 +1742,7 @@ export default function Dashboard() {
             header={
               <>
                 <div className="">
-                  <h1 className="font-extrabold text-[20px] text-[#151D48] dark:text-[#EEF1FF]">
+                  <h1 className="font-extrabold text-[20px] text-[#0F2418] dark:text-[#EBF9F0]">
                     Sales Trends
                   </h1>
                 </div>
@@ -1750,7 +1750,7 @@ export default function Dashboard() {
                   <DropdownButton
                     defaultOption={selectedMetric}
                     options={["Sales Trends", "Productivity", "Inventory"]}
-                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-[#5D5FEF] dark:text-[#5D5FEF] font-bold text-[11px] h-[34px] w-[123px] bg-white dark:bg-black border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-[#09BF64] dark:text-[#09BF64] font-bold text-[11px] h-[34px] w-[123px] bg-white dark:bg-black border border-[#09BF64] focus:outline-none focus:ring-0"
                     dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[123px]"
                     optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                     onChange={(value) => setSelectedMetric(value)}
@@ -1758,7 +1758,7 @@ export default function Dashboard() {
                   <DropdownButton
                     defaultOption={selectedRange}
                     options={["This Week", "This Month", "This Year"]}
-                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#5D5FEF] to-[#353689] border-none focus:outline-none focus:ring-0"
+                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
                     dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[105px]"
                     optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                     onChange={(value) => setSelectedRange(value)}
@@ -1843,7 +1843,7 @@ export default function Dashboard() {
         {/* Row 1: Main Dashboard */}
         <div className="flex flex-row justify-between items-center mb-4 gap-2">
           {/* Title (Hidden below lg) */}
-          <h1 className="hidden lg:block text-[14px] font-semibold text-[#5D5FEF] dark:text-[#5D5FEF]">
+          <h1 className="hidden lg:block text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64]">
             Dashboard
           </h1>
 
@@ -1878,7 +1878,7 @@ export default function Dashboard() {
               iconDark="./refreshIcon.png"
               iconPos="left"
               labelClass="font-normal md:font-bold"
-              buttonClass="flex items-center justify-center gap-2 text-[7px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 sm:px-3 md:px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-2 text-[7px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 sm:px-3 md:px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
               iconClass="w-[10px] h-[10px] xs:w-[11px] xs:h-[11px] sm:w-[14px] sm:h-[14px] md:w-[16px] md:h-[16px]"
               onClick={handleRefresh}
             />
@@ -1915,10 +1915,10 @@ export default function Dashboard() {
                         <Icon icon="formkit:add" width="16" height="16" />
                       }
                       iconPos="left"
-                      buttonClass="hover:shadow-md flex items-center justify-center px-2 gap-2 text-[10px] h-[32px] w-[110px] bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                      buttonClass="hover:shadow-md flex items-center justify-center px-2 gap-2 text-[10px] h-[32px] w-[110px] bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                       onClick={createTarget}
                     />
-                    <span className="text-[8px] text-[#5D5FEF] mt-1 cursor-pointer hover:underline">
+                    <span className="text-[8px] text-[#09BF64] mt-1 cursor-pointer hover:underline">
                       View target report
                     </span>
                   </div>
@@ -1935,15 +1935,15 @@ export default function Dashboard() {
                     <div className="text-lg font-bold text-[#0CB91D]">
                       {achievedRevenue}
                     </div>
-                    <div className="text-xs lg:text-[10px] xl:text-xs text-[#737791]">
+                    <div className="text-xs lg:text-[10px] xl:text-xs text-[#6F7C74]">
                       Achieved Revenue
                     </div>
                   </div>
                   <div className="flex flex-col items-center justify-center -mt-2">
-                    <div className="text-lg font-bold text-[#5D5FEF]">
+                    <div className="text-lg font-bold text-[#09BF64]">
                       {targetRevenue}
                     </div>
-                    <div className="text-xs lg:text-[10px] xl:text-xs text-[#737791]">
+                    <div className="text-xs lg:text-[10px] xl:text-xs text-[#6F7C74]">
                       Target Revenue
                     </div>
                   </div>
@@ -1962,17 +1962,17 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex flex-col justify-evenly pt-2 pb-2 m-4 gap-6">
-                    <h2 className="w-full text-[12px] font-semibold text-[#151D48] dark:text-white">
+                    <h2 className="w-full text-[12px] font-semibold text-[#0F2418] dark:text-white">
                       Top Performer Today!
                     </h2>
                     <h1 className="text-[22px] font-bold bg-gradient-to-r from-[#000000] to-[#00FF40] bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-[#00DA37] dark:to-[#048A12]">
                       Electronics
                     </h1>
                     <div className="flex flex-col gap-2">
-                      <div className="text-[22px] font-bold text-[#151D48] dark:text-white">
+                      <div className="text-[22px] font-bold text-[#0F2418] dark:text-white">
                         $ 356K
                       </div>
-                      <div className="text-[12px] text-[#151D48] dark:text-white">
+                      <div className="text-[12px] text-[#0F2418] dark:text-white">
                         of total sales
                       </div>
                     </div>
@@ -1997,13 +1997,13 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex flex-col justify-evenly pt-6 pb-1 pl-4 gap-4">
-                    <h2 className="text-[12px] font-semibold text-[#151D48] dark:text-white">
+                    <h2 className="text-[12px] font-semibold text-[#0F2418] dark:text-white">
                       Biggest Bottleneck Today!
                     </h2>
-                    <h1 className="text-[18px] lg:text-[21px] font-bold bg-gradient-to-r from-[#151D48] to-[#FF0000] bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-[#FF0000] dark:to-[#899CFF]">
+                    <h1 className="text-[18px] lg:text-[21px] font-bold bg-gradient-to-r from-[#0F2418] to-[#FF0000] bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-[#FF0000] dark:to-[#899CFF]">
                       Delayed Shipments
                     </h1>
-                    <h2 className="text-[26px] font-extrabold text-[#151D48] dark:text-white">
+                    <h2 className="text-[26px] font-extrabold text-[#0F2418] dark:text-white">
                       12 Orders
                     </h2>
                     <h1 className="text-[13px] font-semibold text-[#AE0003] dark:text-[#C70003] mt-0 lg:-mt-4 xl:mt-0">
@@ -2025,7 +2025,7 @@ export default function Dashboard() {
                     <ActionButton
                       label="Contact supplier!"
                       onClick={AccessDenied}
-                      buttonClass="flex items-center justify-center px-2 text-[12px] h-[40px] w-[150px] bg-[#151D48] text-white dark:bg-black dark:text-white border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center px-2 text-[12px] h-[40px] w-[150px] bg-[#0F2418] text-white dark:bg-black dark:text-white border-none focus:outline-none focus:ring-0"
                     />
                   </div>
                 </div>
@@ -2049,7 +2049,7 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex flex-row justify-between pt-3 pl-4 pr-4">
-                    <h2 className="flex text-[#737791] dark:text-[#FFFFFF] text-[12px]">
+                    <h2 className="flex text-[#6F7C74] dark:text-[#FFFFFF] text-[12px]">
                       Revenue
                     </h2>
 
@@ -2057,7 +2057,7 @@ export default function Dashboard() {
                       defaultOption={revenuePeriod}
                       options={["This Week", "This Month", "This Year"]}
                       className="ml-4"
-                      buttonClassName="text-[#5D5FEF] hover:underline"
+                      buttonClassName="text-[#09BF64] hover:underline"
                       dropdownClassName="bg-gray-50 border border-gray-200 w-[85px]"
                       optionClassName="hover:bg-[#f0f0ff]"
                       onChange={(value) => setRevenuePeriod(value)}
@@ -2068,10 +2068,10 @@ export default function Dashboard() {
               center={
                 <div className="flex flex-row justify-between pl-4 pr-4">
                   <div className="flex flex-col gap-5 pb-3">
-                    <h1 className="font-extrabold text-[28px] text-[#151D48] dark:text-[#EEF1FF]">
+                    <h1 className="font-extrabold text-[28px] text-[#0F2418] dark:text-[#EBF9F0]">
                       {revenue}
                     </h1>
-                    <h2 className="text-[#737791] text-[12px] dark:text-[#FFFFFF]">
+                    <h2 className="text-[#6F7C74] text-[12px] dark:text-[#FFFFFF]">
                       {revenueChange}
                     </h2>
                   </div>
@@ -2094,7 +2094,7 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex flex-row justify-between pr-4 pt-3 pl-4">
-                    <h2 className="text-[#737791] dark:text-[#FFFFFF] text-[12px]">
+                    <h2 className="text-[#6F7C74] dark:text-[#FFFFFF] text-[12px]">
                       New Customers
                     </h2>
 
@@ -2102,7 +2102,7 @@ export default function Dashboard() {
                       defaultOption={customersPeriod}
                       options={["This Week", "This Month", "This Year"]}
                       className="ml-4"
-                      buttonClassName="text-[#5D5FEF] hover:underline"
+                      buttonClassName="text-[#09BF64] hover:underline"
                       dropdownClassName="bg-gray-50 border border-gray-200 w-[85px]"
                       optionClassName="hover:bg-[#f0f0ff]"
                       onChange={(value) => setCustomersPeriod(value)}
@@ -2113,10 +2113,10 @@ export default function Dashboard() {
               center={
                 <div className="flex flex-row justify-between pl-4 pr-4 ">
                   <div className="flex flex-col gap-5 pb-3">
-                    <h1 className="font-extrabold text-[28px] text-[#151D48] dark:text-[#EEF1FF]">
+                    <h1 className="font-extrabold text-[28px] text-[#0F2418] dark:text-[#EBF9F0]">
                       {customerValue}
                     </h1>
-                    <h2 className="text-[#737791] text-[12px] dark:text-[#FFFFFF]">
+                    <h2 className="text-[#6F7C74] text-[12px] dark:text-[#FFFFFF]">
                       {customerChange}
                     </h2>
                   </div>
@@ -2139,7 +2139,7 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex flex-row justify-between pt-3 pl-4 pr-4">
-                    <h2 className="text-[#737791] dark:text-[#FFFFFF] text-[12px]">
+                    <h2 className="text-[#6F7C74] dark:text-[#FFFFFF] text-[12px]">
                       Sales
                     </h2>
 
@@ -2147,7 +2147,7 @@ export default function Dashboard() {
                       defaultOption={salesPeriod}
                       options={["This Week", "This Month", "This Year"]}
                       className="ml-4"
-                      buttonClassName="text-[#5D5FEF] hover:underline"
+                      buttonClassName="text-[#09BF64] hover:underline"
                       dropdownClassName="bg-gray-50 border border-gray-200 w-[85px]"
                       optionClassName="hover:bg-[#f0f0ff]"
                       onChange={(value) => setSalesPeriod(value)}
@@ -2158,10 +2158,10 @@ export default function Dashboard() {
               center={
                 <div className="flex flex-row justify-between pl-4 pr-4">
                   <div className="flex flex-col gap-5 pb-3">
-                    <h1 className="font-extrabold text-[28px] text-[#151D48] dark:text-[#EEF1FF]">
+                    <h1 className="font-extrabold text-[28px] text-[#0F2418] dark:text-[#EBF9F0]">
                       {salesValue}
                     </h1>
-                    <h2 className="text-[#737791] text-[12px] dark:text-[#FFFFFF]">
+                    <h2 className="text-[#6F7C74] text-[12px] dark:text-[#FFFFFF]">
                       {salesChange}
                     </h2>
                   </div>
@@ -2182,7 +2182,7 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex flex-row justify-between pt-3 pl-4 pr-4">
-                    <h2 className="text-[#737791] dark:text-[#FFFFFF] text-[12px]">
+                    <h2 className="text-[#6F7C74] dark:text-[#FFFFFF] text-[12px]">
                       Orders Overview
                     </h2>
 
@@ -2190,7 +2190,7 @@ export default function Dashboard() {
                       defaultOption={ordersPeriod}
                       options={["This Week", "This Month", "This Year"]}
                       className="ml-4"
-                      buttonClassName="text-[#5D5FEF] hover:underline"
+                      buttonClassName="text-[#09BF64] hover:underline"
                       dropdownClassName="bg-gray-50 border border-gray-200 w-[85px]"
                       optionClassName="hover:bg-[#f0f0ff]"
                       onChange={(value) => setOrdersPeriod(value)}
@@ -2201,10 +2201,10 @@ export default function Dashboard() {
               center={
                 <div className="flex flex-row justify-between pl-4 pr-4">
                   <div className="flex flex-col gap-5 pb-3">
-                    <h1 className="font-extrabold text-[28px] text-[#151D48] dark:text-[#EEF1FF]">
+                    <h1 className="font-extrabold text-[28px] text-[#0F2418] dark:text-[#EBF9F0]">
                       {orderValue}
                     </h1>
-                    <h2 className="text-[#737791] text-[12px] dark:text-[#FFFFFF]">
+                    <h2 className="text-[#6F7C74] text-[12px] dark:text-[#FFFFFF]">
                       {orderChange}
                     </h2>
                   </div>
@@ -2228,7 +2228,7 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="p-1">
-                    <h1 className="text-[14px] text-[#737791] dark:text-[#FFFFFF] ">
+                    <h1 className="text-[14px] text-[#6F7C74] dark:text-[#FFFFFF] ">
                       Quick Actions
                     </h1>
                   </div>
@@ -2242,7 +2242,7 @@ export default function Dashboard() {
                         <Icon icon="ic:round-add" width="20" height="20" />
                       }
                       iconPos="left"
-                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[50px] w-[160px] text-white bg-gradient-to-r from-[#5D5FEF] to-[#353689] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[50px] w-[160px] text-white bg-gradient-to-r from-[#09BF64] to-[#353689] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={addNewOrder}
                     />
                     <ActionButton
@@ -2263,7 +2263,7 @@ export default function Dashboard() {
                       }
                       iconPos="left"
                       // styling="col-span-4"
-                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[50px] w-[160px] text-white bg-gradient-to-r from-[#5D5FEF] to-[#353689] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[50px] w-[160px] text-white bg-gradient-to-r from-[#09BF64] to-[#353689] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={generateInvoice}
                     />
                     <ActionButton
@@ -2284,7 +2284,7 @@ export default function Dashboard() {
                       }
                       iconPos="left"
                       // styling="col-span-4"
-                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[50px] w-[160px] text-white bg-gradient-to-r from-[#5D5FEF] to-[#353689] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[50px] w-[160px] text-white bg-gradient-to-r from-[#09BF64] to-[#353689] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={updateInventory}
                     />
                   </div>
@@ -2293,7 +2293,7 @@ export default function Dashboard() {
               center={
                 <>
                   <div className="p-1">
-                    <h1 className="text-[14px] text-[#737791] dark:text-[#FFFFFF] ">
+                    <h1 className="text-[14px] text-[#6F7C74] dark:text-[#FFFFFF] ">
                       Multichannel View
                     </h1>
                   </div>
@@ -2314,13 +2314,13 @@ export default function Dashboard() {
                               height={32}
                               className="object-contain"
                             />
-                            <h1 className="text-[24px] font-extrabold text-[#151D48] dark:text-white">
+                            <h1 className="text-[24px] font-extrabold text-[#0F2418] dark:text-white">
                               $1K
                             </h1>
                             <h2 className="text-[16px] font-normal text-[#4E4E4E] dark:text-white">
                               Shopify
                             </h2>
-                            <h2 className="text-[12px] font-light text-[#5D5FEF] dark:text-white">
+                            <h2 className="text-[12px] font-light text-[#09BF64] dark:text-white">
                               +8% from yesterday
                             </h2>
                           </div>
@@ -2342,13 +2342,13 @@ export default function Dashboard() {
                               height={32}
                               className="object-contain"
                             />
-                            <h1 className="text-[24px] font-extrabold text-[#151D48] dark:text-white">
+                            <h1 className="text-[24px] font-extrabold text-[#0F2418] dark:text-white">
                               $1K
                             </h1>
                             <h2 className="text-[16px] font-normal text-[#4E4E4E] dark:text-white">
                               Amazon
                             </h2>
-                            <h2 className="text-[12px] font-light text-[#5D5FEF] dark:text-white">
+                            <h2 className="text-[12px] font-light text-[#09BF64] dark:text-white">
                               +5% from yesterday
                             </h2>
                           </div>
@@ -2370,13 +2370,13 @@ export default function Dashboard() {
                               height={32}
                               className="object-contain"
                             />
-                            <h1 className="text-[24px] font-extrabold text-[#151D48] dark:text-white">
+                            <h1 className="text-[24px] font-extrabold text-[#0F2418] dark:text-white">
                               $1K
                             </h1>
                             <h2 className="text-[16px] font-normal text-[#4E4E4E] dark:text-white">
                               eBay
                             </h2>
-                            <h2 className="text-[12px] font-light text-[#5D5FEF] dark:text-white">
+                            <h2 className="text-[12px] font-light text-[#09BF64] dark:text-white">
                               +12% from yesterday
                             </h2>
                           </div>
@@ -2404,16 +2404,16 @@ export default function Dashboard() {
                         icon="mingcute:ai-line"
                         width="20"
                         height="20"
-                        className=" text-[#5D5FEF]"
+                        className=" text-[#09BF64]"
                       />
-                      <h1 className="text-[14px] text-[#737791] dark:text-[#EEF1FF] font-medium">
+                      <h1 className="text-[14px] text-[#6F7C74] dark:text-[#EBF9F0] font-medium">
                         AI Powered Suggestions
                       </h1>
                     </div>
                     <div className="">
                       <ActionButton
                         label="View All"
-                        buttonClass="flex text-[12px] h-[24px] font-normal text-[#5D5FEF] dark:text-[#7476F1] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
+                        buttonClass="flex text-[12px] h-[24px] font-normal text-[#09BF64] dark:text-[#81D959] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
                       />
                     </div>
                   </div>
@@ -2457,17 +2457,17 @@ export default function Dashboard() {
                         <h2 className="text-[11px] dark:text-[#FFFFFF66] text-[#00000066]">
                           {item.title}
                         </h2>
-                        <p className="text-[15px] dark:text-[#EEF1FF] text-[#151D48]">
+                        <p className="text-[15px] dark:text-[#EBF9F0] text-[#0F2418]">
                           {item.text}
                         </p>
                       </div>
                     )}
                     tabLabelClass="text-[12px] font-normal pb-1"
-                    activeTabClass="text-[#5D5FEF] border-b-[2px] border-[#5D5FEF]"
-                    inactiveTabClass="text-[#737791] dark:text-[#EEF1FF]"
+                    activeTabClass="text-[#09BF64] border-b-[2px] border-[#09BF64]"
+                    inactiveTabClass="text-[#6F7C74] dark:text-[#EBF9F0]"
                     tabHeaderClass="gap-5"
                     contentContainerClass="mt-4 w-full"
-                    panelClass="w-full h-[205px] overflow-y-auto overflow-x-hidden space-y-4 pr-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]"
+                    panelClass="w-full h-[205px] overflow-y-auto overflow-x-hidden space-y-4 pr-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]"
                     onTabChange={handleTabChange}
                   />
                 )
@@ -2488,7 +2488,7 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex w-full items-center">
-                    <h1 className="text-[18px] font-bold text-[#151D48] dark:text-[#EEF1FF] ">
+                    <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
                       Tasks
                     </h1>
                   </div>
@@ -2526,7 +2526,7 @@ export default function Dashboard() {
                         <Icon icon="formkit:add" width="16" height="16" />
                       }
                       iconPos="left"
-                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[32px] w-[119px] text-white bg-[#5D5FEF] dark:text-[#0D0D0D] border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[32px] w-[119px] text-white bg-[#09BF64] dark:text-[#0D0D0D] border-none focus:outline-none focus:ring-0"
                       onClick={createTask}
                     />
                   </div>
@@ -2537,7 +2537,7 @@ export default function Dashboard() {
                   <div className="relative flex w-full items-center">
                     <div className="flex flex-row items-center gap-2">
                       <img src="/multipleProfile.png" alt="Profiles" />
-                      <h3 className="text-[12px] text-[#131330] dark:text-[#CFCFEC]">
+                      <h3 className="text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
                         + 15 more
                       </h3>
                       {/* </div> */}
@@ -2555,7 +2555,7 @@ export default function Dashboard() {
                     <div className="ml-auto">
                       <ActionButton
                         label="View All"
-                        buttonClass="flex text-[12px] h-[24px] font-normal text-[#5D5FEF] dark:text-[#7476F1] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
+                        buttonClass="flex text-[12px] h-[24px] font-normal text-[#09BF64] dark:text-[#81D959] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
                         onClick={() => {
                           navigate("/task");
                         }}
@@ -2565,7 +2565,7 @@ export default function Dashboard() {
                 </>
               }
               footer={
-                <div className="h-[235px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+                <div className="h-[235px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
                   {taskCards.map((task) => (
                     <FlexibleCard
                       key={task.id}
@@ -2581,7 +2581,7 @@ export default function Dashboard() {
                               alt={task.name}
                               className="w-8 h-8 rounded-full object-cover"
                             />
-                            <h3 className="text-[12px] text-[#151D48] dark:text-[#EEF1FF] ">
+                            <h3 className="text-[12px] text-[#0F2418] dark:text-[#EBF9F0] ">
                               {task.name}
                             </h3>
                             <Icon
@@ -2595,7 +2595,7 @@ export default function Dashboard() {
                             </h1>
                           </div>
                           <div className="flex flex-row items-center gap-1 ml-auto">
-                            <h1 className="text-[10px] text-[#131330] text-right">
+                            <h1 className="text-[10px] text-[#0E1A12] text-right">
                               <span className="text-[#00000066] dark:text-[#FFFFFF66] font-normal pr-1 ">
                                 Assigned on:
                               </span>
@@ -2612,10 +2612,10 @@ export default function Dashboard() {
                       footer={
                         <>
                           <div className="flex flex-col gap-1 pt-1">
-                            <h1 className="text-[15px] text-[#151D48] dark:text-[#EEF1FF] font-extrabold">
+                            <h1 className="text-[15px] text-[#0F2418] dark:text-[#EBF9F0] font-extrabold">
                               {task.taskTitle}
                             </h1>
-                            <h2 className="text-[10px] text-[#131330]">
+                            <h2 className="text-[10px] text-[#0E1A12]">
                               <span className="text-[#EF4444] pr-1 font-normal">
                                 Deadline:
                               </span>
@@ -2647,17 +2647,17 @@ export default function Dashboard() {
               footerClass="w-full"
               header={
                 <>
-                  <h1 className="text-[#151D48] text-[20px] dark:text-[#EEF1FF] font-extrabold">
+                  <h1 className="text-[#0F2418] text-[20px] dark:text-[#EBF9F0] font-extrabold">
                     Recent Activities
                   </h1>
                 </>
               }
               center={
-                <div className="h-[275px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+                <div className="h-[275px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
                   {recentActivities.map((activity) => (
                     <FlexibleCard
                       key={activity.id}
-                      cardClass="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-3"
+                      cardClass="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-3"
                       headerClass=""
                       centerClass=""
                       footerClass="flex flex-row items-center"
@@ -2669,7 +2669,7 @@ export default function Dashboard() {
                               alt={activity.taskName}
                               className="w-8 h-8 rounded-full object-cover"
                             />
-                            <h3 className="text-[12px] text-[#151D48] dark:text-[#EEF1FF]">
+                            <h3 className="text-[12px] text-[#0F2418] dark:text-[#EBF9F0]">
                               {activity.name}
                             </h3>
                           </div>
@@ -2691,7 +2691,7 @@ export default function Dashboard() {
                       }
                       footer={
                         <div className="flex flex-col gap-1 pt-1">
-                          <h1 className="text-[15px] text-[#151D48] dark:text-[#EEF1FF] font-semibold">
+                          <h1 className="text-[15px] text-[#0F2418] dark:text-[#EBF9F0] font-semibold">
                             {activity.taskTitle}
                           </h1>
                         </div>
@@ -2736,12 +2736,12 @@ export default function Dashboard() {
               header={
                 <>
                   <div className="flex justify-between">
-                    <h2 className="text-[14px] font-semibold text-[#737791] dark:text-[#F2F2FE]">
+                    <h2 className="text-[14px] font-semibold text-[#6F7C74] dark:text-[#EFFBF3]">
                       Activity Feed
                     </h2>
                     <ActionButton
                       label="View All"
-                      buttonClass="flex text-[12px] h-[24px] font-normal text-[#5D5FEF] dark:text-[#7476F1] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
+                      buttonClass="flex text-[12px] h-[24px] font-normal text-[#09BF64] dark:text-[#81D959] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
                       onClick={() => {
                         navigate("/notifications");
                       }}
@@ -2750,7 +2750,7 @@ export default function Dashboard() {
                 </>
               }
               center={
-                <div className="h-[275px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+                <div className="h-[275px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
                   {activityFeeds.map((activityFeed) => (
                     <FlexibleCard
                       key={activityFeed.id}
@@ -2761,7 +2761,7 @@ export default function Dashboard() {
                       header={
                         <div className="relative flex w-full items-center">
                           <div className="flex items-center gap-4">
-                            <h3 className="text-[12px] text-[#151D48] dark:text-[#EEF1FF] font-semibold">
+                            <h3 className="text-[12px] text-[#0F2418] dark:text-[#EBF9F0] font-semibold">
                               {activityFeed.name}
                             </h3>
                           </div>
@@ -2769,7 +2769,7 @@ export default function Dashboard() {
                       }
                       footer={
                         <div className="flex flex-col gap-1 pt-1">
-                          <h1 className="text-[14px] text-[#737791] dark:text-[#737791]">
+                          <h1 className="text-[14px] text-[#6F7C74] dark:text-[#6F7C74]">
                             {activityFeed.detail}
                           </h1>
                         </div>
@@ -2788,7 +2788,7 @@ export default function Dashboard() {
             <div className="bg-white dark:bg-[#000000] rounded-lg p-4 h-auto">
               {/* Heading + Export */}
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
-                <h2 className="text-[#333333] dark:text-[#F2F2FE] font-bold text-[16px] lg:text-[18px]">
+                <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
                   Daily Tasks
                 </h2>
                 <MenuActionButton
@@ -2836,15 +2836,15 @@ export default function Dashboard() {
                           }}
                           className={`pb-2 flex items-center gap-2 text-[12px] font-medium transition-all ${
                             i === activeDailyTabIndex
-                              ? "text-[#151D48] dark:text-[#F2F2FE] border-b-2 border-[#5D5FEF] dark:border-[#7476F1]"
-                              : "text-[#151D48] dark:text-[#B7BFEA] hover:text-[#5D5FEF] dark:hover:text-[#F2F2FE]"
+                              ? "text-[#0F2418] dark:text-[#EFFBF3] border-b-2 border-[#09BF64] dark:border-[#81D959]"
+                              : "text-[#0F2418] dark:text-[#B5E6C9] hover:text-[#09BF64] dark:hover:text-[#EFFBF3]"
                           }`}
                         >
                           <span>{label}</span>
                           {i !== activeDailyTabIndex && (
                             <span
                               className={`w-5 h-5 flex items-center justify-center rounded-full text-[10px] font-semibold 
-            bg-[#5D5FEF1A] dark:bg-[#7476F11A] text-[#5D5FEF] dark:text-[#7476F1]`}
+            bg-[#09BF641A] dark:bg-[#81D9591A] text-[#09BF64] dark:text-[#81D959]`}
                             >
                               {count}
                             </span>
@@ -2899,7 +2899,7 @@ export default function Dashboard() {
                     paginator={false}
                     className="p-datatable-sm w-full my-delete-table"
                     rowClassName={() =>
-                      "border-b border-[#73779126] text-[13px] text-[#666666] dark:text-[#F2F2FE] dark:bg-black whitespace-nowrap"
+                      "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
                     }
                   >
                     {columns.map((col, idx) => (

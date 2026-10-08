@@ -1,121 +1,62 @@
-import { Logo, ActionButton, useState, FieldComponent } from "@/common/imports";
-import { useNavigate } from "react-router-dom";
+import { useState, FieldComponent } from "@/common/imports";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { api } from "@/lib/api";
+import AuthShell, { authButtonClass, authInputClass, authLabelClass } from "@/components/auth/AuthShell";
 
 export default function NewPassword() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
   const navigate = useNavigate();
+  const { email, code } = useLocation().state ?? {};
+
+  if (!email || !code) return <Navigate to="/forgot-password" replace />;
+
+  const submit = async () => {
+    if (password.length < 8 || !/[A-Za-z]/.test(password) || !/\d/.test(password)) {
+      return setError("Use at least 8 characters, including a letter and a number.");
+    }
+    if (password !== confirmPassword) return setError("Passwords do not match.");
+    setBusy(true);
+    setError("");
+    try {
+      await api.post("/auth/reset-password", { email, code, password });
+      navigate("/login", { replace: true, state: { email, notice: "Password set. You can now log in." } });
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const field = (label, name, value, set, placeholder) => (
+    <div className="w-full pt-4">
+      <FieldComponent
+        type="password"
+        label={label}
+        name={name}
+        autoComplete="new-password"
+        placeholder={placeholder}
+        value={value}
+        onChange={(e) => set(e.target.value)}
+        inputClass={authInputClass}
+        containerClass="flex flex-col gap-1 [&_.p-password]:w-full [&_.p-password_input]:w-full"
+        labelClass={authLabelClass}
+      />
+    </div>
+  );
 
   return (
-    <div className="flex h-screen overflow-hidden dark:bg-[#0D0D0D]">
-      {/* <div className="flex flex-col items-center justify-center w-full lg:w-1/2 p-4 lg:p-8 overflow-y-auto"> */}
-      {/* Left Section */}
-      <div className="flex flex-col items-center justify-center w-full lg:w-1/2 p-4 lg:p-8 overflow-y-auto">
-        {/* Logo */}
-        <div className="mb-2 flex justify-center">
-          <Logo
-            lightLogo="/logo-light.png"
-            className="h-12 w-auto"
-            alt="CFR management services"
-          />
-        </div>
-
-        {/* Title & Message */}
-        <div className="text-center space-y-1">
-          <h1 className="text-[22px] font-bold text-[#2B2B2B] dark:text-[#F2F2FE]">
-            Create new password
-          </h1>
-          <p className="text-[15px] text-[#8E8E9C] dark:text-[#F2F2FE]">
-            Create a new password
-          </p>
-        </div>
-
-        {/* Password */}
-        <div className="w-full pt-4">
-          <FieldComponent
-            type="password"
-            label="Password"
-            name="password"
-            placeholder="Create your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            inputClass="text-[14px] w-full pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
-            containerClass="flex flex-col gap-1"
-            labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
-          />
-        </div>
-
-        {/* Confirm Password */}
-        <div className="w-full pt-4">
-          <FieldComponent
-            type="password"
-            label="Confirm Password"
-            name="confirmPassword"
-            placeholder="Re-enter your password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            inputClass="text-[14px] w-full pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
-            containerClass="flex flex-col gap-1"
-            labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
-          />
-        </div>
-
-        {/* Remember me*/}
-        <div className="flex justify-between  w-full text-[12px] pt-3">
-          <label className="flex items-center cursor-pointer text-[#737791] dark:text-[#A9A9CD]">
-            <span
-              className={`relative w-4 h-4 border border-gray-400 rounded-sm mr-2 flex items-center justify-center
-                  ${
-                    rememberMe
-                      ? "bg-[#5D5FEF] border-[#5D5FEF]"
-                      : "dark:bg-black dark:border-[#A9A9CD]"
-                  }`}
-              onClick={() => setRememberMe(!rememberMe)}
-            >
-              {rememberMe && (
-                <svg
-                  className="w-3 h-3 text-white pointer-events-none"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              )}
-            </span>
-            Remember me
-          </label>
-        </div>
-
-        {/* Button */}
-        <div className="flex pt-6 w-full">
-          <ActionButton
-            label="Login"
-            labelClass="font-normal text-[12px] lg:text[16px]"
-            buttonClass="text-[16px] h-[45px] w-full bg-[#5D5FEF] dark:bg-[#7476F1] text-white dark:text-black focus:outline-none focus:ring-0"
-            onClick={() => navigate("/reset")}
-          />
-        </div>
+    <AuthShell title="Create new password" subtitle="At least 8 characters, including a letter and a number." onSubmit={submit} error={error}>
+      {field("Password", "password", password, setPassword, "Create your password")}
+      {field("Confirm Password", "confirmPassword", confirmPassword, setConfirmPassword, "Re-enter your password")}
+      <div className="flex pt-6 w-full">
+        <button type="submit" disabled={busy} className={authButtonClass}>
+          {busy && <i className="pi pi-spin pi-spinner" />}
+          Set password
+        </button>
       </div>
-
-      {/* Right Section */}
-      <div className="hidden lg:flex w-1/2 h-full">
-        <div className="w-full h-full p-6">
-          <div className="w-full h-full rounded-lg overflow-hidden">
-            <img
-              src="/laptop-image.png"
-              alt="CFR Management Services"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    </AuthShell>
   );
 }

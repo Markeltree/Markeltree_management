@@ -109,11 +109,11 @@ export default function AddManufacturerOrderModal({ closeModal }) {
           className="mt-4 dark:bg-[#2C2C2CAA]"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full max-h-[52vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full max-h-[52vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           {[...Array(4)].map((_, idx) => (
             <div
               key={idx}
-              className="bg-[#F2F2FE] dark:bg-[#141414CC] rounded-lg shadow p-4 h-[186px] flex flex-col justify-between"
+              className="bg-[#EFFBF3] dark:bg-[#141414CC] rounded-lg shadow p-4 h-[186px] flex flex-col justify-between"
             >
               <div className="flex justify-between gap-4">
                 {/* Left skeleton */}
@@ -176,13 +176,13 @@ export default function AddManufacturerOrderModal({ closeModal }) {
   return (
     <div className="flex flex-col space-y-2">
       {/* Fixed Top Bar */}
-      <h1 className="text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+      <h1 className="text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
         Multi Product Selection
       </h1>
 
       <div className="flex flex-row justify-between items-end gap-4">
         <div className="flex whitespace-nowrap">
-          <label className="text-[10px] font-normal text-[#737791] dark:text-[#737791]">
+          <label className="text-[10px] font-normal text-[#6F7C74] dark:text-[#6F7C74]">
             Search with Product Title
           </label>
         </div>
@@ -190,37 +190,37 @@ export default function AddManufacturerOrderModal({ closeModal }) {
 
       <div className="relative flex flex-row items-center justify-between w-full">
         <input
-          className="dark:bg-[#0D0D0D] w-full border border-[#5D5FEF] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#5D5FEF] text-[14px] text-[#737791] dark:text-[#737791] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+          className="dark:bg-[#0D0D0D] w-full border border-[#09BF64] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#09BF64] text-[14px] text-[#6F7C74] dark:text-[#6F7C74] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           placeholder="Search"
           value={search}
           onChange={handleSearch}
         />
         <Icon
           icon="mdi:magnify"
-          className="absolute top-3 right-3 text-[#5D5FEF] text-lg"
+          className="absolute top-3 right-3 text-[#09BF64] text-lg"
         />
       </div>
       <div className="flex flex-row justify-between w-full">
-        <div className="text-[16px] text-[#151D48] dark:text-[#F2F2FE] font-semibold pt-2">
+        <div className="text-[16px] text-[#0F2418] dark:text-[#EFFBF3] font-semibold pt-2">
           Products{" "}
-          <span className="text-[14px] font-normal text-[#737791] dark:text-[#737791]">
+          <span className="text-[14px] font-normal text-[#6F7C74] dark:text-[#6F7C74]">
             (Showing {filteredProducts.length} Products)
           </span>
         </div>
         <div className="flex text-right">
-          <span className="text-[10px] text-[#737791] dark:text-[#737791]">
+          <span className="text-[10px] text-[#6F7C74] dark:text-[#6F7C74]">
             {selectedCount} product selected
           </span>
         </div>
       </div>
 
       {/* Scrollable Product Cards Section */}
-      <div className="flex flex-col w-full max-h-[52vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full max-h-[52vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-[#F2F2FE] dark:bg-[#141414CC] rounded-lg shadow  p-4 h-[186px] flex flex-col justify-between"
+              className="bg-[#EFFBF3] dark:bg-[#141414CC] rounded-lg shadow  p-4 h-[186px] flex flex-col justify-between"
             >
               {/* Top row: left and right sections */}
               <div className="flex  justify-between gap-4">
@@ -232,7 +232,7 @@ export default function AddManufacturerOrderModal({ closeModal }) {
                     className="w-[84px] h-[60px] object-cover rounded"
                   />
                   <div className="flex flex-col gap-1 justify-center">
-                    <div className="text-[12px] font-medium text-[#151D48] dark:text-[#B7BFEA]">
+                    <div className="text-[12px] font-medium text-[#0F2418] dark:text-[#B5E6C9]">
                       {product.name} ({product.id})
                     </div>
                     <div className="text-[10px] text-[#2B2B2B] dark:text-[#D4D4D4]">
@@ -261,7 +261,7 @@ export default function AddManufacturerOrderModal({ closeModal }) {
                       <input
                         type="radio"
                         name={`unit-${product.id}`}
-                        className="mr-1 accent-[#5D5FEF]"
+                        className="mr-1 accent-[#09BF64]"
                       />
                       Pallet
                     </label>
@@ -270,14 +270,14 @@ export default function AddManufacturerOrderModal({ closeModal }) {
                         type="radio"
                         name={`unit-${product.id}`}
                         defaultChecked
-                        className="mr-1 accent-[#5D5FEF]"
+                        className="mr-1 accent-[#09BF64]"
                       />
                       Cartons
                     </label>
                   </div>
 
                   {/* Quantity Counter */}
-                  <div className="flex items-center border border-[#5D5FEF] rounded px-2 py-1 gap-2">
+                  <div className="flex items-center border border-[#09BF64] rounded px-2 py-1 gap-2">
                     <button
                       onClick={() => updateQuantity(product.id, -1)}
                       className="p-1"
@@ -286,7 +286,7 @@ export default function AddManufacturerOrderModal({ closeModal }) {
                         icon="mdi:minus"
                         width="18px"
                         height="18px"
-                        className="text-[#5D5FEF] bg-[#5D5FEF14]"
+                        className="text-[#09BF64] bg-[#09BF6414]"
                       />
                     </button>
                     <span className="w-4 text-center font-medium">
@@ -300,7 +300,7 @@ export default function AddManufacturerOrderModal({ closeModal }) {
                         icon="mdi:plus"
                         width="18px"
                         height="18px"
-                        className="text-[#5D5FEF] bg-[#5D5FEF14]"
+                        className="text-[#09BF64] bg-[#09BF6414]"
                       />
                     </button>
                   </div>
@@ -319,10 +319,10 @@ export default function AddManufacturerOrderModal({ closeModal }) {
                   className={`w-full py-2 rounded-md text-[12px] font-medium  transition-all
                     ${
                       !product.inStock
-                        ? "bg-[#5D5FEF66] text-white cursor-not-allowed dark:bg-[#7476F166] dark:text-[#0D0D0D]"
+                        ? "bg-[#09BF6466] text-white cursor-not-allowed dark:bg-[#81D95966] dark:text-[#0D0D0D]"
                         : product.added
-                        ? "bg-[#F2F2FE] dark:bg-[#141414CC]  border border-[#5D5FEF] dark:border-[#7476F1] text-[#5D5FEF] dark:text-[#7476F1]"
-                        : "bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-[#0D0D0D]"
+                        ? "bg-[#EFFBF3] dark:bg-[#141414CC]  border border-[#09BF64] dark:border-[#81D959] text-[#09BF64] dark:text-[#81D959]"
+                        : "bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-[#0D0D0D]"
                     }
                 `}
                 >
@@ -338,7 +338,7 @@ export default function AddManufacturerOrderModal({ closeModal }) {
         <ActionButton
           label="Next"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[40px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[40px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
           onClick={handleNext}
         />
       </div>

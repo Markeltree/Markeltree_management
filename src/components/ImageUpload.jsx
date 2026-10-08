@@ -32,7 +32,7 @@ export default function ImageUpload() {
     <div className="w-full">
       {/* Top Bar */}
       <div className="flex flex-row justify-between items-center mb-3 !p-0">
-        <h2 className="font-bold text-[12px] md:text-[20px] text-[#151D48] dark:text-[#F2F2FE] whitespace-nowrap">
+        <h2 className="font-bold text-[12px] md:text-[20px] text-[#0F2418] dark:text-[#EFFBF3] whitespace-nowrap">
           Product Info
         </h2>
         <div className="flex gap-2">
@@ -51,14 +51,14 @@ export default function ImageUpload() {
         </div>
       </div>
 
-      <div className="mt-5 mb-1 text-[12px] text-[#737791] dark:text-[#A9A9CD] font-normal">
+      <div className="mt-5 mb-1 text-[12px] text-[#6F7C74] dark:text-[#A9C2B3] font-normal">
         Add Image(Upload or Drag drop)
       </div>
 
       {/* Upload Box */}
-      <div className="border border-[#73779140] rounded-lg p-4">
+      <div className="border border-[#6F7C7440] rounded-lg p-4">
         <div
-          className="border border-dashed border-[#5D5FEF] dark:border-[#7476F1] rounded-lg flex flex-col items-center justify-center py-6 cursor-pointer"
+          className="border border-dashed border-[#09BF64] dark:border-[#81D959] rounded-lg flex flex-col items-center justify-center py-6 cursor-pointer"
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
           onClick={handleClick}
@@ -82,7 +82,7 @@ export default function ImageUpload() {
           </div>
 
           {/* Instructions */}
-          <p className="text-[12px] md:text-[14px] text-[#737791] m-1 dark:text-[#A9A9CD] text-center">
+          <p className="text-[12px] md:text-[14px] text-[#6F7C74] m-1 dark:text-[#A9C2B3] text-center">
             Supported formats: JPG, PNG, Excel file (Max size: 4mb)
           </p>
         </div>

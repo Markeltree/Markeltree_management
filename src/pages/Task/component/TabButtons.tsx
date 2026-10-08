@@ -19,7 +19,7 @@ const TabButtons: React.FC<TabButtonsProps> = ({
 }) => {
   return (
     <>
-    <div className="inline-flex items-center gap-1 sm:gap-2 bg-[#F2F2FE] dark:bg-[#1a1a1a] rounded-full p-1 overflow-x-auto">
+    <div className="inline-flex items-center gap-1 sm:gap-2 bg-[#EFFBF3] dark:bg-[#1a1a1a] rounded-full p-1 overflow-x-auto">
       {tabs.map((tab) => {
         // Use strict equality to ensure exact match
         const isActive = activeTab === tab.id;
@@ -34,11 +34,11 @@ const TabButtons: React.FC<TabButtonsProps> = ({
             type="button"
             className={`px-4 sm:px-10 py-1 sm:py-2 max-sm:px-5 font-medium max-sm:text-[10px] text-[12px] sm:text-[15px] whitespace-nowrap transition-all duration-300 rounded-full ${
               isActive
-                ? "!bg-[#5D5FEF] !text-white shadow-md"
-                : "!bg-transparent text-[#2B2B2B] dark:text-white hover:text-[#5D5FEF]"
+                ? "!bg-[#09BF64] !text-white shadow-md"
+                : "!bg-transparent text-[#2B2B2B] dark:text-white hover:text-[#09BF64]"
             }`}
             style={{
-              backgroundColor: isActive ? '#5D5FEF' : 'transparent',
+              backgroundColor: isActive ? '#09BF64' : 'transparent',
               color: isActive ? '#ffffff' : undefined,
             }}
             aria-pressed={isActive}

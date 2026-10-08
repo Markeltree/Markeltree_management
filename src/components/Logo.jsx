@@ -1,8 +1,8 @@
 export default function Logo({
-  lightLogo = "/logo-dark.png",
+  lightLogo = "/logo-light.png",
   darkLogo = "/logo-dark.png",
-  alt = "App Logo",
-  className = "h-10 w-auto ",
+  alt = "Markeltree",
+  className = "h-8 w-auto",
 }) {
   return (
     <>

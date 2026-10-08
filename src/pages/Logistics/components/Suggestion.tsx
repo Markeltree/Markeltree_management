@@ -38,7 +38,7 @@ const Suggestion = () => {
         {[...Array(5)].map((_, index) => (
           <div
             key={index}
-            className="mb-4 flex w-full flex-col gap-2 bg-[#F2F2FE]/50 rounded-2xl bg-[#F9F9FF] px-4 py-3 sm:px-6 sm:py-4 dark:bg-[#141414]/50 dark:text-white"
+            className="mb-4 flex w-full flex-col gap-2 bg-[#EFFBF3]/50 rounded-2xl bg-[#F9F9FF] px-4 py-3 sm:px-6 sm:py-4 dark:bg-[#141414]/50 dark:text-white"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">

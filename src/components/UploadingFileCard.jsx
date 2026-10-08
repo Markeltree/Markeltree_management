@@ -15,7 +15,7 @@ export default function UploadingFileCard({
   const fileIcon = getFileIcon(fileName);
 
   return (
-    <div className="relative bg-[#7377911A] rounded-lg p-4 w-full h-auto">
+    <div className="relative bg-[#6F7C741A] rounded-lg p-4 w-full h-auto">
       {/* Cancel icon */}
       {topIcon === "material-symbols-light:delete-outline-rounded" ? (
         <button
@@ -45,12 +45,12 @@ export default function UploadingFileCard({
 
         {/* Text Info */}
         <div className="flex flex-col text-sm">
-          <span className="font-medium text-[#151D48] dark:text-[#B7BFEA]">
+          <span className="font-medium text-[#0F2418] dark:text-[#B5E6C9]">
             {fileName}
           </span>
           <div className="flex flex-row gap-6 items-center">
             {/* File size */}
-            <div className="text-[10px] text-[#737791] dark:text-[#737791]">
+            <div className="text-[10px] text-[#6F7C74] dark:text-[#6F7C74]">
               {uploadedKB} KB of {totalKB} KB
             </div>
 

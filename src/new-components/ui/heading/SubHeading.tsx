@@ -9,7 +9,7 @@ type SubHeadingProps = {
 const SubHeading: React.FC<SubHeadingProps> = ({
   text,
   className = "",
-  colorClass = "text-[#737791] dark:text-white",
+  colorClass = "text-[#6F7C74] dark:text-white",
 }) => {
   return (
     <span

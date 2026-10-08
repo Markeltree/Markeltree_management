@@ -48,21 +48,21 @@ const UnitInput = ({ label, unit, options }) => {
   return (
     <div className="flex flex-col w-full gap-1" ref={inputRef}>
       {label && (
-        <label className="text-[#737791] dark:text-[#A9A9CD] text-[12px]">
+        <label className="text-[#6F7C74] dark:text-[#A9C2B3] text-[12px]">
           {label}
         </label>
       )}
 
       <div
-        className="flex items-center h-[40px] border border-[#73779140] dark:border-[#A9A9CD] rounded-lg px-2 py-1 text-[14px] dark:bg-[#0D0D0D] hover:shadow-md transition-shadow duration-200 cursor-pointer select-none"
+        className="flex items-center h-[40px] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg px-2 py-1 text-[14px] dark:bg-[#0D0D0D] hover:shadow-md transition-shadow duration-200 cursor-pointer select-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <input
           type="number"
           placeholder=""
-          className="flex-1 dark:text-[#A9A9CD] pl-1 outline-none bg-transparent placeholder:dark:text-[#A9A9CD] [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+          className="flex-1 dark:text-[#A9C2B3] pl-1 outline-none bg-transparent placeholder:dark:text-[#A9C2B3] [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
         />
-        <div className="flex items-center gap-1 text-[#5D5FEF] dark:text-[#7476F1]">
+        <div className="flex items-center gap-1 text-[#09BF64] dark:text-[#81D959]">
           <span>{selectedUnit}</span>
           <ChevronDownIcon className="w-4 h-4" />
         </div>
@@ -78,7 +78,7 @@ const UnitInput = ({ label, unit, options }) => {
               width: "96px", // small fixed width
               zIndex: 9999,
             }}
-            className="bg-white dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD40] rounded-lg shadow-lg"
+            className="bg-white dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B340] rounded-lg shadow-lg"
           >
             {options.map((opt, idx) => (
               <div
@@ -87,7 +87,7 @@ const UnitInput = ({ label, unit, options }) => {
                   setSelectedUnit(opt);
                   setIsOpen(false);
                 }}
-                className="px-3 py-2 hover:bg-[#5D5FEF1A] dark:hover:bg-[#7476F140] cursor-pointer rounded"
+                className="px-3 py-2 hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] cursor-pointer rounded"
               >
                 {opt}
               </div>

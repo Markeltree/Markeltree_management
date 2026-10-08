@@ -55,7 +55,7 @@ const ReorderSuggestion = () => {
           <HoverDropdown
             variant="filled"
             DropdownName="Reorder Suggestion"
-            bgColor="bg-gradient-to-r from-[#5D5FEF] to-[#353689] text-white"
+            bgColor="bg-gradient-to-r from-[#09BF64] to-[#353689] text-white"
           />
         </div>
         <AiSuggestion />

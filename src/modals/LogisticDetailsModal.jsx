@@ -57,7 +57,7 @@ export default function LogisticDetailsModal({ closeModal }) {
         <Skeleton width="200px" height="28px" className="dark:bg-[#2C2C2CAA]" />
 
         {/* Fields Container Skeleton */}
-        <div className="flex flex-col w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="flex flex-col w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           {/* Row 1: Unit/Display & Display/Carton */}
           <div className="flex flex-col lg:flex-row gap-4 mb-4">
             <Skeleton
@@ -136,11 +136,11 @@ export default function LogisticDetailsModal({ closeModal }) {
     <div className="space-y-3">
       {/* Header */}
 
-      <div className=" text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+      <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
         Logistcs Details
       </div>
 
-      <div className="flex flex-col w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         {/* fields - row 1*/}
         <div className="flex flex-col lg:flex-row gap-4 mb-4">
           <div className="flex flex-col w-full gap-1">
@@ -151,9 +151,9 @@ export default function LogisticDetailsModal({ closeModal }) {
               placeholder=""
               value={unitDisplay}
               onChange={(e) => setUnitDisplay(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
           <div className="flex flex-col w-full gap-1">
@@ -164,9 +164,9 @@ export default function LogisticDetailsModal({ closeModal }) {
               placeholder=""
               value={displayCarton}
               onChange={(e) => setDisplayCarton(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
         </div>
@@ -181,9 +181,9 @@ export default function LogisticDetailsModal({ closeModal }) {
               placeholder=""
               value={cartonLayer}
               onChange={(e) => setCartonLayer(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
           <div className="flex flex-col w-full gap-1">
@@ -194,9 +194,9 @@ export default function LogisticDetailsModal({ closeModal }) {
               placeholder=""
               value={layerPallet}
               onChange={(e) => setLayerPallet(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
         </div>
@@ -211,9 +211,9 @@ export default function LogisticDetailsModal({ closeModal }) {
               placeholder=""
               value={cartonPallet}
               onChange={(e) => setCartonPallet(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
           <div className="flex flex-col w-full gap-1">
@@ -224,9 +224,9 @@ export default function LogisticDetailsModal({ closeModal }) {
               placeholder=""
               value={unitPallet}
               onChange={(e) => setUnitPallet(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
         </div>
@@ -236,7 +236,7 @@ export default function LogisticDetailsModal({ closeModal }) {
           <div className="flex flex-col w-full gap-1 pl-1">
             <label
               htmlFor="HFSSCompliant"
-              className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             >
               HFSS Compliant
             </label>
@@ -247,7 +247,7 @@ export default function LogisticDetailsModal({ closeModal }) {
               onChange={(e) => setHFSSCompliant(e.value)}
               placeholder="Select"
               className={clsx(
-                "text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
               )}
               pt={{
                 panel: {
@@ -260,7 +260,7 @@ export default function LogisticDetailsModal({ closeModal }) {
           <div className="flex flex-col w-full gap-1 pl-1">
             <label
               htmlFor="countryOfOrigin"
-              className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             >
               Country of Origins
             </label>
@@ -271,7 +271,7 @@ export default function LogisticDetailsModal({ closeModal }) {
               onChange={(e) => setCountryOfOrigin(e.value)}
               placeholder="Months"
               className={clsx(
-                "text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
               )}
               pt={{
                 panel: {
@@ -289,7 +289,7 @@ export default function LogisticDetailsModal({ closeModal }) {
             <ActionButton
               label="Back"
               labelClass="font-normal text-[12px] md:text-[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
               onClick={handleBack}
             />
           </div>
@@ -297,7 +297,7 @@ export default function LogisticDetailsModal({ closeModal }) {
             <ActionButton
               label="Next"
               labelClass="font-normal text-[12px] md:text-[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
               onClick={handleNext}
             />
           </div>

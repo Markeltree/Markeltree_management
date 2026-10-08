@@ -682,15 +682,15 @@ export default function ProductManagementData() {
       <button
         type="button"
         className="flex items-center gap-2 bg-white dark:bg-black 
-                 text-[#5D5FEF] dark:text-[#7476F1] 
-                 border border-[#5D5FEF] dark:border-[#7476F1] 
+                 text-[#09BF64] dark:text-[#81D959] 
+                 border border-[#09BF64] dark:border-[#81D959] 
                  px-3 py-1 rounded text-[11px] font-medium"
       >
         <Icon
           icon="tabler:edit"
           width={14}
           height={14}
-          className="text-[#5D5FEF] dark:text-[#7476F1]"
+          className="text-[#09BF64] dark:text-[#81D959]"
         />
         Edit
       </button>
@@ -857,7 +857,7 @@ export default function ProductManagementData() {
           {[...Array(5)].map((_, idx) => (
             <div
               key={idx}
-              className="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] rounded-xl p-4 space-y-2"
+              className="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] rounded-xl p-4 space-y-2"
             >
               <Skeleton
                 width="60%"
@@ -879,7 +879,7 @@ export default function ProductManagementData() {
   const TableSkeleton = () => (
     <div className="p-4 space-y-4 relative bg-white dark:bg-[#000000] rounded-lg mt-8">
       {/* Tabs Skeleton */}
-      <div className="inline-flex w-full md:w-auto bg-[#F2F2FE] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
+      <div className="inline-flex w-full md:w-auto bg-[#EFFBF3] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
         {[...Array(4)].map((_, i) => (
           <Skeleton
             key={i}
@@ -932,7 +932,7 @@ export default function ProductManagementData() {
           {[...Array(7)].map((_, rowIdx) => (
             <div
               key={rowIdx}
-              className="flex flex-row justify-between border-b border-[#73779126] w-full gap-2"
+              className="flex flex-row justify-between border-b border-[#6F7C7426] w-full gap-2"
             >
               {[...Array(7)].map((_, colIdx) => (
                 <Skeleton
@@ -1158,7 +1158,7 @@ export default function ProductManagementData() {
           header={
             <>
               <div className="flex w-full items-center">
-                <h1 className="text-[18px] font-bold text-[#151D48] dark:text-[#EEF1FF] ">
+                <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
                   Sales Trends & Revenue
                 </h1>
               </div>
@@ -1166,7 +1166,7 @@ export default function ProductManagementData() {
                 <DropdownButton
                   defaultOption="Electronics"
                   options={["Electronics", "Food", "Furniture"]}
-                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-[#5D5FEF] dark:text-[#5D5FEF] font-bold text-[11px] h-[34px] w-[123px] bg-white dark:bg-black border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-[#09BF64] dark:text-[#09BF64] font-bold text-[11px] h-[34px] w-[123px] bg-white dark:bg-black border border-[#09BF64] focus:outline-none focus:ring-0"
                   dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[123px]"
                   optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                   onChange={(value) => setSelectedCategory(value)}
@@ -1175,7 +1175,7 @@ export default function ProductManagementData() {
                 <DropdownButton
                   defaultOption="This Year"
                   options={["This Week", "This Month", "This Year"]}
-                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#5D5FEF] to-[#353689] border-none focus:outline-none focus:ring-0"
+                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
                   dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[105px]"
                   optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                   onChange={(value) => setSelectedRange(value)}
@@ -1249,16 +1249,16 @@ export default function ProductManagementData() {
                     icon="mingcute:ai-line"
                     width="20"
                     height="20"
-                    className=" text-[#5D5FEF]"
+                    className=" text-[#09BF64]"
                   />
-                  <h1 className="text-[14px] text-[#737791] dark:text-[#EEF1FF] font-medium">
+                  <h1 className="text-[14px] text-[#6F7C74] dark:text-[#EBF9F0] font-medium">
                     AI Powered Suggestions
                   </h1>
                 </div>
                 <div className="">
                   <ActionButton
                     label="View All"
-                    buttonClass="flex text-[12px] h-[24px] font-normal text-[#5D5FEF] dark:text-[#7476F1] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
+                    buttonClass="flex text-[12px] h-[24px] font-normal text-[#09BF64] dark:text-[#81D959] border-none focus:outline-none focus:ring-0 !shadow-none hover:underline"
                   />
                 </div>
               </div>
@@ -1266,22 +1266,22 @@ export default function ProductManagementData() {
           }
           center={
             <>
-              <div className="h-[310px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+              <div className="h-[310px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
                 <div className="flex flex-col gap-4 w-full">
                   {AISuggestion.map((msg) => (
                     <FlexibleCard
                       key={msg.id}
-                      cardClass="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-4"
+                      cardClass="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-4"
                       headerClass=""
                       centerClass=""
                       footerClass="flex flex-row items-center"
                       header={
                         <div className="relative flex w-full items-center">
                           <div className="flex flex-col gap-3 text-left">
-                            <h3 className="text-[13px] text-[#737791] dark:text-[#A9A9CD]">
+                            <h3 className="text-[13px] text-[#6F7C74] dark:text-[#A9C2B3]">
                               {msg.title}
                             </h3>
-                            <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#F2F2FE] font-medium">
+                            <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-medium">
                               {msg.msg}
                             </h3>
                           </div>
@@ -1302,7 +1302,7 @@ export default function ProductManagementData() {
     <div className="space-y-4 ">
       <div className="p-4 space-y-4 relative bg-white dark:bg-[#000000] rounded-lg mt-8">
         {/* Tabs */}
-        <div className="inline-flex w-full md:w-auto bg-[#F2F2FE] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
+        <div className="inline-flex w-full md:w-auto bg-[#EFFBF3] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
           {["Stock Management", "FIFO", "Escrow", "Batch Tracking"].map(
             (label, i) => (
               <button
@@ -1321,8 +1321,8 @@ export default function ProductManagementData() {
                 className={`h-full text-[12px] md:text-[16px] font-medium transition-all rounded-full
         ${
           i === activeIndex
-            ? "text-white dark:text-[#0D0D0D] bg-[#5D5FEF] dark:bg-[#7476F1] px-3 md:px-6"
-            : "text-[#151D48] dark:text-[#D4D4D4] hover:text-[#5D5FEF] dark:hover:text-[#F2F2FE] px-3 md:px-6"
+            ? "text-white dark:text-[#0D0D0D] bg-[#09BF64] dark:bg-[#81D959] px-3 md:px-6"
+            : "text-[#0F2418] dark:text-[#D4D4D4] hover:text-[#09BF64] dark:hover:text-[#EFFBF3] px-3 md:px-6"
         }`}
               >
                 {label}
@@ -1340,7 +1340,7 @@ export default function ProductManagementData() {
                 className={`w-[70px] h-[36px] flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300
         ${
           toggleOn
-            ? "bg-[#5D5FEF] dark:bg-[#7476F1]"
+            ? "bg-[#09BF64] dark:bg-[#81D959]"
             : "bg-gray-300 dark:bg-[#141414]"
         }`}
                 style={{ minWidth: "70px" }}
@@ -1352,10 +1352,10 @@ export default function ProductManagementData() {
               </div>
             )}
             <div className="flex flex-col gap-1 w-full">
-              <h2 className="text-[#333333] dark:text-[#F2F2FE] font-bold text-[16px] lg:text-[18px]">
+              <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
                 {tabTitles[activeIndex].heading}
               </h2>
-              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#F2F2FE]">
+              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
                 {tabTitles[activeIndex].subheading}
               </p>
             </div>
@@ -1465,7 +1465,7 @@ export default function ProductManagementData() {
                     }
                     iconPos="left"
                     labelClass="font-normal"
-                    buttonClass="flex items-center justify-center gap-1 text-[10px] md:text-sm h-[40px] w-[148px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-[10px] md:text-sm h-[40px] w-[148px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
                     onClick={handleAddProduct}
                   />
                 </>
@@ -1504,13 +1504,13 @@ export default function ProductManagementData() {
 
                     return (
                       <div key={field} className="mb-3">
-                        <h4 className="font-semibold text-[12px] text-[#151D48] dark:text-[#F2F2FE] mb-2 capitalize">
+                        <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
                           {field}
                         </h4>
                         {values.map((val) => (
                           <label
                             key={val}
-                            className="flex items-center gap-2 mb-1 text-[12px] text-[#737791CC] dark:text-[#F2F2FECC] cursor-pointer select-none"
+                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
                           >
                             <input
                               type="checkbox"
@@ -1520,7 +1520,7 @@ export default function ProductManagementData() {
                               onChange={() => toggleTempValue(field, val)}
                               className="hidden peer"
                             />
-                            <span className="w-3.5 h-3.5 rounded border border-[#737791CC] peer-checked:bg-[#5D5FEF] peer-checked:border-[#5D5FEF] relative flex items-center justify-center">
+                            <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
                               <svg
                                 className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                 fill="none"
@@ -1555,7 +1555,7 @@ export default function ProductManagementData() {
                     <ActionButton
                       label="Reset"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                       onClick={() => {
                         setTempFilters({});
                         setFilters({});
@@ -1579,7 +1579,7 @@ export default function ProductManagementData() {
                     <ActionButton
                       label="Apply Filter"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={() => {
                         setFilters(tempFilters); // temp filters ko apply filters me copy karo
                         setDateRange(tempDateRange); // temp date range ko apply date range me copy karo
@@ -1615,7 +1615,7 @@ export default function ProductManagementData() {
                   paginator={false}
                   className="p-datatable-sm w-full my-delete-table [&_.p-datatable-tbody>tr]:dark:!bg-black"
                   rowClassName={() =>
-                    "border-b border-[#73779126] text-[13px] text-[#666666] dark:text-[#F2F2FE] dark:bg-black whitespace-nowrap"
+                    "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
                   }
                   emptyMessage={
                     <div className="py-4 bg-white text-black dark:bg-black dark:text-white">
@@ -1647,7 +1647,7 @@ export default function ProductManagementData() {
                   paginator={false}
                   className="p-datatable-sm w-full [&_.p-datatable-tbody>tr]:dark:!bg-black"
                   rowClassName={() =>
-                    "border-b border-[#73779126] text-[13px] text-[#666666] dark:text-[#F2F2FE] dark:bg-black whitespace-nowrap"
+                    "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
                   }
                   emptyMessage={
                     <div className="py-4 bg-white text-black dark:bg-black dark:text-white">

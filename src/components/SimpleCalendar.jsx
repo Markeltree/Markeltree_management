@@ -109,7 +109,7 @@ export default function SimpleCalendar({
             >
               <span
                 className={`w-[28px] h-[28px] flex items-center justify-center text-[12px] rounded-full ${
-                  selected ? "bg-[#5D5FEF] text-white dark:text-black" : ""
+                  selected ? "bg-[#09BF64] text-white dark:text-black" : ""
                 }`}
               >
                 {date.day}
@@ -118,7 +118,7 @@ export default function SimpleCalendar({
           );
         }}
         prevIcon={
-          <div className="w-6 h-6 bg-[#5D5FEF] rounded-full flex items-center justify-center">
+          <div className="w-6 h-6 bg-[#09BF64] rounded-full flex items-center justify-center">
             <Icon
               icon="ep:arrow-left"
               className="text-white dark:text-black"
@@ -128,7 +128,7 @@ export default function SimpleCalendar({
           </div>
         }
         nextIcon={
-          <div className="w-6 h-6 bg-[#5D5FEF] rounded-full flex items-center justify-center">
+          <div className="w-6 h-6 bg-[#09BF64] rounded-full flex items-center justify-center">
             <Icon
               icon="ep:arrow-right"
               className="text-white dark:text-black"
@@ -248,12 +248,12 @@ export default function SimpleCalendar({
 
         .dark .p-datepicker {
           background-color: black;
-          color: #F2F2FE;
+          color: #EFFBF3;
         }
 
         .dark .p-datepicker .p-datepicker-header {
           background-color: black;
-          color: #F2F2FE;
+          color: #EFFBF3;
         }
       
         `}

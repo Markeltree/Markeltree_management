@@ -13,7 +13,7 @@ const AuditCard = ({ icon, title, value }) => {
             </div>
             <div className="text-center sm:text-left space-y-6">
                 <Paragragh
-                    color="#737791"
+                    color="#6F7C74"
                     className="font-medium"
                     para={title}
                 />

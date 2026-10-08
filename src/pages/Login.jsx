@@ -1,125 +1,91 @@
-import { Logo, ActionButton, FieldComponent, useState } from "@/common/imports";
-import { useNavigate } from "react-router-dom";
+import { FieldComponent, useState } from "@/common/imports";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+import AuthShell, { authButtonClass, authInputClass, authLabelClass } from "@/components/auth/AuthShell";
 
-export default function SignUp() {
-  const [emailAddress, setEmailAddress] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
-  const [password, setPassword] = useState("");
+export default function Login() {
+  const { user, login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const [email, setEmail] = useState(location.state?.email ?? "");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  if (user) return <Navigate to={location.state?.from || "/dashboard"} replace />;
+
+  const submit = async () => {
+    if (!email || !password) return setError("Enter your email and password.");
+    setBusy(true);
+    setError("");
+    try {
+      await login(email.trim(), password);
+      navigate(location.state?.from || "/dashboard", { replace: true });
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setBusy(false);
+    }
+  };
 
   return (
-    <div className="flex h-screen overflow-hidden dark:bg-[#0D0D0D]">
-      {/* <div className="flex flex-col items-center justify-center w-full lg:w-1/2 p-4 lg:p-8 overflow-y-auto"> */}
-      {/* Left Section */}
-      <div className="flex flex-col items-center justify-center w-full lg:w-1/2 p-4 lg:p-8 overflow-y-auto">
-        {/* Logo */}
-        <div className="mb-2 flex justify-center">
-          <Logo
-            lightLogo="/logo-light.png"
-            className="h-12 w-auto"
-            alt="CFR management services"
-          />
-        </div>
-
-        {/* Title & Message */}
-        <div className="text-center space-y-1">
-          <h1 className="text-[22px] font-bold text-[#2B2B2B] dark:text-[#F2F2FE]">
-            Login to Your Account
-          </h1>
-          <p className="text-[15px] text-[#8E8E9C] dark:text-[#F2F2FE]">
-            Access your account securely and manage your tasks with ease.
-          </p>
-        </div>
-
-        {/* Form Fields */}
-
-        <div className="w-full pt-4">
-          <FieldComponent
-            type="text"
-            label="Email Address"
-            name="emailAddress"
-            placeholder="Enter your email address"
-            value={emailAddress}
-            onChange={(e) => setEmailAddress(e.target.value)}
-            inputClass="text-[14px] pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
-            containerClass="flex flex-col gap-1"
-            labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
-          />
-        </div>
-
-        <div className="w-full pt-4">
-          <FieldComponent
-            type="password"
-            label="Password"
-            name="password"
-            placeholder="Create your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            inputClass="text-[14px] w-full pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
-            containerClass="flex flex-col gap-1"
-            labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
-          />
-        </div>
-
-        <div className="flex justify-between items-center text-[12px] pt-3 w-full">
-          <label className="flex items-center cursor-pointer text-[#737791] dark:text-[#A9A9CD]">
-            <span
-              className={`relative w-4 h-4 border border-gray-400 rounded-sm mr-2 flex items-center justify-center
-                  ${
-                    rememberMe
-                      ? "bg-[#5D5FEF] border-[#5D5FEF]"
-                      : "dark:bg-black dark:border-[#A9A9CD]"
-                  }`}
-              onClick={() => setRememberMe(!rememberMe)}
-            >
-              {rememberMe && (
-                <svg
-                  className="w-3 h-3 text-white pointer-events-none"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              )}
-            </span>
-            Remember me
-          </label>
-          <button
-            className="text-[#5D5FEF] font-semibold ml-1  hover:underline"
-            onClick={() => navigate("/password")}
-          >
-            Forget Password?
-          </button>
-        </div>
-
-        <div className="flex pt-3 w-full">
-          <ActionButton
-            label="Login"
-            labelClass="font-normal text-[12px] lg:text[16px]"
-            buttonClass="text-[16px] h-[45px] w-full bg-[#5D5FEF] dark:bg-[#7476F1] text-white dark:text-black focus:outline-none focus:ring-0"
-            onClick={() => navigate("/verification")}
-          />
-        </div>
+    <AuthShell
+      title="Login to Your Account"
+      subtitle="Access your account securely and manage your work with ease."
+      onSubmit={submit}
+      error={error}
+      notice={location.state?.notice}
+    >
+      <div className="w-full pt-4">
+        <FieldComponent
+          type="text"
+          label="Email Address"
+          name="email"
+          autoComplete="username"
+          placeholder="Enter your work email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          inputClass={authInputClass}
+          containerClass="flex flex-col gap-1"
+          labelClass={authLabelClass}
+        />
       </div>
 
-      {/* Right Section */}
-      <div className="hidden lg:flex w-1/2 h-full">
-        <div className="w-full h-full p-6">
-          <div className="w-full h-full rounded-lg overflow-hidden">
-            <img
-              src="/laptop-image.png"
-              alt="CFR Management Services"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
+      <div className="w-full pt-4">
+        <FieldComponent
+          type="password"
+          label="Password"
+          name="password"
+          autoComplete="current-password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          inputClass={authInputClass}
+          containerClass="flex flex-col gap-1 [&_.p-password]:w-full [&_.p-password_input]:w-full"
+          labelClass={authLabelClass}
+        />
       </div>
-    </div>
+
+      <div className="flex justify-end items-center text-[12px] pt-3 w-full">
+        <button
+          type="button"
+          className="text-[#09BF64] font-semibold ml-1 hover:underline"
+          onClick={() => navigate("/forgot-password", { state: { email } })}
+        >
+          Forgot Password?
+        </button>
+      </div>
+
+      <div className="flex pt-3 w-full">
+        <button type="submit" disabled={busy} className={authButtonClass}>
+          {busy && <i className="pi pi-spin pi-spinner" />}
+          Login
+        </button>
+      </div>
+
+      <p className="text-[12px] text-[#8E8E9C] pt-4 text-center">
+        Accounts are created by HR. New here? Use <span className="font-semibold">Forgot Password</span> with your work email to activate your account.
+      </p>
+    </AuthShell>
   );
 }

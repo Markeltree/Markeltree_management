@@ -95,7 +95,7 @@ const UserRoles = () => {
           {paginatedData.map((item) => (
             <tr
               key={item.id}
-              className="text-[14px] text-[#666666] dark:text-[#F2F2FE]"
+              className="text-[14px] text-[#666666] dark:text-[#EFFBF3]"
             >
               <td className="p-4">
                 <input
@@ -157,11 +157,11 @@ const UserRoles = () => {
           >
             <path
               d="M10.458 10.6797L11.2288 9.90889L8.72503 7.39969L11.2288 4.89049L10.458 4.11969L7.17796 7.39969L10.458 10.6797Z"
-              fill="#151D48"
+              fill="#0F2418"
             />
             <path
               d="M6.85444 10.6797L7.62524 9.90889L5.12151 7.39969L7.62524 4.89049L6.85444 4.11969L3.57444 7.39969L6.85444 10.6797Z"
-              fill="#151D48"
+              fill="#0F2418"
             />
           </svg>
         </button>
@@ -179,7 +179,7 @@ const UserRoles = () => {
           >
             <path
               d="M8.98872 10.6797L9.75952 9.90889L7.25579 7.39969L9.75952 4.89049L8.98872 4.11969L5.70872 7.39969L8.98872 10.6797Z"
-              fill="#151D48"
+              fill="#0F2418"
             />
           </svg>
         </button>
@@ -190,7 +190,7 @@ const UserRoles = () => {
             onClick={() => setCurrentPage(i + 1)}
             className={`rounded-[100px] border border-[#F5F5F5] dark:text-white px-5 py-3 ${
               currentPage === i + 1
-                ? "bg-[#5D5FEF] text-white"
+                ? "bg-[#09BF64] text-white"
                 : "rounded-[26.24px] border border-[#F5F5F5] px-5 py-3"
             }`}
           >
@@ -212,7 +212,7 @@ const UserRoles = () => {
           >
             <path
               d="M5.83086 4.11914L5.06006 4.88994L7.56379 7.39914L5.06006 9.90834L5.83086 10.6791L9.11086 7.39914L5.83086 4.11914Z"
-              fill="#151D48"
+              fill="#0F2418"
             />
           </svg>
         </button>
@@ -232,11 +232,11 @@ const UserRoles = () => {
           >
             <path
               d="M3.54351 4.11914L2.77271 4.88994L5.27644 7.39914L2.77271 9.90834L3.54351 10.6791L6.8235 7.39914L3.54351 4.11914Z"
-              fill="#151D48"
+              fill="#0F2418"
             />
             <path
               d="M7.14702 4.11914L6.37622 4.88994L8.87995 7.39914L6.37622 9.90834L7.14702 10.6791L10.427 7.39914L7.14702 4.11914Z"
-              fill="#151D48"
+              fill="#0F2418"
             />
           </svg>
         </button>

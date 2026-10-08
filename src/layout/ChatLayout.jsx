@@ -39,7 +39,7 @@ export default function ChatLayout() {
         </div>
 
         {/* Chat Content - Full height without topbar/footer */}
-        <div className="flex-1 bg-gray-50 dark:bg-[#141414] overflow-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="flex-1 bg-gray-50 dark:bg-[#141414] overflow-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}

@@ -93,7 +93,7 @@ export default function ShippingModal({ closeModal }) {
           .map((_, index) => (
             <div
               key={index}
-              className="flex items-center p-4 rounded-lg border border-[#A9A9CD] bg-white dark:bg-[#0D0D0D] h-[64px] gap-3"
+              className="flex items-center p-4 rounded-lg border border-[#A9C2B3] bg-white dark:bg-[#0D0D0D] h-[64px] gap-3"
             >
               <Skeleton
                 shape="circle"
@@ -155,10 +155,10 @@ export default function ShippingModal({ closeModal }) {
             icon="fe:arrow-left"
             width="18px"
             height="18px"
-            className="text-[#151D48] dark:text-[#F2F2FE]"
+            className="text-[#0F2418] dark:text-[#EFFBF3]"
           />
         </button>
-        <div className=" text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+        <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
           Shipping
         </div>
       </div>
@@ -169,8 +169,8 @@ export default function ShippingModal({ closeModal }) {
           key={option.id}
           className={`flex items-center p-4 rounded-lg border cursor-pointer transition-all h-[64px] ${
             selectedShipping === option.id
-              ? "border-[#5D5FEF] bg-[#F4F4FF] dark:bg-[#0D0D0D]"
-              : "border-[#A9A9CD] bg-white dark:border-[#A9A9CD] dark:bg-[#0D0D0D]"
+              ? "border-[#09BF64] bg-[#F4F4FF] dark:bg-[#0D0D0D]"
+              : "border-[#A9C2B3] bg-white dark:border-[#A9C2B3] dark:bg-[#0D0D0D]"
           }`}
           onClick={() => setSelectedShipping(option.id)}
         >
@@ -179,7 +179,7 @@ export default function ShippingModal({ closeModal }) {
             name="shipping"
             checked={selectedShipping === option.id}
             onChange={() => setSelectedShipping(option.id)}
-            className="accent-[#5D5FEF] mr-3"
+            className="accent-[#09BF64] mr-3"
           />
           <img
             src={option.icon}
@@ -187,7 +187,7 @@ export default function ShippingModal({ closeModal }) {
             className="w-8 h-8 mr-3 object-contain"
           />
           <div className="flex-1">
-            <div className="font-medium text-[14px] text-[#131330] dark:text-[#F2F2FE]">
+            <div className="font-medium text-[14px] text-[#0E1A12] dark:text-[#EFFBF3]">
               {option.label}
             </div>
             <div
@@ -204,7 +204,7 @@ export default function ShippingModal({ closeModal }) {
       <div className="flex flex-col gap-2">
         <label
           htmlFor="priority"
-          className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+          className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
         >
           Order Priority
         </label>
@@ -215,7 +215,7 @@ export default function ShippingModal({ closeModal }) {
           onChange={(e) => setOrderPriority(e.value)}
           placeholder="Select Order priority"
           className={clsx(
-            "text-[14px] dark:!text-[#A9A9CD] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+            "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           )}
           pt={{
             panel: {
@@ -230,7 +230,7 @@ export default function ShippingModal({ closeModal }) {
       <ActionButton
         label="Next"
         labelClass="font-normal text-[12px] md:text-[16px]"
-        buttonClass="text-[16px] h-[48px] w-full bg-[#5D5FEF] dark:bg-[#7476F1] text-white dark:text-black focus:outline-none focus:ring-0"
+        buttonClass="text-[16px] h-[48px] w-full bg-[#09BF64] dark:bg-[#81D959] text-white dark:text-black focus:outline-none focus:ring-0"
         onClick={handleNext}
       />
     </div>

@@ -114,7 +114,7 @@ export default function PODetailsModal({ closeModal }) {
         </div>
 
         {/* Table Headers */}
-        <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           <div className="min-w-[700px]">
             <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-2 px-4 pt-3 pb-2">
               {Array(7)
@@ -135,7 +135,7 @@ export default function PODetailsModal({ closeModal }) {
               .map((_, idx) => (
                 <div
                   key={idx}
-                  className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-[#A9A9CD40]"
+                  className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-[#A9C2B340]"
                 >
                   {Array(7)
                     .fill(0)
@@ -153,7 +153,7 @@ export default function PODetailsModal({ closeModal }) {
         </div>
 
         {/* Summary Footer */}
-        <div className="bg-[#F2F2FE] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-2">
+        <div className="bg-[#EFFBF3] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-2">
           {Array(3)
             .fill(0)
             .map((_, idx) => (
@@ -201,7 +201,7 @@ export default function PODetailsModal({ closeModal }) {
     <div className="space-y-3">
       {/* Header */}
       <div className="flex flex-row justify-between w-full">
-        <div className=" text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+        <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
           PO Details {"  "} #3561
         </div>
         <div className="mr-3">
@@ -220,9 +220,9 @@ export default function PODetailsModal({ closeModal }) {
       </div>
 
       {/* Table Headers */}
-      <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <div className="min-w-[700px]">
-          <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] text-[11px] font-normal text-[#33333380] dark:text-[#CFCFEC] px-4 pt-3 pb-2 rounded-lg">
+          <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] text-[11px] font-normal text-[#33333380] dark:text-[#CDEEDB] px-4 pt-3 pb-2 rounded-lg">
             <div className="text-left">Product Name</div>
             <div className="text-center">Quantity(Carton)</div>
             <div className="text-center">Per Pallet Unit Quantity</div>
@@ -237,44 +237,44 @@ export default function PODetailsModal({ closeModal }) {
           {poDetails.map((product, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-[#A9A9CD40] dark:border-[#A9A9CD] text-sm"
+              className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-[#A9C2B340] dark:border-[#A9C2B3] text-sm"
             >
               {/* Product Info */}
               <div className="flex flex-col gap-2 items-start">
                 <div className="flex flex-row gap-1 whitespace-nowrap">
-                  <div className="font-medium text-[12px] text-[#666666] dark:text-[#F2F2FE] truncate">
+                  <div className="font-medium text-[12px] text-[#666666] dark:text-[#EFFBF3] truncate">
                     {product.productName}
                   </div>
                 </div>
               </div>
 
               {/* Pallet */}
-              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#F2F2FE]">
+              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#EFFBF3]">
                 {product.pallets}
               </div>
 
               {/* Catons */}
-              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#F2F2FE]">
+              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#EFFBF3]">
                 {product.perPalletUnitQuantity}
               </div>
 
               {/* Manufacturer */}
-              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#F2F2FE]">
+              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#EFFBF3]">
                 {product.order}
               </div>
 
               {/* Price */}
-              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#F2F2FE]">
+              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#EFFBF3]">
                 {product.price}
               </div>
 
               {/* discount */}
-              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#F2F2FE]">
+              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#EFFBF3]">
                 {product.discount}
               </div>
 
               {/* total */}
-              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#F2F2FE]">
+              <div className="text-center font-medium text-[12px] text-[#666666] dark:text-[#EFFBF3]">
                 {product.total}
               </div>
             </div>
@@ -283,29 +283,29 @@ export default function PODetailsModal({ closeModal }) {
       </div>
 
       {/* Summary Footer */}
-      <div className="bg-[#F2F2FE] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-2 mt-2">
+      <div className="bg-[#EFFBF3] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-2 mt-2">
         <div className="flex justify-between">
-          <span className="text-[#737791] text-[15px] dark:text-[#737791]">
+          <span className="text-[#6F7C74] text-[15px] dark:text-[#6F7C74]">
             Total Pallets
           </span>
-          <span className="text-[#151D48] text-[15px] dark:text-[#B7BFEA]">
+          <span className="text-[#0F2418] text-[15px] dark:text-[#B5E6C9]">
             23
           </span>
         </div>
         <div className="flex justify-between">
-          <span className="text-[#737791] text-[15px] dark:text-[#737791]">
+          <span className="text-[#6F7C74] text-[15px] dark:text-[#6F7C74]">
             Total Price (€)
           </span>
-          <span className="text-[#151D48] text-[15px] dark:text-[#B7BFEA]">
+          <span className="text-[#0F2418] text-[15px] dark:text-[#B5E6C9]">
             €1.00
           </span>
         </div>
 
         <div className="flex justify-between">
-          <span className="text-[#737791] text-[15px] dark:text-[#737791]">
+          <span className="text-[#6F7C74] text-[15px] dark:text-[#6F7C74]">
             Total Price (£)
           </span>
-          <span className="text-[#151D48] text-[15px] dark:text-[#B7BFEA]">
+          <span className="text-[#0F2418] text-[15px] dark:text-[#B5E6C9]">
             £1.00
           </span>
         </div>
@@ -316,7 +316,7 @@ export default function PODetailsModal({ closeModal }) {
         <ActionButton
           label="Add More Products to PO"
           labelClass="font-normal text-[12px]"
-          buttonClass="flex items-center justify-center gap-1 text-[12px] h-[34px] px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[12px] h-[34px] px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
         />
       </div>
 
@@ -325,13 +325,13 @@ export default function PODetailsModal({ closeModal }) {
         <ActionButton
           label="Back"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-black border border-[#5D5FEF] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-black border border-[#09BF64] focus:outline-none focus:ring-0"
           onClick={handleBack}
         />
         <ActionButton
           label="Continue"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
           onClick={handleContinue}
         />
       </div>

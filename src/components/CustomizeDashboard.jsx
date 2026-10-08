@@ -88,7 +88,7 @@ export default function CustomizeDashboard({
         }
         iconPos="left"
         labelClass="font-normal md:font-bold"
-        buttonClass="flex items-center justify-center gap-2 text-[7px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 sm:px-3 md:px-4 bg-[#5D5FEF] text-white dark:bg-[#5D5FEF] dark:text-black border border-[#5D5FEF] focus:outline-none focus:ring-0"
+        buttonClass="flex items-center justify-center gap-2 text-[7px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 sm:px-3 md:px-4 bg-[#09BF64] text-white dark:bg-[#09BF64] dark:text-black border border-[#09BF64] focus:outline-none focus:ring-0"
         onClick={() => setOpen(!open)}
       />
 
@@ -97,7 +97,7 @@ export default function CustomizeDashboard({
         <div className="absolute right-0 mt-2 w-72 bg-white dark:bg-[#121212] rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 z-50 p-4">
           {/* Header with title + cross */}
           <div className="flex justify-between items-center mb-3">
-            <h3 className="text-sm font-bold text-[#151D48] dark:text-[#B7BFEA]">
+            <h3 className="text-sm font-bold text-[#0F2418] dark:text-[#B5E6C9]">
               Remove/Add widgets
             </h3>
             <button onClick={() => setOpen(false)}>
@@ -108,21 +108,21 @@ export default function CustomizeDashboard({
             </button>
           </div>
 
-          <div className="max-h-64 overflow-y-auto pr-2 space-y-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+          <div className="max-h-64 overflow-y-auto pr-2 space-y-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
             {widgetOptions.map((option, idx) => {
               const checked = tempSelection.includes(option);
               return (
                 <label
                   key={idx}
-                  className="flex items-center gap-2 cursor-pointer text-[12px] text-[#8E8E9C] dark:text-[#F2F2FE]"
+                  className="flex items-center gap-2 cursor-pointer text-[12px] text-[#8E8E9C] dark:text-[#EFFBF3]"
                   onClick={() => toggleOption(option)}
                 >
                   <span
                     className={`relative w-4 h-4 border border-gray-400 rounded-sm mr-2 flex items-center justify-center
                       ${
                         checked
-                          ? "bg-[#5D5FEF] border-[#5D5FEF]"
-                          : "dark:bg-black dark:border-[#A9A9CD]"
+                          ? "bg-[#09BF64] border-[#09BF64]"
+                          : "dark:bg-black dark:border-[#A9C2B3]"
                       }`}
                   >
                     {checked && (
@@ -151,13 +151,13 @@ export default function CustomizeDashboard({
           <div className="flex justify-between items-center gap-3 mt-4">
             <button
               onClick={resetSelection}
-              className="w-1/2 py-2 rounded-lg border border-[#5D5FEF] text-[#5D5FEF] font-medium text-sm hover:bg-[#5D5FEF]/10"
+              className="w-1/2 py-2 rounded-lg border border-[#09BF64] text-[#09BF64] font-medium text-sm hover:bg-[#09BF64]/10"
             >
               Reset
             </button>
             <button
               onClick={saveSelection}
-              className="w-1/2 py-2 rounded-lg bg-[#5D5FEF] text-white font-medium text-sm hover:bg-[#4b4cd1]"
+              className="w-1/2 py-2 rounded-lg bg-[#09BF64] text-white font-medium text-sm hover:bg-[#4b4cd1]"
             >
               Save
             </button>

@@ -114,10 +114,10 @@ export default function DateAndTimeModal({ closeModal }) {
             icon="fe:arrow-left"
             width="18px"
             height="18px"
-            className="text-[#151D48] dark:text-[#F2F2FE]"
+            className="text-[#0F2418] dark:text-[#EFFBF3]"
           />
         </button>
-        <div className=" text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+        <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
           Date & Time
         </div>
       </div>
@@ -131,7 +131,7 @@ export default function DateAndTimeModal({ closeModal }) {
           />
         </div>
         <div className="flex flex-col gap-1 w-full">
-          <label className="block text-[12px] text-[#737791] dark:text-[#A9A9CD]">
+          <label className="block text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
             Select Time
           </label>
           <TimePicker value={time} onChange={setTime} />
@@ -142,7 +142,7 @@ export default function DateAndTimeModal({ closeModal }) {
       <div className="flex flex-col gap-1 mb-4 pl-1">
         <label
           htmlFor="orderNotes"
-          className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+          className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
         >
           Order Notes(Optional)
         </label>
@@ -152,7 +152,7 @@ export default function DateAndTimeModal({ closeModal }) {
           rows={4}
           cols={100}
           placeholder="Add any specific notes or instructions related to the order."
-          className="h-[70px] pt-1 pl-3 pr-3 text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+          className="h-[70px] pt-1 pl-3 pr-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
         />
       </div>
 
@@ -161,7 +161,7 @@ export default function DateAndTimeModal({ closeModal }) {
         <ActionButton
           label="Next"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="text-[16px] h-[48px] w-full bg-[#5D5FEF] dark:bg-[#7476F1] text-white dark:text-black focus:outline-none focus:ring-0"
+          buttonClass="text-[16px] h-[48px] w-full bg-[#09BF64] dark:bg-[#81D959] text-white dark:text-black focus:outline-none focus:ring-0"
           onClick={handleNext}
         />
       </div>

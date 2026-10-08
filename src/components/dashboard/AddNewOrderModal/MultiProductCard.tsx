@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const isOutOfStock = stock === 0;
 
   return (
-    <div className="bg-[#F2F2FE99] border rounded-xl shadow-sm p-4 w-full">
+    <div className="bg-[#EFFBF399] border rounded-xl shadow-sm p-4 w-full">
 
 
 
@@ -117,7 +117,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
               : isSelected
               ? 'bg-white text-blue-600 border border-blue-600 hover:bg-blue-50'
-              : 'bg-[#5D5FEF] text-white hover:bg-blue-600'
+              : 'bg-[#09BF64] text-white hover:bg-blue-600'
           }`}
         >
           {isSelected ? 'Remove from Order' : 'Add to Order'}

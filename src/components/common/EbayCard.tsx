@@ -36,7 +36,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
       </h5>
       <a
         href={linkHref}
-        className="inline-flex font-medium items-center text-[#5D5FEF] text-[10px] hover:underline"
+        className="inline-flex font-medium items-center text-[#09BF64] text-[10px] hover:underline"
       >
         {linkText}
         <svg

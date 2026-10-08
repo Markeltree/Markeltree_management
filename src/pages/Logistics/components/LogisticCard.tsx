@@ -19,16 +19,16 @@ const LogisticCard = ({ para, value, progress, Icon, showProgress = true, custom
       <div className="mt-2">
         {showProgress ? (
           <>
-            <p className="text-[8px] text-[#A9A9CD]">{progress}% Delivered</p>
+            <p className="text-[8px] text-[#A9C2B3]">{progress}% Delivered</p>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div
-                className="bg-[#5D5FEF] h-2 rounded-full transition-all duration-300"
+                className="bg-[#09BF64] h-2 rounded-full transition-all duration-300"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>
           </>
         ) : (
-          <p className="text-[8px] font-regular text-[#A9A9CD]"><span className='text-green-600'>{green}</span>{customText}</p>
+          <p className="text-[8px] font-regular text-[#A9C2B3]"><span className='text-green-600'>{green}</span>{customText}</p>
         )}
       </div>
     </div>

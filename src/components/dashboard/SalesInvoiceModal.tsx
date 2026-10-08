@@ -25,9 +25,9 @@ const SalesInvoiceModal = () => {
             Sales Invoice
           </h4>
          <div className="flex flex-col">
-             <span className="invoice-text">CFR Management service</span>
-          <span className="invoice-text">CFR Management service</span>
-          <span className="invoice-text">CFR Management service</span>
+             <span className="invoice-text">Markeltree</span>
+          <span className="invoice-text">Markeltree</span>
+          <span className="invoice-text">Markeltree</span>
          </div>
         </div>
          <div>
@@ -35,9 +35,9 @@ const SalesInvoiceModal = () => {
             Sales Invoice
           </h4>
           <div className="flex flex-col">
-             <span className="invoice-text">CFR Management service</span>
-          <span className="invoice-text">CFR Management service</span>
-          <span className="invoice-text">CFR Management service</span>
+             <span className="invoice-text">Markeltree</span>
+          <span className="invoice-text">Markeltree</span>
+          <span className="invoice-text">Markeltree</span>
          </div>
         </div>
       </div>

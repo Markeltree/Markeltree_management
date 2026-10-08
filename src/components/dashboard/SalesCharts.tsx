@@ -61,22 +61,22 @@ const SalesTrendChart = ({
           
 
           <div className="flex flex-col items-start md:w-1/3">
-        {/* <h2 className="text-2xl font-extrabold text-[#23235F] mb-3">Sales Trends</h2> */}
+        {/* <h2 className="text-2xl font-extrabold text-[#144A2A] mb-3">Sales Trends</h2> */}
         
         {/* Legend */}
         {showLegend && (
           <div className="grid items-center gap-6 border-l-2 border-gray-200 pl-6">
             <div className="flex items-center gap-2">
               <span className="inline-block w-3 h-3 rounded-full bg-[#22C55E]" />
-              <span className="text-[#23235F] text-sm">High</span>
+              <span className="text-[#144A2A] text-sm">High</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-block w-3 h-3 rounded-full bg-[#FFD600]" />
-              <span className="text-[#23235F] text-sm">Medium</span>
+              <span className="text-[#144A2A] text-sm">Medium</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-block w-3 h-3 rounded-full bg-[#FF7171]" />
-              <span className="text-[#23235F] text-sm">Low</span>
+              <span className="text-[#144A2A] text-sm">Low</span>
             </div>
           </div>
         )}
@@ -84,10 +84,10 @@ const SalesTrendChart = ({
           </div>
           <div className='flex'>
             <div className="flex justify-end gap-4 mb-4">
-          <button className="px-6 py-2 rounded-lg border border-[#5D5FEF] text-[#5D5FEF] font-semibold bg-white hover:bg-[#f4f4ff] transition flex items-center gap-2">
+          <button className="px-6 py-2 rounded-lg border border-[#09BF64] text-[#09BF64] font-semibold bg-white hover:bg-[#f4f4ff] transition flex items-center gap-2">
             Sales Trends
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-              <path d="M8 10l4 4 4-4" stroke="#5D5FEF" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M8 10l4 4 4-4" stroke="#09BF64" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
           <button className="px-6 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold shadow hover:brightness-110 flex items-center gap-2">
@@ -159,7 +159,7 @@ const SalesTrendChart = ({
                   />
                   {/* Value label shown for hovered bar with a popover style */}
                   {showLabel && (
-                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 rounded-xl bg-white shadow text-[#23235F] font-bold text-sm z-10">
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 rounded-xl bg-white shadow text-[#144A2A] font-bold text-sm z-10">
                       {value}%
                     </span>
                   )}

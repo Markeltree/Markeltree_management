@@ -209,9 +209,9 @@ export default function AddManufacturerModal({
                     placeholder="Enter manufacturer name"
                     value={manufacturerName}
                     onChange={(e) => setManufacturerName(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                   />
                 </div>
                 <div className="flex flex-col w-full gap-1">
@@ -222,9 +222,9 @@ export default function AddManufacturerModal({
                     placeholder="Email or mobile number"
                     value={emailAdress}
                     onChange={(e) => setEmailAdress(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                   />
                 </div>
               </div>
@@ -239,9 +239,9 @@ export default function AddManufacturerModal({
                     placeholder="Enter customer name"
                     value={mobileNumber}
                     onChange={(e) => setMobileNumber(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                   />
                 </div>
                 <div className="flex flex-col w-full gap-1">
@@ -252,9 +252,9 @@ export default function AddManufacturerModal({
                     placeholder="Contact person name"
                     value={contactPerson}
                     onChange={(e) => setContactPerson(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                   />
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default function AddManufacturerModal({
                 <div className="flex flex-col gap-2 pl-1 w-full">
                   <label
                     htmlFor="paymentTerm"
-                    className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                   >
                     Payment Term
                   </label>
@@ -275,7 +275,7 @@ export default function AddManufacturerModal({
                     onChange={(e) => setPaymentTerm(e.value)}
                     placeholder="Select"
                     className={clsx(
-                      "text-[14px] dark:!text-[#A9A9CD] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -289,7 +289,7 @@ export default function AddManufacturerModal({
                 <div className="flex flex-col gap-2 pl-1 w-full">
                   <label
                     htmlFor="bankTransfer"
-                    className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                   >
                     Bank Transfer
                   </label>
@@ -300,7 +300,7 @@ export default function AddManufacturerModal({
                     onChange={(e) => setBankTransfer(e.value)}
                     placeholder="Select"
                     className={clsx(
-                      "text-[14px] dark:!text-[#A9A9CD] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -314,7 +314,7 @@ export default function AddManufacturerModal({
                 <div className="flex flex-col gap-2 pl-1 w-full">
                   <label
                     htmlFor="currency"
-                    className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                   >
                     Currency
                   </label>
@@ -325,7 +325,7 @@ export default function AddManufacturerModal({
                     onChange={(e) => setCurrency(e.value)}
                     placeholder="Select"
                     className={clsx(
-                      "text-[14px] dark:!text-[#A9A9CD] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -341,7 +341,7 @@ export default function AddManufacturerModal({
               <div className="flex flex-col gap-1 mb-4 pl-1">
                 <label
                   htmlFor="address"
-                  className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+                  className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
                 >
                   Address
                 </label>
@@ -351,7 +351,7 @@ export default function AddManufacturerModal({
                   onChange={(e) => setAddress(e.target.value)}
                   rows={4}
                   cols={100}
-                  className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                  className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                 />
               </div>
 
@@ -361,7 +361,7 @@ export default function AddManufacturerModal({
                   <ActionButton
                     label="Cancel"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                     onClick={closeModal}
                   />
                 </div>
@@ -369,7 +369,7 @@ export default function AddManufacturerModal({
                   <ActionButton
                     label="Save"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
                     onClick={handleSave}
                   />
                 </div>
@@ -470,7 +470,7 @@ export default function AddManufacturerModal({
                   <ActionButton
                     label="Cancel"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                     onClick={closeModal}
                   />
                 </div>
@@ -478,7 +478,7 @@ export default function AddManufacturerModal({
                   <ActionButton
                     label="Preview"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
                     onClick={handlePreview}
                   />
                 </div>
@@ -495,11 +495,11 @@ export default function AddManufacturerModal({
   return (
     <div className="flex flex-col w-full">
       <div>
-        <h1 className="text-[20px] text-[#151D48] dark:text-[#F2F2FE] font-extrabold">
+        <h1 className="text-[20px] text-[#0F2418] dark:text-[#EFFBF3] font-extrabold">
           Add Manufacturer
         </h1>
       </div>
-      <div className="flex flex-col w-full max-h-[80vh] overflow-y-auto px-3 mt-4 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full max-h-[80vh] overflow-y-auto px-3 mt-4 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <SimpleTabView
           activeIndex={activeTabIndex}
           onTabChange={setActiveTabIndex}
@@ -523,9 +523,9 @@ export default function AddManufacturerModal({
           ]}
           renderItem={renderItem}
           tabLabelClass="text-[12px] lg:text-[14px] font-normal text-center w-full -mt-2"
-          activeTabClass="border-b-[2px] border-[#5D5FEF] text-[#151D48] dark:text-[#F2F2FE] font-medium"
-          inactiveTabClass="text-[#151D48] dark:text-[#EEF1FF]"
-          tabHeaderClass="flex w-full border-b border-[#5D5FEF] mt-2"
+          activeTabClass="border-b-[2px] border-[#09BF64] text-[#0F2418] dark:text-[#EFFBF3] font-medium"
+          inactiveTabClass="text-[#0F2418] dark:text-[#EBF9F0]"
+          tabHeaderClass="flex w-full border-b border-[#09BF64] mt-2"
           contentContainerClass="mt-4 w-full"
           panelClass=""
         />

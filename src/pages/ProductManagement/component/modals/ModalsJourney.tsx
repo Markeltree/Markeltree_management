@@ -93,7 +93,7 @@ export default function ModalsJourney() {
         )}
         {step < labelArray.length - 1 && (
           <Button
-            className="w-full bg-[#5D5FEF] text-white mx-5 my-1"
+            className="w-full bg-[#09BF64] text-white mx-5 my-1"
             size="sm"
             onClick={handleNext}
           >
@@ -102,7 +102,7 @@ export default function ModalsJourney() {
         )}
         {step === labelArray.length - 1 && (
           <Button
-            className="w-full bg-[#5D5FEF] text-white mx-5 my-1"
+            className="w-full bg-[#09BF64] text-white mx-5 my-1"
             size="sm"
             onClick={handleSave}
           >
@@ -129,8 +129,8 @@ export default function ModalsJourney() {
             onClick={() => setActiveTab("Tab1")}
             className={`px-4 py-2 ${
               activeTab === "Tab1"
-                ? "text-[#151D48]/80 border-b-2 border-[#5D5FEF]"
-                : "text-[#151D48]/60"
+                ? "text-[#0F2418]/80 border-b-2 border-[#09BF64]"
+                : "text-[#0F2418]/60"
             }`}
           >
             Update Manually
@@ -139,8 +139,8 @@ export default function ModalsJourney() {
             onClick={() => setActiveTab("Tab2")}
             className={`px-4 py-2 ${
               activeTab === "Tab2"
-                ? "text-[#151D48]/80 border-b-2 border-[#5D5FEF]"
-                : "text-[#151D48]/60"
+                ? "text-[#0F2418]/80 border-b-2 border-[#09BF64]"
+                : "text-[#0F2418]/60"
             }`}
           >
             Upload File
@@ -153,7 +153,7 @@ export default function ModalsJourney() {
               <HeadingOne fontSize="text-[20px]" text="Update Inventory" />
               <div className="flex flex-col gap-2 sm:flex-row">
                 <OutlineBtn
-                  className="border-[1px] border-[#555555] text-[#555555] hover:bg-[#5D5FEF] hover:text-black"
+                  className="border-[1px] border-[#555555] text-[#555555] hover:bg-[#09BF64] hover:text-black"
                   BtnName="Add new Brand"
                 />
                 <OutlineBtn
@@ -167,13 +167,13 @@ export default function ModalsJourney() {
               <Button
                 variant="outline"
                 onClick={() => setIsModalOpen(false)}
-                className="border-[1px] w-full border-[#5D5FEF] hover:bg-[#5D5FEF] hover:text-white"
+                className="border-[1px] w-full border-[#09BF64] hover:bg-[#09BF64] hover:text-white"
               >
                 Cancel
               </Button>
               <Button
                 variant="primary"
-                className="border-[1px] w-full border-[#5D5FEF] bg-[#5D5FEF] text-white hover:bg-white hover:text-[#5D5FEF]"
+                className="border-[1px] w-full border-[#09BF64] bg-[#09BF64] text-white hover:bg-white hover:text-[#09BF64]"
               >
                 Save
               </Button>
@@ -189,7 +189,7 @@ export default function ModalsJourney() {
               <Button
                 variant="outline"
                 onClick={() => setIsModalOpen(false)}
-                className="border-[1px] w-full border-[#5D5FEF] hover:bg-[#5D5FEF] hover:text-white"
+                className="border-[1px] w-full border-[#09BF64] hover:bg-[#09BF64] hover:text-white"
               >
                 Cancel
               </Button>
@@ -199,7 +199,7 @@ export default function ModalsJourney() {
                   setIsModalOpen(false);
                   setShowConfirmationModal(true);
                 }}
-                className="border-[1px] w-full border-[#5D5FEF] bg-[#5D5FEF] text-white hover:bg-white hover:text-[#5D5FEF]"
+                className="border-[1px] w-full border-[#09BF64] bg-[#09BF64] text-white hover:bg-white hover:text-[#09BF64]"
               >
                 Save
               </Button>
@@ -212,7 +212,7 @@ export default function ModalsJourney() {
         <ColorFull
           text="Add Product"
           icon={FiPlus}
-          bgColor="bg-[#5D5FEF]"
+          bgColor="bg-[#09BF64]"
           textColor="text-white"
           onClick={() => setIsModalOpen("inventory")}
         />

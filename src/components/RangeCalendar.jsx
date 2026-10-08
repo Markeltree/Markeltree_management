@@ -88,11 +88,11 @@ export default function RangeCalendar({
           "w-[30px] h-[30px] flex items-center justify-center rounded-full text-[12px] leading-none cursor-pointer font-semibold";
         const selected =
           isSelectedStart || isSelectedEnd
-            ? "bg-[#5D5FEF] text-white"
+            ? "bg-[#09BF64] text-white"
             : isInRange
-            ? "bg-[#5D5FEF]/70 text-white"
+            ? "bg-[#09BF64]/70 text-white"
             : isSameMonth(day, monthStart)
-            ? "text-[#293050CC] dark:text-[#F2F2FE]"
+            ? "text-[#293050CC] dark:text-[#EFFBF3]"
             : "text-gray-400";
 
         days.push(
@@ -135,15 +135,15 @@ export default function RangeCalendar({
       <button
         onClick={() => setShow((prev) => !prev)}
         ref={buttonRef}
-        className={`bg-[#5D5FEF]/10 text-[#5D5FEF] border-none overflow-hidden focus:outline-none focus:ring-0 ${buttonStyling}`}
+        className={`bg-[#09BF64]/10 text-[#09BF64] border-none overflow-hidden focus:outline-none focus:ring-0 ${buttonStyling}`}
       >
         <div
           className={`flex items-center justify-center w-full h-full ${gapClasses}`}
         >
           <i
-            className={`${icon} text-[#5D5FEF] text-[9px] xs:text-[10px] sm:text-[11px] md:text-[14px]`}
+            className={`${icon} text-[#09BF64] text-[9px] xs:text-[10px] sm:text-[11px] md:text-[14px]`}
           />
-          <span className={`text-[#5D5FEF] truncate ${labelClass}`}>
+          <span className={`text-[#09BF64] truncate ${labelClass}`}>
             {placeholder}
           </span>
         </div>
@@ -164,8 +164,8 @@ export default function RangeCalendar({
                   onClick={() => handleQuickSelect(item.label, item.range)}
                   className={`text-left px-2 py-[2px] rounded hover:bg-blue-50 dark:hover:bg-blue-900 ${
                     selectedOption === item.label
-                      ? "bg-blue-100 dark:bg-[#5D5FEF] dark:text-[#F2F2FE] text-[#293050CC]"
-                      : "dark:text-[#F2F2FE] text-[#293050CC]"
+                      ? "bg-blue-100 dark:bg-[#09BF64] dark:text-[#EFFBF3] text-[#293050CC]"
+                      : "dark:text-[#EFFBF3] text-[#293050CC]"
                   }`}
                 >
                   {item.label}
@@ -178,8 +178,8 @@ export default function RangeCalendar({
                 }}
                 className={`text-left px-2 py-[2px] rounded hover:bg-blue-50 dark:hover:bg-blue-900 ${
                   selectedOption === "Custom Range"
-                    ? "bg-blue-100 dark:bg-[#5D5FEF] dark:text-[#F2F2FE] text-[#293050CC]"
-                    : "dark:text-[#F2F2FE] text-[#293050CC]"
+                    ? "bg-blue-100 dark:bg-[#09BF64] dark:text-[#EFFBF3] text-[#293050CC]"
+                    : "dark:text-[#EFFBF3] text-[#293050CC]"
                 }`}
               >
                 Custom Range
@@ -188,7 +188,7 @@ export default function RangeCalendar({
 
             <button
               onClick={resetSelection}
-              className="text-left text-[#5D5FEF] hover:text-[#3D3DEF] font-semibold text-[12px] sm:text-[14px] mt-1 px-2 py-2"
+              className="text-left text-[#09BF64] hover:text-[#3D3DEF] font-semibold text-[12px] sm:text-[14px] mt-1 px-2 py-2"
             >
               Reset
             </button>
@@ -200,7 +200,7 @@ export default function RangeCalendar({
           {/* Right Panel - Custom Calendar */}
           <div className="w-full sm:w-[70%] p-2 min-w-[250px] sm:min-w-[280px]">
             {/* Calendar Header */}
-            <div className="flex justify-between items-center mb-2 text-[12px] text-[#293050CC] dark:text-[#F2F2FE] font-semibold">
+            <div className="flex justify-between items-center mb-2 text-[12px] text-[#293050CC] dark:text-[#EFFBF3] font-semibold">
               <span>{format(currentMonth, "MMMM yyyy")}</span>
               <div className="flex gap-1">
                 <button

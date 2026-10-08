@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useModal } from "@/context/ModalContext";
 import { Skeleton, ActionButton } from "@/common/imports";
 
-const INDIGO = "#5D5FEF";
+const INDIGO = "#09BF64";
 
 function Chevron({ open }) {
   return (
@@ -27,8 +27,8 @@ function Chevron({ open }) {
 
 const CHECKBOX_BASE =
   "relative w-4 h-4 border rounded-sm mr-2 flex items-center justify-center cursor-pointer";
-const CHECKED_CLS = "bg-[#5D5FEF] border-[#5D5FEF]";
-const UNCHECKED_CLS = "border-gray-400 dark:bg-black dark:border-[#A9A9CD]";
+const CHECKED_CLS = "bg-[#09BF64] border-[#09BF64]";
+const UNCHECKED_CLS = "border-gray-400 dark:bg-black dark:border-[#A9C2B3]";
 
 const groupsData = [
   {
@@ -211,7 +211,7 @@ export default function ViewPermissionsModal({ closeModal }) {
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <h2 className="text-[18px] font-bold text-[#151D48] dark:text-white">
+        <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-white">
           Permissions
         </h2>
       </div>
@@ -257,7 +257,7 @@ export default function ViewPermissionsModal({ closeModal }) {
         </button>
       </div>
 
-      <div className="max-h-[35vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="max-h-[35vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <div className="space-y-2">
           {groupsData.map((group) => {
             const isOpen = expanded[group.title];
@@ -362,7 +362,7 @@ export default function ViewPermissionsModal({ closeModal }) {
           <ActionButton
             label="Cancel"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
             onClick={handleCancel}
           />
         </div>
@@ -370,7 +370,7 @@ export default function ViewPermissionsModal({ closeModal }) {
           <ActionButton
             label="Save"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
           />
         </div>
       </div>

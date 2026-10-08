@@ -95,14 +95,14 @@ export default function ShareFeedbackModal({ closeModal }) {
 
   return (
     <div className="space-y-3">
-      <h1 className="text-[18px] text-[#151D48] dark:text-[#B7BFEA] font-bold">
+      <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
         Share Feedback
       </h1>
       {/* row 1 */}
       <div className="flex flex-col gap-2">
         <label
           htmlFor="issueTyoe"
-          className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+          className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
         >
           Issue Type
         </label>
@@ -113,7 +113,7 @@ export default function ShareFeedbackModal({ closeModal }) {
           onChange={(e) => setIssueType(e.value)}
           placeholder="Select"
           className={clsx(
-            "text-[14px] dark:!text-[#A9A9CD] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+            "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           )}
           pt={{
             panel: {
@@ -133,9 +133,9 @@ export default function ShareFeedbackModal({ closeModal }) {
           placeholder=""
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
-          inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+          inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
           containerClass="flex flex-col gap-1 pl-1 w-full"
-          labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+          labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
         />
       </div>
 
@@ -143,7 +143,7 @@ export default function ShareFeedbackModal({ closeModal }) {
       <div className="flex flex-col gap-1 mb-4 ">
         <label
           htmlFor="note"
-          className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+          className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
         >
           Description
         </label>
@@ -153,7 +153,7 @@ export default function ShareFeedbackModal({ closeModal }) {
           rows={4}
           cols={100}
           placeholder=""
-          className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+          className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
         />
       </div>
 
@@ -163,7 +163,7 @@ export default function ShareFeedbackModal({ closeModal }) {
           <ActionButton
             label="Cancel"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
             onClick={closeModal}
           />
         </div>
@@ -171,7 +171,7 @@ export default function ShareFeedbackModal({ closeModal }) {
           <ActionButton
             label="Submit"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
           />
         </div>
       </div>

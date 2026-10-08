@@ -21,7 +21,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           className="dark:bg-[#2C2C2CAA] rounded"
         />
 
-        <div className="rounded-xl bg-[#F2F2FEAA] dark:bg-[#141414AA] p-6 flex flex-col space-y-3">
+        <div className="rounded-xl bg-[#EFFBF3AA] dark:bg-[#141414AA] p-6 flex flex-col space-y-3">
           {/* Transaction Type */}
           <div className="flex justify-between items-center w-full">
             <Skeleton
@@ -168,14 +168,14 @@ export default function PaymentSummaryModal({ closeModal }) {
 
   return (
     <div className="space-y-3">
-      <h1 className="text-[18px] text-[#151D48] dark:text-[#B7BFEA] font-bold">
+      <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
         Transaction Summary
       </h1>
 
-      <div className="rounded-xl bg-[#F2F2FEAA] dark:bg-[#141414AA] p-6 flex flex-col">
+      <div className="rounded-xl bg-[#EFFBF3AA] dark:bg-[#141414AA] p-6 flex flex-col">
         <div className="flex flex-col gap-3">
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Transaction Type:
             </p>
             <p className="font-medium text-[11px] md:text-[14px] dark:text-[#D4D4D4] text-[#2B2B2B]">
@@ -184,7 +184,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Reference ID:
             </p>
             <p className="font-medium text-[11px] md:text-[14px] dark:text-[#D4D4D4] text-[#2B2B2B]">
@@ -193,7 +193,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Date:
             </p>
             <p className="font-medium text-[11px] md:text-[14px] dark:text-[#D4D4D4] text-[#2B2B2B]">
@@ -202,7 +202,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Category:
             </p>
             <p className="font-medium text-[11px] md:text-[14px] dark:text-[#D4D4D4] text-[#2B2B2B]">
@@ -211,7 +211,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Client/Vendor:
             </p>
             <p className="font-medium text-[11px] md:text-[14px] dark:text-[#D4D4D4] text-[#2B2B2B]">
@@ -220,7 +220,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Payment Method:
             </p>
             <p className="font-medium text-[11px] md:text-[14px] dark:text-[#D4D4D4] text-[#2B2B2B]">
@@ -229,7 +229,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Amount:
             </p>
             <p className="font-medium text-[11px] md:text-[14px] dark:text-[#0CB91D] text-[#0CB91D]">
@@ -238,7 +238,7 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Status:
             </p>
             <p className="font-semibold text-[11px] md:text-[14px] dark:text-[#0CB91D] text-[#0CB91D]">
@@ -247,13 +247,13 @@ export default function PaymentSummaryModal({ closeModal }) {
           </div>
 
           <div className="flex flex-row justify-between w-full text-left gap-1">
-            <p className="text-[#737791] dark:text-[#737791] text-[11px] md:text-[14px] font-normal">
+            <p className="text-[#6F7C74] dark:text-[#6F7C74] text-[11px] md:text-[14px] font-normal">
               Action
             </p>
             <ActionButton
               label="Request Refund"
               labelClass="font-normal text-[11px] lg:text[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm h-[25px] w-[120px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black  focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm h-[25px] w-[120px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black  focus:outline-none focus:ring-0"
             />
           </div>
 
@@ -263,7 +263,7 @@ export default function PaymentSummaryModal({ closeModal }) {
               <ActionButton
                 label="Cancel"
                 labelClass="font-normal text-[12px] md:text-[16px]"
-                buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                 onClick={closeModal}
               />
             </div>
@@ -271,7 +271,7 @@ export default function PaymentSummaryModal({ closeModal }) {
               <ActionButton
                 label="View Associated Invoice"
                 labelClass="font-normal text-[12px] md:text-[16px]"
-                buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
               />
             </div>
           </div>

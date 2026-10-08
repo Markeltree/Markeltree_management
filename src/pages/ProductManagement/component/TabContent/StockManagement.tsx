@@ -26,14 +26,14 @@ const StepButtons = ({ onNext, onBack }) => (
     <Button
       variant="outline"
       onClick={onBack}
-      className="w-full border-[#5D5FEF]"
+      className="w-full border-[#09BF64]"
     >
       Back
     </Button>
     <Button
       variant="primary"
       onClick={onNext}
-      className="w-full bg-[#5D5FEF]"
+      className="w-full bg-[#09BF64]"
     >
       Save & Continue
     </Button>
@@ -65,7 +65,7 @@ const StockManagement = () => {
               <ColorFull
                 text="Add Product"
                 icon={FiPlus}
-                bgColor="bg-[#5D5FEF]"
+                bgColor="bg-[#09BF64]"
                 textColor="text-white"
                 onClick={() => setIsModalOpen(true)}
               />
@@ -91,8 +91,8 @@ const StockManagement = () => {
                 onClick={() => setActiveTab("Tab1")}
                 className={`px-4 py-2 ${
                   activeTab === "Tab1"
-                    ? "text-[#151D48]/80 border-b-2 border-[#5D5FEF]"
-                    : "text-[#151D48]/60"
+                    ? "text-[#0F2418]/80 border-b-2 border-[#09BF64]"
+                    : "text-[#0F2418]/60"
                 }`}
               >
                 Update Manually
@@ -101,8 +101,8 @@ const StockManagement = () => {
                 onClick={() => setActiveTab("Tab2")}
                 className={`px-4 py-2 ${
                   activeTab === "Tab2"
-                    ? "text-[#151D48]/80 border-b-2 border-[#5D5FEF]"
-                    : "text-[#151D48]/60"
+                    ? "text-[#0F2418]/80 border-b-2 border-[#09BF64]"
+                    : "text-[#0F2418]/60"
                 }`}
               >
                 Upload File
@@ -115,7 +115,7 @@ const StockManagement = () => {
                   <HeadingTwo text="Update Inventory" />
                   <div className="flex flex-col gap-2 sm:flex-row">
                     <OutlineBtn
-                      className="border-[1px] border-[#555555] text-[#555555] hover:bg-[#5D5FEF] hover:text-black"
+                      className="border-[1px] border-[#555555] text-[#555555] hover:bg-[#09BF64] hover:text-black"
                       BtnName="Add new Brand"
                     />
                     <OutlineBtn
@@ -177,7 +177,7 @@ const StockManagement = () => {
               <Button
                 variant="outline"
                 onClick={() => setCurrentStep(4)}
-                className="w-full border-[#5D5FEF]"
+                className="w-full border-[#09BF64]"
               >
                 Back
               </Button>
@@ -187,7 +187,7 @@ const StockManagement = () => {
                   setCurrentStep(1);
                   setIsModalOpen(false);
                 }}
-                className="w-full bg-[#5D5FEF]"
+                className="w-full bg-[#09BF64]"
               >
                 Finish
               </Button>

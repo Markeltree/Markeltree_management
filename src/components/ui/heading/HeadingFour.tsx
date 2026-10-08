@@ -7,7 +7,7 @@ type HeadingFourProps = {
 
 const HeadingFour: React.FC<HeadingFourProps> = ({ text, className = "" }) => {
   return (
-    <h4 className={`dark:text-white text-[14px] font-medium text-[#5D5FEF] ${className}`}>
+    <h4 className={`dark:text-white text-[14px] font-medium text-[#09BF64] ${className}`}>
       {text}
     </h4>
   );

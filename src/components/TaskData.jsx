@@ -372,7 +372,7 @@ export default function TaskData() {
             header: "Action",
             body: (rowData) => (
               <button
-                className="w-[110px] h-[28px] flex items-center gap-1 px-3 py-1 bg-[#5D5FEF] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#7476F1]"
+                className="w-[110px] h-[28px] flex items-center gap-1 px-3 py-1 bg-[#09BF64] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#81D959]"
                 onClick={handleViewDetails}
               >
                 <Icon
@@ -433,7 +433,7 @@ export default function TaskData() {
               height="28px"
               className="dark:bg-[#2C2C2CAA]"
               style={{
-                borderBottom: i === activeIndex ? "2px solid #5D5FEF" : "none",
+                borderBottom: i === activeIndex ? "2px solid #09BF64" : "none",
                 marginBottom: "4px",
               }}
             />
@@ -578,7 +578,7 @@ export default function TaskData() {
               {[...Array(rowsPerPage)].map((_, rowIndex) => (
                 <div
                   key={rowIndex}
-                  className="flex border-b border-[#73779126] dark:border-[#73779126] text-[13px] dark:bg-black bg-white whitespace-nowrap"
+                  className="flex border-b border-[#6F7C7426] dark:border-[#6F7C7426] text-[13px] dark:bg-black bg-white whitespace-nowrap"
                   style={{ gap: "8px" }}
                 >
                   {columns.map((col, colIndex) => (
@@ -628,8 +628,8 @@ export default function TaskData() {
             }}
             className={`pb-2 text-[14px] lg:text-[16px] font-medium transition-all ${
               i === activeIndex
-                ? "text-[#5D5FEF] dark:text-[#F2F2FE] border-b-2 border-[#5D5FEF] dark:border-[#7476F1]"
-                : "text-[#151D48] dark:text-[#B7BFEA] hover:text-[#5D5FEF] dark:hover:text-[#F2F2FE]"
+                ? "text-[#09BF64] dark:text-[#EFFBF3] border-b-2 border-[#09BF64] dark:border-[#81D959]"
+                : "text-[#0F2418] dark:text-[#B5E6C9] hover:text-[#09BF64] dark:hover:text-[#EFFBF3]"
             }`}
           >
             {label}
@@ -652,7 +652,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Total Tasks
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       512
                     </h1>
                   </div>
@@ -681,7 +681,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Completed Tasks
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       1,245
                     </h1>
                   </div>
@@ -711,7 +711,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Pending Tasks
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       512
                     </h1>
                   </div>
@@ -741,7 +741,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Overdue Tasks
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       34
                     </h1>
                   </div>
@@ -775,7 +775,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Total Targets
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       512
                     </h1>
                   </div>
@@ -804,7 +804,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Completed Targets
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       1,245
                     </h1>
                   </div>
@@ -834,7 +834,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Pending Targets
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       512
                     </h1>
                   </div>
@@ -864,7 +864,7 @@ export default function TaskData() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[11px] whitespace-nowrap">
                       Overdue Targets
                     </h2>
-                    <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                       34
                     </h1>
                   </div>
@@ -887,10 +887,10 @@ export default function TaskData() {
       <div className="bg-white dark:bg-[#000000] rounded-lg p-4 h-auto">
         <div className="flex flex-col md:flex-row gap-2 items-center w-full">
           <div className="flex flex-col gap-1 w-full">
-            <h2 className="text-[#333333] dark:text-[#F2F2FE] font-bold text-[16px] lg:text-[18px]">
+            <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
               {tabTitles[activeIndex].heading}
             </h2>
-            <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#F2F2FE]">
+            <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
               {tabTitles[activeIndex].subheading}
             </p>
           </div>
@@ -971,13 +971,13 @@ export default function TaskData() {
 
                     return (
                       <div key={field} className="mb-3">
-                        <h4 className="font-semibold text-[12px] text-[#151D48] dark:text-[#F2F2FE] mb-2 capitalize">
+                        <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
                           {field}
                         </h4>
                         {values.map((val) => (
                           <label
                             key={val}
-                            className="flex items-center gap-2 mb-1 text-[12px] text-[#737791CC] dark:text-[#F2F2FECC] cursor-pointer select-none"
+                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
                           >
                             <input
                               type="checkbox"
@@ -987,7 +987,7 @@ export default function TaskData() {
                               onChange={() => toggleTempValue(field, val)}
                               className="hidden peer"
                             />
-                            <span className="w-3.5 h-3.5 rounded border border-[#737791CC] peer-checked:bg-[#5D5FEF] peer-checked:border-[#5D5FEF] relative flex items-center justify-center">
+                            <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
                               <svg
                                 className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                 fill="none"
@@ -1022,7 +1022,7 @@ export default function TaskData() {
                     <ActionButton
                       label="Reset"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                       onClick={() => {
                         setTempFilters({});
                         setFilters({});
@@ -1038,7 +1038,7 @@ export default function TaskData() {
                     <ActionButton
                       label="Apply Filter"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={() => {
                         setFilters(tempFilters); // temp filters ko apply filters me copy karo
                         setDateRange(tempDateRange); // temp date range ko apply date range me copy karo
@@ -1072,7 +1072,7 @@ export default function TaskData() {
               paginator={false}
               className="p-datatable-sm w-full"
               rowClassName={() =>
-                "border-b border-[#73779126] text-[13px] text-[#666666] dark:text-[#F2F2FE] dark:bg-black whitespace-nowrap"
+                "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
               }
             >
               {columns.map((col, idx) => (

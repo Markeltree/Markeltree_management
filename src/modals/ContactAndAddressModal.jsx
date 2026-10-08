@@ -140,35 +140,35 @@ export default function ContactAndAddressModal({ closeModal }) {
             icon="fe:arrow-left"
             width="18px"
             height="18px"
-            className="text-[#151D48] dark:text-[#F2F2FE]"
+            className="text-[#0F2418] dark:text-[#EFFBF3]"
           />
         </button>
-        <div className=" text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+        <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
           Contact & Address
         </div>
       </div>
 
       {/* search bar */}
       <div className="flex flex-row justify-between items-end">
-        <label className="text-[12px] font-normal text-[#737791] dark:text-[#737791]">
+        <label className="text-[12px] font-normal text-[#6F7C74] dark:text-[#6F7C74]">
           Search User or Address
         </label>
       </div>
       <div className="relative flex flex-row items-center justify-between w-full">
         <input
-          className="dark:bg-[#0D0D0D] w-full border border-[#5D5FEF] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#5D5FEF] text-[14px] text-[#737791] dark:text-[#737791] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+          className="dark:bg-[#0D0D0D] w-full border border-[#09BF64] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#09BF64] text-[14px] text-[#6F7C74] dark:text-[#6F7C74] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           placeholder="Search"
           value={search}
           onChange={handleSearch}
         />
         <Icon
           icon="mdi:magnify"
-          className="absolute top-3 right-3 text-[#5D5FEF] text-lg"
+          className="absolute top-3 right-3 text-[#09BF64] text-lg"
         />
       </div>
 
       {/* fields - row 1*/}
-      <div className="flex flex-col w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <div className="flex flex-col lg:flex-row gap-4 mb-4">
           <div className="flex flex-col w-full gap-1">
             <FieldComponent
@@ -178,9 +178,9 @@ export default function ContactAndAddressModal({ closeModal }) {
               placeholder="Enter customer full name"
               value={customerName}
               onChange={(e) => setCustomerName(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
           <div className="flex flex-col w-full gap-1">
@@ -191,9 +191,9 @@ export default function ContactAndAddressModal({ closeModal }) {
               placeholder="Enter customer phone number"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
         </div>
@@ -208,15 +208,15 @@ export default function ContactAndAddressModal({ closeModal }) {
               placeholder="Enter email address"
               value={emailAddress}
               onChange={(e) => setEmailAddress(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
           <div className="flex flex-col w-full gap-1 pl-1">
             <label
               htmlFor="selectCountry"
-              className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             >
               Select Country
             </label>
@@ -227,7 +227,7 @@ export default function ContactAndAddressModal({ closeModal }) {
               onChange={(e) => setCountry(e.value)}
               placeholder="Select your country"
               className={clsx(
-                "text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
               )}
               pt={{
                 panel: {
@@ -249,15 +249,15 @@ export default function ContactAndAddressModal({ closeModal }) {
               placeholder="Your area pin code"
               value={pinCode}
               onChange={(e) => setPinCode(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             />
           </div>
           <div className="flex flex-col w-full gap-1 pl-1">
             <label
               htmlFor="selectCity"
-              className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+              className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
             >
               Select City
             </label>
@@ -268,7 +268,7 @@ export default function ContactAndAddressModal({ closeModal }) {
               onChange={(e) => setCity(e.value)}
               placeholder="Select your city"
               className={clsx(
-                "text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] h-[40px] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
               )}
               pt={{
                 panel: {
@@ -284,7 +284,7 @@ export default function ContactAndAddressModal({ closeModal }) {
         <div className="flex flex-col gap-1 mb-4 pl-1">
           <label
             htmlFor="shippingAddress"
-            className="text-[12px] text-[#737791] dark:text-[#A9A9CD]"
+            className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
           >
             Shipping Address
           </label>
@@ -294,7 +294,7 @@ export default function ContactAndAddressModal({ closeModal }) {
             rows={4}
             cols={100}
             placeholder="Enter full address"
-            className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#73779140] dark:border-[#A9A9CD] rounded-lg dark:text-[#A9A9CD] focus:outline-none focus:ring-1 focus:ring-[#B9B9FB] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+            className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           />
         </div>
 
@@ -303,7 +303,7 @@ export default function ContactAndAddressModal({ closeModal }) {
           <ActionButton
             label="Next"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="text-[16px] h-[48px] w-full bg-[#5D5FEF] dark:bg-[#7476F1] text-white dark:text-black focus:outline-none focus:ring-0"
+            buttonClass="text-[16px] h-[48px] w-full bg-[#09BF64] dark:bg-[#81D959] text-white dark:text-black focus:outline-none focus:ring-0"
             onClick={handleNext}
           />
         </div>

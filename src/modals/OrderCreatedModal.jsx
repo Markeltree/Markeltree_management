@@ -131,12 +131,12 @@ export default function OrderCreatedModal({
 
   return (
     <div className="flex flex-col items-center space-y-3">
-      <div className=" text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+      <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
         {topHeading}
       </div>
       <div className="flex flex-col gap-1 items-center text-center">
         <Icon icon={icon} className={`w-[100px] h-[100px] ${iconClass}`} />
-        <p className="text-[16px] text-[#737791]">{centerText}</p>
+        <p className="text-[16px] text-[#6F7C74]">{centerText}</p>
       </div>
       <div className="flex flex-row w-full justify-between mt-4 gap-4">
         {/* First button (render only if label exists) */}
@@ -146,8 +146,8 @@ export default function OrderCreatedModal({
             labelClass="font-normal text-[11px] md:text-[16px] whitespace-nowrap"
             buttonClass={`flex items-center justify-center gap-1 h-[50px] ${
               hasSecond
-                ? "w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF]"
-                : "w-full px-1 lg:px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none"
+                ? "w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64]"
+                : "w-full px-1 lg:px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none"
             } focus:outline-none focus:ring-0`}
             onClick={handleFirstButtonClick}
           />
@@ -158,7 +158,7 @@ export default function OrderCreatedModal({
           <ActionButton
             label={secondButtonLable}
             labelClass="font-normal text-[11px] md:text-[16px] whitespace-nowrap"
-            buttonClass="flex items-center justify-center gap-1 w-full h-[50px] px-1 lg:px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 w-full h-[50px] px-1 lg:px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
             onClick={handleSecondButtonClick}
           />
         )}

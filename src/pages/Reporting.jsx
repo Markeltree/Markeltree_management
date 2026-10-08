@@ -128,7 +128,7 @@ export default function Reporting() {
           <>
             <div className="flex flex-row justify-between items-center mb-4 gap-2">
               {/* Title (Hidden below lg) */}
-              <h1 className="hidden lg:block text-[14px] font-semibold text-[#5D5FEF] dark:text-[#5D5FEF] whitespace-nowrap">
+              <h1 className="hidden lg:block text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
                 Reporting
               </h1>
 
@@ -163,7 +163,7 @@ export default function Reporting() {
                   iconDark="./refreshIcon.png"
                   iconPos="left"
                   labelClass="font-normal md:font-bold"
-                  buttonClass="flex items-center justify-center gap-2 text-[8px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 md:px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-2 text-[8px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 md:px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                   iconClass="w-[10px] h-[10px] xs:w-[11px] xs:h-[11px] sm:w-[14px] sm:h-[14px] md:w-[16px] md:h-[16px]"
                   onClick={handleRefresh}
                 />
@@ -185,7 +185,7 @@ export default function Reporting() {
                   }
                   iconPos="left"
                   labelClass="font-normal md:font-bold"
-                  buttonClass="flex items-center justify-center gap-2 text-[8px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 md:px-4 bg-[#5D5FEF] text-white dark:bg-[#5D5FEF] dark:text-black border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-2 text-[8px] xs:text-[10px] sm:text-[12px] md:text-sm h-[24px] xs:h-[30px] sm:h-[32px] md:h-[45px] w-auto px-2 md:px-4 bg-[#09BF64] text-white dark:bg-[#09BF64] dark:text-black border border-[#09BF64] focus:outline-none focus:ring-0"
                   onClick={handleGenerateReport}
                 />
               </div>
@@ -206,7 +206,7 @@ export default function Reporting() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Total
                         </h2>
-                        <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                           $1,245
                         </h1>
                       </div>
@@ -250,7 +250,7 @@ export default function Reporting() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Total Sales
                         </h2>
-                        <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                           $512
                         </h1>
                       </div>
@@ -295,7 +295,7 @@ export default function Reporting() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Order Completed
                         </h2>
-                        <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                           34
                         </h1>
                       </div>
@@ -340,7 +340,7 @@ export default function Reporting() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Inventory Turnover
                         </h2>
-                        <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                           65%
                         </h1>
                       </div>
@@ -385,7 +385,7 @@ export default function Reporting() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Pending Shipments
                         </h2>
-                        <h1 className="text-[24px] text-[#151D48] dark:text-[#F2F2FE] font-bold">
+                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
                           92%
                         </h1>
                       </div>

@@ -31,11 +31,11 @@ const TabbedTaskView = () => {
             key={tab.label}
             onClick={() => setActiveTab(tab.label)}
             className={`pb-2 relative ${
-              activeTab === tab.label ? "text-indigo-600 font-semibold border-b-2 border-indigo-600" : "text-gray-500"
+              activeTab === tab.label ? "text-emerald-600 font-semibold border-b-2 border-emerald-600" : "text-gray-500"
             }`}
           >
             {tab.label}
-            <span className="ml-1 text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">
+            <span className="ml-1 text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
               {tab.count.toString().padStart(2, "0")}
             </span>
           </button>

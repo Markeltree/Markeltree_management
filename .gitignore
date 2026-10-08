@@ -1,5 +1,34 @@
-# Logs
-logs
+# ── Dependencies ──
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+
+# ── Build output ──
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+.vite/
+.cache/
+
+# ── Environment & secrets (never commit) ──
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+
+# ── Deploy ──
+.vercel/
+
+# ── Server runtime files ──
+uploads/
+server/uploads/
+
+# ── Logs ──
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +36,26 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ── Tests & coverage ──
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
 
-# Editor directories and files
+# ── Editor ──
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Local AI-assistant settings ──
+.claude/settings.local.json

@@ -8,12 +8,14 @@ import {
 import "../index.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import TooltipPortal from "@/components/TooltipPortal";
+import { useAuth } from "@/context/AuthContext";
+import { useRealtimeContext } from "@/context/RealtimeContext";
+import { useQuery } from "@/components/hr/utils";
+import { usePolling } from "@/hooks/useRealtime";
 
 export default function Sidebar() {
   const menuRef = useRef(null);
   const [selected, setSelected] = useState("dashboard");
-  const [unreadCount, setUnreadCount] = useState(0);
-
   const { collapsed, enableTransition } = useSidebar();
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,145 +24,63 @@ export default function Sidebar() {
     setSelected(getActiveKey(location.pathname));
   }, [location.pathname]);
 
-  // Initialize unread count from localStorage on mount
-  useEffect(() => {
-    const storedCount = localStorage.getItem("unreadNotificationCount");
-    if (storedCount) {
-      setUnreadCount(parseInt(storedCount, 10));
-    }
-  }, []);
+  // Real unread chat count; realtime invalidates it, polling is only the fallback.
+  const { connected } = useRealtimeContext();
+  const chatUnread = useQuery("/chat/unread");
+  const unreadCount = chatUnread.data?.total ?? 0;
+  usePolling(chatUnread.reload, 30_000, !connected);
 
-  // Listen for unread count updates
-  useEffect(() => {
-    const handleUnreadCountUpdate = (e) => {
-      const count = e.detail.count;
-      setUnreadCount(count);
-      // Store in localStorage so it persists across page navigations
-      localStorage.setItem("unreadNotificationCount", count.toString());
-    };
+  const { can, logout } = useAuth();
 
-    window.addEventListener("updateUnreadCount", handleUnreadCountUpdate);
-
-    return () => {
-      window.removeEventListener("updateUnreadCount", handleUnreadCountUpdate);
-    };
-  }, []);
-
-  const menuItems = [
-    {
-      key: "dashboard",
-      label: "Dashboard",
-      icon: <i className="pi pi-home text-xl" />,
-      path: "/dashboard",
-    },
-    {
-      key: "chat",
-      label: "Chat",
-      icon: <i className="pi pi-comments text-xl" />,
-      path: "/chat",
-    },
-    {
-      key: "inventoryManagement",
-      label: "Inventory Management",
-      icon: <i className="pi pi-box text-xl" />,
-      path: "/inventory",
-    },
-    {
-      key: "productManagement",
-      label: "Product Management",
-      icon: <i className="pi pi-tags text-xl" />,
-      path: "/product",
-    },
-    {
-      key: "logistics",
-      label: "Logistics",
-      icon: <i className="pi pi-truck text-xl" />,
-      path: "/logistics",
-    },
-    {
-      key: "orderManagement",
-      label: "Order Management",
-      icon: <i className="pi pi-shopping-cart text-xl" />,
-      path: "/order",
-    },
-    {
-      key: "customer",
-      label: "Customer",
-      icon: <i className="pi pi-users text-xl" />,
-      path: "/customer",
-    },
-    {
-      key: "manufacturer",
-      label: "Manufacturer",
-      icon: <i className="pi pi-building text-xl" />,
-      path: "/manufacturer",
-    },
+  // HR platform modules (FRD §9). `perms` hides entries the user can't use — the API still enforces access.
+  const allMenuItems = [
+    { key: "dashboard", label: "Dashboard", icon: <i className="pi pi-home text-xl" />, path: "/dashboard" },
+    { key: "chat", label: "Chat", icon: <i className="pi pi-comments text-xl" />, path: "/chat" },
+    { key: "employees", label: "Employees", icon: <i className="pi pi-users text-xl" />, path: "/employees" },
+    { key: "attendance", label: "Attendance", icon: <i className="pi pi-clock text-xl" />, path: "/attendance" },
+    { key: "leave", label: "Leave", icon: <i className="pi pi-calendar-minus text-xl" />, path: "/leave" },
+    { key: "task", label: "Tasks", icon: <i className="pi pi-check-square text-xl" />, path: "/task" },
+    { key: "announcements", label: "Announcements", icon: <i className="pi pi-megaphone text-xl" />, path: "/announcements" },
     { separator: true },
     {
-      key: "reporting",
-      label: "Reporting",
+      key: "reports",
+      label: "Reports",
       icon: <i className="pi pi-chart-line text-xl" />,
-      path: "/report",
+      path: "/reports",
+      perms: ["reports.view_all", "reports.view_team", "attendance.view_team", "attendance.view_all", "leave.view_all"],
     },
     {
-      key: "accounts",
-      label: "Accounts",
-      icon: <i className="pi pi-credit-card text-xl" />,
-      path: "/accounts",
+      key: "payroll",
+      label: "Payroll",
+      icon: <i className="pi pi-wallet text-xl" />,
+      path: "/payroll",
+      perms: ["payroll.manage", "payroll.approve"],
     },
     {
-      key: "task",
-      label: "Task",
-      icon: <i className="pi pi-credit-card text-xl" />,
-      path: "/task",
+      key: "admin",
+      label: "Administration",
+      icon: <i className="pi pi-shield text-xl" />,
+      path: "/admin",
+      perms: ["admin.users", "admin.roles", "admin.settings", "admin.audit", "org.manage", "leave.manage_policy", "holidays.manage"],
     },
     { separator: true },
-    {
-      key: "settings",
-      label: "Settings",
-      icon: <i className="pi pi-cog text-xl" />,
-      path: "/settings",
-    },
-    {
-      key: "feedback",
-      label: "Feedback",
-      icon: <i className="pi pi-comment text-xl" />,
-      path: "/feedback",
-    },
-    {
-      key: "help",
-      label: "Help",
-      icon: <i className="pi pi-question-circle text-xl" />,
-      path: "/help",
-    },
+    { key: "profile", label: "My Profile", icon: <i className="pi pi-user text-xl" />, path: "/profile" },
+    { key: "help", label: "Help", icon: <i className="pi pi-question-circle text-xl" />, path: "/help" },
     {
       key: "signout",
       label: "Sign Out",
       icon: <i className="pi pi-sign-out text-xl" />,
-      path: "/login",
+      onClick: async () => {
+        await logout();
+        navigate("/login", { replace: true });
+      },
     },
   ];
+  const menuItems = allMenuItems.filter((m) => !m.perms || can(...m.perms));
 
   const getActiveKey = (pathname) => {
-    if (pathname.startsWith("/logistic")) {
-      return "logistics";
-    }
     if (pathname.startsWith("/notes")) {
       return "task";
-    }
-    if (pathname.startsWith("/manufacturer")) {
-      return "manufacturer";
-    }
-
-    if (pathname.startsWith("/viewreport")) {
-      return "reporting";
-    }
-    if (
-      pathname.startsWith("/lowstock") ||
-      pathname.startsWith("/outofstock") ||
-      pathname.startsWith("/nearexpiry")
-    ) {
-      return "productManagement";
     }
 
     const candidates = menuItems
@@ -203,6 +123,7 @@ export default function Sidebar() {
       template: () => (
         <div
           onClick={() => {
+            if (item.onClick) return item.onClick();
             setSelected(item.key);
             if (item.path) navigate(item.path);
             if (window.innerWidth < 1280) {
@@ -217,8 +138,8 @@ export default function Sidebar() {
       cursor-pointer focus:outline-none focus:ring-0
       ${
         selected === item.key
-          ? "bg-[#5D5FEF] text-white dark:bg-[#7476F1]"
-          : "hover:bg-[#5D5FEF1A] dark:hover:bg-[#7476F140] text-[#737791] dark:text-[#8E8E9C]"
+          ? "bg-[#09BF64] text-white dark:bg-[#81D959]"
+          : "hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] text-[#6F7C74] dark:text-[#8E8E9C]"
       }
     `}
         >
@@ -233,8 +154,8 @@ export default function Sidebar() {
               <span
                 className={`absolute -top-2 -right-3 ${
                   selected === item.key
-                    ? "bg-white text-[#5D5FEF]"
-                    : "bg-[#5D5FEF] text-white"
+                    ? "bg-white text-[#09BF64]"
+                    : "bg-[#09BF64] text-white"
                 } text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] h-[18px] flex items-center justify-center`}
               >
                 {unreadCount > 9 ? "9+" : unreadCount}
@@ -249,8 +170,8 @@ export default function Sidebar() {
                 <span
                   className={`${
                     selected === item.key
-                      ? "bg-white text-[#5D5FEF]"
-                      : "bg-[#5D5FEF] text-white"
+                      ? "bg-white text-[#09BF64]"
+                      : "bg-[#09BF64] text-white"
                   } text-[10px] font-bold px-1.5 py-0.5 rounded-full`}
                 >
                   {unreadCount > 9 ? "9+" : unreadCount}
@@ -273,7 +194,7 @@ export default function Sidebar() {
         : "w-[232px] lg:top-[115px] xl:top-0"
     }
     ${enableTransition ? "transition-all duration-300 ease-in-out" : ""}
-    bg-white dark:bg-[#000000] text-[#737791] dark:text-white
+    bg-white dark:bg-[#000000] text-[#6F7C74] dark:text-white
     overflow-y-auto ${
       collapsed ? "overflow-hidden" : "overflow-x-hidden"
     } scrollbar-hide

@@ -75,7 +75,7 @@ export const ModalProvider = ({ children }) => {
                 icon="maki:cross"
                 width="15"
                 height="15"
-                className="text-xl text-[#151D48] dark:text-[#F2F2FE]"
+                className="text-xl text-[#0F2418] dark:text-[#EFFBF3]"
               />
             </button>
             {/* Modal content gets both props and direct close function */}
@@ -96,19 +96,19 @@ export const ModalProvider = ({ children }) => {
                          border border-gray-200 dark:border-gray-700
                          shadow-[0_25px_50px_rgba(0,0,0,0.25)] dark:shadow-[0_25px_50px_rgba(255,255,255,0.15)]"
           >
-            <p className="mb-4 text-[#737791] dark:text-[#A9A9CD] whitespace-nowrap">
+            <p className="mb-4 text-[#6F7C74] dark:text-[#A9C2B3] whitespace-nowrap">
               Are you sure you want to close this?
             </p>
             <div className="flex justify-center gap-3">
               <button
                 onClick={forceCloseModal}
-                className="px-4 py-2 w-20 bg-[#5D5FEF] text-white dark:text-black rounded transition-all hover:shadow-lg dark:hover:[box-shadow:0_4px_12px_rgba(255,255,255,0.2)]"
+                className="px-4 py-2 w-20 bg-[#09BF64] text-white dark:text-black rounded transition-all hover:shadow-lg dark:hover:[box-shadow:0_4px_12px_rgba(255,255,255,0.2)]"
               >
                 Yes
               </button>
               <button
                 onClick={cancelClose}
-                className="px-4 py-2 w-20 border border-[#5D5FEF] bg-white dark:bg-[#0D0D0D] text-[#5D5FEF] rounded transition-all hover:shadow-lg dark:hover:[box-shadow:0_4px_12px_rgba(255,255,255,0.2)]"
+                className="px-4 py-2 w-20 border border-[#09BF64] bg-white dark:bg-[#0D0D0D] text-[#09BF64] rounded transition-all hover:shadow-lg dark:hover:[box-shadow:0_4px_12px_rgba(255,255,255,0.2)]"
               >
                 No
               </button>

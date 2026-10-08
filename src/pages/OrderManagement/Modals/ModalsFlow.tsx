@@ -74,7 +74,7 @@ export default function ModalsFlow() {
             onClick={() => handleOpenModal("invoice")}
             text="Generate Invoice"
             icon={FiPlus}
-            bgColor="bg-[#5D5FEF]"
+            bgColor="bg-[#09BF64]"
             textColor="text-white"
           />
           </div>
@@ -101,19 +101,19 @@ export default function ModalsFlow() {
             )}
 
             {step < 3 && (
-              <Button className="w-full bg-[#5D5FEF] bg:hover-red mx-5 my-1" size="sm" onClick={handleNext}>
+              <Button className="w-full bg-[#09BF64] bg:hover-red mx-5 my-1" size="sm" onClick={handleNext}>
                 Next
               </Button>
             )}
 
             {step === 2 && (
-              <Button className="w-full text-[#5D5FEF] bg:hover-red mx-5 my-1" size="sm" onClick={handleNext}>
+              <Button className="w-full text-[#09BF64] bg:hover-red mx-5 my-1" size="sm" onClick={handleNext}>
                 Save
               </Button>
             )}
 
             {step === 3 && (
-              <Button className="w-full text-[#5D5FEF] bg:hover-red mx-5 my-1" size="sm" onClick={handleNext}>
+              <Button className="w-full text-[#09BF64] bg:hover-red mx-5 my-1" size="sm" onClick={handleNext}>
                 Record Payment
               </Button>
             )}

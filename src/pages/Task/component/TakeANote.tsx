@@ -151,7 +151,7 @@ const TakeANote: React.FC<TakeANoteProps> = ({ notes, setNotes, editingNote, set
             <div className="flex justify-end mt-4">
               <button
                 onClick={handleAddNote}
-                className="px-6 py-2 bg-[#5D5FEF] text-white rounded-lg hover:bg-[#4a4cd1] transition-colors duration-200 font-medium"
+                className="px-6 py-2 bg-[#09BF64] text-white rounded-lg hover:bg-[#4a4cd1] transition-colors duration-200 font-medium"
               >
                 Add
               </button>

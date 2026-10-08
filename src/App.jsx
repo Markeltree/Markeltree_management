@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
   Navigate,
+  Outlet,
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { SidebarProvider } from "./context/SidebarContext";
@@ -10,105 +11,83 @@ import { ModalProvider } from "./context/ModalContext";
 import Loading from "./components/LazyLoading";
 import MainLayout from "./layout/MainLayout";
 import ChatLayout from "./layout/ChatLayout";
+import RequireAuth from "./components/RequireAuth";
 import MessageNotification from "./components/MessageNotification";
 
-const Dashboard = lazy(() => import("./pages/Dashboard"));
-const SignUp = lazy(() => import("./pages/SignUp"));
-const CodeVerification = lazy(() => import("./pages/CodeVerification"));
+// Auth
+const Landing = lazy(() => import("./pages/Landing"));
 const Login = lazy(() => import("./pages/Login"));
-const NewPassword = lazy(() => import("./pages/NewPassword"));
+const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
 const Reset = lazy(() => import("./pages/Reset"));
-const ChatPanel = lazy(() => import("./components/ChatPanel"));
-const InventoryManagement = lazy(() => import("./pages/InventoryManagement"));
-const Feedback = lazy(() => import("./pages/Feedback"));
-const ProductManagement = lazy(() => import("./pages/ProductManagement"));
-const LowStockSKU = lazy(() => import("./pages/LowStockSKU"));
-const OutOfStockSKU = lazy(() => import("./pages/OutOfStockSKU"));
-const NearExpiryStockSKU = lazy(() => import("./pages/NearExpiryStockSKU"));
-const Logistics = lazy(() => import("./pages/Logistics"));
-const LogisticDetails = lazy(() => import("./pages/LogisticDetails"));
-const Help = lazy(() => import("./pages/Help"));
-const OrderManagement = lazy(() => import("./pages/OrderManagement"));
-const OrderDetail = lazy(() => import("./pages/OrderDetail"));
-const Reporting = lazy(() => import("./pages/Reporting"));
-const ViewReport = lazy(() => import("./pages/ViewReport"));
-const Accounts = lazy(() => import("./pages/Accounts"));
-const NotificationPage = lazy(() => import("./pages/NotificationPage"));
-const Setting = lazy(() => import("./pages/Setting"));
-// const Task = lazy(() => import("./pages/Task"));
-const Customers = lazy(() => import("./pages/Customers"));
-const CustomerDetails = lazy(() => import("./pages/CustomerDetails"));
-const ManufacturerOrder = lazy(() => import("./pages/ManufacturerOrder"));
-const ManufacturerOrderDetails = lazy(() =>
-  import("./pages/ManufacturerOrderDetails")
-);
-const ManufacturerDetails = lazy(() => import("./pages/ManufacturerDetails"));
-const PinSection = lazy(() => import("./pages/PinSection"));
+const NewPassword = lazy(() => import("./pages/NewPassword"));
 
-import TaskLayout from "./pages/Task/TaskLayout";
-import MyTask from "./pages/Task/innerpage/MyTask";
-import Notes from "./pages/Task/innerpage/Notes";
+// HR platform modules (FRD §9)
+const Dashboard = lazy(() => import("./pages/hr/Dashboard"));
+const Employees = lazy(() => import("./pages/hr/Employees"));
+const EmployeeProfile = lazy(() => import("./pages/hr/EmployeeProfile"));
+const Attendance = lazy(() => import("./pages/hr/Attendance"));
+const Leave = lazy(() => import("./pages/hr/Leave"));
+const Tasks = lazy(() => import("./pages/hr/Tasks"));
+const Announcements = lazy(() => import("./pages/hr/Announcements"));
+const Notifications = lazy(() => import("./pages/hr/Notifications"));
+const Reports = lazy(() => import("./pages/hr/Reports"));
+const Admin = lazy(() => import("./pages/hr/Admin"));
+const Payroll = lazy(() => import("./pages/hr/Payroll"));
+const Help = lazy(() => import("./pages/Help"));
+const Chat = lazy(() => import("./pages/hr/Chat"));
+
+const REPORT_PERMS = ["reports.view_all", "reports.view_team", "attendance.view_team", "attendance.view_all", "leave.view_all"];
+const ADMIN_PERMS = ["admin.users", "admin.roles", "admin.settings", "admin.audit", "org.manage", "leave.manage_policy", "holidays.manage"];
 
 function App() {
   return (
-    <SidebarProvider>
-      <ModalProvider>
-        <Suspense fallback={<Loading fullscreen />}>
-          <Router>
-            <MessageNotification />
+    <Router>
+      <SidebarProvider>
+        <ModalProvider>
+          <Suspense fallback={<Loading fullscreen />}>
             <Routes>
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="/verification" element={<CodeVerification />} />
+              <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/password" element={<NewPassword />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset" element={<Reset />} />
-              <Route element={<ChatLayout />}>
-                <Route path="/chat" element={<ChatPanel />} />
-              </Route>
-              <Route element={<MainLayout />}>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/pinsection" element={<PinSection />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/inventory" element={<InventoryManagement />} />
-                <Route path="/feedback" element={<Feedback />} />
-                <Route path="/product" element={<ProductManagement />} />
-                <Route path="/lowstock" element={<LowStockSKU />} />
-                <Route path="/outofstock" element={<OutOfStockSKU />} />
-                <Route path="/nearexpiry" element={<NearExpiryStockSKU />} />
-                <Route path="/logistics" element={<Logistics />} />
-                <Route path="/logisticdetails" element={<LogisticDetails />} />
-                <Route path="/help" element={<Help />} />
-                <Route path="/order" element={<OrderManagement />} />
-                <Route path="/orderdetail" element={<OrderDetail />} />
-                <Route path="/report" element={<Reporting />} />
-                <Route path="/viewreport" element={<ViewReport />} />
-                <Route path="/accounts" element={<Accounts />} />
-                <Route path="/notifications" element={<NotificationPage />} />
-                <Route path="/settings" element={<Setting />} />
-                {/* <Route path="/task" element={<Task />} /> */}
-                <Route path="/customer" element={<Customers />} />
-                <Route path="/customerdetail" element={<CustomerDetails />} />
-                <Route path="/manufacturer" element={<ManufacturerOrder />} />
-                <Route
-                  path="/manufacturerorderdetail"
-                  element={<ManufacturerOrderDetails />}
-                />
-                <Route
-                  path="/manufacturerdetails"
-                  element={<ManufacturerDetails />}
-                />
-                {/* Task Routes */}
-                <Route path="/task" element={<TaskLayout />}>
-                  <Route index element={<MyTask />} />
-                </Route>
+              <Route path="/password" element={<NewPassword />} />
+              {/* Accounts are created by HR (onboarding workflow) — no public sign-up. */}
+              <Route path="/signup" element={<Navigate to="/login" replace />} />
+              <Route path="/verification" element={<Navigate to="/login" replace />} />
 
-                <Route path="/notes" element={<Notes />} />
+              <Route
+                element={
+                  <RequireAuth>
+                    <MessageNotification />
+                    <Outlet />
+                  </RequireAuth>
+                }
+              >
+                <Route element={<ChatLayout />}>
+                  <Route path="/chat" element={<Chat />} />
+                </Route>
+                <Route element={<MainLayout />}>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/employees" element={<Employees />} />
+                  <Route path="/employees/:id" element={<EmployeeProfile />} />
+                  <Route path="/profile" element={<EmployeeProfile self />} />
+                  <Route path="/attendance" element={<Attendance />} />
+                  <Route path="/leave" element={<Leave />} />
+                  <Route path="/task" element={<Tasks />} />
+                  <Route path="/announcements" element={<Announcements />} />
+                  <Route path="/notifications" element={<Notifications />} />
+                  <Route path="/reports" element={<RequireAuth permissions={REPORT_PERMS}><Reports /></RequireAuth>} />
+                  <Route path="/payroll" element={<RequireAuth permissions={["payroll.manage", "payroll.approve"]}><Payroll /></RequireAuth>} />
+                  <Route path="/admin" element={<RequireAuth permissions={ADMIN_PERMS}><Admin /></RequireAuth>} />
+                  <Route path="/help" element={<Help />} />
+                  <Route path="*" element={<Navigate to="/dashboard" replace />} />
+                </Route>
               </Route>
             </Routes>
-          </Router>
-        </Suspense>
-      </ModalProvider>
-    </SidebarProvider>
+          </Suspense>
+        </ModalProvider>
+      </SidebarProvider>
+    </Router>
   );
 }
 

@@ -274,7 +274,7 @@ export default function ManufacturerOrderDetailsData() {
         field: "customer",
         header: "Customer",
         body: (rowData) => (
-          <button className="w-[110px] h-[28px] justify-center flex items-center gap-1 px-3 py-1 bg-[#5D5FEF] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#7476F1]">
+          <button className="w-[110px] h-[28px] justify-center flex items-center gap-1 px-3 py-1 bg-[#09BF64] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#81D959]">
             {rowData.customer}
           </button>
         ),
@@ -439,10 +439,10 @@ export default function ManufacturerOrderDetailsData() {
       <div className="bg-white dark:bg-[#000000] rounded-lg p-4 h-auto">
         <div className="flex flex-col md:flex-row gap-2 items-center w-full">
           <div className="flex flex-col gap-1 w-full">
-            <h2 className="text-[#333333] dark:text-[#F2F2FE] font-bold text-[16px] lg:text-[18px]">
+            <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
               {tabTitles[0].heading}
             </h2>
-            <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#F2F2FE]">
+            <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
               {tabTitles[0].subheading}
             </p>
           </div>
@@ -520,13 +520,13 @@ export default function ManufacturerOrderDetailsData() {
 
                     return (
                       <div key={field} className="mb-3">
-                        <h4 className="font-semibold text-[12px] text-[#151D48] dark:text-[#F2F2FE] mb-2 capitalize">
+                        <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
                           {field}
                         </h4>
                         {values.map((val) => (
                           <label
                             key={val}
-                            className="flex items-center gap-2 mb-1 text-[12px] text-[#737791CC] dark:text-[#F2F2FECC] cursor-pointer select-none"
+                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
                           >
                             <input
                               type="checkbox"
@@ -536,7 +536,7 @@ export default function ManufacturerOrderDetailsData() {
                               onChange={() => toggleTempValue(field, val)}
                               className="hidden peer"
                             />
-                            <span className="w-3.5 h-3.5 rounded border border-[#737791CC] peer-checked:bg-[#5D5FEF] peer-checked:border-[#5D5FEF] relative flex items-center justify-center">
+                            <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
                               <svg
                                 className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                 fill="none"
@@ -560,7 +560,7 @@ export default function ManufacturerOrderDetailsData() {
                     <ActionButton
                       label="Reset"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                       onClick={() => {
                         setTempFilters({});
                         setFilters({});
@@ -570,7 +570,7 @@ export default function ManufacturerOrderDetailsData() {
                     <ActionButton
                       label="Apply Filter"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={() => {
                         setFilters(tempFilters);
                         setFilterOpen(false); // panel band karo
@@ -590,7 +590,7 @@ export default function ManufacturerOrderDetailsData() {
             paginator={false}
             className="p-datatable-sm w-full"
             rowClassName={() =>
-              "border-b border-[#73779126] text-[13px] text-[#666666] dark:text-[#F2F2FE] dark:bg-black whitespace-nowrap"
+              "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
             }
           >
             {columns.map((col, idx) => (

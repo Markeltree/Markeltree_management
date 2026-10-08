@@ -31,7 +31,7 @@ const ProductInventoryChart: React.FC = () => {
       <div className="absolute right-6 top-4">
         <HoverDropdown
           DropdownName="This Year"
-          className="bg-gradient-to-r from-[#5D5FEF] to-[#353689] text-white dark:text-[#A9A9CD]"
+          className="bg-gradient-to-r from-[#09BF64] to-[#353689] text-white dark:text-[#A9C2B3]"
         />
       </div>
       {/* Donut Chart */}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Label = ({ htmlFor, children, className = "", color = "text-[#737791]", font = "font-medium" }) => {
+const Label = ({ htmlFor, children, className = "", color = "text-[#6F7C74]", font = "font-medium" }) => {
   return (
     <label
       htmlFor={htmlFor}

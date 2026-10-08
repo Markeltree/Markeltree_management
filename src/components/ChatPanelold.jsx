@@ -520,14 +520,14 @@ export default function ChatPanel() {
           {/* Create Group Icon */}
           <button
             onClick={() => setGroupModalOpen(true)}
-            className="p-2 rounded-lg hover:bg-[#5D5FEF] hover:text-white transition"
+            className="p-2 rounded-lg hover:bg-[#09BF64] hover:text-white transition"
             title="Create Group"
           >
             <Icon
               icon="heroicons:user-group-16-solid"
               width="24"
               height="24"
-              className="text-[#5D5FEF] hover:text-white"
+              className="text-[#09BF64] hover:text-white"
             />
           </button>
 
@@ -537,14 +537,14 @@ export default function ChatPanel() {
               setActiveUser(null);
               setNewChatModalOpen(true);
             }}
-            className="p-2 rounded-lg hover:bg-[#5D5FEF] hover:text-white transition"
+            className="p-2 rounded-lg hover:bg-[#09BF64] hover:text-white transition"
             title="Start New Chat"
           >
             <Icon
               icon="pajamas:duo-chat-new"
               width="18"
               height="18"
-              className="text-[#5D5FEF] hover:text-white"
+              className="text-[#09BF64] hover:text-white"
             />
           </button>
         </div>
@@ -563,9 +563,9 @@ export default function ChatPanel() {
               {groups.map((group) => (
                 <div
                   key={group.id}
-                  className={`flex items-center gap-3 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#5D5FEF1A] dark:hover:bg-[#7476F140] rounded-md ${
+                  className={`flex items-center gap-3 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] rounded-md ${
                     activeUser?.id === group.id
-                      ? "bg-[#5D5FEF] dark:bg-[#7476F1] text-white"
+                      ? "bg-[#09BF64] dark:bg-[#81D959] text-white"
                       : "dark:text-[#8E8E9C]"
                   }`}
                   onClick={() => {
@@ -593,9 +593,9 @@ export default function ChatPanel() {
               {favoriteUsers.map((user) => (
                 <div
                   key={user.id}
-                  className={`flex items-center gap-3 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#5D5FEF1A] dark:hover:bg-[#7476F140] rounded-md ${
+                  className={`flex items-center gap-3 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] rounded-md ${
                     activeUser?.id === user.id
-                      ? "bg-[#5D5FEF] dark:bg-[#7476F1] text-white "
+                      ? "bg-[#09BF64] dark:bg-[#81D959] text-white "
                       : "dark:text-[#8E8E9C]"
                   }`}
                   onClick={() => handleUserClick(user)}
@@ -629,9 +629,9 @@ export default function ChatPanel() {
                 .map((user) => (
                   <div
                     key={user.id}
-                    className={`flex items-center gap-3 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#5D5FEF1A] dark:hover:bg-[#7476F140] rounded-md ${
+                    className={`flex items-center gap-3 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] rounded-md ${
                       activeUser?.id === user.id
-                        ? "bg-[#5D5FEF] dark:bg-[#7476F1] text-white "
+                        ? "bg-[#09BF64] dark:bg-[#81D959] text-white "
                         : "dark:text-[#8E8E9C]"
                     }`}
                     onClick={() => handleUserClick(user)}
@@ -660,25 +660,25 @@ export default function ChatPanel() {
         <div className="flex flex-row justify-start items-center gap-2 p-4 bg-white dark:bg-[#000000] shadow-sm">
           {/* Mobile sidebar toggle */}
           <button
-            className="md:hidden text-[#5D5FEF] hover:bg-[#5D5FEF]/10 p-2 rounded-lg transition"
+            className="md:hidden text-[#09BF64] hover:bg-[#09BF64]/10 p-2 rounded-lg transition"
             onClick={() => setSidebarOpen((prev) => !prev)}
           >
             <Icon icon="mdi:menu" width="24" />
           </button>
 
-          <h1 className="flex items-center text-md font-semibold text-[#5D5FEF]">
+          <h1 className="flex items-center text-md font-semibold text-[#09BF64]">
             <button
               onClick={() => {
                 console.log("Navigating to dashboard...");
                 navigate("/dashboard");
               }}
-              className="flex items-center text-[#5D5FEF] hover:underline"
+              className="flex items-center text-[#09BF64] hover:underline"
             >
               Dashboard
             </button>
             <Icon
               icon="mdi:chevron-right"
-              className="mx-1 text-[#5D5FEF]"
+              className="mx-1 text-[#09BF64]"
               width="16"
               height="16"
             />
@@ -740,14 +740,14 @@ export default function ChatPanel() {
                     <>
                       <button
                         onClick={() => setShowGroupMembers(true)}
-                        className="h-8 flex items-center justify-center px-3 border border-[#5D5FEF] text-[#5D5FEF] rounded-full text-xs hover:bg-[#5D5FEF] hover:text-white shadow-sm transition"
+                        className="h-8 flex items-center justify-center px-3 border border-[#09BF64] text-[#09BF64] rounded-full text-xs hover:bg-[#09BF64] hover:text-white shadow-sm transition"
                       >
                         View Members
                       </button>
 
                       <button
                         onClick={() => setShowAddMember(true)}
-                        className="h-8 flex items-center justify-center px-3 border border-[#5D5FEF] text-[#5D5FEF] rounded-full text-xs hover:bg-[#5D5FEF] hover:text-white shadow-sm transition"
+                        className="h-8 flex items-center justify-center px-3 border border-[#09BF64] text-[#09BF64] rounded-full text-xs hover:bg-[#09BF64] hover:text-white shadow-sm transition"
                       >
                         <Icon
                           icon="mdi:account-plus-outline"
@@ -759,7 +759,7 @@ export default function ChatPanel() {
                   ) : (
                     <button
                       onClick={() => setShowProfile(true)}
-                      className="h-8 flex items-center justify-center px-3 border border-[#5D5FEF] text-[#5D5FEF] rounded-full text-xs hover:bg-[#5D5FEF] hover:text-white shadow-sm transition"
+                      className="h-8 flex items-center justify-center px-3 border border-[#09BF64] text-[#09BF64] rounded-full text-xs hover:bg-[#09BF64] hover:text-white shadow-sm transition"
                     >
                       View Profile
                     </button>
@@ -807,7 +807,7 @@ export default function ChatPanel() {
                       <div
                         className={`flex flex-col p-3 rounded-xl shadow-sm ${
                           isRight
-                            ? "bg-[#5D5FEF] text-white"
+                            ? "bg-[#09BF64] text-white"
                             : "bg-white dark:bg-[#2C2C2E] text-gray-800 dark:text-gray-200"
                         }`}
                       >
@@ -945,8 +945,8 @@ export default function ChatPanel() {
                 onClick={() => toggleFavorite(activeUser.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition ${
                   favorites.includes(activeUser.id)
-                    ? "bg-[#5D5FEF] text-white"
-                    : "bg-white dark:bg-[#0D0D0D] border-[#5D5FEF] dark:border-[#5D5FEF] text-[#5D5FEF] dark:text-[#5D5FEF]"
+                    ? "bg-[#09BF64] text-white"
+                    : "bg-white dark:bg-[#0D0D0D] border-[#09BF64] dark:border-[#09BF64] text-[#09BF64] dark:text-[#09BF64]"
                 }`}
               >
                 <Icon
@@ -1143,7 +1143,7 @@ export default function ChatPanel() {
             {/* Group Name */}
             <label
               htmlFor="groupName"
-              className="block text-[12px] text-[#737791] dark:text-[#A9A9CD] mb-1"
+              className="block text-[12px] text-[#6F7C74] dark:text-[#A9C2B3] mb-1"
             >
               Group Name
             </label>
@@ -1178,11 +1178,11 @@ export default function ChatPanel() {
             )}
 
             {/* Upload Avatar */}
-            <label className="block mt-4 text-[12px] text-[#737791] dark:text-[#A9A9CD]">
+            <label className="block mt-4 text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
               Group Avatar:
             </label>
             <div className="flex items-center gap-4 mt-2 mb-4">
-              <label className="flex-1 cursor-pointer border-2 border-dashed border-[#5D5FEF] rounded-lg px-3 py-1 text-center text-sm text-[#5D5FEF] hover:bg-[#5D5FEF]/5 transition">
+              <label className="flex-1 cursor-pointer border-2 border-dashed border-[#09BF64] rounded-lg px-3 py-1 text-center text-sm text-[#09BF64] hover:bg-[#09BF64]/5 transition">
                 <Icon
                   icon="mdi:cloud-upload-outline"
                   className="mx-auto mb-1"
@@ -1227,7 +1227,7 @@ export default function ChatPanel() {
             <div className="flex flex-row gap-2 mt-4">
               <button
                 onClick={() => setGroupModalOpen(false)}
-                className="w-full px-3 py-2 rounded-lg border border-[#5D5FEF] text-[#5D5FEF] hover:bg-[#5D5FEF1A] dark:hover:bg-[#2a2a2a]"
+                className="w-full px-3 py-2 rounded-lg border border-[#09BF64] text-[#09BF64] hover:bg-[#09BF641A] dark:hover:bg-[#2a2a2a]"
               >
                 Cancel
               </button>
@@ -1239,7 +1239,7 @@ export default function ChatPanel() {
                   }
                   handleCreateGroup();
                 }}
-                className="w-full px-3 py-2 rounded-lg bg-[#5D5FEF] text-white hover:bg-[#4a4cd1]"
+                className="w-full px-3 py-2 rounded-lg bg-[#09BF64] text-white hover:bg-[#4a4cd1]"
               >
                 Create
               </button>
@@ -1271,7 +1271,7 @@ export default function ChatPanel() {
               placeholder="Search users..."
               value={newChatSearch}
               onChange={(e) => setNewChatSearch(e.target.value)}
-              className="w-full mb-3 px-3 py-2 border rounded-lg focus:outline-none focus:border-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-white"
+              className="w-full mb-3 px-3 py-2 border rounded-lg focus:outline-none focus:border-[#09BF64] dark:bg-[#0D0D0D] dark:text-white"
             />
 
             {/* Users List */}
@@ -1283,7 +1283,7 @@ export default function ChatPanel() {
                 .map((user) => (
                   <div
                     key={user.id}
-                    className="flex items-center gap-3 px-4 py-2 mb-1 cursor-pointer hover:bg-[#5D5FEF] hover:text-white rounded-md"
+                    className="flex items-center gap-3 px-4 py-2 mb-1 cursor-pointer hover:bg-[#09BF64] hover:text-white rounded-md"
                     onClick={() => {
                       setActiveUser(user);
                       setNewChatModalOpen(false);

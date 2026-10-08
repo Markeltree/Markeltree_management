@@ -89,7 +89,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
             onClick={onCustomize}
             text="Customize Dashboard"
             icon={CustomisehIcon}
-            bgColor="bg-[#5D5FEF]"
+            bgColor="bg-[#09BF64]"
             textColor="text-white"
             
           />

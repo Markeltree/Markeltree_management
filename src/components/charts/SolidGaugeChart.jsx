@@ -17,10 +17,10 @@ export default function SolidGaugeChart({
   centerText = "Achieved",
   gradientColors = [
     [0, "#A0A2F8"],
-    [1, "#5D5FEF"],
+    [1, "#09BF64"],
   ],
   valueStyle = "font-size:22px; font-weight:bold; color:#0CB91D;",
-  textStyle = "font-size:12px; color:#737791;",
+  textStyle = "font-size:12px; color:#6F7C74;",
   outerRadius = "100%",
   innerRadius = "80%",
 }) {

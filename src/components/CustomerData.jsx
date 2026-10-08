@@ -234,19 +234,19 @@ export default function CustomerData() {
   const actionTemplate = () => (
     <div className="flex items-center gap-3">
       <div
-        className="flex border border-[#5D5FEF] p-1 w-7 h-6 rounded items-center justify-center"
+        className="flex border border-[#09BF64] p-1 w-7 h-6 rounded items-center justify-center"
         onClick={editCustomer}
       >
         <Icon
           icon="tabler:edit"
-          style={{ color: "#5D5FEF" }}
+          style={{ color: "#09BF64" }}
           className="cursor-pointer items-center justify-center"
           width={15}
           height={15}
         />
       </div>
       <div
-        className="flex bg-[#5D5FEF] p-1 w-7 h-6 rounded items-center justify-center"
+        className="flex bg-[#09BF64] p-1 w-7 h-6 rounded items-center justify-center"
         onClick={() => {
           navigate("/customerdetail");
         }}
@@ -475,10 +475,10 @@ export default function CustomerData() {
       <div className="bg-white dark:bg-[#000000] rounded-lg p-4 h-auto">
         <div className="flex flex-col md:flex-row gap-2 items-center w-full">
           <div className="flex flex-col gap-1 w-full">
-            <h2 className="text-[#333333] dark:text-[#F2F2FE] font-bold text-[16px] lg:text-[18px]">
+            <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
               {tabTitles[0].heading}
             </h2>
-            <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#F2F2FE]">
+            <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
               {tabTitles[0].subheading}
             </p>
           </div>
@@ -554,13 +554,13 @@ export default function CustomerData() {
                   {Object.entries(uniqueFilterValues).map(([field, values]) => {
                     return (
                       <div key={field} className="mb-3">
-                        <h4 className="font-semibold text-[12px] text-[#151D48] dark:text-[#F2F2FE] mb-2 capitalize">
+                        <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
                           {field}
                         </h4>
                         {values.map((val) => (
                           <label
                             key={val}
-                            className="flex items-center gap-2 mb-1 text-[12px] text-[#737791CC] dark:text-[#F2F2FECC] cursor-pointer select-none"
+                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
                           >
                             <input
                               type="checkbox"
@@ -570,7 +570,7 @@ export default function CustomerData() {
                               onChange={() => toggleTempValue(field, val)}
                               className="hidden peer"
                             />
-                            <span className="w-3.5 h-3.5 rounded border border-[#737791CC] peer-checked:bg-[#5D5FEF] peer-checked:border-[#5D5FEF] relative flex items-center justify-center">
+                            <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
                               <svg
                                 className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                 fill="none"
@@ -594,14 +594,14 @@ export default function CustomerData() {
                     <ActionButton
                       label="Reset"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                       onClick={resetAllFilters}
                     />
 
                     <ActionButton
                       label="Apply Filter"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#5D5FEF] text-white dark:bg-[#7476F1] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={applyTempFilters}
                     />
                   </div>
@@ -668,7 +668,7 @@ export default function CustomerData() {
                       <>
                         {/* Header */}
                         <div className="flex justify-between items-center mb-4">
-                          <h3 className="text-[16px] font-semibold text-[#151D48] dark:text-[#F2F2FE]">
+                          <h3 className="text-[16px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">
                             Remove / Add Columns
                           </h3>
                         </div>
@@ -682,15 +682,15 @@ export default function CustomerData() {
                             return (
                               <label
                                 key={col.field}
-                                className="flex items-center text-sm text-[#737791] dark:text-[#F2F2FE] cursor-pointer whitespace-nowrap"
+                                className="flex items-center text-sm text-[#6F7C74] dark:text-[#EFFBF3] cursor-pointer whitespace-nowrap"
                                 onClick={() => toggleTempColumn(col.field)}
                               >
                                 <span
                                   className={`relative w-4 h-4 border rounded-sm mr-2 flex items-center justify-center
                       ${
                         isChecked
-                          ? "bg-[#5D5FEF] border-[#5D5FEF]"
-                          : "bg-white border-gray-400 dark:bg-black dark:border-[#A9A9CD]"
+                          ? "bg-[#09BF64] border-[#09BF64]"
+                          : "bg-white border-gray-400 dark:bg-black dark:border-[#A9C2B3]"
                       }`}
                                 >
                                   {isChecked && (
@@ -720,14 +720,14 @@ export default function CustomerData() {
                           <ActionButton
                             label="Cancel"
                             buttonClass="flex items-center justify-center gap-1 text-sm h-[40px] w-full px-4 
-                bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] 
-                border border-[#5D5FEF] focus:outline-none focus:ring-0 whitespace-nowrap"
+                bg-white text-[#09BF64] dark:bg-[#0D0D0D] 
+                border border-[#09BF64] focus:outline-none focus:ring-0 whitespace-nowrap"
                             onClick={() => setCustomizeOpen(false)}
                           />
                           <ActionButton
                             label="Save"
                             buttonClass="flex items-center justify-center gap-1 text-sm h-[40px] w-full px-4 
-                bg-[#5D5FEF] text-white dark:text-black 
+                bg-[#09BF64] text-white dark:text-black 
                 focus:outline-none focus:ring-0 whitespace-nowrap"
                             onClick={() => {
                               setVisibleColumns(tempVisibleColumns);
@@ -751,7 +751,7 @@ export default function CustomerData() {
             paginator={false}
             className="p-datatable-sm w-full [&_.p-datatable-tbody>tr]:dark:!bg-black"
             rowClassName={() =>
-              "border-b border-[#73779126] text-[13px] text-[#666666] dark:text-[#F2F2FE] dark:bg-black whitespace-nowrap"
+              "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
             }
             emptyMessage={
               <div className="py-4 bg-white text-black dark:bg-black dark:text-white">

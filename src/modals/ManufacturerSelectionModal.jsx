@@ -179,7 +179,7 @@ export default function ManufacturerSelectionModal({ closeModal }) {
               .map((_, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center p-4 rounded-lg border border-[#A9A9CD] bg-white dark:bg-[#0D0D0D] h-[64px] gap-3"
+                  className="flex items-center p-4 rounded-lg border border-[#A9C2B3] bg-white dark:bg-[#0D0D0D] h-[64px] gap-3"
                 >
                   {/* Radio Circle */}
                   <Skeleton
@@ -241,14 +241,14 @@ export default function ManufacturerSelectionModal({ closeModal }) {
     <div className="space-y-3">
       {/* Header */}
       <div className="flex flex-row gap-2">
-        <div className=" text-[20px] font-bold text-[#151D48] dark:text-[#F2F2FE]">
+        <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
           Manufacturer Selection
         </div>
       </div>
 
       <div className="flex flex-row justify-between items-end gap-4">
         <div className="flex whitespace-nowrap">
-          <label className="text-[10px] font-normal text-[#737791] dark:text-[#737791]">
+          <label className="text-[10px] font-normal text-[#6F7C74] dark:text-[#6F7C74]">
             Search Manufacturer
           </label>
         </div>
@@ -256,36 +256,36 @@ export default function ManufacturerSelectionModal({ closeModal }) {
 
       <div className="relative flex flex-row items-center justify-between w-full">
         <input
-          className="dark:bg-[#0D0D0D] w-full border border-[#5D5FEF] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#5D5FEF] text-[14px] text-[#737791] dark:text-[#737791] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+          className="dark:bg-[#0D0D0D] w-full border border-[#09BF64] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#09BF64] text-[14px] text-[#6F7C74] dark:text-[#6F7C74] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           placeholder="Search"
           value={search}
           onChange={handleSearch}
         />
         <Icon
           icon="mdi:magnify"
-          className="absolute top-3 right-3 text-[#5D5FEF] text-lg"
+          className="absolute top-3 right-3 text-[#09BF64] text-lg"
         />
       </div>
 
       <div className="flex flex-row justify-between w-full">
-        <div className="text-[14px] text-[#151D48] dark:text-[#F2F2FE] font-semibold pt-2">
+        <div className="text-[14px] text-[#0F2418] dark:text-[#EFFBF3] font-semibold pt-2">
           Manufacturer{" "}
-          <span className="text-[12px] font-normal text-[#737791] dark:text-[#737791]">
+          <span className="text-[12px] font-normal text-[#6F7C74] dark:text-[#6F7C74]">
             (Showing {filteredManufacturers.length})
           </span>
         </div>
       </div>
 
       {/* manufacturer Options */}
-      <div className="flex flex-col gap-4 w-full max-h-[52vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col gap-4 w-full max-h-[52vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         {filteredManufacturers.length > 0 ? (
           filteredManufacturers.map((option) => (
             <div
               key={option.id}
               className={`flex items-center p-4 rounded-lg border cursor-pointer transition-all h-[64px] ${
                 selectedManufacturer === option.id
-                  ? "border-[#5D5FEF] bg-[#F4F4FF] dark:bg-[#0D0D0D]"
-                  : "border-[#A9A9CD] bg-white dark:border-[#A9A9CD] dark:bg-[#0D0D0D]"
+                  ? "border-[#09BF64] bg-[#F4F4FF] dark:bg-[#0D0D0D]"
+                  : "border-[#A9C2B3] bg-white dark:border-[#A9C2B3] dark:bg-[#0D0D0D]"
               }`}
               onClick={() => setSelectedManufacturer(option.id)}
             >
@@ -294,22 +294,22 @@ export default function ManufacturerSelectionModal({ closeModal }) {
                 name="shipping"
                 checked={selectedManufacturer === option.id}
                 onChange={() => setSelectedManufacturer(option.id)}
-                className="accent-[#5D5FEF] mr-3"
+                className="accent-[#09BF64] mr-3"
               />
               <div className="flex flex-row justify-between w-full">
                 <div className="flex flex-col gap-2">
-                  <p className="font-medium text-[10px] md:text-[14px] text-[#131330] dark:text-[#F2F2FE] whitespace-nowrap">
+                  <p className="font-medium text-[10px] md:text-[14px] text-[#0E1A12] dark:text-[#EFFBF3] whitespace-nowrap">
                     {option.label}
                   </p>
-                  <p className="font-normal text-[8px] md:text-[10px] text-[#737791] dark:text-[#737791]">
+                  <p className="font-normal text-[8px] md:text-[10px] text-[#6F7C74] dark:text-[#6F7C74]">
                     {option.subText}
                   </p>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                  <p className="text-[#131330] text-[10px] font-medium text-center">
+                  <p className="text-[#0E1A12] text-[10px] font-medium text-center">
                     {option.order}
                   </p>
-                  <p className="text-[#737791] text-[8px] md:text-[10px] whitespace-nowrap">
+                  <p className="text-[#6F7C74] text-[8px] md:text-[10px] whitespace-nowrap">
                     Previous Orders
                   </p>
                 </div>
@@ -317,7 +317,7 @@ export default function ManufacturerSelectionModal({ closeModal }) {
             </div>
           ))
         ) : (
-          <p className="text-center text-sm text-[#737791] dark:text-[#737791] py-6">
+          <p className="text-center text-sm text-[#6F7C74] dark:text-[#6F7C74] py-6">
             No manufacturers found
           </p>
         )}
@@ -328,13 +328,13 @@ export default function ManufacturerSelectionModal({ closeModal }) {
         <ActionButton
           label="Back"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="text-[16px] h-[48px] w-full bg-white dark:bg-black text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+          buttonClass="text-[16px] h-[48px] w-full bg-white dark:bg-black text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
           onClick={handleBack}
         />
         <ActionButton
           label="Next"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="text-[16px] h-[48px] w-full bg-[#5D5FEF] dark:bg-[#7476F1] text-white dark:text-black focus:outline-none focus:ring-0"
+          buttonClass="text-[16px] h-[48px] w-full bg-[#09BF64] dark:bg-[#81D959] text-white dark:text-black focus:outline-none focus:ring-0"
           onClick={handleNext}
         />
       </div>

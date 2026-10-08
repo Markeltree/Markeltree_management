@@ -85,14 +85,14 @@ const NoteCard: React.FC<NoteCardProps> = ({ title, description, onDelete, onSav
               e.stopPropagation();
               onPin();
             }}
-            className={`flex items-center justify-center ${isPinned ? 'text-[#5D5FEF]' : 'text-gray-600 hover:text-black'}`}
+            className={`flex items-center justify-center ${isPinned ? 'text-[#09BF64]' : 'text-gray-600 hover:text-black'}`}
           >
             <Icon 
               icon="mynaui:pin" 
               width="16" 
               height="16" 
-              style={{ color: isPinned ? '#5D5FEF' : '#4b5563' }} 
-              className={isPinned ? 'text-[#5D5FEF]' : 'text-gray-600'} 
+              style={{ color: isPinned ? '#09BF64' : '#4b5563' }} 
+              className={isPinned ? 'text-[#09BF64]' : 'text-gray-600'} 
             />
           </button>
         )}

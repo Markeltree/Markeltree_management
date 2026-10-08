@@ -14,7 +14,7 @@ const LogisticDetail = () => {
     <div className="px-4 md:px-6 lg:px-10 py-4 space-y-6">
       {/* Top Header */}
       <div className="flex flex-row justify-between">
-        <h2 className="text-[14px] font-medium text-[#5D5FEF] mt-3">
+        <h2 className="text-[14px] font-medium text-[#09BF64] mt-3">
           Logistic : UA7345
         </h2>
       <div className="flex flex-col md:flex-row justify-end items-center mb-4 gap-2">

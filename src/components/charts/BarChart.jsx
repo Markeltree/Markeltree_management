@@ -93,13 +93,13 @@ const BarChart = ({ dataPoints }) => {
           color: darkMode ? "000000" : "#FFFFFF", // grid lines color
         },
         ticks: {
-          color: darkMode ? "#ffffff" : "#737791",
+          color: darkMode ? "#ffffff" : "#6F7C74",
           font: { size: 10, weight: "normal" },
           callback: (val) => val + "%",
         },
         title: {
           display: false,
-          color: darkMode ? "#ffffff" : "#737791",
+          color: darkMode ? "#ffffff" : "#6F7C74",
         },
       },
       x: {
@@ -110,12 +110,12 @@ const BarChart = ({ dataPoints }) => {
           color: darkMode ? "000000" : "#FFFFFF",
         },
         ticks: {
-          color: darkMode ? "#ffffff" : "#737791",
+          color: darkMode ? "#ffffff" : "#6F7C74",
           font: { size: 10, weight: "normal" },
         },
         title: {
           display: false,
-          color: darkMode ? "#ffffff" : "#737791",
+          color: darkMode ? "#ffffff" : "#6F7C74",
         },
       },
     },

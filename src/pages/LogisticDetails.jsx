@@ -41,7 +41,7 @@ export default function LogisticDetails() {
   const card =
     "bg-white dark:bg-[#0D0D0D] border border-[#E9E9EE] dark:border-[#2A2A2A] rounded-xl p-4";
   const label = "text-[12px] text-[#8E8E9C]";
-  const title = "text-[14px] font-semibold text-[#151D48] dark:text-white";
+  const title = "text-[14px] font-semibold text-[#0F2418] dark:text-white";
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -114,7 +114,7 @@ export default function LogisticDetails() {
           <div className="col-span-12 lg:col-span-4 space-y-4">
             {/* Row 1: Order Detail */}
             <div>
-              <p className="text-[14px] font-medium text-[#737791] dark:text-[#F2F2FE] pb-2">
+              <p className="text-[14px] font-medium text-[#6F7C74] dark:text-[#EFFBF3] pb-2">
                 <Skeleton
                   width="100px"
                   height="14px"
@@ -416,7 +416,7 @@ export default function LogisticDetails() {
                 {[...Array(4)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] rounded-xl p-4"
+                    className="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] rounded-xl p-4"
                   >
                     <Skeleton
                       width="100px"
@@ -468,16 +468,16 @@ export default function LogisticDetails() {
         {/* Row 1: Main Dashboard */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-2">
           {/* Title (Hidden below lg) */}
-          <h1 className="flex w-full  justify-start items-center text-[14px] font-semibold text-[#5D5FEF] dark:text-[#5D5FEF] whitespace-nowrap">
+          <h1 className="flex w-full  justify-start items-center text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
             <button
               onClick={() => navigate("/logistics")}
-              className="flex items-center text-[#5D5FEF] dark:text-[#5D5FEF] hover:underline"
+              className="flex items-center text-[#09BF64] dark:text-[#09BF64] hover:underline"
             >
               Logistic
             </button>
             <Icon
               icon="mdi:chevron-right"
-              className="mx-1 text-[#5D5FEF] dark:text-[#5D5FEF]"
+              className="mx-1 text-[#09BF64] dark:text-[#09BF64]"
               width="16"
               height="16"
             />
@@ -513,7 +513,7 @@ export default function LogisticDetails() {
           <div className="col-span-12 lg:col-span-4 space-y-4">
             {/* Row 1: Order Detail */}
             <div>
-              <p className="text-[14px] font-medium text-[#737791] dark:text-[#F2F2FE] pb-2">
+              <p className="text-[14px] font-medium text-[#6F7C74] dark:text-[#EFFBF3] pb-2">
                 Order Detail
               </p>
               <FlexibleCard
@@ -618,7 +618,7 @@ export default function LogisticDetails() {
                 header={
                   <>
                     <div className="p-4">
-                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#F2F2FE] font-semibold whitespace-nowrap">
+                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-semibold whitespace-nowrap">
                         Carrier Details
                       </h1>
                     </div>
@@ -629,7 +629,7 @@ export default function LogisticDetails() {
                     <div className="flex justify-center">
                       <div className="flex flex-row  gap-4 items-center h-[56px] w-[calc(100%-20px)] rounded-lg bg-[#EFF0F7] dark:bg-[#191919] p-4">
                         <img src="/walkerpackIcon.png" alt="walkerpack" />
-                        <h1 className="text-[#131330] text-[14px] font-semibold dark:text-[#CFCFEC]">
+                        <h1 className="text-[#0E1A12] text-[14px] font-semibold dark:text-[#CDEEDB]">
                           Shipping Walkerpack (Northampton)
                         </h1>
                       </div>
@@ -644,7 +644,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Email
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             example@mail.com
                           </h1>
                         </div>
@@ -652,7 +652,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Contact
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             +1 234 567 890
                           </h1>
                         </div>
@@ -681,7 +681,7 @@ export default function LogisticDetails() {
                 header={
                   <>
                     <div className="pt-4 pr-4 pl-4 pb-2">
-                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#F2F2FE] font-semibold whitespace-nowrap">
+                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-semibold whitespace-nowrap">
                         Codes
                       </h1>
                     </div>
@@ -695,7 +695,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             HS Code
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             5996071650983
                           </h1>
                         </div>
@@ -703,7 +703,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Unit Bar Code
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             5996071650983
                           </h1>
                         </div>
@@ -713,7 +713,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Display Bar Code
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             5996071650983
                           </h1>
                         </div>
@@ -721,7 +721,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Carton Bar Code
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             5996071650983
                           </h1>
                         </div>
@@ -745,7 +745,7 @@ export default function LogisticDetails() {
                 header={
                   <>
                     <div className="pt-4 pr-4 pl-4 pb-2">
-                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#F2F2FE] font-semibold whitespace-nowrap">
+                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-semibold whitespace-nowrap">
                         Product Info
                       </h1>
                     </div>
@@ -759,7 +759,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Name
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             Product A
                           </h1>
                         </div>
@@ -767,7 +767,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Article Number
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             SKU 23434
                           </h1>
                         </div>
@@ -777,7 +777,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Category
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             Electric
                           </h1>
                         </div>
@@ -785,7 +785,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Shelf Life(Month)
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             12
                           </h1>
                         </div>
@@ -803,7 +803,7 @@ export default function LogisticDetails() {
                 header={
                   <>
                     <div className="pt-4 pr-4 pl-4 pb-2">
-                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#F2F2FE] font-semibold whitespace-nowrap">
+                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-semibold whitespace-nowrap">
                         Customer Info
                       </h1>
                     </div>
@@ -817,7 +817,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Name
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             John Doe
                           </h1>
                         </div>
@@ -825,7 +825,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Contact
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             +1 234 567 890
                           </h1>
                         </div>
@@ -835,7 +835,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Address
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             123, Main Street, NY, Noida, India
                           </h1>
                         </div>
@@ -860,9 +860,9 @@ export default function LogisticDetails() {
                         icon="mingcute:ai-line"
                         width="20"
                         height="20"
-                        className=" text-[#5D5FEF]"
+                        className=" text-[#09BF64]"
                       />
-                      <h1 className="text-[14px] text-[#737791] dark:text-[#EEF1FF] font-medium">
+                      <h1 className="text-[14px] text-[#6F7C74] dark:text-[#EBF9F0] font-medium">
                         AI Powered Suggestions
                       </h1>
                     </div>
@@ -871,22 +871,22 @@ export default function LogisticDetails() {
               }
               center={
                 <>
-                  <div className="h-[265px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 pb-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#F2F2FE] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+                  <div className="h-[265px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 pb-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
                     <div className="flex flex-col gap-4 w-full">
                       {AISuggestion.map((msg) => (
                         <FlexibleCard
                           key={msg.id}
-                          cardClass="w-full h-auto bg-[#F2F2FE80] dark:bg-[#14141480] border-none rounded-xl p-4"
+                          cardClass="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-4"
                           headerClass=""
                           centerClass=""
                           footerClass="flex flex-row items-center"
                           header={
                             <div className="relative flex w-full items-center">
                               <div className="flex flex-col gap-3 text-left">
-                                <h3 className="text-[13px] text-[#737791] dark:text-[#A9A9CD]">
+                                <h3 className="text-[13px] text-[#6F7C74] dark:text-[#A9C2B3]">
                                   {msg.title}
                                 </h3>
-                                <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#F2F2FE] font-medium">
+                                <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-medium">
                                   {msg.msg}
                                 </h3>
                               </div>
@@ -910,7 +910,7 @@ export default function LogisticDetails() {
                 header={
                   <>
                     <div className="pt-4 pr-4 pl-4 pb-2">
-                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#F2F2FE] font-semibold whitespace-nowrap">
+                      <h1 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-semibold whitespace-nowrap">
                         Other Product Details
                       </h1>
                     </div>
@@ -924,7 +924,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Unit Display
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             20
                           </h1>
                         </div>
@@ -932,7 +932,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Display/Carton
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             23
                           </h1>
                         </div>
@@ -940,7 +940,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Carton/Layer
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             7
                           </h1>
                         </div>
@@ -950,7 +950,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Layer Pallet
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             6
                           </h1>
                         </div>
@@ -958,7 +958,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Carton/Pallet
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             12
                           </h1>
                         </div>
@@ -966,7 +966,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Unit/Weight
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             50
                           </h1>
                         </div>
@@ -976,7 +976,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Units/Pallet
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             20
                           </h1>
                         </div>
@@ -984,7 +984,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Pallet Height
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             10
                           </h1>
                         </div>
@@ -992,7 +992,7 @@ export default function LogisticDetails() {
                           <h2 className="dark:text-[#D4D4D4] text-[#B0B0B0] text-[10px]">
                             Blue Pallet Height
                           </h2>
-                          <h1 className="text-[#2B2B2BCC] dark:text-[#F2F2FE] text-[14px] font-medium">
+                          <h1 className="text-[#2B2B2BCC] dark:text-[#EFFBF3] text-[14px] font-medium">
                             60
                           </h1>
                         </div>

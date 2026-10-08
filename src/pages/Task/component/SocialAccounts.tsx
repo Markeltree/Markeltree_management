@@ -137,7 +137,7 @@ const SocialCard = ({ name, icon, url: initialUrl, email: initialEmail, password
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#73779140]/25 dark:border-gray-600">
+        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6F7C7440]/25 dark:border-gray-600">
           <textarea
             value={url}
             onChange={(e) => setUrl(e.target.value)}
@@ -162,7 +162,7 @@ const SocialCard = ({ name, icon, url: initialUrl, email: initialEmail, password
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#73779140]/25 dark:border-gray-600">
+        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6F7C7440]/25 dark:border-gray-600">
           <input
             type="email"
             value={email}
@@ -186,7 +186,7 @@ const SocialCard = ({ name, icon, url: initialUrl, email: initialEmail, password
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex items-center gap-2 bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#73779140]/25 dark:border-gray-600 w-full">
+        <div className="flex items-center gap-2 bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6F7C7440]/25 dark:border-gray-600 w-full">
           <input
             type={showPassword ? "text" : "password"}
             value={password}

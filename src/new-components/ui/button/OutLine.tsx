@@ -16,7 +16,7 @@ const OutlineBtn: React.FC<OutlineBtnProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center justify-center gap-2 border border-[#5D5FEF] text-[#5D5FEF] 
+      className={`flex items-center justify-center gap-2 border border-[#09BF64] text-[#09BF64] 
         rounded-sm bg-transparent hover:bg-indigo-400 hover:text-[#fff] hover:border-[#fff]
         font-medium sm:text-base
         w-full sm:w-auto px-3 py-2 transition-all ${className}`}

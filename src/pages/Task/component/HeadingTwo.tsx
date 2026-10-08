@@ -7,7 +7,7 @@ type HeadingTwoProps = {
 
 const HeadingTwo: React.FC<HeadingTwoProps> = ({ text, className = "" }) => {
   return (
-    <h2 className={`text-[20px] font-bold text-[#151D48] dark:text-white ${className}`}>
+    <h2 className={`text-[20px] font-bold text-[#0F2418] dark:text-white ${className}`}>
       {text}
     </h2>
   );

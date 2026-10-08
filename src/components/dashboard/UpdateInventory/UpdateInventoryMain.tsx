@@ -31,8 +31,8 @@ const Tabs = () => {
               onClick={() => setActiveTab(tab)}
               className={`w-1/2 px-3 py-1.5 text-[11px] sm:text-[12px] md:text-[13px] font-medium capitalize rounded transition-all duration-200 ${
                 activeTab === tab
-                  ? "text-[#5D5FEF] border-b-2 border-[#5D5FEF]"
-                  : "text-[#8E8E9C] hover:text-[#151D48]"
+                  ? "text-[#09BF64] border-b-2 border-[#09BF64]"
+                  : "text-[#8E8E9C] hover:text-[#0F2418]"
               }`}
             >
               {tab}

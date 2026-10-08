@@ -34,7 +34,7 @@ const Training = () => {
           <ColorFull
             text="Add Training"
             icon={FiPlus}
-            bgColor="bg-[#5D5FEF]"
+            bgColor="bg-[#09BF64]"
             textColor="text-white"
             fontSize="text-xs"
             className="rounded-full"

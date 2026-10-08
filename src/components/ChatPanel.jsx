@@ -3348,7 +3348,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
 
   // Update browser tab title and favicon based on unread notifications
   useEffect(() => {
-    const originalTitle = "CFR Dashboard"; // Use a fixed original title
+    const originalTitle = "Markeltree Dashboard"; // Use a fixed original title
     const unreadCount = getUnreadNotificationCount();
 
     console.log("useEffect triggered - Dispatching unread count:", unreadCount);
@@ -5092,7 +5092,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
         <div className="flex-1 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-transparent">
           {/* Threads Section */}
           <div
-            className={`group flex items-center justify-between px-4 py-2 text-[14px] cursor-pointer hover:bg-[#7476F11A] hover:text-white rounded-md ${
+            className={`group flex items-center justify-between px-4 py-2 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
               showThreadsPage ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]" : ""
             }`}
             onClick={handleThreadsClick}
@@ -5150,7 +5150,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                 channels.map((group) => (
                   <div
                     key={group.id}
-                    className={`group flex items-center gap-2 px-4 py-1 mb-1 text-[14px] cursor-pointer hover:bg-[#7476F11A] hover:text-white rounded-md ${
+                    className={`group flex items-center gap-2 px-4 py-1 mb-1 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
                       activeUser?.id === group.id && !showThreadsPage
                         ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]"
                         : ""
@@ -5210,7 +5210,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                 favoriteUsers.map((user) => (
                   <div
                     key={user.id}
-                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#7476F11A] hover:text-white rounded-md ${
+                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
                       activeUser?.id === user.id && !showThreadsPage
                         ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]"
                         : ""
@@ -5265,7 +5265,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                 regularUsers.map((user) => (
                   <div
                     key={user.id}
-                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#7476F11A] hover:text-white rounded-md ${
+                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
                       activeUser?.id === user.id && !showThreadsPage
                         ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]"
                         : ""
@@ -5570,7 +5570,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                             key={`${message.id}-reply-${index}-${reply.time}`}
                             className={`flex items-start gap-2 pl-4 border-l-2 border-gray-200 dark:border-gray-600 ${
                               reply.status === "unread"
-                                ? "bg-purple-50 dark:bg-purple-900/20 rounded-lg p-2 -ml-2 -mr-2"
+                                ? "bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-2 -ml-2 -mr-2"
                                 : ""
                             }`}
                             onClick={() => {
@@ -6283,7 +6283,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                         } group relative ${
                           highlightedMessageId === msg.id ||
                           highlightedFileId === msg.id
-                            ? "bg-purple-100 dark:bg-purple-900 rounded-lg p-2 -m-2"
+                            ? "bg-emerald-100 dark:bg-emerald-900 rounded-lg p-2 -m-2"
                             : ""
                         }`}
                         onMouseEnter={() => setHoveredMessageId(msg.id)}
@@ -6839,7 +6839,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                     className={`group flex items-start gap-3 relative p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 ${
                       highlightedMessageId === r.id ||
                       highlightedFileId === r.id
-                        ? "bg-purple-100 dark:bg-purple-900"
+                        ? "bg-emerald-100 dark:bg-emerald-900"
                         : ""
                     }`}
                     onMouseEnter={() => setHoveredReplyId(r.id)}
@@ -8126,7 +8126,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
             {/* Group Name */}
             <label
               htmlFor="groupName"
-              className="block text-[12px] pl-1 text-[#737791] dark:text-[#A9A9CD] mb-1"
+              className="block text-[12px] pl-1 text-[#6F7C74] dark:text-[#A9C2B3] mb-1"
             >
               Channel Name
             </label>

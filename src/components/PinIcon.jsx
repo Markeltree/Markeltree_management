@@ -19,8 +19,8 @@ export default function PinIcon({
       className={`relative w-9 h-9 rounded-xl flex items-center justify-center transition
         ${
           isActive
-            ? "bg-[#5D5FEF] text-white"
-            : "bg-[#F4F6F9] dark:bg-gray-800 text-[#5D5FEF] dark:text-white"
+            ? "bg-[#09BF64] text-white"
+            : "bg-[#F4F6F9] dark:bg-gray-800 text-[#09BF64] dark:text-white"
         }
         ${className}`}
     >

@@ -50,7 +50,7 @@ export const menuOptions = (allowedKeys = []) => {
     ...item,
     template: (opt) => (
       <div
-        className="flex items-center justify-around py-2 cursor-pointer hover:bg-[#5D5FEF1A] dark:hover:bg-[#7476F140]"
+        className="flex items-center justify-around py-2 cursor-pointer hover:bg-[#09BF641A] dark:hover:bg-[#81D95940]"
         onClick={item.command}
       >
         <span className="text-sm text-left">{item.label}</span>

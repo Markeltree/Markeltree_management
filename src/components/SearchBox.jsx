@@ -9,7 +9,7 @@ export default function SearchBox({
   return (
     <div className={`relative ${containerClass}`}>
       <span className="absolute inset-y-0 left-3 flex items-center text-gray-400 dark:text-gray-300">
-        <Icon icon="mdi:magnify" className="text-xl text-[#5D5FEF]" />
+        <Icon icon="mdi:magnify" className="text-xl text-[#09BF64]" />
       </span>
       <input
         type="text"

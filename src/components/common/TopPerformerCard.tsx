@@ -17,7 +17,7 @@ const TopPerformerCard = ({ category, amount, color, data }: CardProps) => {
         
         {/* Left Side - Info */}
         <div className="flex flex-col gap-1 sm:gap-1 md:w-[60%]">
-          <span className="text-[16px] font-semibold text-[#151D48] dark:text-orange-400 mb-4">
+          <span className="text-[16px] font-semibold text-[#0F2418] dark:text-orange-400 mb-4">
             Top Performer Today!
           </span>
           <h2 className="text-[24px] sm:text-2xl font-bold mb-5">
@@ -27,11 +27,11 @@ const TopPerformerCard = ({ category, amount, color, data }: CardProps) => {
           <HeadingOne 
           text={ `$ ${amount}K`} 
           fontSize="text-[32px]" 
-          colorClass="text-[#151D48]" 
+          colorClass="text-[#0F2418]" 
           fontWeight="700"
           className="font-bold mb-6"
           />
-          <p className="text-[17px] sm:text-base font-regular text-[#151D48] dark:text-gray-300">
+          <p className="text-[17px] sm:text-base font-regular text-[#0F2418] dark:text-gray-300">
             of total sales
           </p>
         </div>

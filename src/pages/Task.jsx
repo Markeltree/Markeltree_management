@@ -77,7 +77,7 @@ export default function Task() {
             {/* Row 1: Main Dashboard */}
             <div className="flex flex-row justify-between items-center mb-4 gap-2">
               {/* Title (Hidden below lg) */}
-              <h1 className="hidden lg:block text-[14px] font-semibold text-[#5D5FEF] dark:text-[#5D5FEF] whitespace-nowrap">
+              <h1 className="hidden lg:block text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
                 My Tasks
               </h1>
 
@@ -118,7 +118,7 @@ export default function Task() {
                   iconDark="./refreshIcon.png"
                   iconPos="left"
                   labelClass="font-normal md:font-bold"
-                  buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-4 bg-white text-[#5D5FEF] dark:bg-[#0D0D0D] dark:text-[#5D5FEF] border border-[#5D5FEF] focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
                   iconClass="w-[14px] md:w-[16px] h-[14px] md:h-[16px]"
                   onClick={handleRefresh}
                 />

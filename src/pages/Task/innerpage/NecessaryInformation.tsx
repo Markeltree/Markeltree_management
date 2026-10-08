@@ -119,7 +119,7 @@ const NecessaryInformation = () => {
                   console.error("Modal context is not available. Make sure ModalProvider wraps the component.");
                 }
               }}
-              className="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[35px] w-[200px] text-white bg-[#5D5FEF] dark:text-black border-none focus:outline-none focus:ring-0 rounded-lg hover:bg-[#4a4cd1] transition-colors"
+              className="flex items-center justify-center px-3 gap-1 font-normal text-[12px] h-[35px] w-[200px] text-white bg-[#09BF64] dark:text-black border-none focus:outline-none focus:ring-0 rounded-lg hover:bg-[#4a4cd1] transition-colors"
             >
               <Icon icon="ic:round-add" width="20" height="20" />
               <span>Add Information</span>
