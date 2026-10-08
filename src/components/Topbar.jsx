@@ -37,7 +37,7 @@ export default function Topbar({ toggleSidebar }) {
         </div>
 
         <div className="ml-10">
-          <span className="text-[#0F2418] text-md dark:text-white font-bold truncate pr-10">
+          <span className="text-[#0B1B33] text-md dark:text-white font-bold truncate pr-10">
             {greeting()}, {UserName}
           </span>
         </div>
@@ -67,7 +67,7 @@ export default function Topbar({ toggleSidebar }) {
               showLabel={false}
               size="w-[90px] h-9"
               iconSize="w-5 h-5"
-              styling="[&_.p-dropdown-trigger-icon]:text-[#09BF64] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
+              styling="[&_.p-dropdown-trigger-icon]:text-[#0088D1] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
               onChange={(val) => console.log("Selected:", val)}
             />
           </div>
@@ -75,10 +75,10 @@ export default function Topbar({ toggleSidebar }) {
           <div className="ml-1.5">
             <PinIcon
               icon="solar:pin-linear"
-              iconStyle="text-xl text-[#09BF64]"
+              iconStyle="text-xl text-[#0088D1]"
               showDot={true}
               dotStyling="bg-red-500 absolute top-1 left-[26px] block h-1.5 w-1.5 rounded-full"
-              className="ml-2 bg-[#09BF641A] dark:bg-[#09BF6440] w-9 h-9 rounded-xl flex items-center justify-center"
+              className="ml-2 bg-[#0088D11A] dark:bg-[#0088D140] w-9 h-9 rounded-xl flex items-center justify-center"
             />
           </div>
 
@@ -115,7 +115,7 @@ export default function Topbar({ toggleSidebar }) {
               iconStyle="text-xl dark:text-white bg-[#F4F6F9] dark:bg-gray-800"
               showDot={true}
               dotStyling="bg-red-500 absolute top-1 left-[26px] block h-1.5 w-1.5 rounded-full"
-              className="text-[#09BF64] dark:text-white bg-[#F4F6F9] dark:bg-gray-800 w-9 h-9 rounded-xl flex items-center justify-center"
+              className="text-[#0088D1] dark:text-white bg-[#F4F6F9] dark:bg-gray-800 w-9 h-9 rounded-xl flex items-center justify-center"
             />
             <UserProfile
             />
@@ -124,7 +124,7 @@ export default function Topbar({ toggleSidebar }) {
 
         {/* Row 2 */}
         <div className="flex justify-between items-center px-4 py-2 bg-[#ffffff] dark:bg-black">
-          <span className="text-[#0F2418] text-md dark:text-white font-bold truncate">
+          <span className="text-[#0B1B33] text-md dark:text-white font-bold truncate">
             {greeting()}, {UserName}
           </span>
           <div className="flex items-center gap-x-4">
@@ -144,7 +144,7 @@ export default function Topbar({ toggleSidebar }) {
               size="w-[80px] h-9"
               iconSize="w-6 h-6"
               iconSizeExpand="w-4 h-4"
-              styling="[&_.p-dropdown-trigger-icon]:text-[#09BF64] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
+              styling="[&_.p-dropdown-trigger-icon]:text-[#0088D1] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
             />
             <ThemeToggle
               size="w-16 h-9"
@@ -182,7 +182,7 @@ export default function Topbar({ toggleSidebar }) {
               iconStyle="text-xl dark:text-white bg-[#F4F6F9] dark:bg-gray-800"
               showDot={true}
               dotStyling="bg-red-500 absolute top-1 left-[26px] block h-1.5 w-1.5 rounded-full"
-              className="text-[#09BF64] dark:text-white bg-[#F4F6F9] dark:bg-gray-800 w-9 h-9 rounded-xl flex items-center justify-center"
+              className="text-[#0088D1] dark:text-white bg-[#F4F6F9] dark:bg-gray-800 w-9 h-9 rounded-xl flex items-center justify-center"
             />
             <UserProfile
             />
@@ -191,7 +191,7 @@ export default function Topbar({ toggleSidebar }) {
 
         {/* Row 2 */}
         <div className="flex justify-between items-center px-4 py-3 bg-white dark:bg-black gap-x-4">
-          <span className="text-[#0F2418] text-md dark:text-white font-bold truncate">
+          <span className="text-[#0B1B33] text-md dark:text-white font-bold truncate">
             {greeting()}, {UserName}
           </span>
 
@@ -218,7 +218,7 @@ export default function Topbar({ toggleSidebar }) {
               size="w-[80px] h-9"
               iconSize="w-6 h-6"
               iconSizeExpand="w-4 h-4"
-              styling="[&_.p-dropdown-trigger-icon]:text-[#09BF64] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
+              styling="[&_.p-dropdown-trigger-icon]:text-[#0088D1] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
             />
             <ThemeToggle
               size="w-16 h-9"

@@ -16,8 +16,8 @@ export function PageHeader({ title, subtitle, actions }) {
   return (
     <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
       <div>
-        <h1 className="text-[14px] font-semibold text-[#09BF64] whitespace-nowrap">{title}</h1>
-        {subtitle && <p className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">{subtitle}</p>}
+        <h1 className="text-[14px] font-semibold text-[#0088D1] whitespace-nowrap">{title}</h1>
+        {subtitle && <p className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">{subtitle}</p>}
       </div>
       {actions && <div className="flex flex-wrap items-center gap-2 md:gap-3">{actions}</div>}
     </div>
@@ -30,8 +30,8 @@ export function Panel({ title, subtitle, actions, children, className = "", body
       {(title || actions) && (
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
           <div>
-            {title && <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px]">{title}</h2>}
-            {subtitle && <p className="text-[12px] text-[#666666] dark:text-[#A9C2B3]">{subtitle}</p>}
+            {title && <h2 className="text-[#333333] dark:text-[#EEF8FD] font-bold text-[16px]">{title}</h2>}
+            {subtitle && <p className="text-[12px] text-[#666666] dark:text-[#A9BACB]">{subtitle}</p>}
           </div>
           {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}
         </div>
@@ -42,11 +42,11 @@ export function Panel({ title, subtitle, actions, children, className = "", body
 }
 
 const TONES = {
-  primary: "bg-[#09BF641A] text-[#09BF64]",
+  primary: "bg-[#0088D11A] text-[#0088D1]",
   success: "bg-[#10B9811A] text-[#059669]",
   warning: "bg-[#F59E0B1A] text-[#D97706]",
   danger: "bg-[#FF695B1A] text-[#E5483A]",
-  neutral: "bg-[#8E8E9C1A] text-[#6F7C74] dark:text-[#A9C2B3]",
+  neutral: "bg-[#8E8E9C1A] text-[#6E7A86] dark:text-[#A9BACB]",
   info: "bg-[#0EA5E91A] text-[#0284C7]",
 };
 
@@ -62,8 +62,8 @@ export function StatCard({ label, value, icon, tone = "primary", hint, onClick }
         </div>
       )}
       <div className="min-w-0">
-        <p className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3] truncate">{label}</p>
-        <p className="text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3] leading-tight">{value ?? "—"}</p>
+        <p className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB] truncate">{label}</p>
+        <p className="text-[20px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] leading-tight">{value ?? "—"}</p>
         {hint && <p className="text-[11px] text-[#8E8E9C]">{hint}</p>}
       </div>
     </div>
@@ -95,7 +95,7 @@ export function Avatar({ person, size = 32 }) {
   }
   return (
     <div
-      className="rounded-full bg-[#09BF64] text-white flex items-center justify-center font-semibold shrink-0"
+      className="rounded-full bg-[#0088D1] text-white flex items-center justify-center font-semibold shrink-0"
       style={{ width: size, height: size, fontSize: size * 0.38 }}
     >
       {initials}
@@ -108,7 +108,7 @@ export function PersonCell({ person, sub }) {
     <div className="flex items-center gap-2 min-w-0">
       <Avatar person={person} />
       <div className="min-w-0">
-        <p className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] truncate">{fullName(person)}</p>
+        <p className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] truncate">{fullName(person)}</p>
         {sub && <p className="text-[11px] text-[#8E8E9C] truncate">{sub}</p>}
       </div>
     </div>
@@ -118,9 +118,9 @@ export function PersonCell({ person, sub }) {
 // ── Controls ─────────────────────────────────────────────────────
 
 const BTN = {
-  primary: "bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border border-[#09BF64]",
-  outline: "bg-white text-[#09BF64] dark:bg-[#0D0D0D] border border-[#09BF64]",
-  ghost: "bg-white text-[#333] dark:bg-[#0D0D0D] dark:text-[#A9C2B3] border border-[#A9A9A9] dark:border-[#8E8E9C]",
+  primary: "bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border border-[#0088D1]",
+  outline: "bg-white text-[#0088D1] dark:bg-[#0D0D0D] border border-[#0088D1]",
+  ghost: "bg-white text-[#333] dark:bg-[#0D0D0D] dark:text-[#A9BACB] border border-[#A9A9A9] dark:border-[#8E8E9C]",
   danger: "bg-[#FF695B] text-white border border-[#FF695B]",
   success: "bg-[#10B981] text-white border border-[#10B981]",
 };
@@ -146,8 +146,8 @@ export function IconBtn({ icon, title, onClick, tone = "primary", disabled }) {
     tone === "danger"
       ? "border-[#FF695B] text-[#FF695B]"
       : tone === "solid"
-        ? "bg-[#09BF64] border-[#09BF64] text-white"
-        : "border-[#09BF64] text-[#09BF64]";
+        ? "bg-[#0088D1] border-[#0088D1] text-white"
+        : "border-[#0088D1] text-[#0088D1]";
   return (
     <button
       type="button"
@@ -163,13 +163,13 @@ export function IconBtn({ icon, title, onClick, tone = "primary", disabled }) {
 }
 
 const inputCls =
-  "w-full text-[13px] px-3 border border-[#6F7C7440] dark:border-[#A9C2B355] h-[40px] rounded-lg text-[#0F2418] dark:text-[#EFFBF3] bg-white dark:bg-[#0D0D0D] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] disabled:opacity-60";
+  "w-full text-[13px] px-3 border border-[#6E7A8640] dark:border-[#A9BACB55] h-[40px] rounded-lg text-[#0B1B33] dark:text-[#EEF8FD] bg-white dark:bg-[#0D0D0D] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] disabled:opacity-60";
 
 export function Field({ label, required, hint, error, children, className = "" }) {
   return (
     <label className={`flex flex-col gap-1 ${className}`}>
       {label && (
-        <span className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
+        <span className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">
           {label} {required && <span className="text-[#FF695B]">*</span>}
         </span>
       )}
@@ -203,7 +203,7 @@ export function SearchInput({ value, onChange, placeholder = "Search…", classN
   return (
     <div className={`relative ${className}`}>
       <span className="absolute inset-y-0 left-3 flex items-center">
-        <Icon icon="mdi:magnify" className="text-xl text-[#09BF64]" />
+        <Icon icon="mdi:magnify" className="text-xl text-[#0088D1]" />
       </span>
       <input
         value={value}
@@ -217,17 +217,17 @@ export function SearchInput({ value, onChange, placeholder = "Search…", classN
 
 export function Tabs({ tabs, active, onChange }) {
   return (
-    <div className="flex gap-5 border-b border-[#6F7C7426] overflow-x-auto scrollbar-hide">
+    <div className="flex gap-5 border-b border-[#6E7A8626] overflow-x-auto scrollbar-hide">
       {tabs.map((t) => (
         <button
           key={t.key}
           onClick={() => onChange(t.key)}
           className={`pb-2 text-[13px] font-semibold whitespace-nowrap flex items-center gap-1.5 ${
-            active === t.key ? "text-[#09BF64] border-b-2 border-[#09BF64]" : "text-[#6F7C74] dark:text-[#A9C2B3] hover:text-[#09BF64]"
+            active === t.key ? "text-[#0088D1] border-b-2 border-[#0088D1]" : "text-[#6E7A86] dark:text-[#A9BACB] hover:text-[#0088D1]"
           }`}
         >
           {t.label}
-          {t.count > 0 && <span className="bg-[#09BF64] text-white text-[10px] px-1.5 rounded-full">{t.count}</span>}
+          {t.count > 0 && <span className="bg-[#0088D1] text-white text-[10px] px-1.5 rounded-full">{t.count}</span>}
         </button>
       ))}
     </div>
@@ -276,7 +276,7 @@ export function Table({ columns, rows, loading, emptyText = "No records found.",
           dataKey={dataKey}
           className={`p-datatable-sm w-full [&_.p-datatable-tbody>tr]:dark:!bg-black ${loading ? "opacity-60" : ""}`}
           rowClassName={() =>
-            `border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap ${onRowClick ? "cursor-pointer" : ""}`
+            `border-b border-[#6E7A8626] text-[13px] text-[#666666] dark:text-[#EEF8FD] dark:bg-black whitespace-nowrap ${onRowClick ? "cursor-pointer" : ""}`
           }
           onRowClick={onRowClick ? (e) => onRowClick(e.data) : undefined}
           emptyMessage={<Empty text={emptyText} />}
@@ -309,8 +309,8 @@ export function ModalForm({ title, subtitle, children, onSubmit, submitLabel = "
       className="flex flex-col gap-4 max-h-[80vh]"
     >
       <div className="pr-8">
-        <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{title}</h2>
-        {subtitle && <p className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">{subtitle}</p>}
+        <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{title}</h2>
+        {subtitle && <p className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">{subtitle}</p>}
       </div>
       <div className="overflow-y-auto pr-1 flex flex-col gap-3">{children}</div>
       <ErrorNote error={error} />

@@ -12,9 +12,9 @@ export default function RequireAuth({ permissions, children }) {
   if (permissions?.length && !can(...permissions)) {
     return (
       <div className="flex flex-col items-center justify-center h-full p-10 text-center">
-        <i className="pi pi-lock text-4xl text-[#09BF64] mb-3" />
-        <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">Access restricted</h2>
-        <p className="text-[14px] text-[#6F7C74] dark:text-[#A9C2B3] mt-1">
+        <i className="pi pi-lock text-4xl text-[#0088D1] mb-3" />
+        <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">Access restricted</h2>
+        <p className="text-[14px] text-[#6E7A86] dark:text-[#A9BACB] mt-1">
           You don't have permission to view this page. Contact HR or an administrator if you need access.
         </p>
       </div>

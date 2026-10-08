@@ -85,7 +85,7 @@ export default function Feedback() {
           <>
             <div className="flex flex-row justify-between items-center mb-4 gap-2">
               {/* Title (Hidden below lg) */}
-              <h1 className="hidden lg:block text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
+              <h1 className="hidden lg:block text-[14px] font-semibold text-[#0088D1] dark:text-[#0088D1] whitespace-nowrap">
                 Feedback
               </h1>
 
@@ -110,7 +110,7 @@ export default function Feedback() {
                   iconDark="./refreshIcon.png"
                   iconPos="left"
                   labelClass="font-normal md:font-bold"
-                  buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-2 md:px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-2 md:px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                   iconClass="w-[14px] md:w-[16px] h-[14px] md:h-[16px]"
                   onClick={handleRefresh}
                 />
@@ -132,7 +132,7 @@ export default function Feedback() {
                   }
                   iconPos="left"
                   labelClass="font-normal md:font-bold"
-                  buttonClass="text-[9px] md:text-[12px] flex items-center justify-center gap-2 h-[35px] md:h-[45px] w-auto px-2 md:px-4 bg-[#09BF64] text-white dark:bg-[#09BF64] dark:text-black border border-[#09BF64] focus:outline-none focus:ring-0 truncate md:whitespace-normal md:overflow-visible md:text-ellipsis-none"
+                  buttonClass="text-[9px] md:text-[12px] flex items-center justify-center gap-2 h-[35px] md:h-[45px] w-auto px-2 md:px-4 bg-[#0088D1] text-white dark:bg-[#0088D1] dark:text-black border border-[#0088D1] focus:outline-none focus:ring-0 truncate md:whitespace-normal md:overflow-visible md:text-ellipsis-none"
                   onClick={handleShareFeedback}
                 />
               </div>

@@ -23,8 +23,8 @@ const GenerateInvoice = () => {
                   onClick={() => setActiveTab("Tab1")}
                   className={`px-4 py-2 ${
                     activeTab === "Tab1"
-                      ? "text-[#0F2418]/80 border-b-2 border-[#09BF64]"
-                      : "text-[#0F2418]/60"
+                      ? "text-[#0B1B33]/80 border-b-2 border-[#0088D1]"
+                      : "text-[#0B1B33]/60"
                   }`}
                 >
                   Update Manually
@@ -33,8 +33,8 @@ const GenerateInvoice = () => {
                   onClick={() => setActiveTab("Tab2")}
                   className={`px-4 py-2 ${
                     activeTab === "Tab2"
-                      ? "text-[#0F2418]/80 border-b-2 border-[#09BF64]"
-                      : "text-[#0F2418]/60"
+                      ? "text-[#0B1B33]/80 border-b-2 border-[#0088D1]"
+                      : "text-[#0B1B33]/60"
                   }`}
                 >
                   Upload File
@@ -102,12 +102,12 @@ const GenerateInvoice = () => {
                           children="Cancel"
                           variant="outline"
                           onClick={() => setIsModalOpen(false)}
-                          className="border-[1px] max-sm:w-full w-full border-[#09BF64] hover:bg-[#09BF64] hover:text-white hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
+                          className="border-[1px] max-sm:w-full w-full border-[#0088D1] hover:bg-[#0088D1] hover:text-white hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
                         />
                         <Button
                           variant="primary"
                           children="Save"
-                          className="border-[1px] max-sm:w-full w-full border-[#09BF64] bg-[#09BF64] text-white hover:bg-white hover:text-[#09BF64] hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
+                          className="border-[1px] max-sm:w-full w-full border-[#0088D1] bg-[#0088D1] text-white hover:bg-white hover:text-[#0088D1] hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
                         />
                       </div>
                     </div>
@@ -126,13 +126,13 @@ const GenerateInvoice = () => {
                         children="Cancel"
                         variant="outline"
                         onClick={() => setIsModalOpen(false)}
-                        className="border-[1px] max-sm:w-full w-full border-[#09BF64] hover:bg-[#09BF64] hover:text-white hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
+                        className="border-[1px] max-sm:w-full w-full border-[#0088D1] hover:bg-[#0088D1] hover:text-white hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
                       />
                       <Button
                         type="submit"
                         variant="primary"
                         children="Save"
-                        className="border-[1px] max-sm:w-full w-full border-[#09BF64] bg-[#09BF64] text-white hover:bg-white hover:text-[#09BF64] hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
+                        className="border-[1px] max-sm:w-full w-full border-[#0088D1] bg-[#0088D1] text-white hover:bg-white hover:text-[#0088D1] hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
                       />
                     </div>
                   </div>

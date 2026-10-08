@@ -10,7 +10,7 @@ type IconWrapperProps = {
 const IconWrapper: React.FC<IconWrapperProps> = ({
   children,
   className = "",
-  bgColor = "bg-[#F4FCF7]",       // default light bg color
+  bgColor = "bg-[#F3FAFD]",       // default light bg color
   darkBgColor = "dark:bg-gray-700", // default dark bg color
 }) => {
   return (

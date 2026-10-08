@@ -23,10 +23,10 @@ const PricingModal = () => {
             />
           </div>
           <div className="flex gap-2">
-            <div className="bg-[#09BF64]/5 py-2 text-[#09BF64] text-[12px] font-medium rounded-sm px-2">
+            <div className="bg-[#0088D1]/5 py-2 text-[#0088D1] text-[12px] font-medium rounded-sm px-2">
               Asda X
             </div>
-            <div className="bg-[#09BF64]/5 py-2 text-[#09BF64] text-[12px] font-medium rounded-sm px-2">
+            <div className="bg-[#0088D1]/5 py-2 text-[#0088D1] text-[12px] font-medium rounded-sm px-2">
               Ajay X
             </div>
           </div>

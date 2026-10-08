@@ -44,15 +44,15 @@ export default function CheckInCard({ onChange }) {
             <div className="grid grid-cols-3 gap-4 text-[13px]">
               <div>
                 <p className="text-[#8E8E9C] text-[11px]">Check-in</p>
-                <p className="font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{fmtTime(record?.checkIn)}</p>
+                <p className="font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{fmtTime(record?.checkIn)}</p>
               </div>
               <div>
                 <p className="text-[#8E8E9C] text-[11px]">Check-out</p>
-                <p className="font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{fmtTime(record?.checkOut)}</p>
+                <p className="font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{fmtTime(record?.checkOut)}</p>
               </div>
               <div>
                 <p className="text-[#8E8E9C] text-[11px]">{record?.checkOut ? "Worked" : "Elapsed"}</p>
-                <p className="font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{fmtMinutes(elapsed)}</p>
+                <p className="font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{fmtMinutes(elapsed)}</p>
               </div>
             </div>
             <div className="flex items-center gap-3">

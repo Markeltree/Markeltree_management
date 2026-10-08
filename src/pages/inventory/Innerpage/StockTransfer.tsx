@@ -82,7 +82,7 @@ const StockTransfer = () => {
               <ColorFull
                 text="Transfer Request"
                 icon={FiPlus}
-                bgColor="bg-[#09BF64]"
+                bgColor="bg-[#0088D1]"
                 textColor="text-white"
                 onClick={() => setIsModalOpen(true)}
               />
@@ -241,11 +241,11 @@ const StockTransfer = () => {
               children="Cancel"
               variant="outline"
               onClick={() => setIsModalOpen(false)}
-              className="border-[1px] w-full max-sm:w-full border-[#09BF64] hover:bg-[#09BF64] hover:text-white hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
+              className="border-[1px] w-full max-sm:w-full border-[#0088D1] hover:bg-[#0088D1] hover:text-white hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
             />
             <Button
               children="Request Stock Transfer"
-              className="border-[1px] w-full max-sm:w-full border-[#09BF64] bg-[#09BF64] text-white hover:bg-white hover:text-[#09BF64] hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
+              className="border-[1px] w-full max-sm:w-full border-[#0088D1] bg-[#0088D1] text-white hover:bg-white hover:text-[#0088D1] hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
             />
           </div>
         </Form>
@@ -285,14 +285,14 @@ const StockTransfer = () => {
           <div className="mt-6 flex flex-row gap-4">
             <Button
               children="Create another request"
-              className="border-[1px] max-sm:w-full border-[#09BF64] hover:bg-[#09BF64] hover:text-white hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
+              className="border-[1px] max-sm:w-full border-[#0088D1] hover:bg-[#0088D1] hover:text-white hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[120px] sm:min-w-[140px] transition-all"
               onClick={() => setIsSuccessModalOpen(false)}
               variant="outline"
             />
             <Button
               variant="primary"
               children="Done"
-              className="border-[1px] max-sm:w-full border-[#09BF64] bg-[#09BF64] text-white hover:bg-white hover:text-[#09BF64] hover:border-[#09BF64] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
+              className="border-[1px] max-sm:w-full border-[#0088D1] bg-[#0088D1] text-white hover:bg-white hover:text-[#0088D1] hover:border-[#0088D1] flex h-9 items-center gap-2 rounded-md px-4 sm:h-10 min-w-[140px] transition-all"
               onClick={() => setIsSuccessModalOpen(false)}
             />
           </div>

@@ -33,7 +33,7 @@ const GenerateInvoiceFifthStep = () => {
   const orderNotes = "Be careful while loading and offloading the product.";
 
   const companyInfo = {
-    name: "Markeltree",
+    name: "Teamora",
     address: "4 Summerward Road, Northampton, UK",
     email: "service.support@cfrstate.co.uk",
     phone: "07968-28802",
@@ -41,7 +41,7 @@ const GenerateInvoiceFifthStep = () => {
   };
 
   return (
-    <div className="no-scrollbar relative w-full max-w-[725px] overflow-y-auto rounded-3xl bg-white dark:bg-[#0D0D0D] dark:text-[#A9C2B3] py-6 px-4">
+    <div className="no-scrollbar relative w-full max-w-[725px] overflow-y-auto rounded-3xl bg-white dark:bg-[#0D0D0D] dark:text-[#A9BACB] py-6 px-4">
       <HeadingTwo text="Sales Invoice" />
       <div className="flex justify-center mb-4">
         <img className="w-60 h-20" src={Logo} alt="Company Logo" />
@@ -109,7 +109,7 @@ const GenerateInvoiceFifthStep = () => {
         </tbody>
       </table>
 
-      <div className="grid grid-cols-2 gap-4 bg-[#EFFBF3]/60 dark:bg-[#0D0D0D] p-4">
+      <div className="grid grid-cols-2 gap-4 bg-[#EEF8FD]/60 dark:bg-[#0D0D0D] p-4">
             <div className="space-y-3">
               <Label children="Discount" />
               <Label children="Net" />

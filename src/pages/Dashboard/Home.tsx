@@ -50,8 +50,8 @@ export default function Home() {
   return (
     <>
       <PageMeta
-        title="Markeltree - ERP Dashboard"
-        description="Markeltree - ERP Dashboard React"
+        title="Teamora - ERP Dashboard"
+        description="Teamora - ERP Dashboard React"
       />
       <div className="grid grid-cols-12 gap-4 md:gap-6">
         <div className="col-span-12 space-y-6">
@@ -147,9 +147,9 @@ export default function Home() {
                 <button
                   key={tab.name}
                   onClick={() => setActiveTab(tab.name)}
-                  className={`px-3 sm:px-4 py-2 text-[14px] sm:text-[18px] font-regular text-[#0F2418] border-b-2 transition-colors duration-300 ${
+                  className={`px-3 sm:px-4 py-2 text-[14px] sm:text-[18px] font-regular text-[#0B1B33] border-b-2 transition-colors duration-300 ${
                     activeTab === tab.name
-                      ? "border-[#0F2418] text-secondary"
+                      ? "border-[#0B1B33] text-secondary"
                       : "border-transparent text-gray-500 hover:text-secondary"
                   }`}
                 >

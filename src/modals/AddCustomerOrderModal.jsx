@@ -93,7 +93,7 @@ export default function AddCustomerOrderModal({ closeModal }) {
             className="dark:bg-[#2C2C2CAA]"
           />
         </div>
-        <div className="flex flex-col w-full pr-3 max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="flex flex-col w-full pr-3 max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           {/* Fields - Row 1 */}
           <div className="flex flex-col lg:flex-row gap-4 mb-4">
             <div className="flex flex-col w-full gap-1">
@@ -200,7 +200,7 @@ export default function AddCustomerOrderModal({ closeModal }) {
           </div>
 
           {/* Row 5 - Notes */}
-          <div className="bg-[#09BF640F] rounded-lg mb-2 pl-1">
+          <div className="bg-[#0088D10F] rounded-lg mb-2 pl-1">
             <div className="flex flex-col gap-2 p-2">
               <Skeleton
                 width="80px"
@@ -243,35 +243,35 @@ export default function AddCustomerOrderModal({ closeModal }) {
             icon="fe:arrow-left"
             width="18px"
             height="18px"
-            className="text-[#0F2418] dark:text-[#EFFBF3]"
+            className="text-[#0B1B33] dark:text-[#EEF8FD]"
           />
         </button>
-        <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+        <div className=" text-[20px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
           Add Customer
         </div>
       </div>
 
       {/* search bar */}
       <div className="flex flex-row justify-between items-end">
-        <label className="text-[12px] font-normal text-[#6F7C74] dark:text-[#6F7C74]">
+        <label className="text-[12px] font-normal text-[#6E7A86] dark:text-[#6E7A86]">
           Search Customer
         </label>
       </div>
       <div className="relative flex flex-row items-center justify-between w-full">
         <input
-          className="dark:bg-[#0D0D0D] w-full border border-[#09BF64] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#09BF64] text-[14px] text-[#6F7C74] dark:text-[#6F7C74] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+          className="dark:bg-[#0D0D0D] w-full border border-[#0088D1] rounded-lg py-2 pl-3 focus:outline-none focus:ring-1 focus:ring-[#0088D1] text-[14px] text-[#6E7A86] dark:text-[#6E7A86] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           placeholder="Search"
           value={search}
           onChange={handleSearch}
         />
         <Icon
           icon="mdi:magnify"
-          className="absolute top-3 right-3 text-[#09BF64] text-lg"
+          className="absolute top-3 right-3 text-[#0088D1] text-lg"
         />
       </div>
 
       {/* fields - row 1*/}
-      <div className="flex flex-col w-full pr-3 max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full pr-3 max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <div className="flex flex-col lg:flex-row gap-4 mb-4">
           <div className="flex flex-col w-full gap-1">
             <FieldComponent
@@ -281,9 +281,9 @@ export default function AddCustomerOrderModal({ closeModal }) {
               placeholder="Enter customer full name"
               value={customerName}
               onChange={(e) => setCustomerName(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
           <div className="flex flex-col w-full gap-1">
@@ -294,9 +294,9 @@ export default function AddCustomerOrderModal({ closeModal }) {
               placeholder="Email or mobile number"
               value={emailAddress}
               onChange={(e) => setEmailAddress(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
         </div>
@@ -311,9 +311,9 @@ export default function AddCustomerOrderModal({ closeModal }) {
               placeholder="Enter Mobile Number"
               value={mobileNumber}
               onChange={(e) => setMobileNumber(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
           <div className="flex flex-col w-full gap-1">
@@ -324,9 +324,9 @@ export default function AddCustomerOrderModal({ closeModal }) {
               placeholder="Enter Post Code"
               value={postCode}
               onChange={(e) => setPostCode(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
         </div>
@@ -336,7 +336,7 @@ export default function AddCustomerOrderModal({ closeModal }) {
           <div className="flex flex-col gap-2 pl-1 w-full">
             <label
               htmlFor="paymentTerm"
-              className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             >
               Payment Term
             </label>
@@ -347,7 +347,7 @@ export default function AddCustomerOrderModal({ closeModal }) {
               onChange={(e) => setPaymentTerm(e.value)}
               placeholder="Select"
               className={clsx(
-                "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                "text-[14px] dark:!text-[#A9BACB] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
               )}
               pt={{
                 panel: {
@@ -361,7 +361,7 @@ export default function AddCustomerOrderModal({ closeModal }) {
           <div className="flex flex-col gap-2 pl-1 w-full">
             <label
               htmlFor="bankTransfer"
-              className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             >
               Bank Transfer
             </label>
@@ -372,7 +372,7 @@ export default function AddCustomerOrderModal({ closeModal }) {
               onChange={(e) => setBankTransfer(e.value)}
               placeholder="Select"
               className={clsx(
-                "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                "text-[14px] dark:!text-[#A9BACB] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
               )}
               pt={{
                 panel: {
@@ -388,7 +388,7 @@ export default function AddCustomerOrderModal({ closeModal }) {
         <div className="flex flex-col gap-1 mb-4 pl-1">
           <label
             htmlFor="address"
-            className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+            className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
           >
             Address
           </label>
@@ -398,17 +398,17 @@ export default function AddCustomerOrderModal({ closeModal }) {
             onChange={(e) => setAddress(e.target.value)}
             rows={4}
             cols={100}
-            className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+            className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
           />
         </div>
 
         {/* row 5 */}
-        <div className="bg-[#09BF640F] rounded-lg mb-2 pl-1">
+        <div className="bg-[#0088D10F] rounded-lg mb-2 pl-1">
           <div className="flex flex-col gap-2 p-2">
-            <h2 className="dark:text-[#A9C2B3] text-[14px] text-[#6F7C74]">
+            <h2 className="dark:text-[#A9BACB] text-[14px] text-[#6E7A86]">
               Notes
             </h2>
-            <p className="text-[#0F2418] text-[16px] dark:text-[#EFFBF3]">
+            <p className="text-[#0B1B33] text-[16px] dark:text-[#EEF8FD]">
               Customer Details will be only visible to you, these details will
               not send to the manufacturer.
             </p>
@@ -420,13 +420,13 @@ export default function AddCustomerOrderModal({ closeModal }) {
           <ActionButton
             label="Back"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-black border border-[#09BF64] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-black border border-[#0088D1] focus:outline-none focus:ring-0"
             onClick={handleBack}
           />
           <ActionButton
             label="Continue"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
             onClick={handleContinue}
           />
         </div>

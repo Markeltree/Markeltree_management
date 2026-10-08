@@ -70,7 +70,7 @@ export default function NotificationIcon({ icon = "carbon:notification", iconSty
         onClick={() => setOpen((prev) => !prev)}
         aria-label={`Notifications${unread ? ` (${unread} unread)` : ""}`}
         className={`relative w-9 h-9 rounded-xl flex items-center justify-center transition
-          ${isActive ? "bg-[#09BF64] text-white" : "bg-[#F4F6F9] dark:bg-gray-800 text-[#09BF64] dark:text-[#09BF64]"}
+          ${isActive ? "bg-[#0088D1] text-white" : "bg-[#F4F6F9] dark:bg-gray-800 text-[#0088D1] dark:text-[#0088D1]"}
           ${className}
         `}
       >
@@ -98,7 +98,7 @@ export default function NotificationIcon({ icon = "carbon:notification", iconSty
               <h2 className="font-semibold text-lg text-gray-900 dark:text-white">Notifications</h2>
               <div className="flex items-center gap-3">
                 {unread > 0 && (
-                  <button onClick={markAllRead} className="text-xs text-[#09BF64] hover:underline">
+                  <button onClick={markAllRead} className="text-xs text-[#0088D1] hover:underline">
                     Mark all read
                   </button>
                 )}
@@ -114,7 +114,7 @@ export default function NotificationIcon({ icon = "carbon:notification", iconSty
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   className={`pb-2 text-sm font-medium ${
-                    activeTab === tab ? "text-[#09BF64] border-b-2 border-[#09BF64]" : "text-gray-500 dark:text-gray-400"
+                    activeTab === tab ? "text-[#0088D1] border-b-2 border-[#0088D1]" : "text-gray-500 dark:text-gray-400"
                   }`}
                 >
                   {tab === "all" ? "All" : `Unread${unread ? ` (${unread})` : ""}`}
@@ -125,7 +125,7 @@ export default function NotificationIcon({ icon = "carbon:notification", iconSty
                   setOpen(false);
                   navigate("/notifications");
                 }}
-                className="ml-auto pb-2 text-xs text-[#09BF64] hover:underline"
+                className="ml-auto pb-2 text-xs text-[#0088D1] hover:underline"
               >
                 See all
               </button>
@@ -144,7 +144,7 @@ export default function NotificationIcon({ icon = "carbon:notification", iconSty
                           onClick={() => openItem(n)}
                           className="flex items-start gap-3 px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition cursor-pointer"
                         >
-                          <div className="w-9 h-9 rounded-full bg-[#09BF641A] text-[#09BF64] flex items-center justify-center shrink-0">
+                          <div className="w-9 h-9 rounded-full bg-[#0088D11A] text-[#0088D1] flex items-center justify-center shrink-0">
                             <Icon icon={TYPE_ICON[n.type] ?? "carbon:notification"} width={18} height={18} />
                           </div>
                           <div className="flex-1 min-w-0">
@@ -152,7 +152,7 @@ export default function NotificationIcon({ icon = "carbon:notification", iconSty
                             {n.body && <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">{n.body}</p>}
                             <p className="text-xs text-gray-500">{timeAgo(n.createdAt)}</p>
                           </div>
-                          {!n.readAt && <span className="w-2 h-2 bg-[#09BF64] rounded-full mt-2 shrink-0"></span>}
+                          {!n.readAt && <span className="w-2 h-2 bg-[#0088D1] rounded-full mt-2 shrink-0"></span>}
                         </li>
                       ))}
                     </ul>

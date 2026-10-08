@@ -154,7 +154,7 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
         <button
           onClick={handleCreateTask}
           disabled={isSubmitting}
-          className="font-medium border bg-[#09BF64] text-white text-center py-3 rounded-lg border-[#5D5FE1]/10 hover:border-[#09BF64] hover:shadow-md hover:shadow-[#09BF64]/30 dark:bg-[#81D959]/10 dark:text-[#81D959] dark:hover:border-[#09BF64]/30 dark:hover:shadow-md dark:hover:shadow-[#fff]/30 flex items-center gap-2 px-4 h-9 min-w-[120px] sm:min-w-[140px] transition-all overflow-hidden w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+          className="font-medium border bg-[#0088D1] text-white text-center py-3 rounded-lg border-[#5D5FE1]/10 hover:border-[#0088D1] hover:shadow-md hover:shadow-[#0088D1]/30 dark:bg-[#01CEE9]/10 dark:text-[#01CEE9] dark:hover:border-[#0088D1]/30 dark:hover:shadow-md dark:hover:shadow-[#fff]/30 flex items-center gap-2 px-4 h-9 min-w-[120px] sm:min-w-[140px] transition-all overflow-hidden w-auto disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? "Creating..." : "Create Task"}
         </button>
@@ -189,12 +189,12 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
               setIsEditingTaskName(false);
             }
           }}
-          className="text-[20px] font-medium text-[#0E1A12] dark:text-white mb-4 bg-transparent border-none outline-none focus:ring-0 w-full"
+          className="text-[20px] font-medium text-[#0C1626] dark:text-white mb-4 bg-transparent border-none outline-none focus:ring-0 w-full"
           autoFocus
         />
       ) : (
         <h2
-          className="text-[20px] font-medium text-[#0E1A12] dark:text-white mb-4 cursor-pointer"
+          className="text-[20px] font-medium text-[#0C1626] dark:text-white mb-4 cursor-pointer"
           onClick={() => setIsEditingTaskName(true)}
         >
           {taskName}
@@ -217,10 +217,10 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
             onClick={() => setIsAssigneeDropdownOpen(!isAssigneeDropdownOpen)}
           >
             <img src={user} alt="user" className="w-6 h-6 rounded-full" />
-            <span className="text-[14px] font-medium text-[#0E1A12] dark:text-white">
+            <span className="text-[14px] font-medium text-[#0C1626] dark:text-white">
               {selectedAssignee}
             </span>
-            <ChevronDown size={14} className="text-[#0E1A12] dark:text-white" />
+            <ChevronDown size={14} className="text-[#0C1626] dark:text-white" />
           </div>
           {isAssigneeDropdownOpen && (
             <div className="absolute right-0 top-full mt-1 bg-white dark:bg-[#1a1a1a] border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg z-[99999] w-48 max-h-48 overflow-y-auto">
@@ -268,7 +268,7 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
             >
               {selectedPriority}
             </span>
-            <ChevronDown size={14} className="text-[#0E1A12] dark:text-white" />
+            <ChevronDown size={14} className="text-[#0C1626] dark:text-white" />
           </div>
           {isPriorityDropdownOpen && (
             <div className="absolute right-0 top-full mt-1 bg-white dark:bg-[#1a1a1a] border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg z-[99999] w-24">
@@ -296,7 +296,7 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="w-full mt-1 p-2 border border-[#6F7C7440] dark:border-gray-600 rounded-[8px] text-[14px] font-medium text-[#8C8C8C] dark:text-gray-300 bg-white dark:bg-[#1a1a1a] focus:outline-none focus:ring-1 focus:ring-[#09BF64]"
+          className="w-full mt-1 p-2 border border-[#6E7A8640] dark:border-gray-600 rounded-[8px] text-[14px] font-medium text-[#8C8C8C] dark:text-gray-300 bg-white dark:bg-[#1a1a1a] focus:outline-none focus:ring-1 focus:ring-[#0088D1]"
           placeholder="What is the task about"
           rows={3}
         ></textarea>
@@ -317,7 +317,7 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
                   size={14}
                   className="text-gray-500 dark:text-gray-400"
                 />
-                <span className="text-sm text-[#0E1A12] dark:text-white">
+                <span className="text-sm text-[#0C1626] dark:text-white">
                   {file.name}
                 </span>
               </div>
@@ -331,8 +331,8 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
           onClick={() => setActiveTab("comments")}
           className={`text-sm ${
             activeTab === "comments"
-              ? "font-semibold text-[16px] font-medium text-[#0F2418] dark:text-white border-b-2 border-[#09BF64]"
-              : "text-[#0F2418CC] dark:text-gray-400 text-[16px] font-medium"
+              ? "font-semibold text-[16px] font-medium text-[#0B1B33] dark:text-white border-b-2 border-[#0088D1]"
+              : "text-[#0B1B33CC] dark:text-gray-400 text-[16px] font-medium"
           }`}
         >
           Comments
@@ -341,8 +341,8 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
           onClick={() => setActiveTab("activity")}
           className={`text-sm ${
             activeTab === "activity"
-              ? "font-semibold text-[16px] font-medium text-[#0F2418] dark:text-white border-b-2 border-[#09BF64]"
-              : "text-[#0F2418CC] dark:text-gray-400 text-[16px] font-medium"
+              ? "font-semibold text-[16px] font-medium text-[#0B1B33] dark:text-white border-b-2 border-[#0088D1]"
+              : "text-[#0B1B33CC] dark:text-gray-400 text-[16px] font-medium"
           }`}
         >
           All Activity
@@ -383,7 +383,7 @@ export default function TaskDrawer({ onClose, onCreateTask }: TaskDrawerProps) {
         <input
           type="text"
           placeholder="Add a comment"
-          className="flex-1 border border-gray-300 dark:border-gray-600 rounded-[8px] bg-[#FFFFFF] dark:bg-[#1a1a1a] px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-1 focus:ring-[#09BF64]"
+          className="flex-1 border border-gray-300 dark:border-gray-600 rounded-[8px] bg-[#FFFFFF] dark:bg-[#1a1a1a] px-3 py-2 text-sm text-black dark:text-white focus:outline-none focus:ring-1 focus:ring-[#0088D1]"
         />
       </div>
     </div>

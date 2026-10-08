@@ -62,8 +62,8 @@ function RequestLeaveModal({ existing, balances, onSaved, closeModal }) {
         </Field>
       </div>
       {singleDay && (
-        <label className="flex items-center gap-2 text-[13px] text-[#6F7C74] dark:text-[#A9C2B3]">
-          <input type="checkbox" checked={form.halfDay} onChange={set("halfDay")} className="accent-[#09BF64]" /> Half day
+        <label className="flex items-center gap-2 text-[13px] text-[#6E7A86] dark:text-[#A9BACB]">
+          <input type="checkbox" checked={form.halfDay} onChange={set("halfDay")} className="accent-[#0088D1]" /> Half day
         </label>
       )}
       <Field label="Reason" required>
@@ -104,7 +104,7 @@ function DecisionModal({ request, action, onSaved, closeModal }) {
       error={error}
       submitLabel={label}
     >
-      <div className="rounded-lg bg-[#F4F6F9] dark:bg-gray-800 px-3 py-2 text-[13px] text-[#0F2418] dark:text-[#EFFBF3]">
+      <div className="rounded-lg bg-[#F4F6F9] dark:bg-gray-800 px-3 py-2 text-[13px] text-[#0B1B33] dark:text-[#EEF8FD]">
         <b>Reason:</b> {request.reason}
       </div>
       <Field label={action === "APPROVE" ? "Note (optional)" : "Note"} required={action !== "APPROVE"}>
@@ -145,7 +145,7 @@ function HolidayModal({ onSaved, closeModal }) {
 }
 
 const requestColumns = (extra = []) => [
-  { header: "Type", body: (r) => <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full" style={{ background: r.leaveType.color ?? "#09BF64" }} />{r.leaveType.name}</span> },
+  { header: "Type", body: (r) => <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full" style={{ background: r.leaveType.color ?? "#0088D1" }} />{r.leaveType.name}</span> },
   { header: "From", body: (r) => fmtDate(r.startDate) },
   { header: "To", body: (r) => fmtDate(r.endDate) },
   { header: "Days", body: (r) => Number(r.days) },
@@ -192,22 +192,22 @@ function MyLeave() {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
-        <h3 className="text-[13px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">Balances {year}</h3>
+        <h3 className="text-[13px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">Balances {year}</h3>
         <Btn icon="material-symbols:add-rounded" label="Request Leave" onClick={() => openRequest()} />
       </div>
       <ErrorNote error={balances.error} onRetry={balances.reload} />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {(balances.data ?? []).map((b) => (
-          <div key={b.leaveType.id} className="rounded-lg border border-[#6F7C7426] p-3" style={{ borderLeft: `4px solid ${b.leaveType.color ?? "#09BF64"}` }}>
+          <div key={b.leaveType.id} className="rounded-lg border border-[#6E7A8626] p-3" style={{ borderLeft: `4px solid ${b.leaveType.color ?? "#0088D1"}` }}>
             <p className="text-[12px] text-[#8E8E9C]">{b.leaveType.name}</p>
-            <p className="text-[22px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{b.unlimited ? "∞" : b.available}</p>
+            <p className="text-[22px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{b.unlimited ? "∞" : b.available}</p>
             <p className="text-[11px] text-[#8E8E9C]">
               {b.unlimited ? "No fixed allowance" : `of ${b.allowance + b.adjustment} days`} · {b.used} used{b.pending ? ` · ${b.pending} pending` : ""}
             </p>
           </div>
         ))}
       </div>
-      <h3 className="text-[13px] font-bold text-[#0F2418] dark:text-[#EFFBF3] pt-2">My requests</h3>
+      <h3 className="text-[13px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] pt-2">My requests</h3>
       <ErrorNote error={list.error} onRetry={list.reload} />
       <Table columns={requestColumns([note, actions])} rows={list.data?.items} loading={list.loading} page={page} totalPages={list.data?.totalPages} onPageChange={setPage} emptyText="You haven't requested any leave yet." />
     </div>

@@ -70,7 +70,7 @@ const TaskList = ({ tasks, onAddTask, onViewAll }: TaskListProps) => {
               <span onClick={() => handleOpenModal("task")}>Create Task</span>
               {/* <button
                 
-                className="text-[9px] text-[#09BF64] underline"
+                className="text-[9px] text-[#0088D1] underline"
               >
                 View target report
               </button> */}

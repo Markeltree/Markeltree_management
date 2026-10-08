@@ -166,7 +166,7 @@ const FilterModal: React.FC<FilterModalProps> = ({ isOpen, onClose, onApplyFilte
               type="date"
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#09BF64]"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-[#0088D1]"
             />
           </div>
         </div>
@@ -181,7 +181,7 @@ const FilterModal: React.FC<FilterModalProps> = ({ isOpen, onClose, onApplyFilte
           </Button>
           <Button
             onClick={handleApply}
-            className="flex-1 bg-[#09BF64] hover:bg-[#4a4cd1] text-white"
+            className="flex-1 bg-[#0088D1] hover:bg-[#4a4cd1] text-white"
           >
             Apply Filters
           </Button>

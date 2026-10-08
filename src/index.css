@@ -20,7 +20,7 @@
 
 .p-dropdown-label.p-inputtext.p-placeholder {
   font-size: 13px;
-  color: #6F7C74;
+  color: #6E7A86;
 }
 
 .p-dropdown-label.p-inputtext {
@@ -45,22 +45,22 @@
 .custom-paginator .p-paginator-next,
 .custom-paginator .p-paginator-last {
   @apply h-7 px-2 text-[12px] inline-flex items-center justify-center 
-         text-[#09BF64] font-normal border border-transparent 
+         text-[#0088D1] font-normal border border-transparent 
          transition-all duration-200 rounded-full;
 }
 
 /* Hover effect */
 .custom-paginator .p-paginator-page:hover {
-  @apply border-[#09BF64] bg-[#EEFAF2] dark:bg-[#0D0D0D];
+  @apply border-[#0088D1] bg-[#EDF7FD] dark:bg-[#0D0D0D];
 }
 
 /* Selected page: fixed circle with purple background */
 .custom-paginator .p-paginator-page.p-highlight {
-  @apply w-7 h-7 bg-[#09BF64] text-white dark:text-black !px-0 !mx-1 !rounded-full;
+  @apply w-7 h-7 bg-[#0088D1] text-white dark:text-black !px-0 !mx-1 !rounded-full;
 }
 
 .custom-paginator .p-paginator-page.p-highlight:hover {
-  @apply  dark:text-[#09BF64];
+  @apply  dark:text-[#0088D1];
 }
 .custom-paginator{
   @apply dark:bg-[#0D0D0D] p-0
@@ -99,21 +99,21 @@
 
 /* === Dark Theme Specific === */
 .dark .p-calendar.p-focus {
-  border: 1px solid #A9C2B3 !important;
+  border: 1px solid #A9BACB !important;
 }
 
 .dark .p-datepicker-trigger.p-button {
   background-color: transparent !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
 }
 
 .dark .p-datepicker-trigger.p-button:focus {
-  border: 1px solid #A9C2B3 !important;
+  border: 1px solid #A9BACB !important;
 }
 
 /* === Light Theme (Optional) === */
 .p-calendar.p-focus {
-  border: 1px solid #6F7C7440 !important;
+  border: 1px solid #6E7A8640 !important;
 }
 
 .p-datepicker-trigger.p-button {
@@ -122,26 +122,26 @@
 }
 
 .p-datepicker-trigger.p-button:focus {
-  border: 1px solid #6F7C74 !important;
+  border: 1px solid #6E7A86 !important;
 }
 
 /* end */
 
 .dark .p-dropdown-panel {
   background-color: #0D0D0D !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
 }
 
 /* Style each dropdown item */
 .dark .p-dropdown-items .p-dropdown-item {
   background: #0D0D0D !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
 }
 
 /* Hover style */
 .dark .p-dropdown-items .p-dropdown-item:hover {
   background-color: #1F1F1F !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
 }
 
 /* For the item that's selected or focused */
@@ -149,36 +149,36 @@
 .dark .p-dropdown-items .p-dropdown-item.p-highlight:focus,
 .dark .p-dropdown-items .p-dropdown-item.p-highlight:hover {
   background-color: #1F1F1F !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
 }
 
 /* Prevent white flash when the options close */
 .dark .p-dropdown-items .p-dropdown-item.selected {
   background-color: #1F1F1F !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
 }
 
 /* Dropdown placeholder in dark mode */
 .dark .p-dropdown-label.p-placeholder {
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
 }
 
 /* Selected value in dark mode */
 .dark .p-dropdown-label {
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
   font-size: 14px !important;
 }
 
 /* timePicker */
 .dark .custom-time-panel {
   background-color: #0D0D0D !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
   border: 1px solid #2C2C2E !important;
 }
 
 .dark .custom-time-panel * {
   background-color: transparent !important;
-  color: #A9C2B3 !important;
+  color: #A9BACB !important;
   border-color: #2C2C2E !important;
 }
 
@@ -218,7 +218,7 @@
   height: 100%;
   font-size: 14px;
   line-height: 1;
-  background-color: #09BF64 !important;
+  background-color: #0088D1 !important;
   color: #fff !important;
   border-radius: 50%;
 }
@@ -247,7 +247,7 @@
 /* Selected date (single) */
 .react-datepicker__day--selected,
 .react-datepicker__day--keyboard-selected {
-  background-color: #09BF64 !important;
+  background-color: #0088D1 !important;
   color: #ffffff !important; /* White text */
   border-radius: 50% !important;
 }
@@ -255,7 +255,7 @@
 /* Range start and end */
 .react-datepicker__day--range-start,
 .react-datepicker__day--range-end {
-  background-color: #09BF64 !important;
+  background-color: #0088D1 !important;
   color: #ffffff !important;
   border-radius: 50% !important;
 }
@@ -263,13 +263,13 @@
 /* Days in between range */
 .react-datepicker__day--in-range,
 .react-datepicker__day--in-selecting-range {
-  background-color: rgba(9, 191, 100, 0.2) !important;
+  background-color: rgba(0, 136, 209, 0.2) !important;
   color: #000000 !important;
 }
 
 /* Today highlight */
 .react-datepicker__day--today {
-  border: 1px solid #09BF64 !important;
+  border: 1px solid #0088D1 !important;
   /* color: black !important; */
 }
 
@@ -298,7 +298,7 @@
 /* Selected date (single) */
 .dark .react-datepicker__day--selected,
 .dark .react-datepicker__day--keyboard-selected {
-  background-color: #09BF64 !important;
+  background-color: #0088D1 !important;
   color: #000000 !important;
   border-radius: 50% !important;
 }
@@ -306,7 +306,7 @@
 /* Range start and end */
 .dark .react-datepicker__day--range-start,
 .dark .react-datepicker__day--range-end {
-  background-color: #09BF64 !important;
+  background-color: #0088D1 !important;
   color: #000000 !important;
   border-radius: 50% !important;
 }
@@ -314,14 +314,14 @@
 /* Days in between range */
 .dark .react-datepicker__day--in-range,
 .dark .react-datepicker__day--in-selecting-range {
-  background-color: rgba(9, 191, 100, 0.3) !important;
+  background-color: rgba(0, 136, 209, 0.3) !important;
   color: #ffffff !important;
 }
 
 /* Today highlight */
 .dark .react-datepicker__day--today {
-  border: 1px solid #09BF64 !important;
-  /* color: #09BF64 !important; */
+  border: 1px solid #0088D1 !important;
+  /* color: #0088D1 !important; */
 }
 
 .react-datepicker-wrapper {

@@ -6,8 +6,8 @@ export default function NewPasswordForm() {
   return (
     <>
       <PageMeta
-        title="Markeltree | ERP - Admin Dashboard"
-        description="Markeltree | ERP - Admin Dashboard - ReactJs"
+        title="Teamora | ERP - Admin Dashboard"
+        description="Teamora | ERP - Admin Dashboard - ReactJs"
       />
       <AuthLayout imageSrc="/laptop.png">
     <NewPassword />

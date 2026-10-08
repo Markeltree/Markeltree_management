@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { Skeleton, ActionButton } from "@/common/imports";
 
-const INDIGO = "#09BF64";
+const INDIGO = "#0088D1";
 
 function Chevron({ open }) {
   return (
@@ -141,8 +141,8 @@ export default function EditRoleAndPermissionsModal({ closeModal }) {
     <span
       className={`relative w-4 h-4 border rounded-sm mr-2 flex items-center justify-center cursor-pointer ${
         checked
-          ? "bg-[#09BF64] border-[#09BF64]"
-          : "border-gray-400 dark:bg-black dark:border-[#A9C2B3]"
+          ? "bg-[#0088D1] border-[#0088D1]"
+          : "border-gray-400 dark:bg-black dark:border-[#A9BACB]"
       }`}
       onClick={onChange}
     >
@@ -282,7 +282,7 @@ export default function EditRoleAndPermissionsModal({ closeModal }) {
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-white">
+        <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-white">
           Roles & Permissions
         </h2>
       </div>
@@ -336,7 +336,7 @@ export default function EditRoleAndPermissionsModal({ closeModal }) {
         </button>
       </div>
 
-      <div className="max-h-[35vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="max-h-[35vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <div className="space-y-2">
           {groupsData.map((group) => {
             const isOpen = expanded[group.title];
@@ -403,7 +403,7 @@ export default function EditRoleAndPermissionsModal({ closeModal }) {
           <ActionButton
             label="Cancel"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
             onClick={handleCancel} // ✅ revert to saved state
           />
         </div>
@@ -411,7 +411,7 @@ export default function EditRoleAndPermissionsModal({ closeModal }) {
           <ActionButton
             label="Save"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
             onClick={handleSave} // ✅ save new state
           />
         </div>

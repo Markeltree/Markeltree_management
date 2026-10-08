@@ -58,7 +58,7 @@ export default function DropdownButton({
               key={idx}
               onClick={() => handleSelect(option)}
               className={`px-3 py-1 text-[10px] cursor-pointer hover:bg-gray-100 ${
-                option === selected ? "text-[#09BF64]" : "text-gray-700"
+                option === selected ? "text-[#0088D1]" : "text-gray-700"
               } ${optionClassName}`}
             >
               {option}

@@ -140,11 +140,11 @@ export default function PreviewInvoiceModal({
             </>
           ) : (
             <>
-              <h1 className="text-[11px] lg:text-[24px] font-extrabold lg:font-bold text-[#0E1A12] dark:text-[#CDEEDB]">
+              <h1 className="text-[11px] lg:text-[24px] font-extrabold lg:font-bold text-[#0C1626] dark:text-[#CDE9F7]">
                 Sales Invoice: S1 4260
               </h1>
               <p className="dark:text-[#8E8E9C] text-[#8E8E9C] text-[8px] lg:text-[16px] mt-3">
-                Markeltree
+                Teamora
               </p>
               <p className="dark:text-[#8E8E9C] text-[#8E8E9C] text-[8px] lg:text-[16px]">
                 REG: 123001023000
@@ -197,30 +197,30 @@ export default function PreviewInvoiceModal({
           ) : (
             <>
               <div className="flex justify-end gap-x-2 text-[8px] lg:text-[16px]">
-                <span className="text-[#0E1A12] dark:text-[#CDEEDB]">To:</span>
-                <span className="text-[#09BF64] font-medium">
+                <span className="text-[#0C1626] dark:text-[#CDE9F7]">To:</span>
+                <span className="text-[#0088D1] font-medium">
                   Health Co Pvt Ltd
                 </span>
               </div>
 
               <div className="grid grid-cols-[min-content_auto] gap-x-1 md:gap-x-6 text-[8px] lg:text-[14px] text-[#8E8E9C] dark:text-[#8E8E9C]">
                 <span className="whitespace-nowrap">INVOICE NUMBER:</span>
-                <span className="whitespace-nowrap font-normal md:font-medium text-[#0E1A12] dark:text-[#CDEEDB]">
+                <span className="whitespace-nowrap font-normal md:font-medium text-[#0C1626] dark:text-[#CDE9F7]">
                   INV-0002
                 </span>
 
                 <span className="whitespace-nowrap">INVOICE DATE:</span>
-                <span className="whitespace-nowrap font-normal md:font-medium text-[#0E1A12] dark:text-[#CDEEDB]">
+                <span className="whitespace-nowrap font-normal md:font-medium text-[#0C1626] dark:text-[#CDE9F7]">
                   02 Jan 2023
                 </span>
 
                 <span className="whitespace-nowrap">DUE:</span>
-                <span className=" whitespace-nowrapfont-normal md:font-medium text-[#0E1A12] dark:text-[#CDEEDB]">
+                <span className=" whitespace-nowrapfont-normal md:font-medium text-[#0C1626] dark:text-[#CDE9F7]">
                   20 Jan 2023
                 </span>
 
                 <span className="whitespace-nowrap">REFERENCE:</span>
-                <span className="whitespace-nowrap font-normal md:font-medium text-[#0E1A12] dark:text-[#CDEEDB]">
+                <span className="whitespace-nowrap font-normal md:font-medium text-[#0C1626] dark:text-[#CDE9F7]">
                   324553453
                 </span>
               </div>
@@ -247,7 +247,7 @@ export default function PreviewInvoiceModal({
           <table className="w-full mt-6 border">
             <thead>
               {/* <tr className=""> */}
-              <tr className="text-[5px] lg:text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
+              <tr className="text-[5px] lg:text-[12px] text-[#0C1626] dark:text-[#CDE9F7]">
                 <th className="text-left p-2 lg:pr-40 font-normal">
                   Description
                 </th>
@@ -263,7 +263,7 @@ export default function PreviewInvoiceModal({
               {tableData.map((row, i) => (
                 <tr
                   key={i}
-                  className="border-t text-[5px] lg:text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]"
+                  className="border-t text-[5px] lg:text-[12px] text-[#0C1626] dark:text-[#CDE9F7]"
                 >
                   <td className="p-2">
                     <input
@@ -310,7 +310,7 @@ export default function PreviewInvoiceModal({
 
       {/* Summary */}
       {loading ? (
-        <div className="bg-[#EFFBF3] dark:bg-[#141414] p-4 rounded-xl space-y-2">
+        <div className="bg-[#EEF8FD] dark:bg-[#141414] p-4 rounded-xl space-y-2">
           {[...Array(3)].map((_, idx) => (
             <Skeleton
               key={idx}
@@ -322,28 +322,28 @@ export default function PreviewInvoiceModal({
           ))}
         </div>
       ) : (
-        <div className="flex flex-col gap-2 w-full bg-[#EFFBF3AA] dark:bg-[#141414CC] p-4 rounded-xl">
+        <div className="flex flex-col gap-2 w-full bg-[#EEF8FDAA] dark:bg-[#141414CC] p-4 rounded-xl">
           <div className="flex justify-between items-center w-full ">
-            <p className="text-[#0E1A12AA] dark:text-[#CDEEDBAA] text-[14px]">
+            <p className="text-[#0C1626AA] dark:text-[#CDE9F7AA] text-[14px]">
               VAT
             </p>
-            <p className="text-[#0E1A12AA] dark:text-[#CDEEDBAA] text-[14px]">
+            <p className="text-[#0C1626AA] dark:text-[#CDE9F7AA] text-[14px]">
               $6,000.00
             </p>
           </div>
           <div className="flex justify-between items-center w-full ">
-            <p className="text-[#0E1A12AA] dark:text-[#CDEEDBAA] text-[14px]">
+            <p className="text-[#0C1626AA] dark:text-[#CDE9F7AA] text-[14px]">
               Net:
             </p>
-            <p className="text-[#0E1A12AA] dark:text-[#CDEEDBAA] text-[14px]">
+            <p className="text-[#0C1626AA] dark:text-[#CDE9F7AA] text-[14px]">
               $0.00
             </p>
           </div>
           <div className="flex justify-between items-center w-full ">
-            <p className="text-[#0E1A12AA] dark:text-[#CDEEDBAA] text-[14px] font-semibold">
+            <p className="text-[#0C1626AA] dark:text-[#CDE9F7AA] text-[14px] font-semibold">
               Total
             </p>
-            <p className="text-[#0E1A12AA] dark:text-[#CDEEDBAA] text-[14px] font-semibold">
+            <p className="text-[#0C1626AA] dark:text-[#CDE9F7AA] text-[14px] font-semibold">
               $6,000.00
             </p>
           </div>
@@ -364,7 +364,7 @@ export default function PreviewInvoiceModal({
             <ActionButton
               label={firstButtonLabel}
               labelClass="font-normal text-[12px] md:text-[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
               onClick={handleFirstButtonClick}
             />
           </div>
@@ -372,7 +372,7 @@ export default function PreviewInvoiceModal({
             <ActionButton
               label={secondButtonLabel}
               labelClass="font-normal text-[12px] md:text-[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
               onClick={SendTheInvoice}
             />
           </div>

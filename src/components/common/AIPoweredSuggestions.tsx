@@ -72,7 +72,7 @@ const Tabs = () => {
             </defs>
           </svg>
 
-          {/* <h3 className="text-[16px] sm:text-[16px] font-medium text-[#6F7C74]">
+          {/* <h3 className="text-[16px] sm:text-[16px] font-medium text-[#6E7A86]">
             AI Powered Suggestions
           </h3> */}
           <HeadingThree text="AI Powered Suggestions" />
@@ -92,8 +92,8 @@ const Tabs = () => {
             onClick={() => setActiveTab(tab)}
             className={`px-3 py-1.5 text-[11px] sm:text-[12px] md:text-[13px] font-medium capitalize rounded transition-all duration-200 ${
               activeTab === tab
-                ? "text-[#09BF64] border-b-2 border-[#09BF64]"
-                : "text-[#8E8E9C] hover:text-[#0F2418]"
+                ? "text-[#0088D1] border-b-2 border-[#0088D1]"
+                : "text-[#8E8E9C] hover:text-[#0B1B33]"
             }`}
           >
             {tab}
@@ -110,7 +110,7 @@ const Tabs = () => {
           <span className="text-xs sm:text-sm font-normal text-gray-400">
             {activity.type}
           </span>
-          <p className="text-[14px] sm:text-base text-[#0F2418] dark:text-white">
+          <p className="text-[14px] sm:text-base text-[#0B1B33] dark:text-white">
             {activity.message}
           </p>
         </div>

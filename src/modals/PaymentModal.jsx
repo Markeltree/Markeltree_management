@@ -39,7 +39,7 @@ export default function PaymentModal({ closeModal }) {
           />
 
           {/* Skeleton for card */}
-          <div className="rounded-xl bg-[#EFFBF3AA] dark:bg-[#141414AA] p-6 flex flex-col">
+          <div className="rounded-xl bg-[#EEF8FDAA] dark:bg-[#141414AA] p-6 flex flex-col">
             <div className="flex flex-row justify-between">
               <div className="flex flex-col gap-1 w-1/2">
                 <Skeleton
@@ -82,25 +82,25 @@ export default function PaymentModal({ closeModal }) {
         </>
       ) : (
         <>
-          <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
+          <h1 className="text-[18px] text-[#0B1B33] dark:text-[#B5DEF2] font-bold">
             Payment
           </h1>
 
-          <div className="rounded-xl bg-[#EFFBF3AA] dark:bg-[#141414AA] p-6 flex flex-col">
+          <div className="rounded-xl bg-[#EEF8FDAA] dark:bg-[#141414AA] p-6 flex flex-col">
             <div className="flex flex-row justify-between">
               <div className="flex flex-col text-left gap-1">
-                <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[15px]">
+                <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[15px]">
                   Amount Paid
                 </p>
-                <p className="font-semibold text-[14px] lg:text-[20px] dark:text-[#CDEEDB] text-[#0E1A12]">
+                <p className="font-semibold text-[14px] lg:text-[20px] dark:text-[#CDE9F7] text-[#0C1626]">
                   $0.00
                 </p>
               </div>
               <div className="flex flex-col justify-between text-right gap-1">
-                <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[15px]">
+                <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[15px]">
                   Amount Outstanind
                 </p>
-                <p className="font-semibold text-[14px] lg:text-[20px] dark:text-[#CDEEDB] text-[#0E1A12]">
+                <p className="font-semibold text-[14px] lg:text-[20px] dark:text-[#CDE9F7] text-[#0C1626]">
                   $6,000.00
                 </p>
               </div>
@@ -111,13 +111,13 @@ export default function PaymentModal({ closeModal }) {
               <ActionButton
                 label="Record Payment"
                 labelClass="font-normal text-[12px] md:text-[16px]"
-                buttonClass="flex items-center justify-center gap-1 text-sm h-[42px] w-full px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
+                buttonClass="flex items-center justify-center gap-1 text-sm h-[42px] w-full px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
                 onClick={recordPayment}
               />
               <ActionButton
                 label="Turn on Card Payment"
                 labelClass="font-normal text-[12px] md:text-[16px]"
-                buttonClass="flex items-center justify-center gap-1 text-sm h-[42px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                buttonClass="flex items-center justify-center gap-1 text-sm h-[42px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                 // onClick={closeModal}
               />
             </div>

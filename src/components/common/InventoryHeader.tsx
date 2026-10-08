@@ -74,7 +74,7 @@ const InventoryHeader: React.FC<InventoryHeaderProps> = ({
             onClick={onCustomize}
             text="Add Stock"
             icon={FiPlus}
-            bgColor="bg-[#09BF64]"
+            bgColor="bg-[#0088D1]"
             textColor="text-white"
           />
         )}

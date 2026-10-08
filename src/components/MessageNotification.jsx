@@ -54,7 +54,7 @@ function NotificationItem({ data, onClose, onNavigate }) {
   }, [onClose]);
 
   return (
-    <div className="w-80 bg-white dark:bg-[#0B0B0B] rounded-lg shadow-lg p-3 flex gap-3 items-start animate-slide-up cursor-pointer border border-[#6F7C7426]" onClick={onNavigate}>
+    <div className="w-80 bg-white dark:bg-[#0B0B0B] rounded-lg shadow-lg p-3 flex gap-3 items-start animate-slide-up cursor-pointer border border-[#6E7A8626]" onClick={onNavigate}>
       <Avatar person={data.person} size={40} />
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-2">

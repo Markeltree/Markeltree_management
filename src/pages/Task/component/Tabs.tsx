@@ -109,7 +109,7 @@ const Tabs = () => {
             <TakeANote notes={notes} setNotes={setNotes} editingNote={editingNote} setEditingNote={setEditingNote} />
             <div className="flex">
               <button
-              className="cursor-pointer text-[#09BF64] hover:text-[#4a4cd1] font-medium text-right bg-transparent border-none"
+              className="cursor-pointer text-[#0088D1] hover:text-[#4a4cd1] font-medium text-right bg-transparent border-none"
               onClick={() => navigate("/notes")}
             >
               View all notes

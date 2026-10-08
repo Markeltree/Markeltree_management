@@ -28,17 +28,17 @@ export default function SignUp() {
           <div className="mb-2 flex justify-center">
             <Logo
               lightLogo="/logo-light.png"
-              className="h-12 w-auto"
-              alt="Markeltree"
+              className="h-20 w-auto"
+              alt="Teamora"
             />
           </div>
 
           {/* Title & Message */}
           <div className="text-center space-y-1">
-            <h1 className="text-[22px] font-bold text-[#2B2B2B] dark:text-[#EFFBF3]">
+            <h1 className="text-[22px] font-bold text-[#2B2B2B] dark:text-[#EEF8FD]">
               Create Your Account
             </h1>
-            <p className="text-[15px] text-[#8E8E9C] dark:text-[#EFFBF3]">
+            <p className="text-[15px] text-[#8E8E9C] dark:text-[#EEF8FD]">
               Get started with our platform in a few easy steps!
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function SignUp() {
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="role"
-                className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
               >
                 Select your Role
               </label>
@@ -58,7 +58,7 @@ export default function SignUp() {
                 onChange={(e) => setRole(e.value)}
                 placeholder="Select"
                 className={clsx(
-                  "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                  "text-[14px] dark:!text-[#A9BACB] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                 )}
                 panelClassName=""
               />
@@ -74,9 +74,9 @@ export default function SignUp() {
               placeholder="Enter your email address"
               value={emailAddress}
               onChange={(e) => setEmailAddress(e.target.value)}
-              inputClass="text-[14px] pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px] pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
 
@@ -89,9 +89,9 @@ export default function SignUp() {
               placeholder="6583845394"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              inputClass="text-[14px] pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px] pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
 
@@ -104,9 +104,9 @@ export default function SignUp() {
               placeholder="Create your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              inputClass="text-[14px] w-full pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px] w-full pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
 
@@ -119,21 +119,21 @@ export default function SignUp() {
               placeholder="Re-enter your password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              inputClass="text-[14px] w-full pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px] w-full pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
 
           {/* Terms & Conditions */}
           <div className="flex justify-between items-center text-[12px] pt-3">
-            <label className="flex items-center cursor-pointer text-[#6F7C74] dark:text-[#A9C2B3]">
+            <label className="flex items-center cursor-pointer text-[#6E7A86] dark:text-[#A9BACB]">
               <span
                 className={`relative w-4 h-4 border border-gray-400 rounded-sm mr-2 flex items-center justify-center
                   ${
                     agree
-                      ? "bg-[#09BF64] border-[#09BF64]"
-                      : "dark:bg-black dark:border-[#A9C2B3]"
+                      ? "bg-[#0088D1] border-[#0088D1]"
+                      : "dark:bg-black dark:border-[#A9BACB]"
                   }`}
                 onClick={() => setAgree(!agree)}
               >
@@ -162,16 +162,16 @@ export default function SignUp() {
             <ActionButton
               label="Create Account"
               labelClass="font-normal text-[12px] lg:text[16px]"
-              buttonClass="text-[16px] h-[45px] w-full bg-[#09BF64] dark:bg-[#81D959] text-white dark:text-black focus:outline-none focus:ring-0"
+              buttonClass="text-[16px] h-[45px] w-full bg-[#0088D1] dark:bg-[#01CEE9] text-white dark:text-black focus:outline-none focus:ring-0"
               onClick={() => navigate("/login")}
             />
           </div>
 
           {/* Login link */}
-          <div className="text-[12px] flex justify-center items-center text-[#6F7C74] dark:text-[#A9C2B3] pt-6 pb-4">
+          <div className="text-[12px] flex justify-center items-center text-[#6E7A86] dark:text-[#A9BACB] pt-6 pb-4">
             Already have an account?{" "}
             <button
-              className="text-[#09BF64] underline font-semibold ml-1 hover:text-[#4b4de0]"
+              className="text-[#0088D1] underline font-semibold ml-1 hover:text-[#4b4de0]"
               onClick={() => navigate("/login")}
             >
               Login
@@ -184,7 +184,7 @@ export default function SignUp() {
           <div className="w-full h-full rounded-lg overflow-hidden">
             <img
               src="/image.png"
-              alt="Markeltree"
+              alt="Teamora"
               className="w-full h-full object-cover"
             />
           </div>

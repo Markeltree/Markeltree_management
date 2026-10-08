@@ -21,7 +21,7 @@ function LinesEditor({ lines, onChange, currency, typeLabel = true }) {
         <div key={i} className="flex gap-2 items-center">
           <Input className="h-9 flex-1" placeholder="Name (e.g. House Rent)" value={l.name} onChange={(e) => set(i, { name: e.target.value })} maxLength={60} />
           {typeLabel && (
-            <select value={l.type} onChange={(e) => set(i, { type: e.target.value })} className="h-9 text-[12px] border border-[#6F7C7440] rounded-lg px-2 bg-white dark:bg-[#0D0D0D] dark:text-[#EFFBF3]">
+            <select value={l.type} onChange={(e) => set(i, { type: e.target.value })} className="h-9 text-[12px] border border-[#6E7A8640] rounded-lg px-2 bg-white dark:bg-[#0D0D0D] dark:text-[#EEF8FD]">
               <option value="EARNING">Earning (+)</option>
               <option value="DEDUCTION">Deduction (−)</option>
             </select>
@@ -30,7 +30,7 @@ function LinesEditor({ lines, onChange, currency, typeLabel = true }) {
           <IconBtn icon="mdi:close" tone="danger" title="Remove" onClick={() => onChange(lines.filter((_, j) => j !== i))} />
         </div>
       ))}
-      <button type="button" className="text-[12px] text-[#09BF64] font-semibold hover:underline" onClick={() => onChange([...lines, { name: "", type: "EARNING", amount: "" }])}>
+      <button type="button" className="text-[12px] text-[#0088D1] font-semibold hover:underline" onClick={() => onChange([...lines, { name: "", type: "EARNING", amount: "" }])}>
         + Add line
       </button>
     </div>
@@ -96,7 +96,7 @@ function SalaryModal({ employee, current, currency, onSaved, closeModal }) {
         </Field>
         <div className="flex flex-col justify-end">
           <span className="text-[11px] text-[#8E8E9C]">Monthly gross</span>
-          <span className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{fmtMoney(gross, currency)}</span>
+          <span className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{fmtMoney(gross, currency)}</span>
         </div>
       </div>
       <Field label="Recurring allowances & deductions">
@@ -123,8 +123,8 @@ function SalaryModal({ employee, current, currency, onSaved, closeModal }) {
       </Field>
       {history?.history?.length > 0 && (
         <div>
-          <h3 className="text-[12px] font-bold text-[#09BF64] mb-1">History</h3>
-          <ul className="text-[12px] text-[#6F7C74] space-y-0.5">
+          <h3 className="text-[12px] font-bold text-[#0088D1] mb-1">History</h3>
+          <ul className="text-[12px] text-[#6E7A86] space-y-0.5">
             {history.history.map((h) => (
               <li key={h.id}>
                 From {fmtDate(h.effectiveFrom)}: basic {fmtMoney(h.basicSalary, currency)}
@@ -148,7 +148,7 @@ function Salaries({ currency }) {
   return (
     <div className="space-y-3">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-        <p className="text-[12px] text-[#6F7C74]">{missing > 0 ? `${missing} employee(s) have no salary yet and will be left out of payroll.` : "Every active employee has a salary."}</p>
+        <p className="text-[12px] text-[#6E7A86]">{missing > 0 ? `${missing} employee(s) have no salary yet and will be left out of payroll.` : "Every active employee has a salary."}</p>
         <SearchInput value={search} onChange={setSearch} placeholder="Search employees…" />
       </div>
       <ErrorNote error={error} onRetry={reload} />
@@ -175,7 +175,7 @@ function Salaries({ currency }) {
 
 function Row({ label, value, strong, negative }) {
   return (
-    <div className={`flex justify-between text-[13px] py-0.5 ${strong ? "font-bold text-[#0F2418] dark:text-[#EFFBF3]" : "text-[#555] dark:text-[#C9C9D9]"}`}>
+    <div className={`flex justify-between text-[13px] py-0.5 ${strong ? "font-bold text-[#0B1B33] dark:text-[#EEF8FD]" : "text-[#555] dark:text-[#C9C9D9]"}`}>
       <span>{label}</span>
       <span>{negative ? "− " : ""}{value}</span>
     </div>
@@ -216,13 +216,13 @@ function PayslipModal({ slip, run, onSaved, closeModal }) {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <h3 className="text-[12px] font-bold text-[#09BF64] mb-1">Earnings</h3>
+          <h3 className="text-[12px] font-bold text-[#0088D1] mb-1">Earnings</h3>
           <Row label="Basic salary" value={fmtMoney(slip.basicSalary, cur)} />
           {slip.earnings.map((e) => <Row key={e.name} label={e.name} value={fmtMoney(e.amount, cur)} />)}
           {(slip.adjustments ?? []).filter((a) => a.type === "EARNING").map((a) => <Row key={a.name} label={`${a.name} (one-off)`} value={fmtMoney(a.amount, cur)} />)}
         </div>
         <div>
-          <h3 className="text-[12px] font-bold text-[#09BF64] mb-1">Deductions</h3>
+          <h3 className="text-[12px] font-bold text-[#0088D1] mb-1">Deductions</h3>
           {Number(slip.absenceDeduction) > 0 && <Row label={`Unpaid days (${unpaidDaysOf(slip)})`} value={fmtMoney(slip.absenceDeduction, cur)} />}
           {slip.deductions.map((d) => <Row key={d.name} label={d.name} value={fmtMoney(d.amount, cur)} />)}
           {(slip.adjustments ?? []).filter((a) => a.type === "DEDUCTION").map((a) => <Row key={a.name} label={`${a.name} (one-off)`} value={fmtMoney(a.amount, cur)} />)}
@@ -230,11 +230,11 @@ function PayslipModal({ slip, run, onSaved, closeModal }) {
           <Row label="Total deductions" value={fmtMoney(slip.totalDeductions, cur)} strong />
         </div>
       </div>
-      <div className="flex justify-between items-center rounded-lg bg-[#09BF6414] px-4 py-3">
-        <span className="text-[14px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">Net pay</span>
-        <span className="text-[20px] font-bold text-[#09BF64]">{fmtMoney(slip.netPay, cur)}</span>
+      <div className="flex justify-between items-center rounded-lg bg-[#0088D114] px-4 py-3">
+        <span className="text-[14px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">Net pay</span>
+        <span className="text-[20px] font-bold text-[#0088D1]">{fmtMoney(slip.netPay, cur)}</span>
       </div>
-      <div className="text-[12px] text-[#6F7C74] rounded-lg border border-[#6F7C7426] p-3">
+      <div className="text-[12px] text-[#6E7A86] rounded-lg border border-[#6E7A8626] p-3">
         <b>Days:</b> {slip.workingDays}-day month · {Number(slip.eligibleDays)} employed · {Number(slip.absentDays)} absent · {Number(slip.unpaidLeaveDays)} unpaid leave
         {" → "}
         <b>{unpaidDaysOf(slip)} unpaid</b>
@@ -255,7 +255,7 @@ function PayslipModal({ slip, run, onSaved, closeModal }) {
           </div>
         </>
       )}
-      {!editable && slip.note && <p className="text-[12px] text-[#6F7C74]"><b>Note:</b> {slip.note}</p>}
+      {!editable && slip.note && <p className="text-[12px] text-[#6E7A86]"><b>Note:</b> {slip.note}</p>}
     </>
   );
 
@@ -263,8 +263,8 @@ function PayslipModal({ slip, run, onSaved, closeModal }) {
     return (
       <div className="flex flex-col gap-4 max-h-[82vh] overflow-y-auto pr-1">
         <div className="pr-8">
-          <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{fullName(slip.employee)}</h2>
-          <p className="text-[12px] text-[#6F7C74]">{periodLabel(run)} · {slip.employee.employeeCode}</p>
+          <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{fullName(slip.employee)}</h2>
+          <p className="text-[12px] text-[#6E7A86]">{periodLabel(run)} · {slip.employee.employeeCode}</p>
         </div>
         {body}
         <div className="flex justify-end gap-2">
@@ -344,11 +344,11 @@ function RunDetail({ runId, onBack, setParams }) {
     <div className="space-y-4">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <button onClick={onBack} className="text-[#09BF64]" aria-label="Back to payroll runs">
+          <button onClick={onBack} className="text-[#0088D1]" aria-label="Back to payroll runs">
             <Icon icon="mdi:arrow-left" width={22} />
           </button>
           <div>
-            <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3] flex items-center gap-2">
+            <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] flex items-center gap-2">
               Payroll — {label} <Badge tone={RUN_TONE[run.status]}>{run.status}</Badge>
             </h2>
             <p className="text-[12px] text-[#8E8E9C]">
@@ -408,7 +408,7 @@ function RunDetail({ runId, onBack, setParams }) {
         </div>
       )}
       {run.status === "DRAFT" && totalUnpaid > 0 && (
-        <div className="rounded-lg border border-[#6F7C7440] px-3 py-2 text-[12px] text-[#6F7C74]">
+        <div className="rounded-lg border border-[#6E7A8640] px-3 py-2 text-[12px] text-[#6E7A86]">
           {totalUnpaid} unpaid day(s) across this run (absences, unpaid leave and days before joining / after leaving).
           {settings?.["payroll.deductAbsences"] !== false && " If attendance isn't tracked yet, turn off “Deduct absences” in Administration → Policies, or override days per payslip."}
         </div>

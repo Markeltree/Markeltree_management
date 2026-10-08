@@ -66,7 +66,7 @@ export default function GenerateReportModal({ closeModal }) {
         {/* Header */}
         <Skeleton width="150px" height="24px" className="dark:bg-[#2C2C2CAA]" />
 
-        <div className="flex flex-col pr-3 w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="flex flex-col pr-3 w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           {/* fields - row 1 */}
           <div className="flex flex-col lg:flex-row gap-4 mb-4">
             <div className="flex flex-col w-full gap-2 pl-1">
@@ -231,17 +231,17 @@ export default function GenerateReportModal({ closeModal }) {
     <div className="space-y-3">
       {/* Header */}
 
-      <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+      <div className=" text-[20px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
         Generate Report
       </div>
 
-      <div className="flex flex-col pr-3 w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col pr-3 w-full max-h-[60vh] lg:max-h-[65vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         {/* fields - row 1*/}
         <div className="flex flex-col lg:flex-row gap-4 mb-4">
           <div className="flex flex-col w-full gap-1 pl-1">
             <label
               htmlFor="reportType"
-              className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             >
               Report Type
             </label>
@@ -252,7 +252,7 @@ export default function GenerateReportModal({ closeModal }) {
               onChange={(e) => setReportType(e.value)}
               placeholder="Sales"
               className={clsx(
-                "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
               )}
               pt={{
                 panel: {
@@ -270,16 +270,16 @@ export default function GenerateReportModal({ closeModal }) {
               placeholder=""
               value={reportName}
               onChange={(e) => setReportName(e.target.value)}
-              inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pr-1 pl-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
             />
           </div>
         </div>
 
         {/* fields - row 2*/}
         <div className="flex flex-col gap-1 mb-2 pl-1 pr-1">
-          <label className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
+          <label className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">
             Report Duration
           </label>
           <div className="relative w-full">
@@ -292,14 +292,14 @@ export default function GenerateReportModal({ closeModal }) {
               placeholderText="Select date"
               dateFormat="MM/dd/yyyy"
               wrapperClassName="w-full"
-              className="w-full h-[40px] px-3 pr-10 text-[14px] border border-[#6F7C7440] 
-      dark:border-[#A9C2B3] rounded-lg dark:text-[#A9C2B3] 
+              className="w-full h-[40px] px-3 pr-10 text-[14px] border border-[#6E7A8640] 
+      dark:border-[#A9BACB] rounded-lg dark:text-[#A9BACB] 
       dark:bg-[#0D0D0D] focus:outline-none focus:ring-0"
             />
 
             {/* Custom Calendar Icon */}
             <span className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none">
-              <i className="pi pi-calendar text-[#09BF64] dark:text-[#09BF64]" />
+              <i className="pi pi-calendar text-[#0088D1] dark:text-[#0088D1]" />
             </span>
           </div>
         </div>
@@ -308,7 +308,7 @@ export default function GenerateReportModal({ closeModal }) {
         <div className="flex flex-wrap gap-6 pl-1 mb-4">
           <div className="w-full pl-1">
             {/* Label */}
-            <label className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
+            <label className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">
               Select Report Fields
             </label>
 
@@ -324,7 +324,7 @@ export default function GenerateReportModal({ closeModal }) {
                     className={`relative w-4 h-4 flex items-center justify-center rounded border border-[#8E8E9C] transition-colors
               ${
                 checked[key]
-                  ? "bg-[#09BF64] border-[#09BF64] border-none"
+                  ? "bg-[#0088D1] border-[#0088D1] border-none"
                   : "bg-white border-[#8E8E9C] dark:bg-[#141414] dark:border-white"
               }`}
                     onClick={() => toggleCheck(key)}
@@ -360,7 +360,7 @@ export default function GenerateReportModal({ closeModal }) {
         {/* row 4 */}
         <div className="flex flex-col lg:flex-row gap-4 mb-4">
           <div className="flex flex-col gap-2 pl-1">
-            <span className="text-[12px] font-medium text-[#6F7C74] dark:text-[#A9C2B3]">
+            <span className="text-[12px] font-medium text-[#6E7A86] dark:text-[#A9BACB]">
               Chart
             </span>
             <div className="flex flex-row gap-6">
@@ -369,7 +369,7 @@ export default function GenerateReportModal({ closeModal }) {
                   type="radio"
                   name="chart"
                   value="pallet"
-                  className="mr-2 accent-[#09BF64]"
+                  className="mr-2 accent-[#0088D1]"
                   // defaultChecked // uncomment if you want default selection
                 />
                 Without Chart
@@ -379,7 +379,7 @@ export default function GenerateReportModal({ closeModal }) {
                   type="radio"
                   name="chart"
                   value="cartons"
-                  className="mr-2 accent-[#09BF64]"
+                  className="mr-2 accent-[#0088D1]"
                   defaultChecked
                 />
                 Include Chart
@@ -394,7 +394,7 @@ export default function GenerateReportModal({ closeModal }) {
             <div className="flex flex-col w-full gap-1 pl-1">
               <label
                 htmlFor={`chartType-${index}`}
-                className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
               >
                 Chart Type
               </label>
@@ -407,7 +407,7 @@ export default function GenerateReportModal({ closeModal }) {
                 }
                 placeholder="Sales"
                 className={clsx(
-                  "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                  "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                 )}
                 pt={{
                   panel: {
@@ -420,7 +420,7 @@ export default function GenerateReportModal({ closeModal }) {
             <div className="flex flex-col w-full gap-1 pl-1">
               <label
                 htmlFor={`chooseData-${index}`}
-                className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
               >
                 Choose Data
               </label>
@@ -433,7 +433,7 @@ export default function GenerateReportModal({ closeModal }) {
                 }
                 placeholder="Sales"
                 className={clsx(
-                  "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                  "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                 )}
                 pt={{
                   panel: {
@@ -452,7 +452,7 @@ export default function GenerateReportModal({ closeModal }) {
             <ActionButton
               label="Add more chart"
               labelClass="font-normal text-[11px] lg:text[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm h-[25px] w-[120px] px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm h-[25px] w-[120px] px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
               onClick={addMoreChart}
             />
           </div>
@@ -464,7 +464,7 @@ export default function GenerateReportModal({ closeModal }) {
             <ActionButton
               label="Cancel"
               labelClass="font-normal text-[12px] md:text-[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
               onClick={closeModal}
             />
           </div>
@@ -472,7 +472,7 @@ export default function GenerateReportModal({ closeModal }) {
             <ActionButton
               label="Submit"
               labelClass="font-normal text-[12px] md:text-[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
             />
           </div>
         </div>

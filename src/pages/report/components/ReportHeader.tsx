@@ -42,7 +42,7 @@ const OrderManagementHeader: React.FC<OrderManagementHeaderProps> = ({
         <HeadingFour text={headerTitle} />
       <div className="flex flex-col max-sm:flex-row sm:items-center md:flex-row md:flex-wrap gap-2 sm:gap-4 w-full sm:w-auto">
         {showExport && (
-          <Export className="hover:bg-[#09BF64]" BtnName="Export" icon={FiDownload} onClick={onExport} />
+          <Export className="hover:bg-[#0088D1]" BtnName="Export" icon={FiDownload} onClick={onExport} />
         )}
 
         {showDateRange && (
@@ -81,7 +81,7 @@ const OrderManagementHeader: React.FC<OrderManagementHeaderProps> = ({
           <ColorFull
             text="Add New Order"
             icon={FiPlus}
-            bgColor="bg-[#09BF64]"
+            bgColor="bg-[#0088D1]"
             textColor="text-white"
             onClick={onAddNewOrder}
           />

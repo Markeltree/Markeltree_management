@@ -61,7 +61,7 @@ const StackedAreaChart = ({Title = "heading"}) => {
             type="monotone"
             dataKey="amt"
             stackId="1"
-            stroke="#09BF64"
+            stroke="#0088D1"
             fill="#0096FF"
           />
         </AreaChart>

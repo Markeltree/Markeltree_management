@@ -18,7 +18,7 @@ export default function StatusActionDropdown({
   const formattedOptions = options.map((opt) => ({
     template: () => (
       <div
-        className="px-3 py-2 cursor-pointer hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] rounded-lg"
+        className="px-3 py-2 cursor-pointer hover:bg-[#0088D11A] dark:hover:bg-[#01CEE940] rounded-lg"
         onClick={() => {
           setSelected(opt);
           if (onChange) onChange(opt);

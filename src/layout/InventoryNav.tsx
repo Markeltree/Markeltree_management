@@ -23,9 +23,9 @@ const InventoryNav = () => {
           <button
             key={tab.name}
             onClick={() => navigate(tab.path)}
-            className={`px-3 sm:px-4 py-2 text-sm sm:text-[20px] font-medium border-b-2 transition-colors duration-300 dark:text-[#EFFBF3] ${
+            className={`px-3 sm:px-4 py-2 text-sm sm:text-[20px] font-medium border-b-2 transition-colors duration-300 dark:text-[#EEF8FD] ${
               isActive(tab.path)
-                ? "border-[#81D959] text-secondary"
+                ? "border-[#01CEE9] text-secondary"
                 : "border-transparent text-gray-500 hover:text-secondary"
             }`}
           >

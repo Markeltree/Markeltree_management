@@ -111,8 +111,8 @@ export default function Kanban({
               key={tab}
               className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 md:px-4 py-1 sm:py-2 text-[12px] sm:text-[14px] rounded-t-[12px] sm:rounded-t-[16px] relative whitespace-nowrap ${
                 activeTab === tab
-                  ? "bg-[#09BF64] text-white"
-                  : "bg-[#EFFBF3] dark:bg-[#1a1a1a] text-[#0E1A12] dark:text-white font-medium"
+                  ? "bg-[#0088D1] text-white"
+                  : "bg-[#EEF8FD] dark:bg-[#1a1a1a] text-[#0C1626] dark:text-white font-medium"
               }`}
             >
               <button
@@ -134,7 +134,7 @@ export default function Kanban({
                   className={`ml-1 sm:ml-2 text-sm sm:text-base ${
                     activeTab === tab
                       ? "text-white hover:text-red-300"
-                      : "text-[#0E1A12] dark:text-white hover:text-red-300"
+                      : "text-[#0C1626] dark:text-white hover:text-red-300"
                   }`}
                 >
                   ×
@@ -146,7 +146,7 @@ export default function Kanban({
             <button
               ref={buttonRef}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full text-[#6F7C74] border border-[#6F7C74] hover:text-white hover:bg-[#4a4cd1]"
+              className="flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full text-[#6E7A86] border border-[#6E7A86] hover:text-white hover:bg-[#4a4cd1]"
             >
               <Plus size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
             </button>
@@ -186,7 +186,7 @@ export default function Kanban({
         </div>
 
         <DragDropContext onDragEnd={onDragEnd}>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-1 sm:gap-3 md:gap-1 border-1 border-[#09BF64] overflow-visible relative z-[10]">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-1 sm:gap-3 md:gap-1 border-1 border-[#0088D1] overflow-visible relative z-[10]">
           {columns.map((col) => (
             <Droppable key={col.id} droppableId={col.id}>
               {(provided) => (
@@ -195,10 +195,10 @@ export default function Kanban({
                   {...provided.droppableProps}
                   className="bg-white dark:bg-[#0D0D0D] p-1 sm:p-2 md:p-4 rounded-lg"
                 >
-                  <h2 className="font-semibold mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2 text-[#0E1A12] dark:text-white text-sm sm:text-base">
+                  <h2 className="font-semibold mb-2 sm:mb-3 flex items-center gap-1 sm:gap-2 text-[#0C1626] dark:text-white text-sm sm:text-base">
                     <img src={star} alt="star" className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span className="truncate">{col.title}</span>
-                    <span className="text-[#6F7C74] dark:text-[#a0a0a0] text-sm sm:text-lg md:text-[20px] font-medium">
+                    <span className="text-[#6E7A86] dark:text-[#a0a0a0] text-sm sm:text-lg md:text-[20px] font-medium">
                       {tasks[col.id as keyof TasksState].length}
                     </span>
                   </h2>
@@ -219,15 +219,15 @@ export default function Kanban({
                               className={`p-3 sm:p-3 md:p-4 mb-3 sm:mb-3 md:mb-4 rounded-lg relative ${
                                 col.id === 'completed'
                                   ? 'bg-gray-100 dark:bg-gray-800 opacity-60'
-                                  : 'bg-gradient-to-r from-[#5D60EF]/10 to-[#BAFF86]/10 dark:bg-[#0D0D0D]'
+                                  : 'bg-gradient-to-r from-[#5D60EF]/10 to-[#9AF5FF]/10 dark:bg-[#0D0D0D]'
                               }`}
                             >
                               <div className="flex justify-between items-start mb-2 sm:mb-3">
-                                <p className="text-[#0E1A12] dark:text-white text-[11px] sm:text-[12px] md:text-[13px] font-medium leading-snug line-clamp-2 max-w-[75%]">
+                                <p className="text-[#0C1626] dark:text-white text-[11px] sm:text-[12px] md:text-[13px] font-medium leading-snug line-clamp-2 max-w-[75%]">
                                   {task.name}
                                 </p>
-                                <div className="py-1 px-2 bg-[#09BF6426] rounded-md flex items-center justify-center">
-                                  <span className="text-[#09BF64] font-medium text-xs sm:text-sm">
+                                <div className="py-1 px-2 bg-[#0088D126] rounded-md flex items-center justify-center">
+                                  <span className="text-[#0088D1] font-medium text-xs sm:text-sm">
                                     {task.remainingTime ? formatTime(task.remainingTime) : "00:00"}
                                   </span>
                                 </div>

@@ -219,10 +219,10 @@ export default function ReviewAndConfirmModal({ closeModal }) {
             icon="fe:arrow-left"
             width="18px"
             height="18px"
-            className="text-[#0F2418] dark:text-[#EFFBF3]"
+            className="text-[#0B1B33] dark:text-[#EEF8FD]"
           />
         </button>
-        <div className="text-[14px] lg:text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3] whie">
+        <div className="text-[14px] lg:text-[20px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] whie">
           Review & Confirm Delivery Note
         </div>
       </div>
@@ -232,12 +232,12 @@ export default function ReviewAndConfirmModal({ closeModal }) {
         <Logo className="w-[124px] lg:w-[180px] h-[35px] lg:h-[45px] object-contain" />
       </div>
 
-      <div className="max-h-[70vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="max-h-[70vh] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         {/* Table Header */}
         <h2 className="text-[#8E8E9C] text-[7px] lg:text-[14px] pb-2 font-semibold">
           Product Details
         </h2>
-        <div className="grid grid-cols-5 justify-between text-center bg-[#EFFBF3] dark:bg-[#1C1C1C] text-[5px] lg:text-[12px] font-medium text-[#0E1A12] dark:text-[#CDEEDB] px-2 py-2 rounded-lg">
+        <div className="grid grid-cols-5 justify-between text-center bg-[#EEF8FD] dark:bg-[#1C1C1C] text-[5px] lg:text-[12px] font-medium text-[#0C1626] dark:text-[#CDE9F7] px-2 py-2 rounded-lg">
           <div className="text-left">Product Image</div>
           <div>Article Code</div>
           <div className="whitespace-nowrap">Product Description</div>
@@ -249,7 +249,7 @@ export default function ReviewAndConfirmModal({ closeModal }) {
         {[1, 2].map((_, i) => (
           <div
             key={i}
-            className="grid grid-cols-5 justify-between items-center text-[5px] lg:text-[12px] text-[#0E1A12] dark:text-[#CDEEDB] px-2 py-2 border-b border-dashed border-[#A9C2B3]"
+            className="grid grid-cols-5 justify-between items-center text-[5px] lg:text-[12px] text-[#0C1626] dark:text-[#CDE9F7] px-2 py-2 border-b border-dashed border-[#A9BACB]"
           >
             <div>
               <img
@@ -268,7 +268,7 @@ export default function ReviewAndConfirmModal({ closeModal }) {
         {/* Delivery Info Sections */}
         <div className="grid grid-cols-2 gap-4 mt-2">
           {/* Delivery Address */}
-          <div className="col-span-1 border border-[#D4D4D4] bg-[#EFFBF366] dark:bg-[#141414] rounded-lg p-4 space-y-1">
+          <div className="col-span-1 border border-[#D4D4D4] bg-[#EEF8FD66] dark:bg-[#141414] rounded-lg p-4 space-y-1">
             <h3 className="font-semibold text-[7px] lg:text-[14px] text-[#8E8E9C]">
               Delivery Address
             </h3>
@@ -290,7 +290,7 @@ export default function ReviewAndConfirmModal({ closeModal }) {
           </div>
 
           {/* Delivery Date/Time */}
-          <div className="col-span-1 border border-[#D4D4D4] bg-[#EFFBF366] dark:bg-[#141414] rounded-lg p-4  space-y-1">
+          <div className="col-span-1 border border-[#D4D4D4] bg-[#EEF8FD66] dark:bg-[#141414] rounded-lg p-4  space-y-1">
             <h3 className="font-semibold text-[7px] lg:text-[14px] text-[#8E8E9C]">
               Delivery Date
             </h3>
@@ -324,7 +324,7 @@ export default function ReviewAndConfirmModal({ closeModal }) {
 
         {/* Tags */}
         <div className="flex flex-row justify-between gap-4 mt-2">
-          <div className="flex flex-row items-center gap-2 w-full bg-[#EFFBF3] dark:bg-[#191919] px-4 py-2 text-[7px] lg:text-[14px] rounded-lg text-[#0E1A12] dark:text-[#CDEEDB]">
+          <div className="flex flex-row items-center gap-2 w-full bg-[#EEF8FD] dark:bg-[#191919] px-4 py-2 text-[7px] lg:text-[14px] rounded-lg text-[#0C1626] dark:text-[#CDE9F7]">
             <img
               src="/walkerpackIcon.png"
               alt="WalkerPack Icon"
@@ -332,7 +332,7 @@ export default function ReviewAndConfirmModal({ closeModal }) {
             />
             <span>Shipping by WalkerPack</span>
           </div>
-          <div className="bg-[#EF44440f] px-4 py-2 text-[7px] lg:text-[14px] rounded-lg w-full text-[#0E1A12] dark:text-[#CDEEDB]">
+          <div className="bg-[#EF44440f] px-4 py-2 text-[7px] lg:text-[14px] rounded-lg w-full text-[#0C1626] dark:text-[#CDE9F7]">
             High Priority
           </div>
         </div>
@@ -347,7 +347,7 @@ export default function ReviewAndConfirmModal({ closeModal }) {
           ].map((label, idx) => (
             <div key={idx} className="flex flex-col items-center">
               {/* Row 1: Line */}
-              <div className="w-full border-t border-[#A9C2B3] mb-1" />
+              <div className="w-full border-t border-[#A9BACB] mb-1" />
 
               {/* Row 2: Centered Label */}
               <label className="text-center text-[#8E8E9C] dark:text-[#8E8E9C]">
@@ -359,15 +359,15 @@ export default function ReviewAndConfirmModal({ closeModal }) {
 
         {/* Footer Text */}
         <div className="text-left mt-6">
-          <p className="text-[#2B2B2B] dark:text-[#EFFBF3] text-[6px] lg:text-[12px] font-semibold">
-            Markeltree
+          <p className="text-[#2B2B2B] dark:text-[#EEF8FD] text-[6px] lg:text-[12px] font-semibold">
+            Teamora
           </p>
           <p className="text-[#8E8E9C] dark:text-[#8E8E9C] text-[5px] lg:text-[8px]">
             101 Regents Pavilion, 4, Summerhouse Road Northampton, <br />
             Northampton shire, NN3 6BJ,
             <br />
             United Kingdom{" "}
-            <span className="text-[#2B2B2B] dark:text-[#EFFBF3] text-[5px] lg:text-[8px]">
+            <span className="text-[#2B2B2B] dark:text-[#EEF8FD] text-[5px] lg:text-[8px]">
               07935 29802 sales@cfrsales.co.u
             </span>
           </p>
@@ -378,14 +378,14 @@ export default function ReviewAndConfirmModal({ closeModal }) {
           <ActionButton
             label="Back"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
             onClick={handleBack}
           />
 
           <ActionButton
             label="Create Order"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
             onClick={handleCreateOrder}
           />
         </div>

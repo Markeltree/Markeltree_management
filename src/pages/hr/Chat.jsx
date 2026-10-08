@@ -59,15 +59,15 @@ function PeoplePicker({ people, selected, onToggle, multi = true, excludeIds = [
   return (
     <div className="space-y-2">
       <Input placeholder="Search people…" value={q} onChange={(e) => setQ(e.target.value)} className="h-9" autoFocus />
-      <ul className="max-h-[300px] overflow-y-auto divide-y divide-[#6F7C7426] border border-[#6F7C7426] rounded-lg">
+      <ul className="max-h-[300px] overflow-y-auto divide-y divide-[#6E7A8626] border border-[#6E7A8626] rounded-lg">
         {list.length === 0 && <li className="p-3 text-[13px] text-[#8E8E9C]">No one found.</li>}
         {list.map((p) => (
           <li key={p.userId}>
-            <button type="button" onClick={() => onToggle(p.userId)} className="w-full flex items-center gap-3 px-3 py-2 hover:bg-[#09BF640D] text-left">
-              {multi && <input type="checkbox" readOnly checked={selected.includes(p.userId)} className="accent-[#09BF64]" />}
+            <button type="button" onClick={() => onToggle(p.userId)} className="w-full flex items-center gap-3 px-3 py-2 hover:bg-[#0088D10D] text-left">
+              {multi && <input type="checkbox" readOnly checked={selected.includes(p.userId)} className="accent-[#0088D1]" />}
               <Avatar person={p} size={30} />
               <span className="min-w-0">
-                <span className="block text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] truncate">{fullName(p)}</span>
+                <span className="block text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] truncate">{fullName(p)}</span>
                 <span className="block text-[11px] text-[#8E8E9C] truncate">{p.designation}</span>
               </span>
             </button>
@@ -93,8 +93,8 @@ function NewDirectModal({ meId, onOpen, closeModal }) {
   return (
     <div className="flex flex-col gap-3">
       <div className="pr-8">
-        <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">New message</h2>
-        <p className="text-[12px] text-[#6F7C74]">Choose a colleague to chat with.</p>
+        <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">New message</h2>
+        <p className="text-[12px] text-[#6E7A86]">Choose a colleague to chat with.</p>
       </div>
       <PeoplePicker people={people ?? []} selected={[]} multi={false} excludeIds={[meId]} onToggle={start} />
     </div>
@@ -173,14 +173,14 @@ function MembersModal({ conversation, meId, onLeft, closeModal }) {
   return (
     <div className="flex flex-col gap-3 max-h-[80vh]">
       <div className="pr-8">
-        <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{conversation.name}</h2>
-        <p className="text-[12px] text-[#6F7C74]">{conversation.members.length} members</p>
+        <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{conversation.name}</h2>
+        <p className="text-[12px] text-[#6E7A86]">{conversation.members.length} members</p>
       </div>
-      <ul className="overflow-y-auto divide-y divide-[#6F7C7426] max-h-[260px]">
+      <ul className="overflow-y-auto divide-y divide-[#6E7A8626] max-h-[260px]">
         {conversation.members.map((m) => (
           <li key={m.userId} className="flex items-center gap-3 py-2">
             <Avatar person={personOf(m.user)} size={30} />
-            <span className="flex-1 text-[13px] text-[#0F2418] dark:text-[#EFFBF3]">
+            <span className="flex-1 text-[13px] text-[#0B1B33] dark:text-[#EEF8FD]">
               {nameOf(m.user)} {m.userId === meId && <span className="text-[#8E8E9C]">(you)</span>}
             </span>
             {m.isAdmin && <Badge tone="primary">Admin</Badge>}
@@ -194,7 +194,7 @@ function MembersModal({ conversation, meId, onLeft, closeModal }) {
       </ul>
       {isAdmin && (
         <>
-          <h3 className="text-[13px] font-bold text-[#09BF64]">Add people</h3>
+          <h3 className="text-[13px] font-bold text-[#0088D1]">Add people</h3>
           <PeoplePicker people={people ?? []} selected={adding} excludeIds={memberIds} onToggle={(id) => setAdding((a) => (a.includes(id) ? a.filter((x) => x !== id) : [...a, id]))} />
         </>
       )}
@@ -214,11 +214,11 @@ function Message({ m, mine, showAuthor, onEdit, onDelete, seen }) {
     <div className={`group flex gap-2 ${mine ? "justify-end" : "justify-start"}`}>
       {!mine && <div className="w-8 shrink-0">{showAuthor && <Avatar person={personOf(m.sender)} size={32} />}</div>}
       <div className={`max-w-[75%] md:max-w-[60%] flex flex-col ${mine ? "items-end" : "items-start"}`}>
-        {showAuthor && !mine && <span className="text-[11px] text-[#6F7C74] mb-0.5 ml-1">{nameOf(m.sender)}</span>}
+        {showAuthor && !mine && <span className="text-[11px] text-[#6E7A86] mb-0.5 ml-1">{nameOf(m.sender)}</span>}
         <div className="flex items-center gap-1">
           {mine && !deleted && !m.pending && (
             <span className="opacity-0 group-hover:opacity-100 flex gap-1 transition-opacity">
-              <button title="Edit" onClick={() => onEdit(m)} className="text-[#8E8E9C] hover:text-[#09BF64]">
+              <button title="Edit" onClick={() => onEdit(m)} className="text-[#8E8E9C] hover:text-[#0088D1]">
                 <Icon icon="tabler:edit" width={14} />
               </button>
               <button title="Delete" onClick={() => onDelete(m)} className="text-[#8E8E9C] hover:text-[#FF695B]">
@@ -229,10 +229,10 @@ function Message({ m, mine, showAuthor, onEdit, onDelete, seen }) {
           <div
             className={`rounded-2xl px-3 py-2 text-[14px] whitespace-pre-wrap break-words ${
               deleted
-                ? "italic text-[#8E8E9C] bg-transparent border border-[#6F7C7440]"
+                ? "italic text-[#8E8E9C] bg-transparent border border-[#6E7A8640]"
                 : mine
-                  ? "bg-[#09BF64] text-white rounded-br-sm"
-                  : "bg-white dark:bg-[#1F1F1F] text-[#0F2418] dark:text-[#EFFBF3] rounded-bl-sm"
+                  ? "bg-[#0088D1] text-white rounded-br-sm"
+                  : "bg-white dark:bg-[#1F1F1F] text-[#0B1B33] dark:text-[#EEF8FD] rounded-bl-sm"
             } ${m.pending ? "opacity-60" : ""} ${m.failed ? "ring-1 ring-[#FF695B]" : ""}`}
           >
             {deleted ? "This message was deleted" : m.body}
@@ -460,14 +460,14 @@ function Thread({ conversation, meId, connected, onBack, onLeft }) {
 
   return (
     <div className="flex flex-col flex-1 h-full min-w-0">
-      <div className="flex items-center gap-3 px-4 h-[64px] border-b border-[#6F7C7426] bg-white dark:bg-black shrink-0">
-        <button className="md:hidden text-[#09BF64]" onClick={onBack} aria-label="Back to conversations">
+      <div className="flex items-center gap-3 px-4 h-[64px] border-b border-[#6E7A8626] bg-white dark:bg-black shrink-0">
+        <button className="md:hidden text-[#0088D1]" onClick={onBack} aria-label="Back to conversations">
           <Icon icon="mdi:arrow-left" width={22} />
         </button>
         <Avatar person={conversationAvatarPerson(conversation, meId)} size={38} />
         <div className="min-w-0 flex-1">
-          <p className="text-[15px] font-bold text-[#0F2418] dark:text-[#EFFBF3] truncate">{conversationTitle(conversation, meId)}</p>
-          <p className="text-[12px] text-[#8E8E9C] truncate">{typingNames.length ? <span className="text-[#09BF64]">{typingNames.join(", ")} typing…</span> : header}</p>
+          <p className="text-[15px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] truncate">{conversationTitle(conversation, meId)}</p>
+          <p className="text-[12px] text-[#8E8E9C] truncate">{typingNames.length ? <span className="text-[#0088D1]">{typingNames.join(", ")} typing…</span> : header}</p>
         </div>
         {conversation.type !== "DIRECT" && (
           <Btn size="sm" variant="ghost" icon="mdi:account-multiple-outline" label="Members" onClick={() => openModal(MembersModal, { sizeClass: "w-[95%] md:w-[520px]", conversation, meId, onLeft })} />
@@ -513,12 +513,12 @@ function Thread({ conversation, meId, connected, onBack, onLeft }) {
         })}
       </div>
 
-      <div className="relative border-t border-[#6F7C7426] bg-white dark:bg-black p-3 shrink-0">
+      <div className="relative border-t border-[#6E7A8626] bg-white dark:bg-black p-3 shrink-0">
         {mentionOptions.length > 0 && (
-          <ul className="absolute bottom-full left-3 mb-1 w-64 bg-white dark:bg-[#0D0D0D] border border-[#6F7C7440] rounded-lg shadow-lg overflow-hidden z-10">
+          <ul className="absolute bottom-full left-3 mb-1 w-64 bg-white dark:bg-[#0D0D0D] border border-[#6E7A8640] rounded-lg shadow-lg overflow-hidden z-10">
             {mentionOptions.map((m) => (
               <li key={m.userId}>
-                <button type="button" onMouseDown={(e) => (e.preventDefault(), pickMention(m))} className="w-full flex items-center gap-2 px-3 py-2 hover:bg-[#09BF6414] text-left text-[13px]">
+                <button type="button" onMouseDown={(e) => (e.preventDefault(), pickMention(m))} className="w-full flex items-center gap-2 px-3 py-2 hover:bg-[#0088D114] text-left text-[13px]">
                   <Avatar person={personOf(m.user)} size={24} /> {nameOf(m.user)}
                 </button>
               </li>
@@ -526,7 +526,7 @@ function Thread({ conversation, meId, connected, onBack, onLeft }) {
           </ul>
         )}
         {editing && (
-          <div className="flex items-center justify-between text-[12px] text-[#09BF64] mb-2">
+          <div className="flex items-center justify-between text-[12px] text-[#0088D1] mb-2">
             <span>Editing message</span>
             <button onClick={() => (setEditing(null), setText(""))} className="hover:underline">
               Cancel
@@ -552,7 +552,7 @@ function Thread({ conversation, meId, connected, onBack, onLeft }) {
             rows={1}
             maxLength={5000}
             placeholder={conversation.type === "DIRECT" ? "Write a message…" : "Write a message… (@ to mention)"}
-            className="flex-1 resize-none max-h-[140px] text-[14px] px-3 py-2.5 border border-[#6F7C7440] rounded-xl bg-white dark:bg-[#0D0D0D] text-[#0F2418] dark:text-[#EFFBF3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1]"
+            className="flex-1 resize-none max-h-[140px] text-[14px] px-3 py-2.5 border border-[#6E7A8640] rounded-xl bg-white dark:bg-[#0D0D0D] text-[#0B1B33] dark:text-[#EEF8FD] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3]"
             style={{ height: "auto" }}
             onInput={(e) => {
               e.target.style.height = "auto";
@@ -563,7 +563,7 @@ function Thread({ conversation, meId, connected, onBack, onLeft }) {
             onClick={send}
             disabled={!text.trim()}
             aria-label={editing ? "Save" : "Send"}
-            className="h-[42px] w-[42px] shrink-0 rounded-xl bg-[#09BF64] text-white flex items-center justify-center disabled:opacity-40"
+            className="h-[42px] w-[42px] shrink-0 rounded-xl bg-[#0088D1] text-white flex items-center justify-center disabled:opacity-40"
           >
             <Icon icon={editing ? "mdi:check" : "mdi:send"} width={20} />
           </button>
@@ -601,26 +601,26 @@ export default function Chat() {
 
   return (
     <div className="flex h-full bg-white dark:bg-black">
-      <aside className={`${activeId ? "hidden md:flex" : "flex"} flex-col w-full md:w-[320px] lg:w-[360px] border-r border-[#6F7C7426] shrink-0`}>
-        <div className="flex items-center justify-between px-4 h-[64px] border-b border-[#6F7C7426]">
-          <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3] flex items-center gap-2">
+      <aside className={`${activeId ? "hidden md:flex" : "flex"} flex-col w-full md:w-[320px] lg:w-[360px] border-r border-[#6E7A8626] shrink-0`}>
+        <div className="flex items-center justify-between px-4 h-[64px] border-b border-[#6E7A8626]">
+          <h1 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] flex items-center gap-2">
             Chat
             <span title={connected ? "Live" : "Reconnecting — messages refresh every few seconds"} className={`w-2 h-2 rounded-full ${connected ? "bg-[#10B981]" : "bg-[#F59E0B]"}`} />
           </h1>
           <div className="flex gap-2">
             {canCreateGroup && (
-              <button title="New group" onClick={() => openModal(NewGroupModal, { sizeClass: "w-[95%] md:w-[560px]", meId, onOpen: open })} className="w-9 h-9 rounded-xl bg-[#09BF641A] text-[#09BF64] flex items-center justify-center">
+              <button title="New group" onClick={() => openModal(NewGroupModal, { sizeClass: "w-[95%] md:w-[560px]", meId, onOpen: open })} className="w-9 h-9 rounded-xl bg-[#0088D11A] text-[#0088D1] flex items-center justify-center">
                 <Icon icon="mdi:account-multiple-plus-outline" width={20} />
               </button>
             )}
-            <button title="New message" onClick={() => openModal(NewDirectModal, { sizeClass: "w-[95%] md:w-[460px]", meId, onOpen: open })} className="w-9 h-9 rounded-xl bg-[#09BF64] text-white flex items-center justify-center">
+            <button title="New message" onClick={() => openModal(NewDirectModal, { sizeClass: "w-[95%] md:w-[460px]", meId, onOpen: open })} className="w-9 h-9 rounded-xl bg-[#0088D1] text-white flex items-center justify-center">
               <Icon icon="mdi:pencil-plus-outline" width={20} />
             </button>
           </div>
         </div>
         <div className="p-3">
           <div className="relative">
-            <Icon icon="mdi:magnify" className="absolute left-3 top-1/2 -translate-y-1/2 text-[#09BF64] text-xl" />
+            <Icon icon="mdi:magnify" className="absolute left-3 top-1/2 -translate-y-1/2 text-[#0088D1] text-xl" />
             <input
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
@@ -641,17 +641,17 @@ export default function Chat() {
                 <li key={c.id}>
                   <button
                     onClick={() => open(c.id)}
-                    className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${c.id === activeId ? "bg-[#09BF6414]" : "hover:bg-[#F4F6F9] dark:hover:bg-[#141414]"}`}
+                    className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${c.id === activeId ? "bg-[#0088D114]" : "hover:bg-[#F4F6F9] dark:hover:bg-[#141414]"}`}
                   >
                     <Avatar person={conversationAvatarPerson(c, meId)} size={42} />
                     <span className="min-w-0 flex-1">
                       <span className="flex items-center justify-between gap-2">
-                        <span className={`text-[14px] truncate ${c.unread ? "font-bold text-[#0F2418] dark:text-white" : "font-semibold text-[#0F2418] dark:text-[#EFFBF3]"}`}>{conversationTitle(c, meId)}</span>
+                        <span className={`text-[14px] truncate ${c.unread ? "font-bold text-[#0B1B33] dark:text-white" : "font-semibold text-[#0B1B33] dark:text-[#EEF8FD]"}`}>{conversationTitle(c, meId)}</span>
                         <span className="text-[11px] text-[#8E8E9C] shrink-0">{timeShort(last?.createdAt ?? c.updatedAt)}</span>
                       </span>
                       <span className="flex items-center justify-between gap-2">
-                        <span className={`text-[12px] truncate ${c.unread ? "text-[#0F2418] dark:text-[#EFFBF3]" : "text-[#8E8E9C]"}`}>{lastText}</span>
-                        {c.unread > 0 && <span className="bg-[#09BF64] text-white text-[10px] font-bold min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center shrink-0">{c.unread > 99 ? "99+" : c.unread}</span>}
+                        <span className={`text-[12px] truncate ${c.unread ? "text-[#0B1B33] dark:text-[#EEF8FD]" : "text-[#8E8E9C]"}`}>{lastText}</span>
+                        {c.unread > 0 && <span className="bg-[#0088D1] text-white text-[10px] font-bold min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center shrink-0">{c.unread > 99 ? "99+" : c.unread}</span>}
                       </span>
                     </span>
                   </button>
@@ -660,7 +660,7 @@ export default function Chat() {
             })}
           </ul>
           {q.length >= 2 && (
-            <div className="border-t border-[#6F7C7426] mt-2">
+            <div className="border-t border-[#6E7A8626] mt-2">
               <h3 className="text-[11px] font-semibold uppercase text-[#8E8E9C] px-4 pt-3 pb-1">Messages</h3>
               {search.loading && <p className="px-4 text-[12px] text-[#8E8E9C]">Searching…</p>}
               {search.data?.length === 0 && <p className="px-4 pb-3 text-[12px] text-[#8E8E9C]">No messages found.</p>}
@@ -670,10 +670,10 @@ export default function Chat() {
                   return (
                     <li key={m.id}>
                       <button onClick={() => open(m.conversationId)} className="w-full px-4 py-2 text-left hover:bg-[#F4F6F9] dark:hover:bg-[#141414]">
-                        <span className="block text-[12px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] truncate">
+                        <span className="block text-[12px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] truncate">
                           {conv ? conversationTitle(conv, meId) : m.conversation.name ?? "Direct message"} · {nameOf(m.sender)}
                         </span>
-                        <span className="block text-[12px] text-[#6F7C74] truncate">{m.body}</span>
+                        <span className="block text-[12px] text-[#6E7A86] truncate">{m.body}</span>
                         <span className="block text-[10px] text-[#8E8E9C]">{timeShort(m.createdAt)}</span>
                       </button>
                     </li>
@@ -690,7 +690,7 @@ export default function Chat() {
           <Thread key={active.id} conversation={active} meId={meId} connected={connected} onBack={() => open(null)} onLeft={() => open(null)} />
         ) : (
           <div className="flex-1 flex flex-col items-center justify-center text-[#8E8E9C] gap-3 bg-gray-50 dark:bg-[#141414]">
-            <Icon icon="mdi:chat-processing-outline" width={56} className="text-[#09BF64]" />
+            <Icon icon="mdi:chat-processing-outline" width={56} className="text-[#0088D1]" />
             <p className="text-[14px]">{activeId && conversations.loading ? "Loading conversation…" : "Select a conversation or start a new one."}</p>
           </div>
         )}

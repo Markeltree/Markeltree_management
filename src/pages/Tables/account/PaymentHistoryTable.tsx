@@ -97,7 +97,7 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
           {paginatedData.map((item) => (
             <tr
               key={item.id}
-              className="text-[14px] text-[#666666] font-medium dark:text-[#EFFBF3]/20"
+              className="text-[14px] text-[#666666] font-medium dark:text-[#EEF8FD]/20"
             >
               <td className="w-4 p-4">
                 <input
@@ -119,7 +119,7 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
                 />
               </td>
               <td className="px-6 py-4">
-                <div className="font-semibold rounded bg-[#DEF7E7] px-2 py-2 text-center text-[11px] text-[#22C55E]">
+                <div className="font-semibold rounded bg-[#DDF1FB] px-2 py-2 text-center text-[11px] text-[#22C55E]">
                   {item.status}
                 </div>
               </td>
@@ -137,7 +137,7 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
                   >
                     <div className="p-4">
                       <HeadingOne text="Payment Summary" />
-                      <div className="mt-4 flex flex-row justify-between bg-[#EFFBF3]/60 dark:bg-[#0D0D0D] p-4 rounded">
+                      <div className="mt-4 flex flex-row justify-between bg-[#EEF8FD]/60 dark:bg-[#0D0D0D] p-4 rounded">
                         <div className="space-y-3">
                           <Label children="Transaction Type" />
                           <Label children="Reference ID" />
@@ -162,14 +162,14 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
                       <div className="flex flex-row mt-4">
                         <Button
                           variant="outline"
-                          className="bg-[#09BF64] mx-5 my-1 w-full"
+                          className="bg-[#0088D1] mx-5 my-1 w-full"
                           size="md"
                         >
                           Print
                         </Button>
                         <Button
                           variant="primary"
-                          className="bg-[#09BF64] mx-5 my-1 w-full"
+                          className="bg-[#0088D1] mx-5 my-1 w-full"
                           size="md"
                         >
                           Record Payment
@@ -200,11 +200,11 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
           >
             <path
               d="M10.458 10.6797L11.2288 9.90889L8.72503 7.39969L11.2288 4.89049L10.458 4.11969L7.17796 7.39969L10.458 10.6797Z"
-              fill="#0F2418"
+              fill="#0B1B33"
             />
             <path
               d="M6.85444 10.6797L7.62524 9.90889L5.12151 7.39969L7.62524 4.89049L6.85444 4.11969L3.57444 7.39969L6.85444 10.6797Z"
-              fill="#0F2418"
+              fill="#0B1B33"
             />
           </svg>
         </button>
@@ -222,7 +222,7 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
           >
             <path
               d="M8.98872 10.6797L9.75952 9.90889L7.25579 7.39969L9.75952 4.89049L8.98872 4.11969L5.70872 7.39969L8.98872 10.6797Z"
-              fill="#0F2418"
+              fill="#0B1B33"
             />
           </svg>
         </button>
@@ -233,7 +233,7 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
             onClick={() => setCurrentPage(i + 1)}
             className={`rounded-[100px] border border-[#F5F5F5] dark:text-white px-5 py-3 ${
               currentPage === i + 1
-                ? "bg-[#09BF64] text-white"
+                ? "bg-[#0088D1] text-white"
                 : "rounded-[26.24px] border border-[#F5F5F5] px-5 py-3"
             }`}
           >
@@ -255,7 +255,7 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
           >
             <path
               d="M5.83086 4.11914L5.06006 4.88994L7.56379 7.39914L5.06006 9.90834L5.83086 10.6791L9.11086 7.39914L5.83086 4.11914Z"
-              fill="#0F2418"
+              fill="#0B1B33"
             />
           </svg>
         </button>
@@ -275,11 +275,11 @@ const PaymentHistoryTable = ({ BtnText = "View Details" }) => {
           >
             <path
               d="M3.54351 4.11914L2.77271 4.88994L5.27644 7.39914L2.77271 9.90834L3.54351 10.6791L6.8235 7.39914L3.54351 4.11914Z"
-              fill="#0F2418"
+              fill="#0B1B33"
             />
             <path
               d="M7.14702 4.11914L6.37622 4.88994L8.87995 7.39914L6.37622 9.90834L7.14702 10.6791L10.427 7.39914L7.14702 4.11914Z"
-              fill="#0F2418"
+              fill="#0B1B33"
             />
           </svg>
         </button>

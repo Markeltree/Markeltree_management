@@ -45,7 +45,7 @@ export default function TableTabView({
           >
             <span>{tab.label}</span>
             {tab.count !== undefined && (
-              <span className="bg-[#09BF641A] text-[#09BF64] dark:bg-[#81D9591A] dark:text-[#81D959] text-[10px] font-medium rounded-full w-5 h-5 flex items-center justify-center">
+              <span className="bg-[#0088D11A] text-[#0088D1] dark:bg-[#01CEE91A] dark:text-[#01CEE9] text-[10px] font-medium rounded-full w-5 h-5 flex items-center justify-center">
                 {tab.count}
               </span>
             )}
@@ -83,7 +83,7 @@ export default function TableTabView({
                       {activeTab.table.columns.map((col, colIndex) => (
                         <td
                           key={colIndex}
-                          className={`px-3 py-2 align-middle text-[12px] text-[#666666] dark:text-[#CECFFA] whitespace-nowrap border-b dark:border-[#6F7C7426]
+                          className={`px-3 py-2 align-middle text-[12px] text-[#666666] dark:text-[#CECFFA] whitespace-nowrap border-b dark:border-[#6E7A8626]
                             ${
                               colIndex !== 0
                                 ? "hidden lg:table-cell"
@@ -95,7 +95,7 @@ export default function TableTabView({
                           row[col]?.type === "button" ? (
                             <ActionButton
                               label={row[col].label}
-                              buttonClass="text-[12px] px-2 py-1 bg-[#09BF641A] text-[#09BF64] dark:text-[#81D959] rounded"
+                              buttonClass="text-[12px] px-2 py-1 bg-[#0088D11A] text-[#0088D1] dark:text-[#01CEE9] rounded"
                             />
                           ) : (
                             <span>{row[col]}</span>

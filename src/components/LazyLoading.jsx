@@ -8,7 +8,7 @@ export default function Loading({
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-[#0D0D0D]">
         <svg
           className="animate-spin"
-          style={{ width: size, height: size, color: "#09BF64" }}
+          style={{ width: size, height: size, color: "#0088D1" }}
           viewBox="0 0 50 50"
         >
           <circle

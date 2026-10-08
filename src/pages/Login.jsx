@@ -69,7 +69,7 @@ export default function Login() {
       <div className="flex justify-end items-center text-[12px] pt-3 w-full">
         <button
           type="button"
-          className="text-[#09BF64] font-semibold ml-1 hover:underline"
+          className="text-[#0088D1] font-semibold ml-1 hover:underline"
           onClick={() => navigate("/forgot-password", { state: { email } })}
         >
           Forgot Password?

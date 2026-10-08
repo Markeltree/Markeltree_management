@@ -225,7 +225,7 @@ const Board = () => {
                 text="Add Task"
                 icon={FiPlusCircle}
                 className="text-center"
-                bgColor="bg-[#09BF64]"
+                bgColor="bg-[#0088D1]"
                 textColor="text-white"
                 onClick={() => setIsDrawerOpen(true)}
               />

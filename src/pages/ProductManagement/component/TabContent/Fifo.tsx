@@ -32,7 +32,7 @@ const Fifo = () => {
               {/* <ColorFull
                 text="Transfer Request"
                 icon={FiPlus}
-                bgColor="bg-[#09BF64]"
+                bgColor="bg-[#0088D1]"
                 textColor="text-white"
               /> */}
             </div>

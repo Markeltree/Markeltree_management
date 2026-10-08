@@ -17,7 +17,7 @@ function Toggle({ enabled, setEnabled }) {
     <button
       onClick={() => setEnabled(!enabled)}
       className={`${
-        enabled ? "bg-[#09BF64]" : "bg-[#8E8E9C]"
+        enabled ? "bg-[#0088D1]" : "bg-[#8E8E9C]"
       } relative inline-flex h-6 w-10 md:w-11 items-center rounded-full transition`}
     >
       <span
@@ -640,7 +640,7 @@ export default function Setting() {
     <div className="flex-1 px-6 pt-4 bg-gray-50 dark:bg-[#141414] min-h-screen">
       {/* Header */}
       <div className="flex flex-row justify-between items-center mb-6 gap-2">
-        <h1 className="text-[14px] font-medium text-[#09BF64] dark:text-[#81D959] whitespace-nowrap">
+        <h1 className="text-[14px] font-medium text-[#0088D1] dark:text-[#01CEE9] whitespace-nowrap">
           Setting
         </h1>
       </div>
@@ -652,8 +652,8 @@ export default function Setting() {
             onClick={() => handleTabChange(idx)}
             className={`pb-2 text-sm ${
               activeTab === idx
-                ? "text-[#0F2418] dark:text-[#EFFBF3] font-medium border-b-2 border-[#09BF64]"
-                : "text-[#0F2418] dark:text-[#B5E6C9] opacity-70"
+                ? "text-[#0B1B33] dark:text-[#EEF8FD] font-medium border-b-2 border-[#0088D1]"
+                : "text-[#0B1B33] dark:text-[#B5DEF2] opacity-70"
             }`}
           >
             {tab}
@@ -679,13 +679,13 @@ export default function Setting() {
                 <ActionButton
                   label="Cancel"
                   labelClass="font-normal text-[12px] md:text-[16px]"
-                  buttonClass="w-[120px] py-2 rounded-lg border border-[#09BF64] text-[#09BF64] bg-transparent hover:bg-[#09BF64]/10 font-normal focus:outline-none focus:ring-0"
+                  buttonClass="w-[120px] py-2 rounded-lg border border-[#0088D1] text-[#0088D1] bg-transparent hover:bg-[#0088D1]/10 font-normal focus:outline-none focus:ring-0"
                   onClick={handleCancel}
                 />
                 <ActionButton
                   label="Save"
                   labelClass="font-normal text-[12px] md:text-[16px]"
-                  buttonClass="w-[120px] py-2 rounded-lg bg-[#09BF64] text-[#FFFFFF] dark:text-[#111111] hover:bg-[#4a4ccf] font-normal focus:outline-none focus:ring-0"
+                  buttonClass="w-[120px] py-2 rounded-lg bg-[#0088D1] text-[#FFFFFF] dark:text-[#111111] hover:bg-[#4a4ccf] font-normal focus:outline-none focus:ring-0"
                   onClick={handleSave}
                 />
               </div>
@@ -750,7 +750,7 @@ export default function Setting() {
                       key={opt}
                       className="flex justify-between items-center cursor-pointer"
                     >
-                      <span className="text-[#2B2B2B] text-[11px] md:text-[14px] dark:text-[#EFFBF3] capitalize">
+                      <span className="text-[#2B2B2B] text-[11px] md:text-[14px] dark:text-[#EEF8FD] capitalize">
                         {opt} Theme
                       </span>
                       <input
@@ -759,7 +759,7 @@ export default function Setting() {
                         value={opt}
                         checked={theme === opt}
                         onChange={() => setTheme(opt)} // ✅ only update local state
-                        className="h-5 w-5 text-[#81D959] focus:ring-[#81D959] border-[#81D959] accent-[#09BF64]"
+                        className="h-5 w-5 text-[#01CEE9] focus:ring-[#01CEE9] border-[#01CEE9] accent-[#0088D1]"
                       />
                     </label>
                   ))}
@@ -778,7 +778,7 @@ export default function Setting() {
                   {/* Language */}
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-medium text-[2B2B2B] dark:text-[#EFFBF3] text-[13px] md:text-[16px]">
+                      <p className="font-medium text-[2B2B2B] dark:text-[#EEF8FD] text-[13px] md:text-[16px]">
                         Language
                       </p>
                       <p className="text-[11px] md:text-[14px]  text-[#8E8E9C]">
@@ -791,14 +791,14 @@ export default function Setting() {
                       defaultCountry={language}
                       showLabel={true}
                       size="w-[150px]"
-                      styling="[&_.p-dropdown-trigger-icon]:text-[#09BF64] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
+                      styling="[&_.p-dropdown-trigger-icon]:text-[#0088D1] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
                       onChange={(val) => setLanguage(val)}
                     />
                   </div>
                   {/* Currency */}
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-medium text-[2B2B2B] dark:text-[#EFFBF3] text-[13px] md:text-[16px]">
+                      <p className="font-medium text-[2B2B2B] dark:text-[#EEF8FD] text-[13px] md:text-[16px]">
                         Currency
                       </p>
                       <p className="text-[11px] md:text-[14px]  text-[#8E8E9C]">
@@ -811,7 +811,7 @@ export default function Setting() {
                       defaultCountry={currencyVal}
                       showLabel={true}
                       size="w-[150px]"
-                      styling="[&_.p-dropdown-trigger-icon]:text-[#09BF64] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
+                      styling="[&_.p-dropdown-trigger-icon]:text-[#0088D1] !ring-0 !outline-none focus:!outline-none focus:!ring-0 border-none rounded-xl bg-[#F4F6F9] dark:bg-[#1F2937]"
                       onChange={(val) => setCurrencyVal(val)}
                     />
                   </div>

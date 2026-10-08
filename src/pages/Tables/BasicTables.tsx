@@ -7,8 +7,8 @@ export default function BasicTables() {
   return (
     <>
       <PageMeta
-        title="React.js Basic Tables Dashboard | Markeltree - Next.js Admin Dashboard Template"
-        description="This is React.js Basic Tables Dashboard page for Markeltree - React.js Tailwind CSS Admin Dashboard Template"
+        title="React.js Basic Tables Dashboard | Teamora - Next.js Admin Dashboard Template"
+        description="This is React.js Basic Tables Dashboard page for Teamora - React.js Tailwind CSS Admin Dashboard Template"
       />
       <PageBreadcrumb pageTitle="Basic Tables" />
       <div className="space-y-6">

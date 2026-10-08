@@ -11,8 +11,8 @@ type HoverDropdownProps = {
 const HoverDropdown: React.FC<HoverDropdownProps> = ({
   DropdownName = "Dropdown",
   className = "",
-  color = "text-[#09BF64] border-[#09BF64]",
-  bgColor = "bg-[#09BF64] border-1 border-[#09BF64] text-white hover:border-1 hover:border-[#09BF64] hover:text-[#09BF64] hover:bg-white",
+  color = "text-[#0088D1] border-[#0088D1]",
+  bgColor = "bg-[#0088D1] border-1 border-[#0088D1] text-white hover:border-1 hover:border-[#0088D1] hover:text-[#0088D1] hover:bg-white",
   variant = "outlined",
 }) => {
   const isOutlined = variant === "outlined";
@@ -21,7 +21,7 @@ const HoverDropdown: React.FC<HoverDropdownProps> = ({
     <div className="relative inline-block text-left group">
       {/* Trigger Button */}
       <button
-        className={`inline-flex justify-center w-full rounded-md px-[11.5px] py-[8px] text-[12px] font-medium hover:bg-[#09BF64] hover:text-white dark:bg-[#0D0D0D] dark:text-[#A9C2B3] 
+        className={`inline-flex justify-center w-full rounded-md px-[11.5px] py-[8px] text-[12px] font-medium hover:bg-[#0088D1] hover:text-white dark:bg-[#0D0D0D] dark:text-[#A9BACB] 
           ${isOutlined ? `bg-white border-1 ${color}` : `${bgColor} border-0`} 
           ${className}`}
       >

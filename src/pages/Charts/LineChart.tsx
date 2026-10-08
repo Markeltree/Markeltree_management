@@ -7,8 +7,8 @@ export default function LineChart() {
   return (
     <>
       <PageMeta
-        title="React.js Chart Dashboard | Markeltree - React.js Admin Dashboard Template"
-        description="This is React.js Chart Dashboard page for Markeltree - React.js Tailwind CSS Admin Dashboard Template"
+        title="React.js Chart Dashboard | Teamora - React.js Admin Dashboard Template"
+        description="This is React.js Chart Dashboard page for Teamora - React.js Tailwind CSS Admin Dashboard Template"
       />
       <PageBreadcrumb pageTitle="Line Chart" />
       <div className="space-y-6">

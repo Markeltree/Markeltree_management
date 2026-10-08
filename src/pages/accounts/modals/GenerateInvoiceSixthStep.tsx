@@ -12,7 +12,7 @@ export default function GenerateInvoiceSixthStep() {
         <HeadingTwo text="Payment" />
         <div className="px-2 pr-14">
           
-          <div className="bg-[#EFFBF3]/60 dark:bg-[#0D0D0D] p-4 flex flex-row justify-between">
+          <div className="bg-[#EEF8FD]/60 dark:bg-[#0D0D0D] p-4 flex flex-row justify-between">
             <div>
                 <HeadingFour text="Amount Paid" className="text-black" />
                 <HeadingOne text="$0.00" />
@@ -24,14 +24,14 @@ export default function GenerateInvoiceSixthStep() {
           </div>
           <div className="flex justify-center flex-col">
             <Button
-                className="w-full bg-[#09BF64] mx-5 my-1"
+                className="w-full bg-[#0088D1] mx-5 my-1"
                 size="sm"
                 variant="primary"
               >
                 Record Payment
               </Button>
               <Button
-                className="w-full bg-[#09BF64] mx-5 my-1"
+                className="w-full bg-[#0088D1] mx-5 my-1"
                 size="sm"
                 variant="outline"
               >

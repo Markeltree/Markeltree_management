@@ -35,8 +35,8 @@ const SystemPreferences: React.FC = () => {
               Children="System Preferences"
               className={`pb-2 border-b-2 ${
                 activeTab === "preferences"
-                  ? "border-[#09BF64] text-[#09BF64]"
-                  : "border-transparent text-[#144A2A]"
+                  ? "border-[#0088D1] text-[#0088D1]"
+                  : "border-transparent text-[#0F3B66]"
               }`}
               onClick={() => setActiveTab("preferences")}
             />
@@ -44,8 +44,8 @@ const SystemPreferences: React.FC = () => {
               Children="User Roles & Permissions"
               className={`pb-2 border-b-2 ${
                 activeTab === "roles"
-                  ? "border-[#09BF64] text-[#09BF64]"
-                  : "border-transparent text-[#144A2A]"
+                  ? "border-[#0088D1] text-[#0088D1]"
+                  : "border-transparent text-[#0F3B66]"
               }`}
               onClick={() => setActiveTab("roles")}
             />
@@ -53,8 +53,8 @@ const SystemPreferences: React.FC = () => {
               Children="Workflow Configuration"
               className={`pb-2 border-b-2 ${
                 activeTab === "workflow"
-                  ? "border-[#09BF64] text-[#09BF64]"
-                  : "border-transparent text-[#144A2A]"
+                  ? "border-[#0088D1] text-[#0088D1]"
+                  : "border-transparent text-[#0F3B66]"
               }`}
               onClick={() => setActiveTab("workflow")}
             />
@@ -74,18 +74,18 @@ const SystemPreferences: React.FC = () => {
           <div className="space-y-6">
             <div className="bg-white rounded-2xl dark:bg-[#000] p-4">
               <HeadingTwo text="Notification" className="text-[20px] font-semibold" />
-              <Paragragh para="Customize How You Stay Informed and Connected" className="text-[#144A2A] mb-4" />
+              <Paragragh para="Customize How You Stay Informed and Connected" className="text-[#0F3B66] mb-4" />
 
               {[["Get Notification by Email", emailNotif, setEmailNotif], ["SMS Notification", smsNotif, setSmsNotif], ["In App Notification", inAppNotif, setInAppNotif]].map(
                 ([label, value, setter]: any, i) => (
                   <div key={i} className="flex items-center justify-between py-3 border-t border-gray-100">
                     <div>
                       <HeadingThree text={label} color="text-black" />
-                      <Paragragh para="Get every update of your bets and account via email." className="text-[#144A2A]" />
+                      <Paragragh para="Get every update of your bets and account via email." className="text-[#0F3B66]" />
                     </div>
                     <button
                       className={`w-11 h-6 rounded-full flex items-center transition-colors duration-300 ${
-                        value ? "bg-[#09BF64]" : "bg-[#8E8E9C]"
+                        value ? "bg-[#0088D1]" : "bg-[#8E8E9C]"
                       }`}
                       onClick={() => setter((v: boolean) => !v)}
                     >
@@ -102,13 +102,13 @@ const SystemPreferences: React.FC = () => {
 
             <div className="bg-white rounded-2xl p-4 dark:bg-[#000]">
               <HeadingTwo text="Theme" className="text-[20px] font-semibold" />
-              <Paragragh para="Customize how the system looks and feels." className="text-[#144A2A] mb-4" />
+              <Paragragh para="Customize how the system looks and feels." className="text-[#0F3B66] mb-4" />
               {["light", "dark"].map((mode) => (
                 <div key={mode} className="flex items-center justify-between py-3 border-t border-gray-100">
                   <HeadingThree text={`${mode[0].toUpperCase() + mode.slice(1)} Theme`} color="text-black" />
                   <input
                     type="radio"
-                    className="accent-[#09BF64] w-5 h-5"
+                    className="accent-[#0088D1] w-5 h-5"
                     checked={theme === mode}
                     onChange={() => setTheme(mode as "light" | "dark")}
                     name="theme"
@@ -119,14 +119,14 @@ const SystemPreferences: React.FC = () => {
 
             <div className="bg-white rounded-2xl p-4 dark:bg-[#000]">
               <HeadingTwo text="Language & Currency" className="text-[20px] font-semibold" />
-              <Paragragh para="Set your preferred language & Currency." className="text-[#144A2A] mb-4" />
+              <Paragragh para="Set your preferred language & Currency." className="text-[#0F3B66] mb-4" />
 
               <div className="flex items-center justify-between py-3 border-t border-gray-100">
                 <div>
                   <HeadingThree text="Language" color="text-black" />
-                  <Paragragh para="Set your preferred language to match your regional preferences." color="text-[#144A2A]" />
+                  <Paragragh para="Set your preferred language to match your regional preferences." color="text-[#0F3B66]" />
                 </div>
-                <button className="flex items-center border border-gray-200 px-4 py-2 rounded-lg bg-[#09BF64]/8 font-regular text-[14px] text-[#0F2418] min-w-[110px]">
+                <button className="flex items-center border border-gray-200 px-4 py-2 rounded-lg bg-[#0088D1]/8 font-regular text-[14px] text-[#0B1B33] min-w-[110px]">
                   <img src={flagpack} alt="flagpack" className="mr-2" />
                    {language}
                   {/* <svg className="ml-2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -139,9 +139,9 @@ const SystemPreferences: React.FC = () => {
               <div className="flex items-center justify-between py-3 border-t border-gray-100">
                 <div>
                   <HeadingThree text="Currency" color="text-black" />
-                  <Paragragh para="Choose your default currency for accurate financial transactions." color="text-[#144A2A]" />
+                  <Paragragh para="Choose your default currency for accurate financial transactions." color="text-[#0F3B66]" />
                 </div>
-                <button className="flex items-center border border-gray-200 px-4 py-2 rounded-lg bg-[#09BF64]/8 font-regular text-[14px] text-[#0F2418] min-w-[110px]">
+                <button className="flex items-center border border-gray-200 px-4 py-2 rounded-lg bg-[#0088D1]/8 font-regular text-[14px] text-[#0B1B33] min-w-[110px]">
                   <span className="mr-2 text-xl">💲</span> {currency}
                   <svg className="ml-2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -164,7 +164,7 @@ const SystemPreferences: React.FC = () => {
                 <div className="flex gap-2">
                   <Export BtnName="Filter" icon={FiDownload} />
                   <Export BtnName="Export" icon={FiFilter} />
-                  <ColorFull text="Add New Order" icon={FiPlus} bgColor="bg-[#09BF64]" textColor="text-white" />
+                  <ColorFull text="Add New Order" icon={FiPlus} bgColor="bg-[#0088D1]" textColor="text-white" />
                 </div>
               </div>
             </div>

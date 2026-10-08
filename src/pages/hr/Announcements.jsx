@@ -72,7 +72,7 @@ function ComposeModal({ onSaved, closeModal }) {
               disabled={!isManager}
               value={form.audienceIds}
               onChange={(e) => setForm((f) => ({ ...f, audienceIds: [...e.target.selectedOptions].map((o) => o.value) }))}
-              className="w-full text-[13px] px-2 py-1 border border-[#6F7C7440] rounded-lg bg-white dark:bg-[#0D0D0D] dark:text-[#EFFBF3] min-h-[80px]"
+              className="w-full text-[13px] px-2 py-1 border border-[#6E7A8640] rounded-lg bg-white dark:bg-[#0D0D0D] dark:text-[#EEF8FD] min-h-[80px]"
             >
               {options.map((o) => (
                 <option key={o.id} value={o.id}>
@@ -83,13 +83,13 @@ function ComposeModal({ onSaved, closeModal }) {
           </Field>
         )}
       </div>
-      <div className="flex flex-wrap gap-4 text-[13px] text-[#6F7C74]">
+      <div className="flex flex-wrap gap-4 text-[13px] text-[#6E7A86]">
         <label className="flex items-center gap-2">
-          <input type="checkbox" className="accent-[#09BF64]" checked={form.requiresAcknowledgement} onChange={set("requiresAcknowledgement")} /> Require acknowledgement
+          <input type="checkbox" className="accent-[#0088D1]" checked={form.requiresAcknowledgement} onChange={set("requiresAcknowledgement")} /> Require acknowledgement
         </label>
         {isManager && (
           <label className="flex items-center gap-2">
-            <input type="checkbox" className="accent-[#09BF64]" checked={form.isPinned} onChange={set("isPinned")} /> Pin to top
+            <input type="checkbox" className="accent-[#0088D1]" checked={form.isPinned} onChange={set("isPinned")} /> Pin to top
           </label>
         )}
       </div>
@@ -102,8 +102,8 @@ function AckList({ announcement, closeModal }) {
   return (
     <div className="flex flex-col gap-3 max-h-[75vh]">
       <div className="pr-8">
-        <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">Acknowledgements</h2>
-        <p className="text-[12px] text-[#6F7C74]">{announcement.title}</p>
+        <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">Acknowledgements</h2>
+        <p className="text-[12px] text-[#6E7A86]">{announcement.title}</p>
       </div>
       <ErrorNote error={error} />
       {loading ? (
@@ -113,7 +113,7 @@ function AckList({ announcement, closeModal }) {
           <p className="text-[13px] font-semibold">
             {data.acknowledged} of {data.total} acknowledged
           </p>
-          <ul className="overflow-y-auto divide-y divide-[#6F7C7426]">
+          <ul className="overflow-y-auto divide-y divide-[#6E7A8626]">
             {data.rows.map((r) => (
               <li key={r.user.id} className="flex justify-between py-2 text-[13px]">
                 <span>
@@ -180,13 +180,13 @@ export default function Announcements() {
       {(data?.items ?? []).map((a) => {
         const mine = a.author.id === user.id;
         return (
-          <Panel key={a.id} className={focusId === a.id ? "ring-2 ring-[#09BF64]" : ""}>
+          <Panel key={a.id} className={focusId === a.id ? "ring-2 ring-[#0088D1]" : ""}>
             <div id={`ann-${a.id}`} className="flex gap-3">
               <Avatar person={a.author.employee} size={40} />
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-2">
-                  {a.isPinned && <Icon icon="mdi:pin" className="text-[#09BF64]" />}
-                  <h2 className="text-[16px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{a.title}</h2>
+                  {a.isPinned && <Icon icon="mdi:pin" className="text-[#0088D1]" />}
+                  <h2 className="text-[16px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{a.title}</h2>
                   {a.audienceType !== "ALL" && <Badge tone="info">{a.audienceType === "TEAM" ? "Team" : a.audienceType === "DEPARTMENT" ? "Department" : "Selected people"}</Badge>}
                 </div>
                 <p className="text-[11px] text-[#8E8E9C]">

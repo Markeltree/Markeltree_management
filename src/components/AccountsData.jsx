@@ -483,7 +483,7 @@ export default function AccountsData() {
     return (
       <button
         type="button"
-        className="flex items-center gap-2 bg-[#09BF64] dark:bg-[#81D959]
+        className="flex items-center gap-2 bg-[#0088D1] dark:bg-[#01CEE9]
                  text-white dark:text-black 
                  px-3 py-1 rounded text-[11px] font-medium h-[28px]"
         onClick={handlePaymentSummary}
@@ -503,7 +503,7 @@ export default function AccountsData() {
     return (
       <button
         type="button"
-        className="flex items-center gap-2 bg-[#09BF64] dark:bg-[#81D959]
+        className="flex items-center gap-2 bg-[#0088D1] dark:bg-[#01CEE9]
                  text-white dark:text-black 
                  px-3 py-1 rounded text-[11px] font-medium h-[28px]"
         onClick={handlePreviewInvoice}
@@ -523,7 +523,7 @@ export default function AccountsData() {
     return (
       <button
         type="button"
-        className="flex items-center gap-2 bg-[#09BF64] dark:bg-[#81D959]
+        className="flex items-center gap-2 bg-[#0088D1] dark:bg-[#01CEE9]
                  text-white dark:text-black 
                  px-3 py-1 rounded text-[11px] font-medium h-[28px]"
       >
@@ -543,15 +543,15 @@ export default function AccountsData() {
       <button
         type="button"
         className="flex items-center gap-2 bg-white dark:bg-black 
-                   text-[#09BF64] dark:text-[#81D959] 
-                   border border-[#09BF64] dark:border-[#81D959] 
+                   text-[#0088D1] dark:text-[#01CEE9] 
+                   border border-[#0088D1] dark:border-[#01CEE9] 
                    px-3 py-1 rounded text-[11px] font-medium"
       >
         <Icon
           icon="tabler:edit"
           width={14}
           height={14}
-          className="text-[#09BF64] dark:text-[#81D959]"
+          className="text-[#0088D1] dark:text-[#01CEE9]"
         />
         Edit
       </button>
@@ -584,7 +584,7 @@ export default function AccountsData() {
         onClick={handleToggle}
         className={`w-12 h-6 flex items-center rounded-full p-1 transition-colors ${
           enabled
-            ? "bg-[#09BF64] dark:bg-[#81D959]"
+            ? "bg-[#0088D1] dark:bg-[#01CEE9]"
             : "bg-gray-300 dark:bg-[#141414]"
         }`}
       >
@@ -746,7 +746,7 @@ export default function AccountsData() {
           {[...Array(5)].map((_, idx) => (
             <div
               key={idx}
-              className="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] rounded-xl p-4 space-y-2"
+              className="w-full h-auto bg-[#EEF8FD80] dark:bg-[#14141480] rounded-xl p-4 space-y-2"
             >
               <Skeleton
                 width="60%"
@@ -770,7 +770,7 @@ export default function AccountsData() {
       <div className="space-y-4">
         <div className="p-4 space-y-4 relative bg-white dark:bg-[#000000] rounded-lg mt-8">
           {/* Tabs Skeleton */}
-          <div className="inline-flex w-full md:w-auto bg-[#EFFBF3] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
+          <div className="inline-flex w-full md:w-auto bg-[#EEF8FD] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <Skeleton
                 key={i}
@@ -826,7 +826,7 @@ export default function AccountsData() {
               {[...Array(7)].map((_, rowIdx) => (
                 <div
                   key={rowIdx}
-                  className="flex flex-row justify-between border-b border-[#6F7C7426] w-full gap-2"
+                  className="flex flex-row justify-between border-b border-[#6E7A8626] w-full gap-2"
                 >
                   {[...Array(7)].map((_, colIdx) => (
                     <Skeleton
@@ -949,7 +949,7 @@ export default function AccountsData() {
           header={
             <>
               <div className="flex w-full items-center">
-                <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
+                <h1 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EAF6FC] ">
                   Projected Revenue vs. Expenses
                 </h1>
               </div>
@@ -957,7 +957,7 @@ export default function AccountsData() {
                 <DropdownButton
                   defaultOption={selectedRange}
                   options={["This Week", "This Month", "This Year"]}
-                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
+                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#0088D1] to-[#353689] border-none focus:outline-none focus:ring-0"
                   dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[105px]"
                   optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                   onChange={(val) => {
@@ -1019,9 +1019,9 @@ export default function AccountsData() {
                     icon="mingcute:ai-line"
                     width="20"
                     height="20"
-                    className=" text-[#09BF64]"
+                    className=" text-[#0088D1]"
                   />
-                  <h1 className="text-[14px] text-[#6F7C74] dark:text-[#EBF9F0] font-medium">
+                  <h1 className="text-[14px] text-[#6E7A86] dark:text-[#EAF6FC] font-medium">
                     AI Powered Suggestions
                   </h1>
                 </div>
@@ -1030,22 +1030,22 @@ export default function AccountsData() {
           }
           center={
             <>
-              <div className="h-[310px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+              <div className="h-[310px] w-full overflow-y-auto overflow-x-hidden space-y-4 pr-2 mt-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
                 <div className="flex flex-col gap-4 w-full">
                   {AISuggestion.map((msg) => (
                     <FlexibleCard
                       key={msg.id}
-                      cardClass="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-4"
+                      cardClass="w-full h-auto bg-[#EEF8FD80] dark:bg-[#14141480] border-none rounded-xl p-4"
                       headerClass=""
                       centerClass=""
                       footerClass="flex flex-row items-center"
                       header={
                         <div className="relative flex w-full items-center">
                           <div className="flex flex-col gap-3 text-left">
-                            <h3 className="text-[13px] text-[#6F7C74] dark:text-[#A9C2B3]">
+                            <h3 className="text-[13px] text-[#6E7A86] dark:text-[#A9BACB]">
                               {msg.title}
                             </h3>
-                            <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-medium">
+                            <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#EEF8FD] font-medium">
                               {msg.msg}
                             </h3>
                           </div>
@@ -1066,7 +1066,7 @@ export default function AccountsData() {
     <div className="space-y-4 ">
       <div className="p-4 space-y-4 relative bg-white dark:bg-[#000000] rounded-lg mt-8">
         {/* Tabs */}
-        <div className="inline-flex  bg-[#EFFBF3] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
+        <div className="inline-flex  bg-[#EEF8FD] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
           {["Payment History", "Invoice Sent", "Invoice Received"].map(
             (label, i) => (
               <button
@@ -1085,8 +1085,8 @@ export default function AccountsData() {
                 className={`h-full text-[11px] md:text-[16px] font-medium transition-all rounded-full
         ${
           i === activeIndex
-            ? "text-white dark:text-[#0D0D0D] bg-[#09BF64] dark:bg-[#81D959] px-3 md:px-6"
-            : "text-[#0F2418] dark:text-[#D4D4D4] hover:text-[#09BF64] dark:hover:text-[#EFFBF3] px-3 md:px-6"
+            ? "text-white dark:text-[#0D0D0D] bg-[#0088D1] dark:bg-[#01CEE9] px-3 md:px-6"
+            : "text-[#0B1B33] dark:text-[#D4D4D4] hover:text-[#0088D1] dark:hover:text-[#EEF8FD] px-3 md:px-6"
         }`}
               >
                 {label}
@@ -1098,10 +1098,10 @@ export default function AccountsData() {
         <div className="flex flex-col lg:flex-row gap-2 items-center w-full">
           <div className="flex flex-row gap-3 items-center w-full">
             <div className="flex flex-col gap-1 w-full">
-              <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
+              <h2 className="text-[#333333] dark:text-[#EEF8FD] font-bold text-[16px] lg:text-[18px]">
                 {tabTitles[activeIndex].heading}
               </h2>
-              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
+              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EEF8FD]">
                 {tabTitles[activeIndex].subheading}
               </p>
             </div>
@@ -1219,7 +1219,7 @@ export default function AccountsData() {
                     }
                     iconPos="left"
                     labelClass="font-normal"
-                    buttonClass="flex items-center justify-center gap-1 text-[10px] md:text-sm h-[40px] w-[160px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0 whitespace-nowrap"
+                    buttonClass="flex items-center justify-center gap-1 text-[10px] md:text-sm h-[40px] w-[160px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0 whitespace-nowrap"
                     onClick={handleUploadInvoice}
                   />
                 </>
@@ -1258,13 +1258,13 @@ export default function AccountsData() {
 
                     return (
                       <div key={field} className="mb-3">
-                        <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
+                        <h4 className="font-semibold text-[12px] text-[#0B1B33] dark:text-[#EEF8FD] mb-2 capitalize">
                           {field}
                         </h4>
                         {values.map((val) => (
                           <label
                             key={val}
-                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
+                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6E7A86CC] dark:text-[#EEF8FDCC] cursor-pointer select-none"
                           >
                             <input
                               type="checkbox"
@@ -1274,7 +1274,7 @@ export default function AccountsData() {
                               onChange={() => toggleTempValue(field, val)}
                               className="hidden peer"
                             />
-                            <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
+                            <span className="w-3.5 h-3.5 rounded border border-[#6E7A86CC] peer-checked:bg-[#0088D1] peer-checked:border-[#0088D1] relative flex items-center justify-center">
                               <svg
                                 className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                 fill="none"
@@ -1309,7 +1309,7 @@ export default function AccountsData() {
                     <ActionButton
                       label="Reset"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                       onClick={() => {
                         setTempFilters({});
                         setFilters({});
@@ -1325,7 +1325,7 @@ export default function AccountsData() {
                     <ActionButton
                       label="Apply Filter"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={() => {
                         setFilters(tempFilters); // temp filters ko apply filters me copy karo
                         setDateRange(tempDateRange); // temp date range ko apply date range me copy karo
@@ -1359,7 +1359,7 @@ export default function AccountsData() {
                 paginator={false}
                 className="p-datatable-sm w-full my-delete-table"
                 rowClassName={() =>
-                  "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
+                  "border-b border-[#6E7A8626] text-[13px] text-[#666666] dark:text-[#EEF8FD] dark:bg-black whitespace-nowrap"
                 }
               >
                 {columns.map((col, idx) => (

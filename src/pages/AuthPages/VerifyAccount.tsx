@@ -7,8 +7,8 @@ export default function VerifyAccountForm() {
   return (
     <>
       {/* <PageMeta
-        title="Markeltree | ERP - Admin Dashboard"
-        description="Markeltree | ERP - Admin Dashboard - ReactJs"
+        title="Teamora | ERP - Admin Dashboard"
+        description="Teamora | ERP - Admin Dashboard - ReactJs"
       /> */}
       <AuthLayout imageSrc="/woman-laptop.png">
         <VerifyAccount />

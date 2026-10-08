@@ -3348,7 +3348,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
 
   // Update browser tab title and favicon based on unread notifications
   useEffect(() => {
-    const originalTitle = "Markeltree Dashboard"; // Use a fixed original title
+    const originalTitle = "Teamora Dashboard"; // Use a fixed original title
     const unreadCount = getUnreadNotificationCount();
 
     console.log("useEffect triggered - Dispatching unread count:", unreadCount);
@@ -5092,7 +5092,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
         <div className="flex-1 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-transparent">
           {/* Threads Section */}
           <div
-            className={`group flex items-center justify-between px-4 py-2 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
+            className={`group flex items-center justify-between px-4 py-2 text-[14px] cursor-pointer hover:bg-[#01CEE91A] hover:text-white rounded-md ${
               showThreadsPage ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]" : ""
             }`}
             onClick={handleThreadsClick}
@@ -5150,7 +5150,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                 channels.map((group) => (
                   <div
                     key={group.id}
-                    className={`group flex items-center gap-2 px-4 py-1 mb-1 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
+                    className={`group flex items-center gap-2 px-4 py-1 mb-1 text-[14px] cursor-pointer hover:bg-[#01CEE91A] hover:text-white rounded-md ${
                       activeUser?.id === group.id && !showThreadsPage
                         ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]"
                         : ""
@@ -5210,7 +5210,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                 favoriteUsers.map((user) => (
                   <div
                     key={user.id}
-                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
+                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#01CEE91A] hover:text-white rounded-md ${
                       activeUser?.id === user.id && !showThreadsPage
                         ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]"
                         : ""
@@ -5265,7 +5265,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
                 regularUsers.map((user) => (
                   <div
                     key={user.id}
-                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#81D9591A] hover:text-white rounded-md ${
+                    className={`group flex items-center gap-2 px-4 py-2 mb-1 text-[14px] cursor-pointer hover:bg-[#01CEE91A] hover:text-white rounded-md ${
                       activeUser?.id === user.id && !showThreadsPage
                         ? "bg-[#F9EDFF] dark:bg-[#F9EDFF]"
                         : ""
@@ -8126,7 +8126,7 @@ export default function ChatPanel({ username = "Hasnain" }) {
             {/* Group Name */}
             <label
               htmlFor="groupName"
-              className="block text-[12px] pl-1 text-[#6F7C74] dark:text-[#A9C2B3] mb-1"
+              className="block text-[12px] pl-1 text-[#6E7A86] dark:text-[#A9BACB] mb-1"
             >
               Channel Name
             </label>

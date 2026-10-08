@@ -10,7 +10,7 @@ const TASK_STATUSES = ["TODO", "IN_PROGRESS", "REVIEW", "DONE"];
 
 function TaskBar({ byStatus = {} }) {
   const total = TASK_STATUSES.reduce((s, k) => s + (byStatus[k] ?? 0), 0);
-  const colors = { TODO: "#A9C2B3", IN_PROGRESS: "#0EA5E9", REVIEW: "#F59E0B", DONE: "#10B981" };
+  const colors = { TODO: "#A9BACB", IN_PROGRESS: "#0EA5E9", REVIEW: "#F59E0B", DONE: "#10B981" };
   return (
     <div>
       <div className="flex h-2.5 rounded-full overflow-hidden bg-[#F4F6F9] dark:bg-gray-800">
@@ -19,11 +19,11 @@ function TaskBar({ byStatus = {} }) {
             <div key={k} style={{ width: `${((byStatus[k] ?? 0) / total) * 100}%`, background: colors[k] }} title={`${humanize(k)}: ${byStatus[k] ?? 0}`} />
           ))}
       </div>
-      <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
+      <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">
         {TASK_STATUSES.map((k) => (
           <span key={k} className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full" style={{ background: colors[k] }} />
-            {humanize(k)} <b className="text-[#0F2418] dark:text-[#EFFBF3]">{byStatus[k] ?? 0}</b>
+            {humanize(k)} <b className="text-[#0B1B33] dark:text-[#EEF8FD]">{byStatus[k] ?? 0}</b>
           </span>
         ))}
       </div>
@@ -46,12 +46,12 @@ export default function Dashboard() {
       {/* Employee section (DASH-01) */}
       {d?.employee && (
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
-          <Panel title="Leave Balance" subtitle={`Year ${d.date.slice(0, 4)}`} actions={<button className="text-[12px] text-[#09BF64] font-semibold" onClick={() => navigate("/leave")}>Request leave →</button>}>
+          <Panel title="Leave Balance" subtitle={`Year ${d.date.slice(0, 4)}`} actions={<button className="text-[12px] text-[#0088D1] font-semibold" onClick={() => navigate("/leave")}>Request leave →</button>}>
             <div className="grid grid-cols-2 gap-3">
               {d.employee.leaveBalances.map((b) => (
-                <div key={b.leaveType.id} className="rounded-lg border border-[#6F7C7426] p-3">
+                <div key={b.leaveType.id} className="rounded-lg border border-[#6E7A8626] p-3">
                   <p className="text-[11px] text-[#8E8E9C] truncate">{b.leaveType.name}</p>
-                  <p className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{b.unlimited ? "∞" : b.available}</p>
+                  <p className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{b.unlimited ? "∞" : b.available}</p>
                   <p className="text-[11px] text-[#8E8E9C]">
                     {b.used} used{b.pending ? ` · ${b.pending} pending` : ""}
                   </p>
@@ -59,21 +59,21 @@ export default function Dashboard() {
               ))}
             </div>
           </Panel>
-          <Panel title="My Tasks" actions={<button className="text-[12px] text-[#09BF64] font-semibold" onClick={() => navigate("/task")}>Open tasks →</button>}>
+          <Panel title="My Tasks" actions={<button className="text-[12px] text-[#0088D1] font-semibold" onClick={() => navigate("/task")}>Open tasks →</button>}>
             <TaskBar byStatus={d.employee.tasks.byStatus} />
             {d.employee.tasks.overdue > 0 && (
               <p className="mt-3 text-[12px] text-[#E5483A] font-semibold flex items-center gap-1">
                 <Icon icon="mdi:alert-circle-outline" /> {d.employee.tasks.overdue} overdue task(s)
               </p>
             )}
-            <h3 className="text-[12px] font-semibold text-[#6F7C74] mt-4 mb-2">Due in the next 7 days</h3>
+            <h3 className="text-[12px] font-semibold text-[#6E7A86] mt-4 mb-2">Due in the next 7 days</h3>
             {d.employee.tasks.dueSoon.length === 0 ? (
               <p className="text-[12px] text-[#8E8E9C]">Nothing due soon.</p>
             ) : (
               <ul className="space-y-2">
                 {d.employee.tasks.dueSoon.map((t) => (
                   <li key={t.id} className="flex items-center justify-between gap-2 text-[13px] cursor-pointer" onClick={() => navigate(`/task?id=${t.id}`)}>
-                    <span className="truncate text-[#0F2418] dark:text-[#EFFBF3]">{t.title}</span>
+                    <span className="truncate text-[#0B1B33] dark:text-[#EEF8FD]">{t.title}</span>
                     <span className="flex items-center gap-2 shrink-0">
                       <Badge value={t.priority} />
                       <span className="text-[11px] text-[#8E8E9C]">{fmtDate(t.dueDate)}</span>
@@ -83,15 +83,15 @@ export default function Dashboard() {
               </ul>
             )}
           </Panel>
-          <Panel title="Announcements" actions={<button className="text-[12px] text-[#09BF64] font-semibold" onClick={() => navigate("/announcements")}>View all →</button>}>
+          <Panel title="Announcements" actions={<button className="text-[12px] text-[#0088D1] font-semibold" onClick={() => navigate("/announcements")}>View all →</button>}>
             {d.announcements.length === 0 ? (
               <Empty icon="mdi:bullhorn-outline" text="No announcements." />
             ) : (
               <ul className="space-y-3">
                 {d.announcements.map((a) => (
                   <li key={a.id} className="cursor-pointer" onClick={() => navigate(`/announcements?id=${a.id}`)}>
-                    <p className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] flex items-center gap-1">
-                      {a.isPinned && <Icon icon="mdi:pin" className="text-[#09BF64]" />}
+                    <p className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] flex items-center gap-1">
+                      {a.isPinned && <Icon icon="mdi:pin" className="text-[#0088D1]" />}
                       {a.title}
                     </p>
                     <p className="text-[11px] text-[#8E8E9C]">
@@ -116,7 +116,7 @@ export default function Dashboard() {
             <StatCard label="Pending leave approvals" value={d.manager.pendingLeaveApprovals} icon="mdi:calendar-clock" tone="primary" onClick={() => navigate("/leave?tab=approvals")} />
           </div>
           <div className="mt-4">
-            <h3 className="text-[12px] font-semibold text-[#6F7C74] mb-2">
+            <h3 className="text-[12px] font-semibold text-[#6E7A86] mb-2">
               Team tasks{d.manager.tasks.overdue ? <span className="text-[#E5483A]"> · {d.manager.tasks.overdue} overdue</span> : null}
             </h3>
             <TaskBar byStatus={d.manager.tasks.byStatus} />
@@ -137,19 +137,19 @@ export default function Dashboard() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
             <div>
-              <h3 className="text-[12px] font-semibold text-[#6F7C74] mb-2">Headcount by department</h3>
+              <h3 className="text-[12px] font-semibold text-[#6E7A86] mb-2">Headcount by department</h3>
               {d.hr.byDepartment.length === 0 ? (
                 <p className="text-[12px] text-[#8E8E9C]">No departments yet.</p>
               ) : (
                 <ul className="space-y-2">
                   {[...d.hr.byDepartment].sort((a, b) => b.count - a.count).map((r) => (
                     <li key={r.department} className="text-[12px]">
-                      <div className="flex justify-between text-[#0F2418] dark:text-[#EFFBF3]">
+                      <div className="flex justify-between text-[#0B1B33] dark:text-[#EEF8FD]">
                         <span>{r.department}</span>
                         <b>{r.count}</b>
                       </div>
                       <div className="h-1.5 rounded-full bg-[#F4F6F9] dark:bg-gray-800 mt-1">
-                        <div className="h-1.5 rounded-full bg-[#09BF64]" style={{ width: `${(r.count / Math.max(1, d.hr.headcount)) * 100}%` }} />
+                        <div className="h-1.5 rounded-full bg-[#0088D1]" style={{ width: `${(r.count / Math.max(1, d.hr.headcount)) * 100}%` }} />
                       </div>
                     </li>
                   ))}
@@ -157,14 +157,14 @@ export default function Dashboard() {
               )}
             </div>
             <div>
-              <h3 className="text-[12px] font-semibold text-[#6F7C74] mb-2">Joined this month</h3>
+              <h3 className="text-[12px] font-semibold text-[#6E7A86] mb-2">Joined this month</h3>
               {d.hr.joinersThisMonth.length === 0 ? (
                 <p className="text-[12px] text-[#8E8E9C]">No new joiners this month.</p>
               ) : (
                 <ul className="space-y-2">
                   {d.hr.joinersThisMonth.map((e) => (
                     <li key={e.id} className="flex justify-between text-[13px] cursor-pointer" onClick={() => navigate(`/employees/${e.id}`)}>
-                      <span className="text-[#0F2418] dark:text-[#EFFBF3]">
+                      <span className="text-[#0B1B33] dark:text-[#EEF8FD]">
                         {e.firstName} {e.lastName} <span className="text-[#8E8E9C]">· {e.designation}</span>
                       </span>
                       <span className="text-[11px] text-[#8E8E9C]">{fmtDate(e.joiningDate)}</span>
@@ -194,11 +194,11 @@ export default function Dashboard() {
           </div>
           {d.admin.recentAudit.length > 0 && (
             <>
-              <h3 className="text-[12px] font-semibold text-[#6F7C74] mt-4 mb-2">Recent administrative activity</h3>
-              <ul className="divide-y divide-[#6F7C7426]">
+              <h3 className="text-[12px] font-semibold text-[#6E7A86] mt-4 mb-2">Recent administrative activity</h3>
+              <ul className="divide-y divide-[#6E7A8626]">
                 {d.admin.recentAudit.map((a) => (
                   <li key={a.id} className="flex justify-between gap-2 py-1.5 text-[12px]">
-                    <span className="text-[#0F2418] dark:text-[#EFFBF3]">
+                    <span className="text-[#0B1B33] dark:text-[#EEF8FD]">
                       <b>{a.action}</b> <span className="text-[#8E8E9C]">on {a.entityType}</span>
                     </span>
                     <span className="text-[#8E8E9C] shrink-0">
@@ -221,7 +221,7 @@ export default function Dashboard() {
               <ul className="space-y-2">
                 {d.recentActivity.map((n) => (
                   <li key={n.id} className={`text-[13px] ${n.link ? "cursor-pointer" : ""}`} onClick={() => n.link && navigate(n.link)}>
-                    <p className="text-[#0F2418] dark:text-[#EFFBF3] font-semibold">{n.title}</p>
+                    <p className="text-[#0B1B33] dark:text-[#EEF8FD] font-semibold">{n.title}</p>
                     <p className="text-[11px] text-[#8E8E9C]">
                       {n.body ? `${n.body.slice(0, 90)} · ` : ""}
                       {timeAgo(n.createdAt)}
@@ -238,7 +238,7 @@ export default function Dashboard() {
               <ul className="space-y-2">
                 {d.upcomingHolidays.map((h) => (
                   <li key={h.id} className="flex justify-between text-[13px]">
-                    <span className="text-[#0F2418] dark:text-[#EFFBF3]">{h.name}</span>
+                    <span className="text-[#0B1B33] dark:text-[#EEF8FD]">{h.name}</span>
                     <span className="text-[#8E8E9C]">{fmtDate(h.date)}</span>
                   </li>
                 ))}

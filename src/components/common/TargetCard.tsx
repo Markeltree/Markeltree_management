@@ -69,7 +69,7 @@ const TargetCard: React.FC<TargetCardProps> = ({
           />
           <button
             onClick={onReportClick}
-            className="text-[9px] text-[#09BF64]"
+            className="text-[9px] text-[#0088D1]"
           >
             View target report
           </button>
@@ -108,8 +108,8 @@ const TargetCard: React.FC<TargetCardProps> = ({
         <div className="text-center">
           <HeadingOne
             text={`$${(target / 1000).toFixed(0)}k`}
-            className="text-[#09BF64] text-[20px]"
-            colorClass= {"#09BF64"}
+            className="text-[#0088D1] text-[20px]"
+            colorClass= {"#0088D1"}
           />
           <SubHeading text="Target Revenue" />
         </div>

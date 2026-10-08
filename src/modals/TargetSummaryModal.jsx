@@ -46,43 +46,43 @@ export default function PaymentModal({ closeModal }) {
             <Skeleton className="w-[150px] h-[24px] dark:bg-[#2C2C2CAA]" />
 
             {/* Target Amount */}
-            <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
+            <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
               <Skeleton className="w-[100px] h-[16px] dark:bg-[#2C2C2CAA]" />
               <Skeleton className="w-[50px] h-[16px] dark:bg-[#2C2C2CAA]" />
             </div>
 
             {/* Target Achieved */}
-            <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
+            <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
               <Skeleton className="w-[100px] h-[16px] dark:bg-[#2C2C2CAA]" />
               <Skeleton className="w-[50px] h-[16px] dark:bg-[#2C2C2CAA]" />
             </div>
 
             {/* Assigned By */}
-            <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
+            <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
               <Skeleton className="w-[80px] h-[16px] dark:bg-[#2C2C2CAA]" />
               <Skeleton className="w-[100px] h-[16px] dark:bg-[#2C2C2CAA]" />
             </div>
 
             {/* Created Date */}
-            <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
+            <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
               <Skeleton className="w-[100px] h-[16px] dark:bg-[#2C2C2CAA]" />
               <Skeleton className="w-[80px] h-[16px] dark:bg-[#2C2C2CAA]" />
             </div>
 
             {/* Due Date */}
-            <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
+            <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
               <Skeleton className="w-[80px] h-[16px] dark:bg-[#2C2C2CAA]" />
               <Skeleton className="w-[80px] h-[16px] dark:bg-[#2C2C2CAA]" />
             </div>
 
             {/* Status */}
-            <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
+            <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
               <Skeleton className="w-[60px] h-[16px] dark:bg-[#2C2C2CAA]" />
               <Skeleton className="w-[70px] h-[16px] dark:bg-[#2C2C2CAA]" />
             </div>
 
             {/* Notes */}
-            <div className="flex flex-col justify-between text-left gap-1 bg-[#EFFBF366] p-2 rounded-lg">
+            <div className="flex flex-col justify-between text-left gap-1 bg-[#EEF8FD66] p-2 rounded-lg">
               <Skeleton className="w-[50px] h-[16px] dark:bg-[#2C2C2CAA]" />
               <Skeleton className="w-full h-[24px] dark:bg-[#2C2C2CAA]" />
             </div>
@@ -96,57 +96,57 @@ export default function PaymentModal({ closeModal }) {
         </>
       ) : (
         <>
-          <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
+          <h1 className="text-[18px] text-[#0B1B33] dark:text-[#B5DEF2] font-bold">
             Target Summary
           </h1>
 
-          <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
-            <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[14px]">
+          <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
+            <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[14px]">
               Target Amount:
             </p>
-            <p className="text-[10px] lg:text-[14px] dark:text-[#CDEEDB] text-[#2B2B2B]">
+            <p className="text-[10px] lg:text-[14px] dark:text-[#CDE9F7] text-[#2B2B2B]">
               {target.targetAmoun}
             </p>
           </div>
 
-          <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
-            <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[14px]">
+          <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
+            <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[14px]">
               Target Achieved:
             </p>
-            <p className=" text-[10px] lg:text-[14px] dark:text-[#CDEEDB] text-[#2B2B2B]">
+            <p className=" text-[10px] lg:text-[14px] dark:text-[#CDE9F7] text-[#2B2B2B]">
               {target.targetAchieved}
             </p>
           </div>
-          <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
-            <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[14px]">
+          <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
+            <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[14px]">
               Assigned By:
             </p>
-            <p className="text-[10px] lg:text-[14px] dark:text-[#CDEEDB] text-[#2B2B2B]">
+            <p className="text-[10px] lg:text-[14px] dark:text-[#CDE9F7] text-[#2B2B2B]">
               {target.assignedBy}
             </p>
           </div>
-          <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
-            <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[14px]">
+          <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
+            <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[14px]">
               Created Date:
             </p>
-            <p className=" text-[10px] lg:text-[14px] dark:text-[#CDEEDB] text-[#2B2B2B]">
+            <p className=" text-[10px] lg:text-[14px] dark:text-[#CDE9F7] text-[#2B2B2B]">
               {target.createDate}
             </p>
           </div>
-          <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
-            <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[14px]">
+          <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
+            <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[14px]">
               Due Date:
             </p>
-            <p className="text-[10px] lg:text-[14px] dark:text-[#CDEEDB] text-[#2B2B2B]">
+            <p className="text-[10px] lg:text-[14px] dark:text-[#CDE9F7] text-[#2B2B2B]">
               {target.dueDate}
             </p>
           </div>
-          <div className="flex flex-row justify-between text-left gap-4 bg-[#EFFBF366] p-2 rounded-lg">
-            <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[14px]">
+          <div className="flex flex-row justify-between text-left gap-4 bg-[#EEF8FD66] p-2 rounded-lg">
+            <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[14px]">
               Status
             </p>
             <p
-              className={`text-[10px] lg:text-[14px] dark:text-[#CDEEDB] ${
+              className={`text-[10px] lg:text-[14px] dark:text-[#CDE9F7] ${
                 target.status === "Pending"
                   ? "text-[#DDD427]"
                   : target.status === "Completed"
@@ -157,11 +157,11 @@ export default function PaymentModal({ closeModal }) {
               {target.status}
             </p>
           </div>
-          <div className="flex flex-col justify-between text-left gap-1 bg-[#EFFBF366] p-2 rounded-lg">
-            <p className="text-[#0E1A12] dark:text-[#CDEEDB] text-[10px] lg:text-[14px]">
+          <div className="flex flex-col justify-between text-left gap-1 bg-[#EEF8FD66] p-2 rounded-lg">
+            <p className="text-[#0C1626] dark:text-[#CDE9F7] text-[10px] lg:text-[14px]">
               Notes:
             </p>
-            <p className="text-[10px] lg:text-[14px] dark:text-[#CDEEDB] text-[#2B2B2B]">
+            <p className="text-[10px] lg:text-[14px] dark:text-[#CDE9F7] text-[#2B2B2B]">
               {target.notes}
             </p>
           </div>
@@ -171,7 +171,7 @@ export default function PaymentModal({ closeModal }) {
             <ActionButton
               label="Canel"
               labelClass="font-normal text-[12px] md:text-[16px]"
-              buttonClass="flex items-center justify-center gap-1 text-sm h-[42px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#81D959] dark:text-black border border-[#09BF64] dark:border-[#81D959] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-1 text-sm h-[42px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#01CEE9] dark:text-black border border-[#0088D1] dark:border-[#01CEE9] focus:outline-none focus:ring-0"
               onClick={closeModal}
             />
             <ActionButton

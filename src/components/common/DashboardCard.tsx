@@ -36,7 +36,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
         <p className="text-sm text-gray-500 dark:text-white font-medium">{title}</p>
         <HeadingOne
           fontSize="text-[28px] sm:text-[32px]"
-          colorClass="text-[#0F2418]"
+          colorClass="text-[#0B1B33]"
           className="dark:text-white mb-4 sm:mb-8"
           text={amount}
         />
@@ -46,7 +46,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
       {/* Right Dropdown + Chart */}
       <div className="flex flex-col items-end justify-between sm:h-full sm:items-end gap-2 sm:gap-0 space-y-10">
         {/* Dropdown */}
-        <div className="text-[#09BF64CC] font-medium text-[10px] flex items-center gap-1 cursor-pointer md:mt-[-5px] ">
+        <div className="text-[#0088D1CC] font-medium text-[10px] flex items-center gap-1 cursor-pointer md:mt-[-5px] ">
           {timeRange}
           <div className="relative inline-block">
             <button className="dropdown-toggle" onClick={toggleDropdown}>

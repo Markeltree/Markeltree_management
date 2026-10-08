@@ -14,7 +14,7 @@ function Info({ label, value }) {
   return (
     <div>
       <p className="text-[11px] text-[#8E8E9C]">{label}</p>
-      <p className="text-[13px] text-[#0F2418] dark:text-[#EFFBF3] font-medium break-words">{value || "—"}</p>
+      <p className="text-[13px] text-[#0B1B33] dark:text-[#EEF8FD] font-medium break-words">{value || "—"}</p>
     </div>
   );
 }
@@ -104,15 +104,15 @@ function MyPayslips({ focusId }) {
   if (error) return <ErrorNote error={error} onRetry={reload} />;
   if (!loading && !data?.length) return <Empty icon="mdi:file-document-outline" text="No payslips yet. They appear here once payroll is paid." />;
   return (
-    <ul className="divide-y divide-[#6F7C7426]">
+    <ul className="divide-y divide-[#6E7A8626]">
       {(data ?? []).map((p) => (
-        <li key={p.id} className={`flex items-center justify-between gap-3 py-3 px-2 rounded ${focusId === p.id ? "bg-[#09BF6414]" : ""}`}>
+        <li key={p.id} className={`flex items-center justify-between gap-3 py-3 px-2 rounded ${focusId === p.id ? "bg-[#0088D114]" : ""}`}>
           <div>
-            <p className="text-[14px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">
+            <p className="text-[14px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">
               {MONTHS[p.run.month - 1]} {p.run.year}
             </p>
             <p className="text-[12px] text-[#8E8E9C]">
-              Net pay <b className="text-[#0F2418] dark:text-[#EFFBF3]">{fmtMoney(p.netPay, p.run.currency)}</b> · paid {fmtDate(p.run.paidAt)}
+              Net pay <b className="text-[#0B1B33] dark:text-[#EEF8FD]">{fmtMoney(p.netPay, p.run.currency)}</b> · paid {fmtDate(p.run.paidAt)}
             </p>
           </div>
           <Btn size="sm" variant="outline" icon="mdi:file-pdf-box" label="Download PDF" onClick={() => pdf(p.id)} />
@@ -143,7 +143,7 @@ export default function EmployeeProfile({ self = false }) {
         <Panel>
           <Empty icon="mdi:account-off-outline" text="Your account isn't linked to an employee profile." />
           <div className="pt-2">
-            <h3 className="text-[14px] font-bold mb-3 text-[#0F2418] dark:text-[#EFFBF3]">Change password</h3>
+            <h3 className="text-[14px] font-bold mb-3 text-[#0B1B33] dark:text-[#EEF8FD]">Change password</h3>
             <ChangePassword />
           </div>
         </Panel>
@@ -186,11 +186,11 @@ export default function EmployeeProfile({ self = false }) {
           <Avatar person={e} size={72} />
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-2">
-              <h1 className="text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{fullName(e)}</h1>
+              <h1 className="text-[20px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{fullName(e)}</h1>
               <Badge value={e.employmentStatus} />
               {e.user?.status && e.user.status !== "ACTIVE" && <Badge value={e.user.status} />}
             </div>
-            <p className="text-[13px] text-[#6F7C74] dark:text-[#A9C2B3]">
+            <p className="text-[13px] text-[#6E7A86] dark:text-[#A9BACB]">
               {e.designation}
               {e.department && ` · ${e.department.name}`}
               {e.team && ` · ${e.team.name}`}
@@ -232,7 +232,7 @@ export default function EmployeeProfile({ self = false }) {
               </div>
               {e.access.sensitive && (
                 <>
-                  <h3 className="text-[13px] font-bold text-[#09BF64] flex items-center gap-2">
+                  <h3 className="text-[13px] font-bold text-[#0088D1] flex items-center gap-2">
                     Personal & emergency <span className="text-[11px] font-normal text-[#8E8E9C]">(restricted)</span>
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -256,9 +256,9 @@ export default function EmployeeProfile({ self = false }) {
               <ErrorNote error={balances.error} onRetry={balances.reload} />
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {(balances.data ?? []).map((b) => (
-                  <div key={b.leaveType.id} className="rounded-lg border border-[#6F7C7426] p-3">
+                  <div key={b.leaveType.id} className="rounded-lg border border-[#6E7A8626] p-3">
                     <p className="text-[12px] text-[#8E8E9C]">{b.leaveType.name}</p>
-                    <p className="text-[22px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{b.unlimited ? "∞" : b.available}</p>
+                    <p className="text-[22px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{b.unlimited ? "∞" : b.available}</p>
                     <p className="text-[11px] text-[#8E8E9C]">
                       {b.unlimited ? "No fixed allowance" : `of ${b.allowance + b.adjustment}`} · {b.used} used · {b.pending} pending
                     </p>
@@ -272,12 +272,12 @@ export default function EmployeeProfile({ self = false }) {
             <>
               <ErrorNote error={history.error} onRetry={history.reload} />
               {history.data?.length === 0 && <Empty text="No history recorded." />}
-              <ol className="relative border-l border-[#6F7C7440] ml-2 space-y-4">
+              <ol className="relative border-l border-[#6E7A8640] ml-2 space-y-4">
                 {(history.data ?? []).map((h) => (
                   <li key={h.id} className="ml-4">
-                    <span className="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-[#09BF64]" />
-                    <p className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{humanize(h.changeType)}</p>
-                    <p className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
+                    <span className="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-[#0088D1]" />
+                    <p className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{humanize(h.changeType)}</p>
+                    <p className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">
                       {h.fromValue ? `${h.fromValue} → ` : ""}
                       {h.toValue ?? "—"}
                     </p>
@@ -296,12 +296,12 @@ export default function EmployeeProfile({ self = false }) {
           {tab === "security" && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-[14px] font-bold mb-3 text-[#0F2418] dark:text-[#EFFBF3]">Change password</h3>
+                <h3 className="text-[14px] font-bold mb-3 text-[#0B1B33] dark:text-[#EEF8FD]">Change password</h3>
                 <ChangePassword />
               </div>
               <div>
-                <h3 className="text-[14px] font-bold mb-1 text-[#0F2418] dark:text-[#EFFBF3]">Sessions</h3>
-                <p className="text-[12px] text-[#6F7C74] mb-3">Signed in on a shared or lost device? Sign out of every session, including this one.</p>
+                <h3 className="text-[14px] font-bold mb-1 text-[#0B1B33] dark:text-[#EEF8FD]">Sessions</h3>
+                <p className="text-[12px] text-[#6E7A86] mb-3">Signed in on a shared or lost device? Sign out of every session, including this one.</p>
                 <Btn variant="danger" icon="mdi:logout-variant" label="Sign out everywhere" onClick={signOutEverywhere} />
               </div>
             </div>

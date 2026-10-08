@@ -132,7 +132,7 @@ export default function Logistics() {
           <>
             <div className="flex flex-row justify-between items-center mb-4 gap-2">
               {/* Title (Hidden below lg) */}
-              <h1 className="hidden lg:block text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
+              <h1 className="hidden lg:block text-[14px] font-semibold text-[#0088D1] dark:text-[#0088D1] whitespace-nowrap">
                 Logistics
               </h1>
 
@@ -174,7 +174,7 @@ export default function Logistics() {
                   iconDark="./refreshIcon.png"
                   iconPos="left"
                   labelClass="font-normal md:font-bold"
-                  buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                   iconClass="w-[14px] md:w-[16px] h-[14px] md:h-[16px]"
                   onClick={handleRefresh}
                 />
@@ -196,7 +196,7 @@ export default function Logistics() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Total Delivery
                         </h2>
-                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                        <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                           1,245
                         </h1>
                       </div>
@@ -214,7 +214,7 @@ export default function Logistics() {
                 center={
                   <div className="w-full pl-4 pr-4 pb-4">
                     {/* Text */}
-                    <p className="text-[8px] font-normal text-[#A9C2B3] mb-1">
+                    <p className="text-[8px] font-normal text-[#A9BACB] mb-1">
                       780/1,000 Completed Today
                     </p>
                     {/* Progress Bar */}
@@ -240,7 +240,7 @@ export default function Logistics() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           In Transit
                         </h2>
-                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                        <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                           512
                         </h1>
                       </div>
@@ -280,7 +280,7 @@ export default function Logistics() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Delivery Delayed
                         </h2>
-                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                        <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                           78
                         </h1>
                       </div>
@@ -320,7 +320,7 @@ export default function Logistics() {
                         <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                           Delivery Success
                         </h2>
-                        <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                        <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                           92%
                         </h1>
                       </div>

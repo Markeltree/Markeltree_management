@@ -94,7 +94,7 @@ export default function FeedbackDetailModal({ closeModal }) {
         {[...Array(2)].map((_, i) => (
           <div
             key={i}
-            className="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-4 flex flex-col gap-3"
+            className="w-full h-auto bg-[#EEF8FD80] dark:bg-[#14141480] border-none rounded-xl p-4 flex flex-col gap-3"
           >
             <Skeleton
               width="80px"
@@ -127,7 +127,7 @@ export default function FeedbackDetailModal({ closeModal }) {
   }
   return (
     <div className="space-y-3">
-      <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
+      <h1 className="text-[18px] text-[#0B1B33] dark:text-[#B5DEF2] font-bold">
         Feedback Details
       </h1>
       {/* row 1 */}
@@ -140,7 +140,7 @@ export default function FeedbackDetailModal({ closeModal }) {
               className="w-10 h-10 rounded-full object-cover"
             />
             <div className="flex flex-col gap-1">
-              <h3 className="text-[16px] text-[#0F2418] dark:text-[#EFFBF3]">
+              <h3 className="text-[16px] text-[#0B1B33] dark:text-[#EEF8FD]">
                 {details.name}
               </h3>
               <h3 className="text-[10px] text-[#00000066] dark:text-[#FFFFFF66]">
@@ -150,11 +150,11 @@ export default function FeedbackDetailModal({ closeModal }) {
           </div>
 
           <div className="flex flex-col gap-1items-center ml-auto text-right">
-            <h1 className="text-[12px] text-[#2B2B2B] dark:text-[#EFFBF3]">
+            <h1 className="text-[12px] text-[#2B2B2B] dark:text-[#EEF8FD]">
               <span className="text-[12px] text-[#8E8E9C]">Issue Date: </span>
               {details.issueDate}
             </h1>
-            <h1 className="text-[12px] text-[#2B2B2B] dark:text-[#EFFBF3]">
+            <h1 className="text-[12px] text-[#2B2B2B] dark:text-[#EEF8FD]">
               <span className="text-[12px] text-[#8E8E9C]">Email: </span>
               {details.Email}
             </h1>
@@ -166,18 +166,18 @@ export default function FeedbackDetailModal({ closeModal }) {
       {feedbackMsg.map((msg) => (
         <FlexibleCard
           key={msg.id}
-          cardClass="w-full h-auto bg-[#EFFBF380] dark:bg-[#14141480] border-none rounded-xl p-4"
+          cardClass="w-full h-auto bg-[#EEF8FD80] dark:bg-[#14141480] border-none rounded-xl p-4"
           headerClass=""
           centerClass=""
           footerClass="flex flex-row items-center"
           header={
             <div className="relative flex w-full items-center">
               <div className="flex flex-col gap-3 text-left">
-                <h3 className="text-[13px] text-[#6F7C74] dark:text-[#A9C2B3]">
+                <h3 className="text-[13px] text-[#6E7A86] dark:text-[#A9BACB]">
                   {msg.msgType}
                 </h3>
 
-                <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#EFFBF3] font-medium">
+                <h3 className="text-[15px] text-[#2B2B2B] dark:text-[#EEF8FD] font-medium">
                   {msg.msg}
                 </h3>
               </div>
@@ -192,7 +192,7 @@ export default function FeedbackDetailModal({ closeModal }) {
           <ActionButton
             label="Cancel"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
             onClick={closeModal}
           />
         </div>
@@ -200,7 +200,7 @@ export default function FeedbackDetailModal({ closeModal }) {
           <ActionButton
             label="Mark as Resolved"
             labelClass="font-normal text-[12px] md:text-[16px]"
-            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+            buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
           />
         </div>
       </div>

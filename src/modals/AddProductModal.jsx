@@ -95,8 +95,8 @@ export default function AddProductModal({
                 />
 
                 {/* Upload Box Skeleton */}
-                <div className="border border-[#6F7C7440] rounded-lg p-4">
-                  <div className="border border-dashed border-[#09BF64] dark:border-[#81D959] rounded-lg flex flex-col items-center justify-center py-6">
+                <div className="border border-[#6E7A8640] rounded-lg p-4">
+                  <div className="border border-dashed border-[#0088D1] dark:border-[#01CEE9] rounded-lg flex flex-col items-center justify-center py-6">
                     {/* Upload Icon Skeleton */}
                     <Skeleton
                       width="48px"
@@ -226,15 +226,15 @@ export default function AddProductModal({
                     placeholder="Name"
                     value={Name}
                     onChange={(e) => setName(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   />
                 </div>
                 <div className="flex flex-col w-full gap-1 pl-1">
                   <label
                     htmlFor="brand"
-                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   >
                     Brand
                   </label>
@@ -245,7 +245,7 @@ export default function AddProductModal({
                     onChange={(e) => setBrand(e.value)}
                     placeholder="Select"
                     className={clsx(
-                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -266,15 +266,15 @@ export default function AddProductModal({
                     placeholder="e.g., SKU4743"
                     value={articleNumber}
                     onChange={(e) => setArticleNumber(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   />
                 </div>
                 <div className="flex flex-col w-full gap-1 pl-1">
                   <label
                     htmlFor="type"
-                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   >
                     Type
                   </label>
@@ -285,7 +285,7 @@ export default function AddProductModal({
                     onChange={(e) => setType(e.value)}
                     placeholder="Select Product Category"
                     className={clsx(
-                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -311,7 +311,7 @@ export default function AddProductModal({
                 <div className="flex flex-col w-full gap-1 pl-1">
                   <label
                     htmlFor="packSize"
-                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   >
                     Pack Size
                   </label>
@@ -322,7 +322,7 @@ export default function AddProductModal({
                     onChange={(e) => setPackSize(e.value)}
                     placeholder="Select"
                     className={clsx(
-                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -335,7 +335,7 @@ export default function AddProductModal({
                 <div className="flex flex-col w-full gap-1 pl-1">
                   <label
                     htmlFor="shelfLife"
-                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   >
                     Shelf Life
                   </label>
@@ -346,7 +346,7 @@ export default function AddProductModal({
                     onChange={(e) => setShelfLife(e.value)}
                     placeholder="Months"
                     className={clsx(
-                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -364,7 +364,7 @@ export default function AddProductModal({
                   <ActionButton
                     label="Cancel"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                     onClick={closeModal}
                   />
                 </div>
@@ -372,7 +372,7 @@ export default function AddProductModal({
                   <ActionButton
                     label="Next"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                     onClick={handleNextClick}
                   />
                 </div>
@@ -473,7 +473,7 @@ export default function AddProductModal({
                   <ActionButton
                     label="Cancel"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                     onClick={closeModal}
                   />
                 </div>
@@ -481,7 +481,7 @@ export default function AddProductModal({
                   <ActionButton
                     label="Save"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                     onClick={handleNextClick}
                   />
                 </div>
@@ -497,7 +497,7 @@ export default function AddProductModal({
 
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col w-full max-h-[80vh] overflow-y-auto px-3 mt-4 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full max-h-[80vh] overflow-y-auto px-3 mt-4 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <SimpleTabView
           activeIndex={activeTabIndex}
           onTabChange={setActiveTabIndex}
@@ -521,9 +521,9 @@ export default function AddProductModal({
           ]}
           renderItem={renderItem}
           tabLabelClass="text-[12px] lg:text-[14px] font-normal text-center w-full -mt-2"
-          activeTabClass="border-b-[2px] border-[#09BF64] text-[#0F2418] dark:text-[#EFFBF3] font-medium"
-          inactiveTabClass="text-[#0F2418] dark:text-[#EBF9F0]"
-          tabHeaderClass="flex w-full border-b border-[#09BF64] mt-2"
+          activeTabClass="border-b-[2px] border-[#0088D1] text-[#0B1B33] dark:text-[#EEF8FD] font-medium"
+          inactiveTabClass="text-[#0B1B33] dark:text-[#EAF6FC]"
+          tabHeaderClass="flex w-full border-b border-[#0088D1] mt-2"
           contentContainerClass="mt-4 w-full"
           panelClass=""
         />

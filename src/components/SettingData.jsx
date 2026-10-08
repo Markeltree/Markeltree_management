@@ -196,7 +196,7 @@ export function UserRolesPermissions() {
       <Icon
         onClick={EditRoleAndPermissions}
         icon="tabler:edit"
-        style={{ color: "#09BF64" }}
+        style={{ color: "#0088D1" }}
         className="cursor-pointer"
         width={20}
         height={20}
@@ -386,7 +386,7 @@ export function UserRolesPermissions() {
             {/* Add new role */}
             <button
               onClick={AddNewRole}
-              className="flex items-center gap-2 px-4 py-2 bg-[#09BF64] text-white rounded-lg text-sm transition-all hover:shadow-lg dark:hover:[box-shadow:0_4px_12px_rgba(255,255,255,0.2)] whitespace-nowrap"
+              className="flex items-center gap-2 px-4 py-2 bg-[#0088D1] text-white rounded-lg text-sm transition-all hover:shadow-lg dark:hover:[box-shadow:0_4px_12px_rgba(255,255,255,0.2)] whitespace-nowrap"
             >
               <Icon icon="mdi:plus-circle" width={18} />
               Add new role
@@ -402,7 +402,7 @@ export function UserRolesPermissions() {
           paginator={false}
           className="p-datatable-sm w-full my-delete-table [&_.p-datatable-tbody>tr]:dark:!bg-black "
           rowClassName={() =>
-            "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
+            "border-b border-[#6E7A8626] text-[13px] text-[#666666] dark:text-[#EEF8FD] dark:bg-black whitespace-nowrap"
           }
           emptyMessage={
             <div className=" py-6 text-[15px] bg-white dark:bg-black text-black dark:text-white">
@@ -918,8 +918,8 @@ export function WorkflowConfiguration() {
       <button
         type="button"
         className="flex items-center gap-2 bg-white dark:bg-black 
-                   text-[#09BF64] dark:text-[#81D959] 
-                   border border-[#09BF64] dark:border-[#81D959] 
+                   text-[#0088D1] dark:text-[#01CEE9] 
+                   border border-[#0088D1] dark:border-[#01CEE9] 
                    px-3 py-1 rounded text-[11px] font-medium"
       >
         <Icon icon="tabler:edit" width={14} height={14} />
@@ -1056,7 +1056,7 @@ export function WorkflowConfiguration() {
             {/* Add new workflow */}
             <button
               onClick={AddNewWorkFlow}
-              className="flex items-center w-auto h-[40px] gap-2 px-4 py-2 bg-[#09BF64] text-white rounded-lg text-sm hover:bg-[#4c4fdd] transition-all whitespace-nowrap"
+              className="flex items-center w-auto h-[40px] gap-2 px-4 py-2 bg-[#0088D1] text-white rounded-lg text-sm hover:bg-[#4c4fdd] transition-all whitespace-nowrap"
             >
               <Icon icon="mdi:plus-circle" width={18} />
               Add new workflow
@@ -1072,7 +1072,7 @@ export function WorkflowConfiguration() {
           paginator={false}
           className="p-datatable-sm w-full my-delete-table [&_.p-datatable-tbody>tr]:dark:!bg-black"
           rowClassName={() =>
-            "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
+            "border-b border-[#6E7A8626] text-[13px] text-[#666666] dark:text-[#EEF8FD] dark:bg-black whitespace-nowrap"
           }
           emptyMessage={
             <div className=" py-6 text-[15px] bg-white dark:bg-black text-black dark:text-white">

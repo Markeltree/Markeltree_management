@@ -15,7 +15,7 @@ export default function MainLayout() {
         <Sidebar />
 
         {/* Animated Page Content */}
-        <div className="flex-1 bg-gray-50 dark:bg-[#141414] overflow-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="flex-1 bg-gray-50 dark:bg-[#141414] overflow-auto scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
@@ -31,7 +31,7 @@ export default function MainLayout() {
         </div>
       </div>
       <div className="flex justify-center bg-white dark:bg-black p-1">
-        <p className="text-[#0F2418] dark:text-[#B5E6C9] text-[14px]">
+        <p className="text-[#0B1B33] dark:text-[#B5DEF2] text-[14px]">
           @2025 All Rights Reserved
         </p>
       </div>

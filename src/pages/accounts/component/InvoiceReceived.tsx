@@ -36,7 +36,7 @@ const InvoiceReceived = () => {
              <ColorFull
             text="Upload Invoice"
             icon={FiCloud}
-            bgColor="bg-[#09BF64]"
+            bgColor="bg-[#0088D1]"
             textColor="text-white"
             onClick={() => {console.log("Export triggered")}}
           />

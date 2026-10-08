@@ -127,7 +127,7 @@ const SocialCard = ({ name, icon, url: initialUrl, email: initialEmail, password
 
   return (
     <div
-      className={`p-4 rounded-xl bg-gradient-to-r from-[#5D60EF]/10 to-[#BAFF86]/10 dark:from-[#5D60EF]/20 dark:to-[#BAFF86]/20 flex flex-col gap-2 w-full justify-between`}
+      className={`p-4 rounded-xl bg-gradient-to-r from-[#5D60EF]/10 to-[#9AF5FF]/10 dark:from-[#5D60EF]/20 dark:to-[#9AF5FF]/20 flex flex-col gap-2 w-full justify-between`}
     >
       <div className="flex items-center gap-2 text-gray-800 dark:text-white font-semibold text-lg">
         <div className="bg-white dark:bg-gray-800 p-2 rounded-full">
@@ -137,7 +137,7 @@ const SocialCard = ({ name, icon, url: initialUrl, email: initialEmail, password
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6F7C7440]/25 dark:border-gray-600">
+        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6E7A8640]/25 dark:border-gray-600">
           <textarea
             value={url}
             onChange={(e) => setUrl(e.target.value)}
@@ -162,7 +162,7 @@ const SocialCard = ({ name, icon, url: initialUrl, email: initialEmail, password
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6F7C7440]/25 dark:border-gray-600">
+        <div className="flex items-center gap-2 w-full bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6E7A8640]/25 dark:border-gray-600">
           <input
             type="email"
             value={email}
@@ -186,7 +186,7 @@ const SocialCard = ({ name, icon, url: initialUrl, email: initialEmail, password
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex items-center gap-2 bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6F7C7440]/25 dark:border-gray-600 w-full">
+        <div className="flex items-center gap-2 bg-white dark:bg-gray-800 rounded-[8px] px-3 py-2 border border-[#6E7A8640]/25 dark:border-gray-600 w-full">
           <input
             type={showPassword ? "text" : "password"}
             value={password}

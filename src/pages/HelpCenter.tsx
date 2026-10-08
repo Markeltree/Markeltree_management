@@ -65,9 +65,9 @@ const HelpCenter: React.FC = () => {
             {categories.map((cat, idx) => (
               <button
                 key={cat}
-                className={`flex items-center justify-between text-[14px] px-2 py-2 rounded-lg text-left text-[#09BF64] font-regular transition ${
+                className={`flex items-center justify-between text-[14px] px-2 py-2 rounded-lg text-left text-[#0088D1] font-regular transition ${
                   idx === activeCategory
-                    ? "bg-[#f4f4ff] text-[#09BF64]"
+                    ? "bg-[#f4f4ff] text-[#0088D1]"
                     : "hover:bg-[#f4f4ff] text-[#7b7fc1]"
                 }`}
                 disabled={idx !== activeCategory}
@@ -75,7 +75,7 @@ const HelpCenter: React.FC = () => {
                 <span>{cat}</span>
                 {idx === activeCategory && (
                   <svg
-                    className="w-4 h-4 text-[#09BF64]"
+                    className="w-4 h-4 text-[#0088D1]"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -103,12 +103,12 @@ const HelpCenter: React.FC = () => {
                   }`}
                   onClick={() => setExpanded(expanded === idx ? -1 : idx)}
                 >
-                  <div className="flex items-center gap-3 text-[#144A2A] font-medium text-lg">
+                  <div className="flex items-center gap-3 text-[#0F3B66] font-medium text-lg">
                     <span
                       className={`rounded-full w-6 h-6 flex items-center justify-center ${
                         expanded === idx
-                          ? "bg-[#09BF64] text-white"
-                          : "bg-[#f4f4ff] text-[#09BF64]"
+                          ? "bg-[#0088D1] text-white"
+                          : "bg-[#f4f4ff] text-[#0088D1]"
                       }`}
                     ></span>
                     <HeadingThree
@@ -136,7 +136,7 @@ const HelpCenter: React.FC = () => {
                 {expanded === idx && qa.answer && (
                   <div className="pl-12 pb-5">
                     <Paragragh
-                      color="text-[#6F7C74]"
+                      color="text-[#6E7A86]"
                       className="text-[16px]"
                       para={qa.answer}
                     />

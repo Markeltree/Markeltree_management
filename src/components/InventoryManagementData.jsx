@@ -683,7 +683,7 @@ export default function InventoryManagementData() {
   };
 
   const actionTemplate = (rowData) => (
-    <span className="bg-[#09BF64] dark:bg-[#81D959] text-white px-3 py-1 flex items-center justify-center w-[100px] h-[28px] rounded text-[11px] font-medium">
+    <span className="bg-[#0088D1] dark:bg-[#01CEE9] text-white px-3 py-1 flex items-center justify-center w-[100px] h-[28px] rounded text-[11px] font-medium">
       {rowData.action}
     </span>
   );
@@ -855,7 +855,7 @@ export default function InventoryManagementData() {
             {[...Array(rowsPerPage)].map((_, rowIndex) => (
               <div
                 key={rowIndex}
-                className="flex border-b border-[#6F7C7426] dark:border-[#6F7C7426] text-[13px] dark:bg-black bg-white whitespace-nowrap"
+                className="flex border-b border-[#6E7A8626] dark:border-[#6E7A8626] text-[13px] dark:bg-black bg-white whitespace-nowrap"
                 style={{ gap: "8px" }}
               >
                 {columns.map((col, colIndex) => (
@@ -966,7 +966,7 @@ export default function InventoryManagementData() {
           ) : (
             <div className="flex flex-col h-full pt-3">
               {/* Table header */}
-              <div className="flex border-b border-[#6F7C7426] dark:border-[#6F7C7426] mb-2">
+              <div className="flex border-b border-[#6E7A8626] dark:border-[#6E7A8626] mb-2">
                 {["Product Name", "Current Stock", "Suggested Quantity"].map(
                   (text, idx) => (
                     <Skeleton
@@ -986,7 +986,7 @@ export default function InventoryManagementData() {
                 {[...Array(5)].map((_, rowIdx) => (
                   <div
                     key={rowIdx}
-                    className="flex border-b border-[#6F7C7426] dark:border-[#6F7C7426]"
+                    className="flex border-b border-[#6E7A8626] dark:border-[#6E7A8626]"
                     style={{ gap: "8px" }}
                   >
                     {[...Array(3)].map((__, colIdx) => (
@@ -1028,7 +1028,7 @@ export default function InventoryManagementData() {
               height="28px"
               className="dark:bg-[#2C2C2CAA]"
               style={{
-                borderBottom: i === activeIndex ? "2px solid #09BF64" : "none",
+                borderBottom: i === activeIndex ? "2px solid #0088D1" : "none",
                 marginBottom: "4px",
               }}
             />
@@ -1064,10 +1064,10 @@ export default function InventoryManagementData() {
         }
         center={
           <div className="flex flex-col justify-center gap-2 h-full pt-2">
-            <h1 className="text-[#6F7C74] dark:text-[#EFFBF3CC] text-[14px] text-left">
+            <h1 className="text-[#6E7A86] dark:text-[#EEF8FDCC] text-[14px] text-left">
               Total Actions
             </h1>
-            <h1 className="text-[40px] text-[#0F2418] dark:text-[#EFFBF3] font-extrabold text-left">
+            <h1 className="text-[40px] text-[#0B1B33] dark:text-[#EEF8FD] font-extrabold text-left">
               1,500
             </h1>
           </div>
@@ -1086,10 +1086,10 @@ export default function InventoryManagementData() {
         }
         center={
           <div className="flex flex-col justify-center gap-2 h-full pt-2">
-            <h1 className="text-[#6F7C74] dark:text-[#EFFBF3CC] text-[14px] text-left">
+            <h1 className="text-[#6E7A86] dark:text-[#EEF8FDCC] text-[14px] text-left">
               Recent Changes
             </h1>
-            <h1 className="text-[40px] text-[#0F2418] dark:text-[#EFFBF3] font-extrabold text-left">
+            <h1 className="text-[40px] text-[#0B1B33] dark:text-[#EEF8FD] font-extrabold text-left">
               50
             </h1>
           </div>
@@ -1108,10 +1108,10 @@ export default function InventoryManagementData() {
         }
         center={
           <div className="flex flex-col justify-center gap-2 h-full pt-2">
-            <h1 className="text-[#6F7C74] dark:text-[#EFFBF3CC] text-[14px] text-left">
+            <h1 className="text-[#6E7A86] dark:text-[#EEF8FDCC] text-[14px] text-left">
               User Involved
             </h1>
-            <h1 className="text-[40px] text-[#0F2418] dark:text-[#EFFBF3] font-extrabold text-left">
+            <h1 className="text-[40px] text-[#0B1B33] dark:text-[#EEF8FD] font-extrabold text-left">
               10
             </h1>
           </div>
@@ -1144,8 +1144,8 @@ export default function InventoryManagementData() {
             }}
             className={`pb-2 text-[14px] lg:text-[16px] font-medium transition-all ${
               i === activeIndex
-                ? "text-[#09BF64] dark:text-[#EFFBF3] border-b-2 border-[#09BF64] dark:border-[#81D959]"
-                : "text-[#0F2418] dark:text-[#B5E6C9] hover:text-[#09BF64] dark:hover:text-[#EFFBF3]"
+                ? "text-[#0088D1] dark:text-[#EEF8FD] border-b-2 border-[#0088D1] dark:border-[#01CEE9]"
+                : "text-[#0B1B33] dark:text-[#B5DEF2] hover:text-[#0088D1] dark:hover:text-[#EEF8FD]"
             }`}
           >
             {label}
@@ -1159,10 +1159,10 @@ export default function InventoryManagementData() {
         <div className="bg-white dark:bg-[#000000] rounded-lg p-4 h-auto">
           <div className="flex flex-col md:flex-row gap-2 items-center w-full">
             <div className="flex flex-col gap-1 w-full">
-              <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
+              <h2 className="text-[#333333] dark:text-[#EEF8FD] font-bold text-[16px] lg:text-[18px]">
                 {tabTitles[activeIndex].heading}
               </h2>
-              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
+              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EEF8FD]">
                 {tabTitles[activeIndex].subheading}
               </p>
             </div>
@@ -1224,7 +1224,7 @@ export default function InventoryManagementData() {
                       />
                     }
                     iconPos="left"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[40px] w-[180px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[40px] w-[180px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                     onClick={handleStockTransfer}
                   />
                 ) : (
@@ -1274,13 +1274,13 @@ export default function InventoryManagementData() {
 
                         return (
                           <div key={field} className="mb-3">
-                            <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
+                            <h4 className="font-semibold text-[12px] text-[#0B1B33] dark:text-[#EEF8FD] mb-2 capitalize">
                               {field}
                             </h4>
                             {values.map((val) => (
                               <label
                                 key={val}
-                                className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
+                                className="flex items-center gap-2 mb-1 text-[12px] text-[#6E7A86CC] dark:text-[#EEF8FDCC] cursor-pointer select-none"
                               >
                                 <input
                                   type="checkbox"
@@ -1290,7 +1290,7 @@ export default function InventoryManagementData() {
                                   onChange={() => toggleTempValue(field, val)}
                                   className="hidden peer"
                                 />
-                                <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
+                                <span className="w-3.5 h-3.5 rounded border border-[#6E7A86CC] peer-checked:bg-[#0088D1] peer-checked:border-[#0088D1] relative flex items-center justify-center">
                                   <svg
                                     className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                     fill="none"
@@ -1326,7 +1326,7 @@ export default function InventoryManagementData() {
                       <ActionButton
                         label="Reset"
                         labelClass="font-normal"
-                        buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                        buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                         onClick={() => {
                           setTempFilters({});
                           setFilters({});
@@ -1350,7 +1350,7 @@ export default function InventoryManagementData() {
                       <ActionButton
                         label="Apply Filter"
                         labelClass="font-normal"
-                        buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                        buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                         onClick={() => {
                           setFilters(tempFilters); // temp filters ko apply filters me copy karo
                           setDateRange(tempDateRange); // temp date range ko apply date range me copy karo
@@ -1384,7 +1384,7 @@ export default function InventoryManagementData() {
                 paginator={false}
                 className="p-datatable-sm w-full [&_.p-datatable-tbody>tr]:dark:!bg-black"
                 rowClassName={() =>
-                  "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
+                  "border-b border-[#6E7A8626] text-[13px] text-[#666666] dark:text-[#EEF8FD] dark:bg-black whitespace-nowrap"
                 }
                 emptyMessage={
                   <div className="py-4 bg-white text-black dark:bg-black dark:text-white">
@@ -1440,7 +1440,7 @@ export default function InventoryManagementData() {
           header={
             <>
               <div className="flex w-full items-center">
-                <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
+                <h1 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EAF6FC] ">
                   Product Inventory
                 </h1>
               </div>
@@ -1448,7 +1448,7 @@ export default function InventoryManagementData() {
                 <DropdownButton
                   defaultOption="This Year"
                   options={["This Week", "This Month", "This Year"]}
-                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
+                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#0088D1] to-[#353689] border-none focus:outline-none focus:ring-0"
                   dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[105px]"
                   optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                   onChange={(value) => setSelectedRange(value)}
@@ -1520,7 +1520,7 @@ export default function InventoryManagementData() {
           header={
             <>
               <div className="flex w-full items-center">
-                <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
+                <h1 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EAF6FC] ">
                   Reorder Suggestion
                 </h1>
               </div>
@@ -1528,7 +1528,7 @@ export default function InventoryManagementData() {
                 <DropdownButton
                   defaultOption="This Year"
                   options={["This Week", "This Month", "This Year"]}
-                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
+                  buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#0088D1] to-[#353689] border-none focus:outline-none focus:ring-0"
                   dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[105px]"
                   optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                   onChange={(value) => setSelectedBarChartRange(value)}
@@ -1545,7 +1545,7 @@ export default function InventoryManagementData() {
                   height="15"
                   className="text-[#FF695B]"
                 />
-                <h2 className="text-[8px] text-[#6F7C74] dark:text-[#6F7C74]">
+                <h2 className="text-[8px] text-[#6E7A86] dark:text-[#6E7A86]">
                   Critical Urgency
                 </h2>
               </div>
@@ -1557,7 +1557,7 @@ export default function InventoryManagementData() {
                   height="15"
                   className="text-[#DDD427]"
                 />
-                <h2 className="text-[8px] text-[#6F7C74] dark:text-[#6F7C74]">
+                <h2 className="text-[8px] text-[#6E7A86] dark:text-[#6E7A86]">
                   Moderate Urgency
                 </h2>
               </div>
@@ -1569,7 +1569,7 @@ export default function InventoryManagementData() {
                   height="15"
                   className="text-[#22C55E]"
                 />
-                <h2 className="text-[8px] text-[#6F7C74] dark:text-[#6F7C74]">
+                <h2 className="text-[8px] text-[#6E7A86] dark:text-[#6E7A86]">
                   Low Urgency
                 </h2>
               </div>
@@ -1592,7 +1592,7 @@ export default function InventoryManagementData() {
           header={
             <>
               <div className="flex flex-row w-full justify-between items-center">
-                <h1 className="font-extrabold text-[20px] text-[#0F2418] dark:text-[#EBF9F0]">
+                <h1 className="font-extrabold text-[20px] text-[#0B1B33] dark:text-[#EAF6FC]">
                   AI Suggestion
                 </h1>
 
@@ -1615,7 +1615,7 @@ export default function InventoryManagementData() {
                     />
                   }
                   iconPos="right"
-                  buttonClass="flex flex-row-reverse items-center justify-center gap-2 px-3 py-2 text-white dark:text-black font-extralight text-[11px] h-[34px] w-[165px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
+                  buttonClass="flex flex-row-reverse items-center justify-center gap-2 px-3 py-2 text-white dark:text-black font-extralight text-[11px] h-[34px] w-[165px] bg-gradient-to-r from-[#0088D1] to-[#353689] border-none focus:outline-none focus:ring-0"
                 />
               </div>
             </>
@@ -1623,7 +1623,7 @@ export default function InventoryManagementData() {
           center={
             <div className="flex flex-col h-full pt-3">
               <table
-                className="w-full text-sm text-left text-[#33333380] dark:text-[#EFFBF380]"
+                className="w-full text-sm text-left text-[#33333380] dark:text-[#EEF8FD80]"
                 style={{ tableLayout: "fixed" }}
               >
                 <thead className="text-[10px] md:text-[12px] sticky top-0 w-full">
@@ -1639,7 +1639,7 @@ export default function InventoryManagementData() {
                   {currentTableData.map((item, idx) => (
                     <tr
                       key={idx}
-                      className="border-b border-[#6F7C7426] dark:border-[#6F7C7426] dark:text-[#EFFBF3] text-[#666666]"
+                      className="border-b border-[#6E7A8626] dark:border-[#6E7A8626] dark:text-[#EEF8FD] text-[#666666]"
                     >
                       <td className="px-3 py-2 w-1/3">{item.productName}</td>
                       <td className="px-3 py-2 w-1/3">{item.currentStock}</td>

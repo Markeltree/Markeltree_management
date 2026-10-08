@@ -67,7 +67,7 @@ export default function CreateTargetModal({ closeModal, onNext }) {
   return (
     <div className="space-y-3">
       <div className="flex flex-row justify-between p-0">
-        <h1 className="text-xl font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+        <h1 className="text-xl font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
           Create Target
         </h1>
       </div>
@@ -79,9 +79,9 @@ export default function CreateTargetModal({ closeModal, onNext }) {
         placeholder="Enter target amount"
         value={targetAmount}
         onChange={(e) => setTargetAmount(e.value)}
-        inputClass="text-[14px] dark:text-[#A9C2B3] pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+        inputClass="text-[14px] dark:text-[#A9BACB] pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
         containerClass="flex flex-col w-full gap-2"
-        labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+        labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
       />
 
       <div className="grid grid-cols-2 gap-4">
@@ -95,7 +95,7 @@ export default function CreateTargetModal({ closeModal, onNext }) {
         <div className="flex flex-col w-full gap-1 col-span-2 md:col-span-1">
           <label
             htmlFor="priority"
-            className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+            className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
           >
             Select Priority
           </label>
@@ -106,7 +106,7 @@ export default function CreateTargetModal({ closeModal, onNext }) {
             onChange={(e) => setPriority(e.value)}
             placeholder="Select Priority"
             className={clsx(
-              "text-[14px] dark:!text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+              "text-[14px] dark:!text-[#A9BACB] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
             )}
             pt={{
               panel: {
@@ -120,7 +120,7 @@ export default function CreateTargetModal({ closeModal, onNext }) {
       <div className="flex flex-col w-full gap-2">
         <label
           htmlFor="notes"
-          className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+          className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
         >
           Notes (optional)
         </label>
@@ -130,7 +130,7 @@ export default function CreateTargetModal({ closeModal, onNext }) {
           rows={4}
           cols={100}
           placeholder="Add additional details"
-          className="h-[76px] pt-1 pl-3 text-[14px] dark:text-[#A9C2B3] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+          className="h-[76px] pt-1 pl-3 text-[14px] dark:text-[#A9BACB] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
         />
       </div>
 
@@ -138,7 +138,7 @@ export default function CreateTargetModal({ closeModal, onNext }) {
         <ActionButton
           label="Next"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="text-[16px] h-[48px] w-full bg-[#09BF64] dark:bg-[#81D959] text-white dark:text-black focus:outline-none focus:ring-0"
+          buttonClass="text-[16px] h-[48px] w-full bg-[#0088D1] dark:bg-[#01CEE9] text-white dark:text-black focus:outline-none focus:ring-0"
           onClick={handleNext}
         />
       </div>

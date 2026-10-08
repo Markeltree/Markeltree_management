@@ -45,7 +45,7 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
       <div className="flex-1 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-[#6F7C74] dark:text-white mb-2">
+            <label className="block text-sm font-medium text-[#6E7A86] dark:text-white mb-2">
               Training Name <span className="text-red-500">*</span>
             </label>
             <input
@@ -60,7 +60,7 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-[#6F7C74] dark:text-white mb-2">
+            <label className="block text-sm font-medium text-[#6E7A86] dark:text-white mb-2">
               Training Type
             </label>
             <select
@@ -76,7 +76,7 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-[#6F7C74] dark:text-white mb-2">
+            <label className="block text-sm font-medium text-[#6E7A86] dark:text-white mb-2">
               Training Time
             </label>
             <input
@@ -86,13 +86,13 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
               onChange={handleInputChange}
               required
               pattern="^\d{2}:\d{2}:\d{2}$"
-              className="w-full px-3 py-2 border bg-[#6F7C7440]/25 border-gray-300 rounded-md focus:outline-none dark:bg-gray-800 dark:border-gray-600 dark:text-white"
+              className="w-full px-3 py-2 border bg-[#6E7A8640]/25 border-gray-300 rounded-md focus:outline-none dark:bg-gray-800 dark:border-gray-600 dark:text-white"
               placeholder="00:00:00"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-[#6F7C74] dark:text-white mb-2">
+            <label className="block text-sm font-medium text-[#6E7A86] dark:text-white mb-2">
               Training Asset Type
             </label>
             <select
@@ -108,7 +108,7 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
 
           {formData.type === 'video' && (
             <div>
-              <label className="block text-sm font-medium text-[#6F7C74] dark:text-white mb-2">
+              <label className="block text-sm font-medium text-[#6E7A86] dark:text-white mb-2">
                 Upload Video
               </label>
               <input
@@ -122,7 +122,7 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
           )}
 
           <div>
-            <label className="block text-sm font-medium text-[#6F7C74] dark:text-white mb-2">
+            <label className="block text-sm font-medium text-[#6E7A86] dark:text-white mb-2">
               URL
             </label>
             <input
@@ -136,7 +136,7 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-[#6F7C74] dark:text-white mb-2">
+            <label className="block text-sm font-medium text-[#6E7A86] dark:text-white mb-2">
               Notes <span className="text-red-500">*</span>
             </label>
             <textarea
@@ -154,13 +154,13 @@ const AddTrainingModal: React.FC<AddTrainingModalProps> = ({ closeModal }) => {
       <div className="flex-shrink-0 flex justify-end gap-3 pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
         <button
           type="button"
-          className='w-[50%] px-5 py-3.5 text-sm inline-flex font-medium items-center justify-center gap-2 rounded-lg transition bg-white border-[1px] text-[#09BF64] ring-1 ring-inset ring-gray-300 dark:bg-[#0D0D0D] dark:text-[#A9C2B3] dark:ring-gray-700/50'
+          className='w-[50%] px-5 py-3.5 text-sm inline-flex font-medium items-center justify-center gap-2 rounded-lg transition bg-white border-[1px] text-[#0088D1] ring-1 ring-inset ring-gray-300 dark:bg-[#0D0D0D] dark:text-[#A9BACB] dark:ring-gray-700/50'
           onClick={closeModal}
         >
           Cancel
         </button>
         <Button
-          className="bg-[#09BF64] hover:bg-[#4a4cd1] text-white w-[50%]"
+          className="bg-[#0088D1] hover:bg-[#4a4cd1] text-white w-[50%]"
         >
           Add Training
         </Button>

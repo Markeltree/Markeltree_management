@@ -134,7 +134,7 @@ export default function ProductManagement() {
             {/* Row 1: Main Dashboard */}
             <div className="flex flex-row justify-between items-center mb-4 gap-2">
               {/* Title (Hidden below lg) */}
-              <h1 className="hidden lg:block text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
+              <h1 className="hidden lg:block text-[14px] font-semibold text-[#0088D1] dark:text-[#0088D1] whitespace-nowrap">
                 Product Management
               </h1>
 
@@ -175,7 +175,7 @@ export default function ProductManagement() {
                   iconDark="./refreshIcon.png"
                   iconPos="left"
                   labelClass="font-normal md:font-bold"
-                  buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-auto px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                   iconClass="w-[14px] md:w-[16px] h-[14px] md:h-[16px]"
                   onClick={handleRefresh}
                 />
@@ -207,7 +207,7 @@ export default function ProductManagement() {
                 center={
                   <div className="flex flex-row justify-between items-center gap-4 pl-4 pr-4 pt-1">
                     <div className="flex flex-col gap-2">
-                      <h1 className="font-extrabold text-[24px] text-[#0F2418] dark:text-[#EBF9F0]">
+                      <h1 className="font-extrabold text-[24px] text-[#0B1B33] dark:text-[#EAF6FC]">
                         25
                       </h1>
                       <h2 className="text-[#00000066] text-[10px] dark:text-[#FFFFFFCC] whitespace-nowrap">
@@ -241,7 +241,7 @@ export default function ProductManagement() {
                 center={
                   <div className="flex flex-row justify-between items-center gap-4 pl-4 pr-4 pt-1">
                     <div className="flex flex-col gap-2 w-full">
-                      <h1 className="font-extrabold text-[24px] text-[#0F2418] dark:text-[#EBF9F0]">
+                      <h1 className="font-extrabold text-[24px] text-[#0B1B33] dark:text-[#EAF6FC]">
                         8
                       </h1>
 
@@ -252,7 +252,7 @@ export default function ProductManagement() {
                         </p>
                         <button
                           type="button"
-                          className="text-[12px] text-[#09BF64] dark:text-[#81D959] whitespace-nowrap hover:underline"
+                          className="text-[12px] text-[#0088D1] dark:text-[#01CEE9] whitespace-nowrap hover:underline"
                           onClick={() => {
                             navigate("/lowstock");
                           }}
@@ -289,7 +289,7 @@ export default function ProductManagement() {
                 center={
                   <div className="flex flex-row justify-between items-center gap-4 pl-4 pr-4 pt-1">
                     <div className="flex flex-col gap-2 w-full">
-                      <h1 className="font-extrabold text-[24px] text-[#0F2418] dark:text-[#EBF9F0]">
+                      <h1 className="font-extrabold text-[24px] text-[#0B1B33] dark:text-[#EAF6FC]">
                         2
                       </h1>
 
@@ -300,7 +300,7 @@ export default function ProductManagement() {
                         </p>
                         <button
                           type="button"
-                          className="text-[12px] text-[#09BF64] dark:text-[#81D959] whitespace-nowrap hover:underline"
+                          className="text-[12px] text-[#0088D1] dark:text-[#01CEE9] whitespace-nowrap hover:underline"
                           onClick={() => {
                             navigate("/outofstock");
                           }}
@@ -337,7 +337,7 @@ export default function ProductManagement() {
                 center={
                   <div className="flex flex-row justify-between items-center gap-4 pl-4 pr-4 pt-1">
                     <div className="flex flex-col gap-2 w-full">
-                      <h1 className="font-extrabold text-[24px] text-[#0F2418] dark:text-[#EBF9F0]">
+                      <h1 className="font-extrabold text-[24px] text-[#0B1B33] dark:text-[#EAF6FC]">
                         3
                       </h1>
 
@@ -348,7 +348,7 @@ export default function ProductManagement() {
                         </p>
                         <button
                           type="button"
-                          className="text-[12px] text-[#09BF64] dark:text-[#81D959] whitespace-nowrap hover:underline"
+                          className="text-[12px] text-[#0088D1] dark:text-[#01CEE9] whitespace-nowrap hover:underline"
                           onClick={() => {
                             navigate("/nearexpiry");
                           }}

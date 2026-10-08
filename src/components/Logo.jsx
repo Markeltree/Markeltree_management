@@ -1,8 +1,8 @@
 export default function Logo({
   lightLogo = "/logo-light.png",
   darkLogo = "/logo-dark.png",
-  alt = "Markeltree",
-  className = "h-8 w-auto",
+  alt = "Teamora",
+  className = "h-11 w-auto",
 }) {
   return (
     <>

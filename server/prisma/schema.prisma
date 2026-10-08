@@ -1,4 +1,4 @@
-// Markeltree — In-House Employee Management & Collaboration Platform
+// Teamora — In-House Employee Management & Collaboration Platform
 // Data model follows FRD/SRS §11. Database: PostgreSQL (Supabase).
 
 generator client {

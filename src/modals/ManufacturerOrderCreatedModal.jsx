@@ -77,7 +77,7 @@ export default function ManufacturerOrderCreatedModal({
 
   return (
     <div className="flex flex-col items-center space-y-3">
-      <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+      <div className=" text-[20px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
         {topHeading}
       </div>
       <div className="flex flex-col gap-1 items-center text-center">
@@ -85,13 +85,13 @@ export default function ManufacturerOrderCreatedModal({
           icon="charm:circle-tick"
           className="w-[100px] h-[100px] text-[#20BF55]"
         />
-        <p className="text-[16px] text-[#6F7C74]">{centerText}</p>
+        <p className="text-[16px] text-[#6E7A86]">{centerText}</p>
       </div>
       <div className="flex flex-row w-full justify-between mt-4 gap-2">
         <ActionButton
           label="Create more"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
           onClick={createMore}
         />
 
@@ -99,7 +99,7 @@ export default function ManufacturerOrderCreatedModal({
         <ActionButton
           label="View Details"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 w-full h-[50px] px-1 lg:px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 w-full h-[50px] px-1 lg:px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
           //   onClick={closeModal}
         />
       </div>

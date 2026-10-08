@@ -47,14 +47,14 @@ export default function WorkflowConfigureModal({ closeModal }) {
         </>
       ) : (
         <>
-          <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
+          <h1 className="text-[18px] text-[#0B1B33] dark:text-[#B5DEF2] font-bold">
             Workflow Configure
           </h1>
 
           <div className="rounded-xl bg-white dark:bg-[#141414AA] p-3 flex flex-col gap-4">
             {/* Workflow Name */}
             <div className="flex flex-col gap-2">
-              <label className="text-[#0F2418] text-sm dark:text-[#B5E6C9]">
+              <label className="text-[#0B1B33] text-sm dark:text-[#B5DEF2]">
                 Workflow Name
               </label>
               <input
@@ -66,7 +66,7 @@ export default function WorkflowConfigureModal({ closeModal }) {
 
             {/* Workflow Description */}
             <div className="flex flex-col gap-2">
-              <label className="text-[#0F2418] text-sm dark:text-[#B5E6C9]">
+              <label className="text-[#0B1B33] text-sm dark:text-[#B5DEF2]">
                 Workflow Description
               </label>
               <textarea
@@ -81,13 +81,13 @@ export default function WorkflowConfigureModal({ closeModal }) {
               <ActionButton
                 label="Cancel"
                 labelClass="font-normal text-[12px] md:text-[16px]"
-                buttonClass="flex items-center justify-center h-[45px] w-1/2 px-4 rounded-lg border border-[#09BF64] text-[#09BF64] bg-white dark:bg-[#0D0D0D] dark:text-[#09BF64]"
+                buttonClass="flex items-center justify-center h-[45px] w-1/2 px-4 rounded-lg border border-[#0088D1] text-[#0088D1] bg-white dark:bg-[#0D0D0D] dark:text-[#0088D1]"
                 onClick={closeModal}
               />
               <ActionButton
                 label="Next"
                 labelClass="font-normal text-[12px] md:text-[16px]"
-                buttonClass="flex items-center justify-center h-[45px] w-1/2 px-4 rounded-lg bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-[#0D0D0D]"
+                buttonClass="flex items-center justify-center h-[45px] w-1/2 px-4 rounded-lg bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-[#0D0D0D]"
               />
             </div>
           </div>

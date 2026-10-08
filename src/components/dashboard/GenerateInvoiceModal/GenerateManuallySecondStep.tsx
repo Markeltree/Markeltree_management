@@ -99,8 +99,8 @@ const Tabs: React.FC = () => {
               onClick={() => setActiveTab(tab)}
               className={`w-1/2 px-3 py-1.5 text-[11px] sm:text-[12px] md:text-[13px] font-medium capitalize rounded transition-all duration-200 ${
                 activeTab === tab
-                  ? "text-[#09BF64] border-b-2 border-[#09BF64]"
-                  : "text-[#8E8E9C] hover:text-[#0F2418]"
+                  ? "text-[#0088D1] border-b-2 border-[#0088D1]"
+                  : "text-[#8E8E9C] hover:text-[#0B1B33]"
               }`}
             >
               {tab}
@@ -118,7 +118,7 @@ const Tabs: React.FC = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 Product
               </label>
               <div className="relative">
@@ -141,7 +141,7 @@ const Tabs: React.FC = () => {
               </div>
             </div>
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 Ledger Account
               </label>
               <div className="relative">
@@ -167,7 +167,7 @@ const Tabs: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 Qty/Hrs
               </label>
               <input
@@ -179,7 +179,7 @@ const Tabs: React.FC = () => {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 Price Rate
               </label>
               <input
@@ -191,7 +191,7 @@ const Tabs: React.FC = () => {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 Discount
               </label>
               <input
@@ -206,7 +206,7 @@ const Tabs: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 VAT Rate
               </label>
               <div className="relative">
@@ -229,7 +229,7 @@ const Tabs: React.FC = () => {
               </div>
             </div>
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 VAT
               </label>
               <input
@@ -241,7 +241,7 @@ const Tabs: React.FC = () => {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+              <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
                 Total
               </label>
               <input
@@ -255,7 +255,7 @@ const Tabs: React.FC = () => {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-[12px] text-[#6F7C74] font-medium dark:text-gray-400">
+            <label className="mb-1.5 block text-[12px] text-[#6E7A86] font-medium dark:text-gray-400">
               Product Description
             </label>
             <textarea

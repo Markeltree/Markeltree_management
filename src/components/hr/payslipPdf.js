@@ -10,7 +10,7 @@ export const unpaidDaysOf = (p) =>
     ? Number(p.unpaidDaysOverride)
     : p.workingDays - Number(p.eligibleDays) + Number(p.absentDays) + Number(p.unpaidLeaveDays);
 
-export async function downloadPayslipPdf(slip, companyName = "Markeltree") {
+export async function downloadPayslipPdf(slip, companyName = "Teamora") {
   const [{ jsPDF }, { default: autoTable }] = await Promise.all([import("jspdf"), import("jspdf-autotable")]);
   const cur = slip.run.currency;
   const period = `${MONTHS[slip.run.month - 1]} ${slip.run.year}`;

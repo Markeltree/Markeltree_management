@@ -12,9 +12,9 @@ const STATUS_OPTIONS = ["PROBATION", "ACTIVE", "ON_LEAVE", "NOTICE_PERIOD"].map(
 
 function OrgChartNode({ node, onOpen }) {
   return (
-    <li className="ml-4 border-l border-[#6F7C7440] pl-3 py-1">
+    <li className="ml-4 border-l border-[#6E7A8640] pl-3 py-1">
       <button onClick={() => onOpen(node.id)} className="text-left">
-        <span className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{fullName(node)}</span>
+        <span className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{fullName(node)}</span>
         <span className="text-[11px] text-[#8E8E9C]"> · {node.designation}{node.department ? ` · ${node.department.name}` : ""}</span>
       </button>
       {node.reports.length > 0 && (

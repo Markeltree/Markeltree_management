@@ -619,7 +619,7 @@ export default function ViewReport() {
               .map((_, i) => (
                 <div
                   key={i}
-                  className="flex flex-row gap-4 border-b border-[#6F7C7426] py-2 justify-between"
+                  className="flex flex-row gap-4 border-b border-[#6E7A8626] py-2 justify-between"
                 >
                   {Array(6)
                     .fill(0)
@@ -705,16 +705,16 @@ export default function ViewReport() {
         {/* Row 1: Main Dashboard */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-4 gap-2">
           {/* Title (Hidden below lg) */}
-          <h1 className="flex w-full  justify-start items-center text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
+          <h1 className="flex w-full  justify-start items-center text-[14px] font-semibold text-[#0088D1] dark:text-[#0088D1] whitespace-nowrap">
             <button
               onClick={() => navigate("/report")}
-              className="flex items-center text-[#09BF64] dark:text-[#09BF64] hover:underline"
+              className="flex items-center text-[#0088D1] dark:text-[#0088D1] hover:underline"
             >
               Reporting
             </button>
             <Icon
               icon="mdi:chevron-right"
-              className="mx-1 text-[#09BF64] dark:text-[#09BF64]"
+              className="mx-1 text-[#0088D1] dark:text-[#0088D1]"
               width="16"
               height="16"
             />
@@ -739,7 +739,7 @@ export default function ViewReport() {
             <ActionButton
               label="12/01/2025 - 12/01/2025"
               labelClass="font-normal md:font-bold"
-              buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-[150px] md:w-[180px] px-3 md:px-4 bg-[#09BF641A] text-[#09BF64] dark:bg-[#81D9591A] dark:text-[#81D959] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-[150px] md:w-[180px] px-3 md:px-4 bg-[#0088D11A] text-[#0088D1] dark:bg-[#01CEE91A] dark:text-[#01CEE9] focus:outline-none focus:ring-0"
             />
 
             {/* Refresh Button */}
@@ -749,7 +749,7 @@ export default function ViewReport() {
               iconDark="./refreshIcon.png"
               iconPos="left"
               labelClass="font-normal md:font-bold"
-              buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-[95px] md:w-[126px] px-3 md:px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+              buttonClass="flex items-center justify-center gap-2 text-[10px] md:text-[12px] h-[35px] md:h-[45px] w-[95px] md:w-[126px] px-3 md:px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
               iconClass="w-[14px] md:w-[16px] h-[14px] md:h-[16px]"
               onClick={handleRefresh}
             />
@@ -771,7 +771,7 @@ export default function ViewReport() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                       Total Sales
                     </h2>
-                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                    <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                       512
                     </h1>
                   </div>
@@ -800,7 +800,7 @@ export default function ViewReport() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                       Average Orders
                     </h2>
-                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                    <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                       1,245
                     </h1>
                   </div>
@@ -830,7 +830,7 @@ export default function ViewReport() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                       Number of Orders
                     </h2>
-                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                    <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                       512
                     </h1>
                   </div>
@@ -860,7 +860,7 @@ export default function ViewReport() {
                     <h2 className="flex text-[#00000066] dark:text-[#FFFFFFCC] text-[12px]">
                       Inventory Turnover
                     </h2>
-                    <h1 className="text-[24px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+                    <h1 className="text-[24px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
                       92%
                     </h1>
                   </div>
@@ -882,10 +882,10 @@ export default function ViewReport() {
         <div className="bg-white dark:bg-[#000000] rounded-lg p-4 mt-4 h-auto">
           <div className="flex flex-col md:flex-row gap-2 items-center w-full">
             <div className="flex flex-col gap-1 w-full">
-              <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
+              <h2 className="text-[#333333] dark:text-[#EEF8FD] font-bold text-[16px] lg:text-[18px]">
                 {tabTitles[0].heading}
               </h2>
-              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
+              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EEF8FD]">
                 {tabTitles[0].subheading}
               </p>
             </div>
@@ -972,13 +972,13 @@ export default function ViewReport() {
 
                         return (
                           <div key={field} className="mb-3">
-                            <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
+                            <h4 className="font-semibold text-[12px] text-[#0B1B33] dark:text-[#EEF8FD] mb-2 capitalize">
                               {field}
                             </h4>
                             {values.map((val) => (
                               <label
                                 key={val}
-                                className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
+                                className="flex items-center gap-2 mb-1 text-[12px] text-[#6E7A86CC] dark:text-[#EEF8FDCC] cursor-pointer select-none"
                               >
                                 <input
                                   type="checkbox"
@@ -988,7 +988,7 @@ export default function ViewReport() {
                                   onChange={() => toggleTempValue(field, val)}
                                   className="hidden peer"
                                 />
-                                <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
+                                <span className="w-3.5 h-3.5 rounded border border-[#6E7A86CC] peer-checked:bg-[#0088D1] peer-checked:border-[#0088D1] relative flex items-center justify-center">
                                   <svg
                                     className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                     fill="none"
@@ -1024,7 +1024,7 @@ export default function ViewReport() {
                       <ActionButton
                         label="Reset"
                         labelClass="font-normal"
-                        buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                        buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                         onClick={() => {
                           setTempFilters({});
                           setFilters({});
@@ -1048,7 +1048,7 @@ export default function ViewReport() {
                       <ActionButton
                         label="Apply Filter"
                         labelClass="font-normal"
-                        buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#09BF64] dark:text-black border-none focus:outline-none focus:ring-0"
+                        buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#0088D1] text-white dark:bg-[#0088D1] dark:text-black border-none focus:outline-none focus:ring-0"
                         onClick={() => {
                           setFilters(tempFilters); // temp filters ko apply filters me copy karo
                           setDateRange(tempDateRange); // temp date range ko apply date range me copy karo
@@ -1069,7 +1069,7 @@ export default function ViewReport() {
               paginator={false}
               className="p-datatable-sm w-full "
               rowClassName={() =>
-                "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
+                "border-b border-[#6E7A8626] text-[13px] text-[#666666] dark:text-[#EEF8FD] dark:bg-black whitespace-nowrap"
               }
             >
               {columns.map((col, idx) => (
@@ -1107,7 +1107,7 @@ export default function ViewReport() {
             header={
               <>
                 <div className="flex w-full items-center">
-                  <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
+                  <h1 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EAF6FC] ">
                     Sales Performance
                   </h1>
                 </div>
@@ -1115,7 +1115,7 @@ export default function ViewReport() {
                   <DropdownButton
                     defaultOption="Electronics"
                     options={["Electronics", "Food", "Furniture"]}
-                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-[#09BF64] dark:text-[#09BF64] font-bold text-[11px] h-[34px] w-[123px] bg-white dark:bg-black border border-[#09BF64] focus:outline-none focus:ring-0"
+                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-[#0088D1] dark:text-[#0088D1] font-bold text-[11px] h-[34px] w-[123px] bg-white dark:bg-black border border-[#0088D1] focus:outline-none focus:ring-0"
                     dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[123px]"
                     optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                     onChange={(value) => setSelectedCategory(value)}
@@ -1124,7 +1124,7 @@ export default function ViewReport() {
                   <DropdownButton
                     defaultOption="This Year"
                     options={["This Week", "This Month", "This Year"]}
-                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#09BF64] to-[#353689] border-none focus:outline-none focus:ring-0"
+                    buttonClassName="flex items-center rounded-lg justify-center gap-2 px-3 py-2 text-white dark:text-black font-bold text-[11px] h-[34px] w-[105px] bg-gradient-to-r from-[#0088D1] to-[#353689] border-none focus:outline-none focus:ring-0"
                     dropdownClassName="bg-white dark:bg-[#121212] h-[80px] w-[105px]"
                     optionClassName="dark:text-gray-300 dark:hover:bg-gray-800 text-[11px]"
                     onChange={(value) => setSelectedRange(value)}
@@ -1159,7 +1159,7 @@ export default function ViewReport() {
             header={
               <>
                 <div className="flex w-full items-center">
-                  <h1 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EBF9F0] ">
+                  <h1 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EAF6FC] ">
                     Top Selling Categories
                   </h1>
                 </div>
@@ -1187,7 +1187,7 @@ export default function ViewReport() {
                     height="15"
                     className="text-[#FF695B]"
                   />
-                  <h2 className="text-[8px] text-[#6F7C74] dark:text-[#6F7C74]">
+                  <h2 className="text-[8px] text-[#6E7A86] dark:text-[#6E7A86]">
                     High Selling
                   </h2>
                 </div>
@@ -1199,7 +1199,7 @@ export default function ViewReport() {
                     height="15"
                     className="text-[#DDD427]"
                   />
-                  <h2 className="text-[8px] text-[#6F7C74] dark:text-[#6F7C74]">
+                  <h2 className="text-[8px] text-[#6E7A86] dark:text-[#6E7A86]">
                     Moderate Selling
                   </h2>
                 </div>
@@ -1211,7 +1211,7 @@ export default function ViewReport() {
                     height="15"
                     className="text-[#22C55E]"
                   />
-                  <h2 className="text-[8px] text-[#6F7C74] dark:text-[#6F7C74]">
+                  <h2 className="text-[8px] text-[#6E7A86] dark:text-[#6E7A86]">
                     Low Selling
                   </h2>
                 </div>

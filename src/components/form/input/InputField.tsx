@@ -34,10 +34,10 @@ const Input: FC<InputProps> = ({
   error = false,
   hint,
 }) => {
-  let inputClasses = `h-11 w-full rounded-lg border border-[#6F7C74]/25 appearance-none px-4 py-3 text-[14px] leading-[24px] shadow-theme-xs placeholder:text-[#0F2418] focus:outline-hidden placeholder:text-[14px] focus:ring-3  dark:bg-[#0D0D0D] dark:text-[#A9C2B3] dark:placeholder:text-[#A9C2B3] ${className}`;
+  let inputClasses = `h-11 w-full rounded-lg border border-[#6E7A86]/25 appearance-none px-4 py-3 text-[14px] leading-[24px] shadow-theme-xs placeholder:text-[#0B1B33] focus:outline-hidden placeholder:text-[14px] focus:ring-3  dark:bg-[#0D0D0D] dark:text-[#A9BACB] dark:placeholder:text-[#A9BACB] ${className}`;
 
   if (disabled) {
-    inputClasses += ` text-gray-500 border-gray-300 opacity-40 bg-gray-100 cursor-not-allowed dark:bg-[#0D0D0D] dark:text-[#A9C2B3] dark:placeholder:text-[#A9C2B3]`;
+    inputClasses += ` text-gray-500 border-gray-300 opacity-40 bg-gray-100 cursor-not-allowed dark:bg-[#0D0D0D] dark:text-[#A9BACB] dark:placeholder:text-[#A9BACB]`;
   } else if (error) {
     inputClasses += `  border-error-500 focus:border-error-300 focus:ring-error-500/20 dark:text-error-400 dark:border-error-500 dark:focus:border-error-800`;
   } else if (success) {

@@ -47,13 +47,13 @@ export default function Notifications() {
             <>
               <ErrorNote error={list.error} onRetry={list.reload} />
               {!list.loading && list.data?.items.length === 0 && <Empty icon="mdi:bell-check-outline" text="You're all caught up." />}
-              <ul className="divide-y divide-[#6F7C7426]">
+              <ul className="divide-y divide-[#6E7A8626]">
                 {(list.data?.items ?? []).map((n) => (
-                  <li key={n.id} onClick={() => open(n)} className="flex items-start gap-3 py-3 cursor-pointer hover:bg-[#09BF640A] px-2 rounded">
-                    <span className={`w-2 h-2 rounded-full mt-2 shrink-0 ${n.readAt ? "bg-transparent" : "bg-[#09BF64]"}`} />
+                  <li key={n.id} onClick={() => open(n)} className="flex items-start gap-3 py-3 cursor-pointer hover:bg-[#0088D10A] px-2 rounded">
+                    <span className={`w-2 h-2 rounded-full mt-2 shrink-0 ${n.readAt ? "bg-transparent" : "bg-[#0088D1]"}`} />
                     <div className="flex-1 min-w-0">
-                      <p className={`text-[14px] ${n.readAt ? "text-[#6F7C74]" : "text-[#0F2418] dark:text-[#EFFBF3] font-semibold"}`}>{n.title}</p>
-                      {n.body && <p className="text-[13px] text-[#6F7C74] dark:text-[#A9C2B3]">{n.body}</p>}
+                      <p className={`text-[14px] ${n.readAt ? "text-[#6E7A86]" : "text-[#0B1B33] dark:text-[#EEF8FD] font-semibold"}`}>{n.title}</p>
+                      {n.body && <p className="text-[13px] text-[#6E7A86] dark:text-[#A9BACB]">{n.body}</p>}
                     </div>
                     <span className="text-[11px] text-[#8E8E9C] whitespace-nowrap">{timeAgo(n.createdAt)}</span>
                   </li>
@@ -69,7 +69,7 @@ export default function Notifications() {
           ) : (
             <>
               <ErrorNote error={prefs.error} onRetry={prefs.reload} />
-              <p className="text-[12px] text-[#6F7C74] mb-3">Approval and HR notifications are always delivered in-app. Email delivery will apply once email is configured.</p>
+              <p className="text-[12px] text-[#6E7A86] mb-3">Approval and HR notifications are always delivered in-app. Email delivery will apply once email is configured.</p>
               <table className="w-full text-[13px]">
                 <thead>
                   <tr className="text-left text-[12px] text-[#8E8E9C]">
@@ -80,13 +80,13 @@ export default function Notifications() {
                 </thead>
                 <tbody>
                   {(prefs.data ?? []).map((p) => (
-                    <tr key={p.type} className="border-t border-[#6F7C7426]">
-                      <td className="py-2 text-[#0F2418] dark:text-[#EFFBF3]">{humanize(p.type)}</td>
+                    <tr key={p.type} className="border-t border-[#6E7A8626]">
+                      <td className="py-2 text-[#0B1B33] dark:text-[#EEF8FD]">{humanize(p.type)}</td>
                       <td>
-                        <input type="checkbox" className="accent-[#09BF64]" checked={p.inApp} disabled={p.critical} onChange={(e) => savePref(p, { inApp: e.target.checked })} />
+                        <input type="checkbox" className="accent-[#0088D1]" checked={p.inApp} disabled={p.critical} onChange={(e) => savePref(p, { inApp: e.target.checked })} />
                       </td>
                       <td>
-                        <input type="checkbox" className="accent-[#09BF64]" checked={p.email} onChange={(e) => savePref(p, { email: e.target.checked })} />
+                        <input type="checkbox" className="accent-[#0088D1]" checked={p.email} onChange={(e) => savePref(p, { email: e.target.checked })} />
                       </td>
                     </tr>
                   ))}

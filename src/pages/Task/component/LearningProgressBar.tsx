@@ -13,7 +13,7 @@ const LearningProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
 
       <div className="flex-1 mx-4 relative h-3 bg-gray-200 rounded-full overflow-hidden">
         <div
-          className="absolute top-0 left-0 h-full bg-[#09BF64] rounded-full transition-all duration-500"
+          className="absolute top-0 left-0 h-full bg-[#0088D1] rounded-full transition-all duration-500"
           style={{ width: `${progress}%` }}
         ></div>
       </div>

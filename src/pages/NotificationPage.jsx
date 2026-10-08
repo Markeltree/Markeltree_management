@@ -81,7 +81,7 @@ export default function NotificationPage() {
     <div className="flex-1 pl-3 pr-3 pt-4 bg-gray-50 dark:bg-[#141414]">
       {/* --- Top Section --- */}
       <div className="flex lg:flex-row justify-between items-center mb-4 gap-2">
-        <h1 className="hidden lg:block text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64]">
+        <h1 className="hidden lg:block text-[14px] font-semibold text-[#0088D1] dark:text-[#0088D1]">
           Notification
         </h1>
 
@@ -93,7 +93,7 @@ export default function NotificationPage() {
             iconDark="./refreshIcon.png"
             iconPos="left"
             labelClass="font-normal md:font-bold"
-            buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[24px] md:h-[45px] w-auto px-1 md:px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64]"
+            buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[24px] md:h-[45px] w-auto px-1 md:px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1]"
           />
 
           {/* Mark all as read */}
@@ -106,7 +106,7 @@ export default function NotificationPage() {
               />
             }
             labelClass="font-normal md:font-bold"
-            buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[24px] md:h-[45px] w-auto px-1 md:px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border border-[#09BF64]"
+            buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[24px] md:h-[45px] w-auto px-1 md:px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border border-[#0088D1]"
           />
 
           {/* Clear all */}
@@ -119,7 +119,7 @@ export default function NotificationPage() {
               />
             }
             labelClass="font-normal md:font-bold"
-            buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[24px] md:h-[45px] w-auto px-1 md:px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border border-[#09BF64]"
+            buttonClass="flex items-center justify-center gap-2 text-[9px] md:text-[12px] h-[24px] md:h-[45px] w-auto px-1 md:px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border border-[#0088D1]"
           />
         </div>
       </div>
@@ -127,10 +127,10 @@ export default function NotificationPage() {
       {/* Subtitle + Search */}
       <div className="flex flex-col md:flex-row gap-2 items-center w-full bg-white dark:bg-black rounded-lg p-4">
         <div className="flex flex-col gap-1 w-full">
-          <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
+          <h2 className="text-[#333333] dark:text-[#EEF8FD] font-bold text-[16px] lg:text-[18px]">
             {tabTitles[0].heading}
           </h2>
-          <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
+          <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EEF8FD]">
             {tabTitles[0].subheading}
           </p>
         </div>
@@ -154,7 +154,7 @@ export default function NotificationPage() {
               onClick={() => setActiveTab(tab)}
               className={`pb-2 text-sm font-medium ${
                 activeTab === tab
-                  ? "text-[#09BF64] border-b-2 border-[#09BF64]"
+                  ? "text-[#0088D1] border-b-2 border-[#0088D1]"
                   : "text-gray-500 dark:text-gray-400"
               }`}
             >
@@ -177,7 +177,7 @@ export default function NotificationPage() {
                   {items.map((n) => (
                     <li
                       key={n.id}
-                      className="flex items-start gap-3 px-4 py-3 hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] transition"
+                      className="flex items-start gap-3 px-4 py-3 hover:bg-[#0088D11A] dark:hover:bg-[#01CEE940] transition"
                     >
                       <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-sm font-bold">
                         {n.user.charAt(0)}
@@ -190,7 +190,7 @@ export default function NotificationPage() {
                         <p className="text-xs text-gray-500">{n.time}</p>
                       </div>
                       {n.unread && (
-                        <span className="w-2 h-2 bg-[#09BF64] rounded-full mt-2"></span>
+                        <span className="w-2 h-2 bg-[#0088D1] rounded-full mt-2"></span>
                       )}
                     </li>
                   ))}

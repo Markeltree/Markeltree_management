@@ -51,7 +51,7 @@ export default function ForgotPassword() {
           Send code
         </button>
       </div>
-      <button type="button" onClick={() => navigate("/login")} className="text-[12px] text-[#09BF64] font-semibold hover:underline pt-4">
+      <button type="button" onClick={() => navigate("/login")} className="text-[12px] text-[#0088D1] font-semibold hover:underline pt-4">
         Back to login
       </button>
     </AuthShell>

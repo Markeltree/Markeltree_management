@@ -21,7 +21,7 @@ const SystemHealthGauge = ({
     <div className="w-full bg-white rounded-2xl shadow-md px-8 py-7 max-w-2xl mx-auto">
       {/* Header */}
       <div className="flex justify-between items-start">
-        <h2 className="text-2xl font-extrabold text-[#144A2A]">System Health</h2>
+        <h2 className="text-2xl font-extrabold text-[#0F3B66]">System Health</h2>
         <button className="px-5 py-2 rounded-xl text-white font-semibold bg-gradient-to-r from-indigo-500 to-blue-500 shadow hover:brightness-110 text-base flex items-center gap-2">
           This Year
           <svg width={16} height={16} fill="none" viewBox="0 0 24 24">
@@ -62,15 +62,15 @@ const SystemHealthGauge = ({
       <div className="flex justify-between items-end mt-5 px-10">
         <div className="flex flex-col items-center">
           <span className="text-3xl font-extrabold text-[#18C964]">{shopify}%</span>
-          <span className="text-[#144A2A] font-semibold text-sm mt-1">Shopify</span>
+          <span className="text-[#0F3B66] font-semibold text-sm mt-1">Shopify</span>
         </div>
         <div className="flex flex-col items-center">
           <span className="text-3xl font-extrabold text-[#FFD600]">{amazon}%</span>
-          <span className="text-[#144A2A] font-semibold text-sm mt-1">Amazon</span>
+          <span className="text-[#0F3B66] font-semibold text-sm mt-1">Amazon</span>
         </div>
         <div className="flex flex-col items-center">
           <span className="text-3xl font-extrabold text-[#EB5757]">{ebay}%</span>
-          <span className="text-[#144A2A] font-semibold text-sm mt-1">eBay</span>
+          <span className="text-[#0F3B66] font-semibold text-sm mt-1">eBay</span>
         </div>
       </div>
     </div>

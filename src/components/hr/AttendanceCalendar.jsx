@@ -11,9 +11,9 @@ const COLORS = {
   LATE_AND_EARLY: "bg-[#F59E0B40] text-[#B45309]",
   ABSENT: "bg-[#FF695B26] text-[#E5483A]",
   ON_LEAVE: "bg-[#0EA5E926] text-[#0284C7]",
-  HOLIDAY: "bg-[#09BF6426] text-[#09BF64]",
-  WEEKEND: "bg-[#8E8E9C14] text-[#A9C2B3]",
-  PENDING: "bg-transparent text-[#6F7C74] dark:text-[#A9C2B3]",
+  HOLIDAY: "bg-[#0088D126] text-[#0088D1]",
+  WEEKEND: "bg-[#8E8E9C14] text-[#A9BACB]",
+  PENDING: "bg-transparent text-[#6E7A86] dark:text-[#A9BACB]",
   NOT_JOINED: "bg-transparent text-[#C4C4D4]",
 };
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -33,13 +33,13 @@ export default function AttendanceCalendar({ employeeId }) {
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <button onClick={() => shift(-1)} className="p-1 rounded hover:bg-[#09BF641A] text-[#09BF64]" aria-label="Previous month">
+        <button onClick={() => shift(-1)} className="p-1 rounded hover:bg-[#0088D11A] text-[#0088D1]" aria-label="Previous month">
           <Icon icon="mdi:chevron-left" width={22} />
         </button>
-        <h3 className="text-[14px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+        <h3 className="text-[14px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
           {cursor.toLocaleDateString(undefined, { month: "long", year: "numeric" })}
         </h3>
-        <button onClick={() => shift(1)} className="p-1 rounded hover:bg-[#09BF641A] text-[#09BF64]" aria-label="Next month">
+        <button onClick={() => shift(1)} className="p-1 rounded hover:bg-[#0088D11A] text-[#0088D1]" aria-label="Next month">
           <Icon icon="mdi:chevron-right" width={22} />
         </button>
       </div>
@@ -75,7 +75,7 @@ export default function AttendanceCalendar({ employeeId }) {
           </div>
         ))}
       </div>
-      <div className="flex flex-wrap gap-3 text-[11px] text-[#6F7C74]">
+      <div className="flex flex-wrap gap-3 text-[11px] text-[#6E7A86]">
         {["PRESENT", "LATE", "ABSENT", "ON_LEAVE", "HOLIDAY"].map((k) => (
           <span key={k} className="flex items-center gap-1">
             <span className={`w-3 h-3 rounded ${COLORS[k]}`} /> {humanize(k)}

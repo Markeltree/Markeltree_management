@@ -103,7 +103,7 @@ const AllTasks = () => {
                 <div
                   className={`poppins-semibold rounded px-2 py-2 text-center text-[11px] ${
                     item.status === "Delivered"
-                      ? "bg-[#DEF7E7] text-[#22C55E]"
+                      ? "bg-[#DDF1FB] text-[#22C55E]"
                       : "bg-yellow-100 text-yellow-600"
                   }`}
                 >

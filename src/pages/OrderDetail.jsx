@@ -43,7 +43,7 @@ export default function OrderDetail() {
   const card =
     "bg-white dark:bg-[#0D0D0D] border border-[#E9E9EE] dark:border-[#2A2A2A] rounded-xl p-4";
   const label = "text-[12px] text-[#8E8E9C]";
-  const title = "text-[14px] font-semibold text-[#0F2418] dark:text-white";
+  const title = "text-[14px] font-semibold text-[#0B1B33] dark:text-white";
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -265,16 +265,16 @@ export default function OrderDetail() {
         {/* Row 1: Main Dashboard */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-4 gap-2">
           {/* Title (Hidden below lg) */}
-          <h1 className="flex w-full  justify-start items-center text-[14px] font-semibold text-[#09BF64] dark:text-[#09BF64] whitespace-nowrap">
+          <h1 className="flex w-full  justify-start items-center text-[14px] font-semibold text-[#0088D1] dark:text-[#0088D1] whitespace-nowrap">
             <button
               onClick={() => navigate("/order")}
-              className="flex items-center text-[#09BF64] dark:text-[#09BF64] hover:underline"
+              className="flex items-center text-[#0088D1] dark:text-[#0088D1] hover:underline"
             >
               Order Management
             </button>
             <Icon
               icon="mdi:chevron-right"
-              className="mx-1 text-[#09BF64] dark:text-[#09BF64]"
+              className="mx-1 text-[#0088D1] dark:text-[#0088D1]"
               width="16"
               height="16"
             />
@@ -330,7 +330,7 @@ export default function OrderDetail() {
               }
               iconPos="left"
               labelClass="font-normal md:font-bold"
-              buttonClass="text-[9px] md:text-[12px] rounded-lg flex items-center justify-center gap-2 h-[40px] md:h-[45px] w-auto px-4 bg-[#09BF64] text-white dark:bg-[#09BF64] dark:text-black border border-[#09BF64] focus:outline-none focus:ring-0"
+              buttonClass="text-[9px] md:text-[12px] rounded-lg flex items-center justify-center gap-2 h-[40px] md:h-[45px] w-auto px-4 bg-[#0088D1] text-white dark:bg-[#0088D1] dark:text-black border border-[#0088D1] focus:outline-none focus:ring-0"
             />
           </div>
         </div>
@@ -356,9 +356,9 @@ export default function OrderDetail() {
                     buttonClass="flex items-center rounded-lg justify-center gap-1 text-[12px] bg-[#22C55E26] text-[#22C55E] h-[45px] w-[120px] px-4 focus:outline-none focus:ring-0"
                   />
                 </div>
-                <div className="grid grid-cols-3 gap-4 p-4 bg-[#09BF6414] dark:bg-[#81D959] border border-[#09BF64] dark:border-[#81D959] w-full rounded-lg">
+                <div className="grid grid-cols-3 gap-4 p-4 bg-[#0088D114] dark:bg-[#01CEE9] border border-[#0088D1] dark:border-[#01CEE9] w-full rounded-lg">
                   <div className="flex flex-col gap-2 col-span-3 lg:col-span-1">
-                    <p className="text-[16px] md:text-[18px] text-[#0E1A12] dark:text-[#CDEEDB]">
+                    <p className="text-[16px] md:text-[18px] text-[#0C1626] dark:text-[#CDE9F7]">
                       #96459761
                     </p>
                     <p className="flex flex-row items-center text-[10px] md:text-[12px] text-[#475156] dark:text-[#FFFFFF] whitespace-nowrap">
@@ -371,7 +371,7 @@ export default function OrderDetail() {
                   </div>
 
                   <div className="flex flex-col gap-2 col-span-3 lg:col-span-1">
-                    <p className="text-[16px] md:text-[18px] text-[#0E1A12] dark:text-[#CDEEDB]">
+                    <p className="text-[16px] md:text-[18px] text-[#0C1626] dark:text-[#CDE9F7]">
                       Yes
                     </p>
                     <p className="flex flex-row text-[10px] md:text-[12px] text-[#475156] dark:text-[#FFFFFF]">
@@ -388,7 +388,7 @@ export default function OrderDetail() {
                 <div className="text-[12px] pt-4">
                   <p className="text-[#191C1F] dark:text-white">
                     Order expected deliver{" "}
-                    <span className="text-[#0E1A12] dark:text-[#CDEEDB]">
+                    <span className="text-[#0C1626] dark:text-[#CDE9F7]">
                       23 Jan, 2021
                     </span>
                   </p>
@@ -398,7 +398,7 @@ export default function OrderDetail() {
             center={
               <>
                 <div className="pb-2">
-                  <h1 className="text-[#0E1A12] dark:text-white text-[16px] font-medium">
+                  <h1 className="text-[#0C1626] dark:text-white text-[16px] font-medium">
                     Product
                   </h1>
                 </div>
@@ -431,34 +431,34 @@ export default function OrderDetail() {
                               <div className="font-semibold text-[12px] text-[#2DA5F3]">
                                 {product.name}
                               </div>
-                              <div className="text-[12px] text-[#0E1A12] dark:text-white">
+                              <div className="text-[12px] text-[#0C1626] dark:text-white">
                                 {product.description}
                               </div>
                             </div>
                           </td>
 
                           {/* Col 2: Article number */}
-                          <td className="px-4 py-4 text-[12px] text-[#0E1A12] dark:text-white">
+                          <td className="px-4 py-4 text-[12px] text-[#0C1626] dark:text-white">
                             {product.articleNo}
                           </td>
 
                           {/* Col 3: Unit Price */}
-                          <td className="px-4 py-4 text-[12px] text-[#0E1A12] dark:text-white">
+                          <td className="px-4 py-4 text-[12px] text-[#0C1626] dark:text-white">
                             {product.unitPrice}
                           </td>
 
                           {/* Col 4: Quantity */}
-                          <td className="px-4 py-4 text-[12px] text-[#0E1A12] dark:text-white">
+                          <td className="px-4 py-4 text-[12px] text-[#0C1626] dark:text-white">
                             {product.quantity}
                           </td>
 
                           {/* Col 5: Shelf life */}
-                          <td className="px-4 py-4 text-[12px] text-[#0E1A12] dark:text-white">
+                          <td className="px-4 py-4 text-[12px] text-[#0C1626] dark:text-white">
                             {product.shelfLife}
                           </td>
 
                           {/* Col 6: Sub-total */}
-                          <td className="px-4 py-4 text-right font-semibold text-[12px] text-[#0E1A12] dark:text-white">
+                          <td className="px-4 py-4 text-right font-semibold text-[12px] text-[#0C1626] dark:text-white">
                             {product.subTotal}
                           </td>
                         </tr>
@@ -478,11 +478,11 @@ export default function OrderDetail() {
                 >
                   {/* Billing */}
                   <div className="md:pr-4 md:pl-0 pt-4 md:pt-0">
-                    <h3 className="text-[16px] font-medium text-[#0E1A12] dark:text-[#CDEEDB] mb-2">
+                    <h3 className="text-[16px] font-medium text-[#0C1626] dark:text-[#CDE9F7] mb-2">
                       Billing Address
                     </h3>
                     <p className="text-[13px] text-[#5F6C72] dark:text-[#AAAAAA] font-normal">
-                      <span className="text-[#0E1A12] dark:text-[#CDEEDB] font-medium">
+                      <span className="text-[#0C1626] dark:text-[#CDE9F7] font-medium">
                         Kevin Gilbert
                       </span>
                       <br />
@@ -494,7 +494,7 @@ export default function OrderDetail() {
 
                     {/* Phone number */}
                     <p className="mt-2 text-[13px] text-[#5F6C72] dark:text-[#AAAAAA] font-normal">
-                      <span className="text-[#0E1A12] dark:text-[#CDEEDB] font-medium">
+                      <span className="text-[#0C1626] dark:text-[#CDE9F7] font-medium">
                         Phone Number:
                       </span>{" "}
                       +1-202-555-0118
@@ -502,7 +502,7 @@ export default function OrderDetail() {
 
                     {/* Email */}
                     <p className="mt-2 text-[13px] text-[#5F6C72] dark:text-[#AAAAAA] font-normal">
-                      <span className="text-[#0E1A12] dark:text-[#CDEEDB] font-medium">
+                      <span className="text-[#0C1626] dark:text-[#CDE9F7] font-medium">
                         Email:
                       </span>{" "}
                       kevin.gilbert@gmail.com
@@ -511,11 +511,11 @@ export default function OrderDetail() {
 
                   {/* Shipping */}
                   <div className="md:px-4 pt-4 md:pt-0">
-                    <h3 className="text-[16px] font-medium text-[#0E1A12] dark:text-[#CDEEDB] mb-2">
+                    <h3 className="text-[16px] font-medium text-[#0C1626] dark:text-[#CDE9F7] mb-2">
                       Shipping Address
                     </h3>
                     <p className="text-[13px] text-[#5F6C72] dark:text-[#AAAAAA] font-normal">
-                      <span className="text-[#0E1A12] dark:text-[#CDEEDB] font-medium">
+                      <span className="text-[#0C1626] dark:text-[#CDE9F7] font-medium">
                         Kevin Gilbert
                       </span>
                       <br />
@@ -527,7 +527,7 @@ export default function OrderDetail() {
 
                     {/* Phone number */}
                     <p className="mt-2 text-[13px] text-[#5F6C72] dark:text-[#AAAAAA] font-normal">
-                      <span className="text-[#0E1A12] dark:text-[#CDEEDB] font-medium">
+                      <span className="text-[#0C1626] dark:text-[#CDE9F7] font-medium">
                         Phone Number:
                       </span>{" "}
                       +1-202-555-0118
@@ -535,7 +535,7 @@ export default function OrderDetail() {
 
                     {/* Email */}
                     <p className="mt-2 text-[13px] text-[#5F6C72] dark:text-[#AAAAAA] font-normal">
-                      <span className="text-[#0E1A12] dark:text-[#CDEEDB] font-medium">
+                      <span className="text-[#0C1626] dark:text-[#CDE9F7] font-medium">
                         Email:
                       </span>{" "}
                       kevin.gilbert@gmail.com
@@ -544,7 +544,7 @@ export default function OrderDetail() {
 
                   {/* Notes */}
                   <div className="md:pl-4 pt-4 md:pt-0">
-                    <h3 className="text-[16px] font-medium text-[#0E1A12] dark:text-[#CDEEDB] mb-2">
+                    <h3 className="text-[16px] font-medium text-[#0C1626] dark:text-[#CDE9F7] mb-2">
                       Order Notes
                     </h3>
                     <p className="text-[13px] text-[#5F6C72] dark:text-[#AAAAAA] font-normal">

@@ -13,24 +13,24 @@ export default function Reset() {
         <div className="mb-2 flex justify-center">
           <Logo
             lightLogo="/logo-light.png"
-            className="h-12 w-auto"
-            alt="Markeltree"
+            className="h-20 w-auto"
+            alt="Teamora"
           />
         </div>
 
         {/* Title & Message */}
         <div className="text-center space-y-1">
-          <h1 className="text-[22px] font-bold text-[#2B2B2B] dark:text-[#EFFBF3]">
+          <h1 className="text-[22px] font-bold text-[#2B2B2B] dark:text-[#EEF8FD]">
             Verify Your Account
           </h1>
-          <p className="text-[15px] text-[#8E8E9C] dark:text-[#EFFBF3]">
+          <p className="text-[15px] text-[#8E8E9C] dark:text-[#EEF8FD]">
             A verification code has been sent to 86373743545
           </p>
         </div>
 
         {/* OTP */}
         <div className="flex flex-col items-start gap-2 w-full max-w-md pt-6">
-          <h2 className="text-xs text-[#6F7C74] dark:text-[#A9C2B3] font-semibold">
+          <h2 className="text-xs text-[#6E7A86] dark:text-[#A9BACB] font-semibold">
             Enter Code
           </h2>
           <Code
@@ -38,7 +38,7 @@ export default function Reset() {
             value={otp}
             onChange={setOtp}
             containerClassName="grid grid-cols-6 gap-4 w-full"
-            inputClassName="px-4 w-full h-[45px] md:h-[60px] text-center bg-[#FFFFFF] dark:bg-[#0D0D0D] border border-[#6F7C74] rounded-md text-black dark:text-[#EFFBF3]"
+            inputClassName="px-4 w-full h-[45px] md:h-[60px] text-center bg-[#FFFFFF] dark:bg-[#0D0D0D] border border-[#6E7A86] rounded-md text-black dark:text-[#EEF8FD]"
           />
         </div>
 
@@ -47,17 +47,17 @@ export default function Reset() {
           <ActionButton
             label="Continue"
             labelClass="font-normal text-[12px] lg:text[16px]"
-            buttonClass="text-[16px] h-[45px] w-full bg-[#09BF64] dark:bg-[#81D959] text-white dark:text-black focus:outline-none focus:ring-0"
+            buttonClass="text-[16px] h-[45px] w-full bg-[#0088D1] dark:bg-[#01CEE9] text-white dark:text-black focus:outline-none focus:ring-0"
             onClick={() => navigate("/dashboard")}
           />
         </div>
 
         {/* Resend Link */}
         <div className="pt-8">
-          <span className="flex justify-center items-center w-full text-xs text-[#8E8E9C] dark:text-[#EFFBF3]">
+          <span className="flex justify-center items-center w-full text-xs text-[#8E8E9C] dark:text-[#EEF8FD]">
             Not received verification code?{" "}
             <button
-              className="text-[#09BF64] underline font-semibold hover:text-[#4b4de0] ml-1"
+              className="text-[#0088D1] underline font-semibold hover:text-[#4b4de0] ml-1"
               onClick={() => console.log("Resend clicked")}
             >
               Resend
@@ -72,7 +72,7 @@ export default function Reset() {
           <div className="w-full h-full rounded-lg overflow-hidden">
             <img
               src="/image.png"
-              alt="Markeltree"
+              alt="Teamora"
               className="w-full h-full object-cover"
             />
           </div>

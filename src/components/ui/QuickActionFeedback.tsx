@@ -14,7 +14,7 @@ const QuickActionFeedback = ({ onClose }: { onClose: () => void }) => {
         <div className="flex flex-row items-center gap-2">
           <img src={profile} alt="profile" className="w-12 h-12 rounded-full" />
           <div>
-            <HeadingThree text="John Doe" color="text-[#0F2418]" />
+            <HeadingThree text="John Doe" color="text-[#0B1B33]" />
             <Paragragh className="text-[10px]" para="Admin" />
           </div>
         </div>
@@ -26,7 +26,7 @@ const QuickActionFeedback = ({ onClose }: { onClose: () => void }) => {
       </div>
 
       {[1, 2, 3].map((i) => (
-        <div key={i} className="flex flex-col bg-[#EFFBF3]/40 p-3 rounded-sm mt-4">
+        <div key={i} className="flex flex-col bg-[#EEF8FD]/40 p-3 rounded-sm mt-4">
           <div className="space-y-2">
             <Paragragh className="text-[14px]" para="Issue Type" />
             <span className="text-[16px] font-medium text-black">Bug Report</span>

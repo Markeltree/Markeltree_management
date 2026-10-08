@@ -24,23 +24,23 @@ const ProductTable = ({
     <div className="pt-4">
       <table className="w-full border-collapse">
         <thead>
-          <tr className="border-gray-200 bg-[#EFFBF3]">
-            <th className="text-left text-sm py-3 px-3 font-medium text-[#0E1A12]">
+          <tr className="border-gray-200 bg-[#EEF8FD]">
+            <th className="text-left text-sm py-3 px-3 font-medium text-[#0C1626]">
               Product
             </th>
-            <th className="text-left text-sm py-3 px-3 font-medium text-[#0E1A12]">
+            <th className="text-left text-sm py-3 px-3 font-medium text-[#0C1626]">
               Quantity(Carton)
             </th>
-            <th className="text-left text-sm py-3 px-3 font-medium text-[#0E1A12]">
+            <th className="text-left text-sm py-3 px-3 font-medium text-[#0C1626]">
               Pallet
             </th>
-            <th className="text-left text-sm py-3 px-3 font-medium text-[#0E1A12]">
+            <th className="text-left text-sm py-3 px-3 font-medium text-[#0C1626]">
               Cators
             </th>
-            <th className="text-left text-sm py-3 px-3 font-medium text-[#0E1A12]">
+            <th className="text-left text-sm py-3 px-3 font-medium text-[#0C1626]">
               Availability
             </th>
-            <th className="text-left text-sm py-3 px-3 font-medium text-[#0E1A12]">
+            <th className="text-left text-sm py-3 px-3 font-medium text-[#0C1626]">
               Remove
             </th>
           </tr>
@@ -57,7 +57,7 @@ const ProductTable = ({
                   className="w-16 h-16 rounded object-cover mb-2"
                 />
 
-                <div className="text-xs text-[#0E1A12] text-gray-800 font-medium">
+                <div className="text-xs text-[#0C1626] text-gray-800 font-medium">
                   {product.name} ({product.code})
                 </div>
               </td>

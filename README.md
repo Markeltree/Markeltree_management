@@ -1,4 +1,4 @@
-# Markeltree — Employee Management & Collaboration Platform
+# Teamora — Employee Management & Collaboration Platform
 
 Internal platform for employee records, attendance, leave, tasks, announcements, notifications, reports and administration, built from the FRD/SRS v1.0.
 

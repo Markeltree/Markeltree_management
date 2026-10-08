@@ -138,8 +138,8 @@ export default function Sidebar() {
       cursor-pointer focus:outline-none focus:ring-0
       ${
         selected === item.key
-          ? "bg-[#09BF64] text-white dark:bg-[#81D959]"
-          : "hover:bg-[#09BF641A] dark:hover:bg-[#81D95940] text-[#6F7C74] dark:text-[#8E8E9C]"
+          ? "bg-[#0088D1] text-white dark:bg-[#01CEE9]"
+          : "hover:bg-[#0088D11A] dark:hover:bg-[#01CEE940] text-[#6E7A86] dark:text-[#8E8E9C]"
       }
     `}
         >
@@ -154,8 +154,8 @@ export default function Sidebar() {
               <span
                 className={`absolute -top-2 -right-3 ${
                   selected === item.key
-                    ? "bg-white text-[#09BF64]"
-                    : "bg-[#09BF64] text-white"
+                    ? "bg-white text-[#0088D1]"
+                    : "bg-[#0088D1] text-white"
                 } text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] h-[18px] flex items-center justify-center`}
               >
                 {unreadCount > 9 ? "9+" : unreadCount}
@@ -170,8 +170,8 @@ export default function Sidebar() {
                 <span
                   className={`${
                     selected === item.key
-                      ? "bg-white text-[#09BF64]"
-                      : "bg-[#09BF64] text-white"
+                      ? "bg-white text-[#0088D1]"
+                      : "bg-[#0088D1] text-white"
                   } text-[10px] font-bold px-1.5 py-0.5 rounded-full`}
                 >
                   {unreadCount > 9 ? "9+" : unreadCount}
@@ -194,7 +194,7 @@ export default function Sidebar() {
         : "w-[232px] lg:top-[115px] xl:top-0"
     }
     ${enableTransition ? "transition-all duration-300 ease-in-out" : ""}
-    bg-white dark:bg-[#000000] text-[#6F7C74] dark:text-white
+    bg-white dark:bg-[#000000] text-[#6E7A86] dark:text-white
     overflow-y-auto ${
       collapsed ? "overflow-hidden" : "overflow-x-hidden"
     } scrollbar-hide

@@ -39,8 +39,8 @@ function DepartmentModal({ dept, people, onSaved, closeModal }) {
         <TextArea value={form.description} onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))} maxLength={500} rows={2} />
       </Field>
       {dept && (
-        <label className="flex items-center gap-2 text-[13px] text-[#6F7C74]">
-          <input type="checkbox" className="accent-[#09BF64]" checked={form.isActive} onChange={(e) => setForm((f) => ({ ...f, isActive: e.target.checked }))} /> Active
+        <label className="flex items-center gap-2 text-[13px] text-[#6E7A86]">
+          <input type="checkbox" className="accent-[#0088D1]" checked={form.isActive} onChange={(e) => setForm((f) => ({ ...f, isActive: e.target.checked }))} /> Active
         </label>
       )}
     </ModalForm>
@@ -101,7 +101,7 @@ function Organization() {
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
       <div className="space-y-3">
         <div className="flex justify-between items-center">
-          <h3 className="text-[14px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">Departments</h3>
+          <h3 className="text-[14px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">Departments</h3>
           <Btn icon="material-symbols:add-rounded" label="Department" onClick={() => openModal(DepartmentModal, { sizeClass: "w-[95%] md:w-[480px]", people: p, onSaved: reload })} />
         </div>
         <ErrorNote error={depts.error} onRetry={depts.reload} />
@@ -128,7 +128,7 @@ function Organization() {
       </div>
       <div className="space-y-3">
         <div className="flex justify-between items-center">
-          <h3 className="text-[14px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">Teams</h3>
+          <h3 className="text-[14px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">Teams</h3>
           <Btn
             icon="material-symbols:add-rounded"
             label="Team"
@@ -198,7 +198,7 @@ function Users() {
   };
 
   const columns = [
-    { header: "User", body: (u) => <div><p className="font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{u.employee ? fullName(u.employee) : "—"}</p><p className="text-[11px] text-[#8E8E9C]">{u.email}</p></div> },
+    { header: "User", body: (u) => <div><p className="font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{u.employee ? fullName(u.employee) : "—"}</p><p className="text-[11px] text-[#8E8E9C]">{u.email}</p></div> },
     { header: "Department", body: (u) => u.employee?.department?.name ?? "—" },
     {
       header: "Role",
@@ -209,7 +209,7 @@ function Users() {
           <select
             value={u.role.id}
             onChange={(e) => update(u, { roleId: e.target.value })}
-            className="text-[12px] border border-[#6F7C7440] rounded px-2 py-1 bg-white dark:bg-[#0D0D0D] dark:text-[#EFFBF3]"
+            className="text-[12px] border border-[#6E7A8640] rounded px-2 py-1 bg-white dark:bg-[#0D0D0D] dark:text-[#EEF8FD]"
           >
             {(roles ?? []).map((r) => (
               <option key={r.id} value={r.id}>
@@ -240,7 +240,7 @@ function Users() {
   ];
   return (
     <div className="space-y-3">
-      <p className="text-[12px] text-[#6F7C74]">New users are created from <b>Employees → Add Employee</b>, which creates both the employee record and the login.</p>
+      <p className="text-[12px] text-[#6E7A86]">New users are created from <b>Employees → Add Employee</b>, which creates both the employee record and the login.</p>
       <div className="flex flex-col md:flex-row gap-2 md:justify-end">
         <SearchInput value={search} onChange={(v) => (setSearch(v), setPage(1))} placeholder="Search email or name…" />
         <Select className="md:w-[170px] h-9" value={status} onChange={(e) => (setStatus(e.target.value), setPage(1))} placeholder="All statuses" options={["ACTIVE", "INVITED", "SUSPENDED", "DEACTIVATED"].map((s) => ({ value: s, label: humanize(s) }))} />
@@ -302,11 +302,11 @@ function RoleEditor({ role, permissions, onSaved, closeModal }) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {Object.entries(grouped).map(([mod, perms]) => (
-          <div key={mod} className="rounded-lg border border-[#6F7C7426] p-3">
-            <h4 className="text-[12px] font-bold text-[#09BF64] mb-2">{MODULE_LABELS[mod] ?? mod}</h4>
+          <div key={mod} className="rounded-lg border border-[#6E7A8626] p-3">
+            <h4 className="text-[12px] font-bold text-[#0088D1] mb-2">{MODULE_LABELS[mod] ?? mod}</h4>
             {perms.map((p) => (
-              <label key={p.key} className="flex items-center gap-2 text-[12px] text-[#0F2418] dark:text-[#EFFBF3] py-0.5 cursor-pointer">
-                <input type="checkbox" className="accent-[#09BF64]" disabled={locked} checked={locked || selected.has(p.key)} onChange={() => toggle(p.key)} />
+              <label key={p.key} className="flex items-center gap-2 text-[12px] text-[#0B1B33] dark:text-[#EEF8FD] py-0.5 cursor-pointer">
+                <input type="checkbox" className="accent-[#0088D1]" disabled={locked} checked={locked || selected.has(p.key)} onChange={() => toggle(p.key)} />
                 {humanize(p.action)}
                 <span className="text-[10px] text-[#8E8E9C] ml-auto">{p.key}</span>
               </label>
@@ -372,7 +372,7 @@ function LeaveTypeModal({ type, onSaved, closeModal }) {
     carryForwardMax: type ? Number(type.carryForwardMax) : 0,
     isPaid: type?.isPaid ?? true,
     requiresDocument: type?.requiresDocument ?? false,
-    color: type?.color ?? "#09BF64",
+    color: type?.color ?? "#0088D1",
     isActive: type?.isActive ?? true,
     policy: type?.policy ?? "",
   });
@@ -401,10 +401,10 @@ function LeaveTypeModal({ type, onSaved, closeModal }) {
         <Field label="Annual allowance (days)" hint="0 = no fixed allowance (e.g. unpaid)"><Input type="number" step="0.5" min="0" value={form.annualAllowance} onChange={set("annualAllowance", true)} /></Field>
         <Field label="Max carry forward (days)"><Input type="number" step="0.5" min="0" value={form.carryForwardMax} onChange={set("carryForwardMax", true)} /></Field>
         <Field label="Colour"><Input type="color" value={form.color} onChange={set("color")} className="p-1" /></Field>
-        <div className="flex flex-col gap-2 justify-end text-[13px] text-[#6F7C74]">
-          <label className="flex items-center gap-2"><input type="checkbox" className="accent-[#09BF64]" checked={form.isPaid} onChange={set("isPaid")} /> Paid</label>
-          <label className="flex items-center gap-2"><input type="checkbox" className="accent-[#09BF64]" checked={form.requiresDocument} onChange={set("requiresDocument")} /> Requires document</label>
-          <label className="flex items-center gap-2"><input type="checkbox" className="accent-[#09BF64]" checked={form.isActive} onChange={set("isActive")} /> Active</label>
+        <div className="flex flex-col gap-2 justify-end text-[13px] text-[#6E7A86]">
+          <label className="flex items-center gap-2"><input type="checkbox" className="accent-[#0088D1]" checked={form.isPaid} onChange={set("isPaid")} /> Paid</label>
+          <label className="flex items-center gap-2"><input type="checkbox" className="accent-[#0088D1]" checked={form.requiresDocument} onChange={set("requiresDocument")} /> Requires document</label>
+          <label className="flex items-center gap-2"><input type="checkbox" className="accent-[#0088D1]" checked={form.isActive} onChange={set("isActive")} /> Active</label>
         </div>
       </div>
       <Field label="Policy notes"><TextArea value={form.policy} onChange={set("policy")} maxLength={2000} rows={3} /></Field>
@@ -476,14 +476,14 @@ function Policies() {
     <fieldset disabled={!editable} className="space-y-5">
       {!editable && <p className="text-[12px] text-[#8E8E9C]">You can view policies but only administrators can change them.</p>}
       <section>
-        <h3 className="text-[13px] font-bold text-[#09BF64] mb-2">Company</h3>
+        <h3 className="text-[13px] font-bold text-[#0088D1] mb-2">Company</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <Field label="Company name"><Input value={form["company.name"]} onChange={set("company.name")} /></Field>
           <Field label="Timezone" hint="IANA name, e.g. Asia/Karachi, Europe/London"><Input value={form["company.timezone"]} onChange={set("company.timezone")} /></Field>
         </div>
       </section>
       <section>
-        <h3 className="text-[13px] font-bold text-[#09BF64] mb-2">Attendance</h3>
+        <h3 className="text-[13px] font-bold text-[#0088D1] mb-2">Attendance</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
           <Field label="Work starts"><Input type="time" value={form["attendance.workStart"]} onChange={set("attendance.workStart")} /></Field>
           <Field label="Work ends"><Input type="time" value={form["attendance.workEnd"]} onChange={set("attendance.workEnd")} /></Field>
@@ -491,14 +491,14 @@ function Policies() {
           <Field label="Early-leave grace (minutes)"><Input type="number" min="0" value={form["attendance.earlyLeaveGraceMinutes"]} onChange={set("attendance.earlyLeaveGraceMinutes", true)} /></Field>
         </div>
         <div className="mt-3">
-          <span className="text-[12px] text-[#6F7C74]">Working days</span>
+          <span className="text-[12px] text-[#6E7A86]">Working days</span>
           <div className="flex flex-wrap gap-2 mt-1">
             {DAYS.map((d, i) => (
               <button
                 type="button"
                 key={d}
                 onClick={() => toggleDay(i)}
-                className={`px-3 h-8 rounded-md text-[12px] font-semibold border ${form["attendance.workingDays"].includes(i) ? "bg-[#09BF64] text-white border-[#09BF64]" : "border-[#6F7C7440] text-[#6F7C74]"}`}
+                className={`px-3 h-8 rounded-md text-[12px] font-semibold border ${form["attendance.workingDays"].includes(i) ? "bg-[#0088D1] text-white border-[#0088D1]" : "border-[#6E7A8640] text-[#6E7A86]"}`}
               >
                 {d}
               </button>
@@ -510,7 +510,7 @@ function Policies() {
         </Field>
       </section>
       <section>
-        <h3 className="text-[13px] font-bold text-[#09BF64] mb-2">Payroll</h3>
+        <h3 className="text-[13px] font-bold text-[#0088D1] mb-2">Payroll</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <Field label="Currency" hint="3-letter code, e.g. PKR, USD, AED"><Input value={form["payroll.currency"]} onChange={set("payroll.currency")} maxLength={3} /></Field>
           <Field label="Pay days basis" hint="Per-day pay for partial months, absences and unpaid leave" className="md:col-span-2">
@@ -525,8 +525,8 @@ function Policies() {
             />
           </Field>
         </div>
-        <label className="flex items-start gap-2 text-[13px] text-[#6F7C74] mt-3">
-          <input type="checkbox" className="accent-[#09BF64] mt-1" checked={form["payroll.deductAbsences"]} onChange={set("payroll.deductAbsences")} />
+        <label className="flex items-start gap-2 text-[13px] text-[#6E7A86] mt-3">
+          <input type="checkbox" className="accent-[#0088D1] mt-1" checked={form["payroll.deductAbsences"]} onChange={set("payroll.deductAbsences")} />
           <span>
             Deduct absences in payroll
             <span className="block text-[11px] text-[#8E8E9C]">Working days with no check-in are unpaid. Turn off until everyone uses attendance check-in, or untracked days will be deducted.</span>
@@ -534,13 +534,13 @@ function Policies() {
         </label>
       </section>
       <section>
-        <h3 className="text-[13px] font-bold text-[#09BF64] mb-2">Files & collaboration</h3>
+        <h3 className="text-[13px] font-bold text-[#0088D1] mb-2">Files & collaboration</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <Field label="Max upload size (MB)"><Input type="number" min="1" value={form["files.maxSizeMb"]} onChange={set("files.maxSizeMb", true)} /></Field>
           <Field label="Allowed file types" className="md:col-span-2"><Input value={form["files.allowedTypes"]} onChange={set("files.allowedTypes")} /></Field>
         </div>
-        <label className="flex items-center gap-2 text-[13px] text-[#6F7C74] mt-3">
-          <input type="checkbox" className="accent-[#09BF64]" checked={form["chat.employeesCanCreateGroups"]} onChange={set("chat.employeesCanCreateGroups")} /> Employees can create group chats
+        <label className="flex items-center gap-2 text-[13px] text-[#6E7A86] mt-3">
+          <input type="checkbox" className="accent-[#0088D1]" checked={form["chat.employeesCanCreateGroups"]} onChange={set("chat.employeesCanCreateGroups")} /> Employees can create group chats
         </label>
       </section>
       {editable && <Btn label="Save policies" loading={saving} onClick={save} />}
@@ -577,7 +577,7 @@ function AuditLog() {
         columns={[
           { header: "When", body: (l) => fmtDateTime(l.createdAt) },
           { header: "Actor", body: (l) => (l.actor ? (l.actor.employee ? fullName(l.actor.employee) : l.actor.email) : "System") },
-          { header: "Action", body: (l) => <code className="text-[12px] text-[#09BF64]">{l.action}</code> },
+          { header: "Action", body: (l) => <code className="text-[12px] text-[#0088D1]">{l.action}</code> },
           { header: "Entity", body: (l) => l.entityType },
           { header: "Details", body: (l) => <span className="block max-w-[380px] truncate text-[11px]" title={JSON.stringify(l.metadata ?? {}, null, 2)}>{l.metadata ? JSON.stringify(l.metadata) : "—"}</span> },
           { header: "IP", body: (l) => l.ip ?? "—" },

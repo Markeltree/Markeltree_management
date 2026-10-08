@@ -20,10 +20,10 @@ export default function SpeedometerWithStats({
   } = gaugeOptions;
 
   const customSegmentLabels = [
-    { text: "", position: "OUTSIDE", color: "#0F2418", fontSize: "10px" },
-    { text: "25", position: "OUTSIDE", color: "#0F2418", fontSize: "10px" },
-    { text: "50", position: "OUTSIDE", color: "#0F2418", fontSize: "10px" },
-    { text: "", position: "OUTSIDE", color: "#0F2418", fontSize: "10px" },
+    { text: "", position: "OUTSIDE", color: "#0B1B33", fontSize: "10px" },
+    { text: "25", position: "OUTSIDE", color: "#0B1B33", fontSize: "10px" },
+    { text: "50", position: "OUTSIDE", color: "#0B1B33", fontSize: "10px" },
+    { text: "", position: "OUTSIDE", color: "#0B1B33", fontSize: "10px" },
   ];
 
   return (
@@ -60,7 +60,7 @@ export default function SpeedometerWithStats({
       />
 
       {/* Custom Arc-Aligned Labels */}
-      <div className="absolute top-[178px] left-[8px] flex gap-[322px] text-[10px] text-[#0F2418] font-bold ">
+      <div className="absolute top-[178px] left-[8px] flex gap-[322px] text-[10px] text-[#0B1B33] font-bold ">
         <span>0</span>
         {/* <span>25</span>
         <span>50</span> */}
@@ -129,7 +129,7 @@ export default function SpeedometerWithStats({
             >
               {p.value}%
             </div>
-            <div className="flex items-center justify-center text-[#6F7C74] text-[14px] ">
+            <div className="flex items-center justify-center text-[#6E7A86] text-[14px] ">
               {p.name}
             </div>
           </div>

@@ -1,4 +1,4 @@
-// HTTP client for the Markeltree HR API.
+// HTTP client for the Teamora HR API.
 // Access token lives in memory only; the refresh token is an httpOnly cookie
 // scoped to /api/auth, so a 401 triggers one silent refresh and a retry.
 

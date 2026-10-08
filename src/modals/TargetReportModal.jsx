@@ -132,9 +132,9 @@ export default function TargetReportModal({ closeModal }) {
       <label className="relative flex items-center cursor-pointer w-4 h-4">
         <input
           type="checkbox"
-          className="peer appearance-none w-4 h-4 rounded border border-[#6F7C7440] bg-white 
-           checked:bg-[#09BF64] checked:border-[#09BF64] 
-           dark:bg-[#0D0D0D] dark:border-[#A9C2B3] dark:checked:bg-[#09BF64] dark:checked:border-[#09BF64]
+          className="peer appearance-none w-4 h-4 rounded border border-[#6E7A8640] bg-white 
+           checked:bg-[#0088D1] checked:border-[#0088D1] 
+           dark:bg-[#0D0D0D] dark:border-[#A9BACB] dark:checked:bg-[#0088D1] dark:checked:border-[#0088D1]
            focus:outline-none"
         />
         <svg
@@ -276,10 +276,10 @@ export default function TargetReportModal({ closeModal }) {
       ) : (
         <div className="flex flex-col md:flex-row justify-between gap-4">
           <div className="flex flex-col items-start gap-2">
-            <h2 className="text-[18px] text-[#333333] dark:text-[#EFFBF3] font-bold">
+            <h2 className="text-[18px] text-[#333333] dark:text-[#EEF8FD] font-bold">
               Target Report
             </h2>
-            <p className="text-[12px] text-[#666666] dark:text-[#EFFBF3]">
+            <p className="text-[12px] text-[#666666] dark:text-[#EEF8FD]">
               All recent targets in the system
             </p>
           </div>
@@ -339,13 +339,13 @@ export default function TargetReportModal({ closeModal }) {
                 {Object.entries(uniqueFilterValues).map(([field, values]) => {
                   return (
                     <div key={field} className="mb-3">
-                      <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
+                      <h4 className="font-semibold text-[12px] text-[#0B1B33] dark:text-[#EEF8FD] mb-2 capitalize">
                         {field}
                       </h4>
                       {values.map((val) => (
                         <label
                           key={val}
-                          className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
+                          className="flex items-center gap-2 mb-1 text-[12px] text-[#6E7A86CC] dark:text-[#EEF8FDCC] cursor-pointer select-none"
                         >
                           <input
                             type="checkbox"
@@ -353,7 +353,7 @@ export default function TargetReportModal({ closeModal }) {
                             onChange={() => toggleTempValue(field, val)}
                             className="hidden peer"
                           />
-                          <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
+                          <span className="w-3.5 h-3.5 rounded border border-[#6E7A86CC] peer-checked:bg-[#0088D1] peer-checked:border-[#0088D1] relative flex items-center justify-center">
                             <svg
                               className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                               fill="none"
@@ -374,13 +374,13 @@ export default function TargetReportModal({ closeModal }) {
                   <ActionButton
                     label="Reset"
                     labelClass="font-normal"
-                    buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                     onClick={resetAllFilters}
                   />
                   <ActionButton
                     label="Apply Filter"
                     labelClass="font-normal"
-                    buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                     onClick={applyTempFilters}
                   />
                 </div>

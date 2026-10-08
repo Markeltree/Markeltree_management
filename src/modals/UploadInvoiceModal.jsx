@@ -238,9 +238,9 @@ export default function UploadInvoiceModal({
                     placeholder="Invoice Number"
                     value={invoiceNumber}
                     onChange={(e) => setInvoiceNumber(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   />
                 </div>
                 <div className="flex flex-col w-full gap-1">
@@ -251,9 +251,9 @@ export default function UploadInvoiceModal({
                     placeholder="Email or mobile number"
                     value={clientName}
                     onChange={(e) => setClientName(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   />
                 </div>
               </div>
@@ -282,7 +282,7 @@ export default function UploadInvoiceModal({
                 <div className="flex flex-col w-full gap-1 pl-1">
                   <label
                     htmlFor="paymentTerm"
-                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   >
                     Payment Term
                   </label>
@@ -293,7 +293,7 @@ export default function UploadInvoiceModal({
                     onChange={(e) => setPaymentTerm(e.value)}
                     placeholder="Select type"
                     className={clsx(
-                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -312,9 +312,9 @@ export default function UploadInvoiceModal({
                     placeholder="e.g., €43"
                     value={paymentDue}
                     onChange={(e) => setPaymentDue(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   />
                 </div>
               </div>
@@ -329,9 +329,9 @@ export default function UploadInvoiceModal({
                     placeholder="e.g., €43"
                     value={VAT}
                     onChange={(e) => setVAT(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   />
                 </div>
                 <div className="flex flex-col w-full gap-1">
@@ -342,9 +342,9 @@ export default function UploadInvoiceModal({
                     placeholder="e.g., €43"
                     value={invoiceTotal}
                     onChange={(e) => setInvoiceTotal(e.target.value)}
-                    inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                    inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                     containerClass="flex flex-col gap-1 pl-1"
-                    labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   />
                 </div>
               </div>
@@ -355,7 +355,7 @@ export default function UploadInvoiceModal({
                 <div className="flex flex-col w-full gap-1 pl-1">
                   <label
                     htmlFor="verification"
-                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   >
                     Verification
                   </label>
@@ -366,7 +366,7 @@ export default function UploadInvoiceModal({
                     onChange={(e) => setVerification(e.value)}
                     placeholder="Select type"
                     className={clsx(
-                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -380,7 +380,7 @@ export default function UploadInvoiceModal({
                 <div className="flex flex-col w-full gap-1 pl-1">
                   <label
                     htmlFor="Status"
-                    className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                    className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                   >
                     Status
                   </label>
@@ -391,7 +391,7 @@ export default function UploadInvoiceModal({
                     onChange={(e) => setStatus(e.value)}
                     placeholder="Select type"
                     className={clsx(
-                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                      "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                     )}
                     pt={{
                       panel: {
@@ -407,7 +407,7 @@ export default function UploadInvoiceModal({
               <div className="flex flex-col gap-1 mb-4 ">
                 <label
                   htmlFor="note"
-                  className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                  className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
                 >
                   Notes
                 </label>
@@ -417,7 +417,7 @@ export default function UploadInvoiceModal({
                   rows={4}
                   cols={100}
                   placeholder="Invoice notes"
-                  className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                  className="h-[70px] pt-1 pl-3 text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                 />
               </div>
 
@@ -427,7 +427,7 @@ export default function UploadInvoiceModal({
                   <ActionButton
                     label="Cancel"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                     onClick={closeModal}
                   />
                 </div>
@@ -435,7 +435,7 @@ export default function UploadInvoiceModal({
                   <ActionButton
                     label="Save"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                     // onClick={handleNextClick}
                   />
                 </div>
@@ -536,7 +536,7 @@ export default function UploadInvoiceModal({
                   <ActionButton
                     label="Cancel"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                     onClick={closeModal}
                   />
                 </div>
@@ -544,7 +544,7 @@ export default function UploadInvoiceModal({
                   <ActionButton
                     label="Save"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                     // onClick={handleNextClick}
                   />
                 </div>
@@ -560,7 +560,7 @@ export default function UploadInvoiceModal({
 
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col w-full max-h-[80vh] overflow-y-auto px-3 mt-4 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full max-h-[80vh] overflow-y-auto px-3 mt-4 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <SimpleTabView
           activeIndex={activeTabIndex}
           onTabChange={setActiveTabIndex}
@@ -584,9 +584,9 @@ export default function UploadInvoiceModal({
           ]}
           renderItem={renderItem}
           tabLabelClass="text-[12px] lg:text-[14px] font-normal text-center w-full -mt-2"
-          activeTabClass="border-b-[2px] border-[#09BF64] text-[#0F2418] dark:text-[#EFFBF3] font-medium"
-          inactiveTabClass="text-[#0F2418] dark:text-[#EBF9F0]"
-          tabHeaderClass="flex w-full border-b border-[#09BF64] mt-2"
+          activeTabClass="border-b-[2px] border-[#0088D1] text-[#0B1B33] dark:text-[#EEF8FD] font-medium"
+          inactiveTabClass="text-[#0B1B33] dark:text-[#EAF6FC]"
+          tabHeaderClass="flex w-full border-b border-[#0088D1] mt-2"
           contentContainerClass="mt-4 w-full"
           panelClass=""
         />

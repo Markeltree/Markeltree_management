@@ -100,9 +100,9 @@ export default function OrderSummaryModal({ closeModal }) {
         </div>
 
         {/* Table Header Skeleton */}
-        <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
           <div className="min-w-[600px]">
-            <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] px-4 pt-3 pb-2 bg-[#EFFBF3] dark:bg-[#141414] rounded-lg gap-3">
+            <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] px-4 pt-3 pb-2 bg-[#EEF8FD] dark:bg-[#141414] rounded-lg gap-3">
               {Array(7)
                 .fill(0)
                 .map((_, i) => (
@@ -121,7 +121,7 @@ export default function OrderSummaryModal({ closeModal }) {
               .map((_, idx) => (
                 <div
                   key={idx}
-                  className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-dashed border-[#A9C2B3] dark:border-[#A9C2B3] gap-3"
+                  className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-dashed border-[#A9BACB] dark:border-[#A9BACB] gap-3"
                 >
                   {/* Product Info */}
                   <div className="flex flex-col gap-2 items-start">
@@ -198,8 +198,8 @@ export default function OrderSummaryModal({ closeModal }) {
         </div>
 
         {/* Summary Footer Skeleton */}
-        <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
-          <div className="bg-[#EFFBF3] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-3">
+        <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+          <div className="bg-[#EEF8FD] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-3">
             {Array(7)
               .fill(0)
               .map((_, idx) => (
@@ -241,15 +241,15 @@ export default function OrderSummaryModal({ closeModal }) {
     <div className="space-y-3">
       {/* Header */}
       <div className="flex flex-row gap-2">
-        <div className=" text-[20px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+        <div className=" text-[20px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
           Order Summary
         </div>
       </div>
 
       {/* Table Headers */}
-      <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <div className="min-w-[600px]">
-          <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] text-[14px] font-normal text-[#0E1A12] dark:text-[#CDEEDB] px-4 pt-3 pb-2 bg-[#EFFBF3] dark:bg-[#141414] rounded-lg">
+          <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] text-[14px] font-normal text-[#0C1626] dark:text-[#CDE9F7] px-4 pt-3 pb-2 bg-[#EEF8FD] dark:bg-[#141414] rounded-lg">
             <div className="text-left">Product</div>
             <div className="text-center">Quantity(Carton)</div>
             <div className="text-center">Pallet</div>
@@ -264,15 +264,15 @@ export default function OrderSummaryModal({ closeModal }) {
           {products.map((product, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-dashed border-[#A9C2B3] dark:border-[#A9C2B3] text-sm"
+              className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center px-4 py-4 border-b border-dashed border-[#A9BACB] dark:border-[#A9BACB] text-sm"
             >
               {/* Product Info */}
               <div className="flex flex-col gap-2 items-start">
                 <div className="flex flex-row gap-1 whitespace-nowrap">
-                  <div className="font-semibold text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
+                  <div className="font-semibold text-[12px] text-[#0C1626] dark:text-[#CDE9F7]">
                     {product.name}
                   </div>
-                  <div className="font-semibold text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
+                  <div className="font-semibold text-[12px] text-[#0C1626] dark:text-[#CDE9F7]">
                     ({product.id})
                   </div>
                 </div>
@@ -280,7 +280,7 @@ export default function OrderSummaryModal({ closeModal }) {
 
               {/* Quantity Selector */}
               <div className="flex justify-center">
-                <div className="flex items-center border border-[#09BF64] rounded px-2 py-1 gap-2">
+                <div className="flex items-center border border-[#0088D1] rounded px-2 py-1 gap-2">
                   <button
                     onClick={() => updateQuantity(product.id, -1)}
                     className="p-1"
@@ -289,7 +289,7 @@ export default function OrderSummaryModal({ closeModal }) {
                       icon="mdi:minus"
                       width="18px"
                       height="18px"
-                      className="text-[#09BF64] bg-[#09BF6414]"
+                      className="text-[#0088D1] bg-[#0088D114]"
                     />
                   </button>
                   <span className="w-4 text-center font-medium">
@@ -303,29 +303,29 @@ export default function OrderSummaryModal({ closeModal }) {
                       icon="mdi:plus"
                       width="18px"
                       height="18px"
-                      className="text-[#09BF64] bg-[#09BF6414]"
+                      className="text-[#0088D1] bg-[#0088D114]"
                     />
                   </button>
                 </div>
               </div>
 
               {/* Pallet */}
-              <div className="text-center font-semibold text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
+              <div className="text-center font-semibold text-[12px] text-[#0C1626] dark:text-[#CDE9F7]">
                 {product.pallets}
               </div>
 
               {/* Catons */}
-              <div className="text-center font-semibold text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
+              <div className="text-center font-semibold text-[12px] text-[#0C1626] dark:text-[#CDE9F7]">
                 {product.cartons}
               </div>
 
               {/* Manufacturer */}
-              <div className="text-center font-semibold text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
+              <div className="text-center font-semibold text-[12px] text-[#0C1626] dark:text-[#CDE9F7]">
                 {product.manufacturer}
               </div>
 
               {/* Price */}
-              <div className="text-center font-semibold text-[12px] text-[#0E1A12] dark:text-[#CDEEDB]">
+              <div className="text-center font-semibold text-[12px] text-[#0C1626] dark:text-[#CDE9F7]">
                 {product.price}
               </div>
 
@@ -336,7 +336,7 @@ export default function OrderSummaryModal({ closeModal }) {
                     icon="mdi:trash-can-outline"
                     width="16"
                     height="16"
-                    className="text-[#0E1A12] dark:text-[#CDEEDB]"
+                    className="text-[#0C1626] dark:text-[#CDE9F7]"
                   />
                 </button>
               </div>
@@ -350,80 +350,80 @@ export default function OrderSummaryModal({ closeModal }) {
         <ActionButton
           label="Add More Products"
           labelClass="font-normal text-[12px]"
-          buttonClass="flex items-center justify-center gap-1 text-[12px] h-[34px] px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[12px] h-[34px] px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
         />
       </div>
 
       {/* Summary Footer */}
-      <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
-        <div className="bg-[#EFFBF3] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-2">
+      <div className="overflow-auto max-h-[30vh] px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+        <div className="bg-[#EEF8FD] dark:bg-[#2C2C2C66] p-4 rounded-lg space-y-2">
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Quantity
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               50 Carots
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Total Pallets
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               2
             </span>
           </div>
 
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Per Pallet Unit Quantity
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               2
             </span>
           </div>
 
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Total Units
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               2
             </span>
           </div>
 
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Order
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               Promo
             </span>
           </div>
 
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Promo Price
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               €1.00
             </span>
           </div>
 
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Total Price (€)
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               €1.00
             </span>
           </div>
 
           <div className="flex justify-between">
-            <span className="text-[#6F7C74] text-[16px] dark:text-[#6F7C74]">
+            <span className="text-[#6E7A86] text-[16px] dark:text-[#6E7A86]">
               Total Price (£)
             </span>
-            <span className="text-[#0F2418] text-[16px] dark:text-[#B5E6C9]">
+            <span className="text-[#0B1B33] text-[16px] dark:text-[#B5DEF2]">
               £1.00
             </span>
           </div>
@@ -435,13 +435,13 @@ export default function OrderSummaryModal({ closeModal }) {
         <ActionButton
           label="Back"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-black border border-[#09BF64] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-black border border-[#0088D1] focus:outline-none focus:ring-0"
           onClick={handleBack}
         />
         <ActionButton
           label="Next"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
           onClick={handleNext}
         />
       </div>

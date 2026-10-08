@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Skeleton } from "primereact/skeleton";
 
 /* Chevron Icons */
-const ChevronRight = ({ size = 20, color = "#09BF64" }) => (
+const ChevronRight = ({ size = 20, color = "#0088D1" }) => (
   <svg
     width={size}
     height={size}
@@ -247,11 +247,11 @@ export default function Help() {
       <div className="bg-[#F6F8FB] dark:bg-[#141414]">
         {/* Top link */}
         <div className="px-4 pt-5">
-          <span className="text-[#09BF64] text-sm font-medium">Help</span>
+          <span className="text-[#0088D1] text-sm font-medium">Help</span>
         </div>
 
         {/* Title */}
-        <h1 className="text-center text-[32px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] mt-4">
+        <h1 className="text-center text-[32px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] mt-4">
           Help Center
         </h1>
 
@@ -272,15 +272,15 @@ export default function Help() {
                         className={`w-full flex items-center justify-between rounded-lg px-4 py-3 text-left transition
                         ${
                           active
-                            ? "bg-[#EBF9F0] dark:bg-transparent text-[#09BF64] dark:text-[#FFFFFF] font-normal"
-                            : "text-[#6B7280] dark:text-[#6F7C74] hover:bg-gray-50 dark:hover:bg-[#1A1A1A]"
+                            ? "bg-[#EAF6FC] dark:bg-transparent text-[#0088D1] dark:text-[#FFFFFF] font-normal"
+                            : "text-[#6B7280] dark:text-[#6E7A86] hover:bg-gray-50 dark:hover:bg-[#1A1A1A]"
                         }`}
                       >
                         <span className="truncate">{c.name}</span>
                         {active && (
                           <ChevronRight
                             size={24}
-                            color={isDarkMode ? "#FFFFFF" : "#09BF64"}
+                            color={isDarkMode ? "#FFFFFF" : "#0088D1"}
                           />
                         )}
                       </button>
@@ -352,13 +352,13 @@ export default function Help() {
                             {/* Circle color changes */}
                             <span
                               className={`mt-1 w-4 h-4 rounded-full inline-block ${
-                                open ? "bg-[#09BF64]" : "bg-[#A5A6F6]"
+                                open ? "bg-[#0088D1]" : "bg-[#A5A6F6]"
                               }`}
                             ></span>
                             <span
                               className={`text-[15px] font-normal ${
                                 open
-                                  ? "text-[#0F2418] dark:text-[#FFFFFF]"
+                                  ? "text-[#0B1B33] dark:text-[#FFFFFF]"
                                   : "text-[#1F2937] dark:text-[#FFFFFF]"
                               }`}
                             >
@@ -367,14 +367,14 @@ export default function Help() {
                           </div>
                           <ChevronDown
                             size={24}
-                            color={open ? "#09BF64" : "#A7AEDB"}
+                            color={open ? "#0088D1" : "#A7AEDB"}
                             open={open}
                           />
                         </button>
 
                         {open && (
                           <div className="px-11 md:px-12 pb-4">
-                            <ul className="list-disc pl-6 text-[14px] leading-6 text-[#6F7DAC] dark:text-[#6F7C74] space-y-1">
+                            <ul className="list-disc pl-6 text-[14px] leading-6 text-[#6F7DAC] dark:text-[#6E7A86] space-y-1">
                               {item.a.map((line, idx) => (
                                 <li key={idx}>{line}</li>
                               ))}

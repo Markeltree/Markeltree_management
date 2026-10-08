@@ -30,7 +30,7 @@ export default function FilterCalendar({ value = [], onChange }) {
   return (
     <div className="mb-3 relative w-full">
       {/* Label */}
-      <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2">
+      <h4 className="font-semibold text-[12px] text-[#0B1B33] dark:text-[#EEF8FD] mb-2">
         Date Range
       </h4>
 
@@ -38,7 +38,7 @@ export default function FilterCalendar({ value = [], onChange }) {
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="flex items-center gap-2 w-full px-3 py-2 rounded text-[#09BF64] bg-[#09BF641A] text-[13px] font-medium hover:bg-[#09BF6433] transition"
+        className="flex items-center gap-2 w-full px-3 py-2 rounded text-[#0088D1] bg-[#0088D11A] text-[13px] font-medium hover:bg-[#0088D133] transition"
       >
         <Icon icon="mdi:calendar" width={18} height={18} />
         <span>
@@ -125,7 +125,7 @@ export default function FilterCalendar({ value = [], onChange }) {
     .react-datepicker__day--selected,
     .react-datepicker__day--in-range,
     .react-datepicker__day--keyboard-selected {
-      background-color: #09BF64 !important;
+      background-color: #0088D1 !important;
       color: white !important;
     }
     .react-datepicker__day:hover {

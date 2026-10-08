@@ -32,7 +32,7 @@ const ConfitmDelivery = () => {
   const orderNotes = "Be careful while loading and offloading the product.";
 
   const companyInfo = {
-    name: "Markeltree",
+    name: "Teamora",
     address: "for Regents Positive, 4. Summarizeward Road Northampton, Northampton after March 18th.",
     email: "service.support@",
     phone: "07968-28802",

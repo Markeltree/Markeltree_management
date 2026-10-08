@@ -86,7 +86,7 @@ export default function QuickAction() {
         className="text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-xl text-sm px-0 py-6 mb-2"
 
           text="Updated Inventory"
-          bgColor="bg-[#09BF64]"
+          bgColor="bg-[#0088D1]"
           textColor="text-white"
           fontSize="text-[12px]"
           icon={InventoryOutlineIcon}

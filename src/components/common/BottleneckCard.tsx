@@ -31,7 +31,7 @@ const BottleneckCard = ({
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         {/* Left Side - Info */}
         <div className="flex flex-col gap-2">
-          <p className="text-base text-[16px] sm:text-lg font-semibold text-[#0F2418] dark:text-orange-400 mb-3">
+          <p className="text-base text-[16px] sm:text-lg font-semibold text-[#0B1B33] dark:text-orange-400 mb-3">
             {title}
           </p>
           <HeadingTwo
@@ -50,9 +50,9 @@ const BottleneckCard = ({
         <div>
           <HeadingOne
             text={orderCount + " Orders"}
-            colorClass="text-[#0F2418]"
+            colorClass="text-[#0B1B33]"
             fontSize="text-[32px]"
-            className="font-bold text-[#0F2418] mb-6"
+            className="font-bold text-[#0B1B33] mb-6"
             fontWeight="700"
           />
           <p className="text-[16px] text-[#AE0003]">{status}</p>
@@ -60,7 +60,7 @@ const BottleneckCard = ({
         <div>
           <button
             onClick={onClick}
-            className="mt-4 bg-[#0F2418] text-[12px] text-white px-[12px] py-[12px] rounded-[12px] hover:bg-blue-800 transition"
+            className="mt-4 bg-[#0B1B33] text-[12px] text-white px-[12px] py-[12px] rounded-[12px] hover:bg-blue-800 transition"
           >
             {buttonLabel}
           </button>

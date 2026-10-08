@@ -149,13 +149,13 @@ export default function UpdateInventoryModal({
               placeholder="Search and product"
               value={productName}
               onChange={(e) => setProductName(e.target.value)}
-              inputClass="w-full pr-10 pl-3 h-[40px] rounded-lg border border-[#6F7C7440] dark:border-[#A9C2B3] text-[14px] dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+              inputClass="w-full pr-10 pl-3 h-[40px] rounded-lg border border-[#6E7A8640] dark:border-[#A9BACB] text-[14px] dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
               containerClass="flex flex-col gap-1 pl-1"
-              labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+              labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
               rightIcon={
                 <Icon
                   icon="ic:baseline-search"
-                  className="text-[#09BF64] text-[18px]"
+                  className="text-[#0088D1] text-[18px]"
                 />
               }
             />
@@ -164,7 +164,7 @@ export default function UpdateInventoryModal({
             <div className="flex flex-col gap-1 pl-1">
               <label
                 htmlFor="updateType"
-                className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
               >
                 Updated Type
               </label>
@@ -175,7 +175,7 @@ export default function UpdateInventoryModal({
                 onChange={(e) => setUpdatedType(e.target.value)}
                 placeholder="Select update type"
                 className={clsx(
-                  "text-[14px] dark:bg-[#0D0D0D] border border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
+                  "text-[14px] dark:bg-[#0D0D0D] border border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)]"
                 )}
                 pt={{
                   panel: {
@@ -188,25 +188,25 @@ export default function UpdateInventoryModal({
 
             {/* row 3 */}
             <div className="flex items-center gap-6 pl-1">
-              <label className="flex items-center gap-2 text-[14px] text-[#6F7C74] dark:text-[#A9C2B3]">
+              <label className="flex items-center gap-2 text-[14px] text-[#6E7A86] dark:text-[#A9BACB]">
                 <input
                   type="radio"
                   name="packageType"
                   value="pallet"
                   checked={packageType === "pallet"}
                   onChange={() => setPackageType("pallet")}
-                  className="accent-[#09BF64]"
+                  className="accent-[#0088D1]"
                 />
                 Pallet
               </label>
-              <label className="flex items-center gap-2 text-[14px] text-[#6F7C74] dark:text-[#A9C2B3]">
+              <label className="flex items-center gap-2 text-[14px] text-[#6E7A86] dark:text-[#A9BACB]">
                 <input
                   type="radio"
                   name="packageType"
                   value="carton"
                   checked={packageType === "carton"}
                   onChange={() => setPackageType("carton")}
-                  className="accent-[#09BF64]"
+                  className="accent-[#0088D1]"
                 />
                 Carton
               </label>
@@ -222,10 +222,10 @@ export default function UpdateInventoryModal({
                 value={currentStock}
                 onChange={(e) => setCurrentStock(e.target.value)}
                 disabled={true}
-                inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]
-                disabled:bg-[#6F7C7426] dark:disabled:bg-[#6F7C7426] disabled:text-[#2B2B2B] disabled:dark:text-[#A9C2B3] disabled:cursor-not-allowed disabled:"
+                inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]
+                disabled:bg-[#6E7A8626] dark:disabled:bg-[#6E7A8626] disabled:text-[#2B2B2B] disabled:dark:text-[#A9BACB] disabled:cursor-not-allowed disabled:"
                 containerClass="w-full flex flex-col gap-1 pl-1"
-                labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
               />
 
               <FieldComponent
@@ -235,9 +235,9 @@ export default function UpdateInventoryModal({
                 placeholder="50 Cartons"
                 value={updatedQuantity}
                 onChange={(e) => setuUpdatedQuantity(e.target.value)}
-                inputClass="text-[14px]  pl-3 border border-b border-[#6F7C7440] dark:border-[#A9C2B3] h-[40px] rounded-lg dark:text-[#A9C2B3] focus:outline-none focus:ring-1 focus:ring-[#A6E8C1] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
+                inputClass="text-[14px]  pl-3 border border-b border-[#6E7A8640] dark:border-[#A9BACB] h-[40px] rounded-lg dark:text-[#A9BACB] focus:outline-none focus:ring-1 focus:ring-[#A6DDF3] hover:shadow-md transition-shadow duration-200 dark:hover:[box-shadow:0_3px_10px_rgba(255,255,255,0.2)] dark:bg-[#0D0D0D]"
                 containerClass="w-full flex flex-col gap-1 pl-1"
-                labelClass="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]"
+                labelClass="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]"
               />
             </div>
 
@@ -247,7 +247,7 @@ export default function UpdateInventoryModal({
                 <ActionButton
                   label="Cancel"
                   labelClass="font-normal text-[12px] md:text-[16px]"
-                  buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                   onClick={closeModal}
                 />
               </div>
@@ -255,7 +255,7 @@ export default function UpdateInventoryModal({
                 <ActionButton
                   label="Save"
                   labelClass="font-normal text-[12px] md:text-[16px]"
-                  buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                  buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                   //   onClick={handleNextClick}
                 />
               </div>
@@ -355,7 +355,7 @@ export default function UpdateInventoryModal({
                   <ActionButton
                     label="Cancel"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                     onClick={closeModal}
                   />
                 </div>
@@ -363,7 +363,7 @@ export default function UpdateInventoryModal({
                   <ActionButton
                     label="Save"
                     labelClass="font-normal text-[12px] md:text-[16px]"
-                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                    buttonClass="flex items-center justify-center gap-1 text-sm w-full h-[50px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                     // onClick={PreviewInvoice}
                   />
                 </div>
@@ -380,11 +380,11 @@ export default function UpdateInventoryModal({
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-row justify-between w-full">
-        <h1 className="text-[18px] text-[#0F2418] dark:text-[#EFFBF3] font-bold">
+        <h1 className="text-[18px] text-[#0B1B33] dark:text-[#EEF8FD] font-bold">
           Update Inventory
         </h1>
       </div>
-      <div className="flex flex-col w-full max-h-[80vh] overflow-y-hidden px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EFFBF3] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
+      <div className="flex flex-col w-full max-h-[80vh] overflow-y-hidden px-3 scrollbar-thin scrollbar-thumb-[#8E8E9C2E] scrollbar-track-[#EEF8FD] dark:scrollbar-thumb-[#8E8E9C2E] dark:scrollbar-track-[#141414]">
         <SimpleTabView
           activeIndex={activeTabIndex}
           onTabChange={setActiveTabIndex}
@@ -408,9 +408,9 @@ export default function UpdateInventoryModal({
           ]}
           renderItem={renderItem}
           tabLabelClass="text-[12px] lg:text-[14px] font-normal text-center w-full"
-          activeTabClass="border-b-[2px] border-[#09BF64] text-[#0F2418] dark:text-[#EFFBF3] font-medium"
-          inactiveTabClass="text-[#0F2418] dark:text-[#EBF9F0]"
-          tabHeaderClass="flex w-full border-b border-[#09BF64] mt-2"
+          activeTabClass="border-b-[2px] border-[#0088D1] text-[#0B1B33] dark:text-[#EEF8FD] font-medium"
+          inactiveTabClass="text-[#0B1B33] dark:text-[#EAF6FC]"
+          tabHeaderClass="flex w-full border-b border-[#0088D1] mt-2"
           contentContainerClass="mt-4 w-full"
           panelClass=""
         />

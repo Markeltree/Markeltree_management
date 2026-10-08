@@ -45,7 +45,7 @@ export default function PinSection() {
     <div className="flex-1 pl-3 pr-3 pt-4 bg-gray-50 dark:bg-[#141414]">
       <div className="flex flex-row gap-4 justify-between items-center">
         <h1
-          className="text-[#09BF64] text-[14px] flex flex-row items-center gap-1 cursor-pointer"
+          className="text-[#0088D1] text-[14px] flex flex-row items-center gap-1 cursor-pointer"
           onClick={() => navigate(-1)}
         >
           <Icon icon="ion:arrow-back-outline" />
@@ -57,7 +57,7 @@ export default function PinSection() {
           iconLight={<Icon icon="fluent-mdl2:unpin" className="w-4 h-4" />}
           iconDark={<Icon icon="fluent-mdl2:unpin" className="w-4 h-4" />}
           iconPos="left"
-          buttonClass="flex items-center justify-center gap-2 text-[14px] h-[45px] w-auto bg-[#09BF64] px-3 text-white dark:text-black border-none focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-2 text-[14px] h-[45px] w-auto bg-[#0088D1] px-3 text-white dark:text-black border-none focus:outline-none focus:ring-0"
           iconClass="text-white dark:text-black w-5 h-5"
           onClick={() => {
             clearPins();

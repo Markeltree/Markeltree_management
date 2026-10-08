@@ -4,7 +4,7 @@ const UnderlineButton = ({ Children = "text", onClick, className = "" }) => {
   return (
     <button
       onClick={onClick}
-      className={`pb-2 font-semibold text-[#144A2A] dark:text-white ${className}`}
+      className={`pb-2 font-semibold text-[#0F3B66] dark:text-white ${className}`}
     >
       {Children}
     </button>

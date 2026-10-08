@@ -27,7 +27,7 @@ const ProductDetails = ({
         <div className="overflow-x-auto">
           <table className="min-w-full border-collapse">
             <thead>
-              <tr className="border-gray-200 bg-[#EFFBF3] rounded-lg">
+              <tr className="border-gray-200 bg-[#EEF8FD] rounded-lg">
                 <th className=" py-3 px-4 font-medium text-gray-600 text-sm rounded-l-lg text-center">
                   Product Image
                 </th>

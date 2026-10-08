@@ -376,7 +376,7 @@ export default function ManufacturerOrderData() {
             header: "Actions",
             body: (rowData) => (
               <button
-                className="w-[110px] h-[28px] flex items-center gap-1 px-3 py-1 bg-[#09BF64] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#81D959]"
+                className="w-[110px] h-[28px] flex items-center gap-1 px-3 py-1 bg-[#0088D1] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#01CEE9]"
                 onClick={() => navigate("/manufacturerorderdetail")}
               >
                 <Icon
@@ -401,7 +401,7 @@ export default function ManufacturerOrderData() {
             header: "Actions",
             body: (rowData) => (
               <button
-                className="w-[110px] h-[28px] flex items-center gap-1 px-3 py-1 bg-[#09BF64] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#81D959]"
+                className="w-[110px] h-[28px] flex items-center gap-1 px-3 py-1 bg-[#0088D1] hover:bg-[#4b4de0] text-white text-[12px] rounded dark:text-[#0D0D0D] dark:bg-[#01CEE9]"
                 onClick={() => navigate("/manufacturerdetails")}
               >
                 <Icon
@@ -446,7 +446,7 @@ export default function ManufacturerOrderData() {
     <div className="space-y-4">
       <div className="p-4 space-y-4 relative bg-white dark:bg-[#000000] rounded-lg mt-8">
         {/* Tabs Skeleton */}
-        <div className="inline-flex w-full md:w-auto bg-[#EFFBF3] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
+        <div className="inline-flex w-full md:w-auto bg-[#EEF8FD] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
           {[...Array(2)].map((_, i) => (
             <Skeleton
               key={i}
@@ -502,7 +502,7 @@ export default function ManufacturerOrderData() {
             {[...Array(7)].map((_, rowIdx) => (
               <div
                 key={rowIdx}
-                className="flex flex-row justify-between border-b border-[#6F7C7426] w-full gap-2"
+                className="flex flex-row justify-between border-b border-[#6E7A8626] w-full gap-2"
               >
                 {[...Array(7)].map((_, colIdx) => (
                   <Skeleton
@@ -540,7 +540,7 @@ export default function ManufacturerOrderData() {
     <div className="space-y-4 ">
       <div className="p-4 space-y-4 relative bg-white dark:bg-[#000000] rounded-lg mt-8">
         {/* Tabs */}
-        <div className="inline-flex w-auto bg-[#EFFBF3] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
+        <div className="inline-flex w-auto bg-[#EEF8FD] dark:bg-[#141414] h-[48px] items-center rounded-full overflow-hidden whitespace-nowrap">
           {["Orders", "Manufacturers"].map((label, i) => (
             <button
               key={i}
@@ -558,8 +558,8 @@ export default function ManufacturerOrderData() {
               className={`h-full text-[12px] md:text-[16px] font-medium transition-all rounded-full
         ${
           i === activeIndex
-            ? "text-white dark:text-[#0D0D0D] bg-[#09BF64] dark:bg-[#81D959] px-3 md:px-6"
-            : "text-[#0F2418] dark:text-[#D4D4D4] hover:text-[#09BF64] dark:hover:text-[#EFFBF3] px-3 md:px-6"
+            ? "text-white dark:text-[#0D0D0D] bg-[#0088D1] dark:bg-[#01CEE9] px-3 md:px-6"
+            : "text-[#0B1B33] dark:text-[#D4D4D4] hover:text-[#0088D1] dark:hover:text-[#EEF8FD] px-3 md:px-6"
         }`}
             >
               {label}
@@ -572,10 +572,10 @@ export default function ManufacturerOrderData() {
         <div className="flex flex-col lg:flex-row gap-2 items-center w-full">
           <div className="flex flex-row gap-3 items-center w-full">
             <div className="flex flex-col gap-1 w-full">
-              <h2 className="text-[#333333] dark:text-[#EFFBF3] font-bold text-[16px] lg:text-[18px]">
+              <h2 className="text-[#333333] dark:text-[#EEF8FD] font-bold text-[16px] lg:text-[18px]">
                 {tabTitles[activeIndex].heading}
               </h2>
-              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EFFBF3]">
+              <p className="text-[12px] lg:text-[14px] text-[#666666] dark:text-[#EEF8FD]">
                 {tabTitles[activeIndex].subheading}
               </p>
             </div>
@@ -688,7 +688,7 @@ export default function ManufacturerOrderData() {
                       }
                       iconPos="left"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-sm h-[40px] w-[180px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-sm h-[40px] w-[180px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={addManufacturer}
                     />
                   </div>
@@ -726,13 +726,13 @@ export default function ManufacturerOrderData() {
                   {Object.entries(uniqueFilterValues).map(([field, values]) => {
                     return (
                       <div key={field} className="mb-3">
-                        <h4 className="font-semibold text-[12px] text-[#0F2418] dark:text-[#EFFBF3] mb-2 capitalize">
+                        <h4 className="font-semibold text-[12px] text-[#0B1B33] dark:text-[#EEF8FD] mb-2 capitalize">
                           {field}
                         </h4>
                         {values.map((val) => (
                           <label
                             key={val}
-                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6F7C74CC] dark:text-[#EFFBF3CC] cursor-pointer select-none"
+                            className="flex items-center gap-2 mb-1 text-[12px] text-[#6E7A86CC] dark:text-[#EEF8FDCC] cursor-pointer select-none"
                           >
                             <input
                               type="checkbox"
@@ -742,7 +742,7 @@ export default function ManufacturerOrderData() {
                               onChange={() => toggleTempValue(field, val)}
                               className="hidden peer"
                             />
-                            <span className="w-3.5 h-3.5 rounded border border-[#6F7C74CC] peer-checked:bg-[#09BF64] peer-checked:border-[#09BF64] relative flex items-center justify-center">
+                            <span className="w-3.5 h-3.5 rounded border border-[#6E7A86CC] peer-checked:bg-[#0088D1] peer-checked:border-[#0088D1] relative flex items-center justify-center">
                               <svg
                                 className="w-2.5 h-2.5 text-white dark:text-[#0D0D0D]"
                                 fill="none"
@@ -766,7 +766,7 @@ export default function ManufacturerOrderData() {
                     <ActionButton
                       label="Reset"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#09BF64] dark:bg-[#0D0D0D] dark:text-[#09BF64] border border-[#09BF64] focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] h-[35px] w-full px-4 bg-white text-[#0088D1] dark:bg-[#0D0D0D] dark:text-[#0088D1] border border-[#0088D1] focus:outline-none focus:ring-0"
                       onClick={() => {
                         setTempFilters({});
                         setFilters({});
@@ -776,7 +776,7 @@ export default function ManufacturerOrderData() {
                     <ActionButton
                       label="Apply Filter"
                       labelClass="font-normal"
-                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black border-none focus:outline-none focus:ring-0"
+                      buttonClass="flex items-center justify-center gap-1 text-[10px] w-full h-[35px] px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black border-none focus:outline-none focus:ring-0"
                       onClick={() => {
                         setFilters(tempFilters); // temp filters ko apply filters me copy karo
                         setFilterOpen(false); // panel band karo
@@ -811,7 +811,7 @@ export default function ManufacturerOrderData() {
                 paginator={false}
                 className="p-datatable-sm w-full my-delete-table [&_.p-datatable-tbody>tr]:dark:!bg-black"
                 rowClassName={() =>
-                  "border-b border-[#6F7C7426] text-[13px] text-[#666666] dark:text-[#EFFBF3] dark:bg-black whitespace-nowrap"
+                  "border-b border-[#6E7A8626] text-[13px] text-[#666666] dark:text-[#EEF8FD] dark:bg-black whitespace-nowrap"
                 }
                 emptyMessage={
                   <div className="py-6 text-[15px] bg-white dark:bg-black text-black dark:text-white">

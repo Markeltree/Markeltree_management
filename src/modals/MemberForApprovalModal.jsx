@@ -66,7 +66,7 @@ export default function MemberForApprovalModal({ closeModal }) {
         </div>
 
         {/* Notes Section */}
-        <div className="bg-[#09BF640F] rounded-lg mb-4 mt-4 pl-1">
+        <div className="bg-[#0088D10F] rounded-lg mb-4 mt-4 pl-1">
           <div className="flex flex-col gap-2 p-2">
             {/* Notes heading */}
             <Skeleton
@@ -107,7 +107,7 @@ export default function MemberForApprovalModal({ closeModal }) {
 
   return (
     <div className="space-y-3">
-      <h1 className="text-[18px] text-[#0F2418] dark:text-[#B5E6C9] font-bold">
+      <h1 className="text-[18px] text-[#0B1B33] dark:text-[#B5DEF2] font-bold">
         Select members for Approval
       </h1>
 
@@ -127,12 +127,12 @@ export default function MemberForApprovalModal({ closeModal }) {
         />
       </div>
 
-      <div className="bg-[#09BF640F] rounded-lg mb-4 mt-4 pl-1">
+      <div className="bg-[#0088D10F] rounded-lg mb-4 mt-4 pl-1">
         <div className="flex flex-col gap-2 p-2">
-          <h2 className="dark:text-[#A9C2B3] text-[14px] text-[#6F7C74]">
+          <h2 className="dark:text-[#A9BACB] text-[14px] text-[#6E7A86]">
             Notes
           </h2>
-          <p className="text-[#0F2418] text-[16px] dark:text-[#EFFBF3]">
+          <p className="text-[#0B1B33] text-[16px] dark:text-[#EEF8FD]">
             Order automatically sent to the manufacturer when approver will
             approve this order.
           </p>
@@ -143,13 +143,13 @@ export default function MemberForApprovalModal({ closeModal }) {
         <ActionButton
           label="Back"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#09BF64] dark:bg-black border border-[#09BF64] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-white text-[#0088D1] dark:bg-black border border-[#0088D1] focus:outline-none focus:ring-0"
           onClick={handleBack}
         />
         <ActionButton
           label="Continue"
           labelClass="font-normal text-[12px] md:text-[16px]"
-          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
+          buttonClass="flex items-center justify-center gap-1 text-[16px] h-[50px] w-full px-4 bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-[#0D0D0D] focus:outline-none focus:ring-0"
           onClick={handleSent}
         />
       </div>

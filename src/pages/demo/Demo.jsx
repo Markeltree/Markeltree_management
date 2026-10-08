@@ -28,7 +28,7 @@ const NAV = [
 function Sidebar({ screen, setScreen, allowed, unread }) {
   const items = NAV.filter((n) => n.separator || allowed.includes(n.key));
   return (
-    <nav className="w-[64px] lg:w-[220px] shrink-0 bg-white dark:bg-black border-r border-[#6F7C7414] overflow-y-auto scrollbar-hide p-2.5 lg:p-3">
+    <nav className="w-[64px] lg:w-[220px] shrink-0 bg-white dark:bg-black border-r border-[#6E7A8614] overflow-y-auto scrollbar-hide p-2.5 lg:p-3">
       {items.map((n, i) =>
         n.separator ? (
           <hr key={`s${i}`} className="border-t border-gray-200 dark:border-gray-700 my-2" />
@@ -41,8 +41,8 @@ function Sidebar({ screen, setScreen, allowed, unread }) {
             onClick={() => setScreen(n.key)}
             className={`relative w-full flex items-center justify-center lg:justify-start gap-2.5 mb-1.5 p-3 rounded-lg text-[12px] font-medium transition-colors ${
               screen === n.key
-                ? "bg-[#09BF64] text-white dark:bg-[#81D959] dark:text-black"
-                : "text-[#6F7C74] dark:text-[#8E8E9C] hover:bg-[#09BF641A] dark:hover:bg-[#81D95940]"
+                ? "bg-[#0088D1] text-white dark:bg-[#01CEE9] dark:text-black"
+                : "text-[#6E7A86] dark:text-[#8E8E9C] hover:bg-[#0088D11A] dark:hover:bg-[#01CEE940]"
             }`}
           >
             <i aria-hidden="true" className={`pi ${n.icon} text-lg`} />
@@ -50,7 +50,7 @@ function Sidebar({ screen, setScreen, allowed, unread }) {
             {n.key === "chat" && unread > 0 && (
               <span
                 className={`absolute top-1.5 right-1.5 lg:static lg:ml-auto text-[10px] font-bold px-1.5 rounded-full ${
-                  screen === n.key ? "bg-white text-[#09BF64]" : "bg-[#09BF64] text-white"
+                  screen === n.key ? "bg-white text-[#0088D1]" : "bg-[#0088D1] text-white"
                 }`}
               >
                 {unread}
@@ -66,21 +66,21 @@ function Sidebar({ screen, setScreen, allowed, unread }) {
 function Topbar({ role, setRole, dark, toggleDark }) {
   const r = D.ROLES.find((x) => x.key === role);
   return (
-    <header className="h-[60px] shrink-0 flex items-center justify-between gap-3 px-3 sm:px-5 bg-white dark:bg-black border-b border-[#6F7C7414]">
+    <header className="h-[60px] shrink-0 flex items-center justify-between gap-3 px-3 sm:px-5 bg-white dark:bg-black border-b border-[#6E7A8614]">
       <div className="flex items-center gap-3 min-w-0">
-        <Logo className="h-6 sm:h-7 w-auto" />
-        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-[#09BF641A] text-[#078A49] dark:text-[#81D959]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#09BF64] animate-pulse" /> Live demo · sample data
+        <Logo className="h-9 sm:h-11 w-auto" />
+        <span className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-[#0088D11A] text-[#01509F] dark:text-[#01CEE9]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#0088D1] animate-pulse" /> Live demo · sample data
         </span>
       </div>
       <div className="flex items-center gap-2 sm:gap-3">
-        <label className="flex items-center gap-2 text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
+        <label className="flex items-center gap-2 text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">
           <span className="hidden md:inline">View as</span>
           <select
             value={role}
             onChange={(e) => setRole(e.target.value)}
             aria-label="Switch demo role"
-            className="h-9 pl-3 pr-8 rounded-lg border border-[#09BF64] text-[12px] font-semibold text-[#09BF64] bg-white dark:bg-[#0D0D0D] focus:outline-none"
+            className="h-9 pl-3 pr-8 rounded-lg border border-[#0088D1] text-[12px] font-semibold text-[#0088D1] bg-white dark:bg-[#0D0D0D] focus:outline-none"
           >
             {D.ROLES.map((x) => (
               <option key={x.key} value={x.key}>
@@ -93,14 +93,14 @@ function Topbar({ role, setRole, dark, toggleDark }) {
           type="button"
           onClick={toggleDark}
           aria-label="Toggle dark mode"
-          className="w-9 h-9 grid place-items-center rounded-lg text-[#6F7C74] dark:text-[#A9C2B3] hover:bg-[#09BF641A]"
+          className="w-9 h-9 grid place-items-center rounded-lg text-[#6E7A86] dark:text-[#A9BACB] hover:bg-[#0088D11A]"
         >
           <Icon icon={dark ? "mdi:white-balance-sunny" : "mdi:weather-night"} width={19} />
         </button>
-        <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-[#6F7C7426]">
+        <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-[#6E7A8626]">
           <Avatar person={r.person} size={32} />
           <div className="hidden xl:block leading-tight">
-            <p className="text-[12px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{fullName(r.person)}</p>
+            <p className="text-[12px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{fullName(r.person)}</p>
             <p className="text-[11px] text-[#8E8E9C]">{r.label}</p>
           </div>
         </div>
@@ -113,7 +113,7 @@ function Toast({ text }) {
   if (!text) return null;
   return (
     <div role="status" className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#0D0D0D] text-white text-[13px] shadow-xl">
-      <Icon icon="mdi:check-circle" className="text-[#81D959]" width={18} /> {text}
+      <Icon icon="mdi:check-circle" className="text-[#01CEE9]" width={18} /> {text}
     </div>
   );
 }
@@ -128,14 +128,14 @@ function CheckInCard({ att, setAtt, toast }) {
     <Panel>
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl grid place-items-center bg-[#09BF641A] text-[#09BF64]">
+          <div className="w-12 h-12 rounded-xl grid place-items-center bg-[#0088D11A] text-[#0088D1]">
             <Icon icon="mdi:clock-check-outline" width={26} />
           </div>
           <div>
-            <p className="text-[15px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+            <p className="text-[15px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
               {state === "none" ? "You haven't checked in yet" : state === "in" ? `Checked in at ${att.in}` : `Worked ${att.in} – ${att.out}`}
             </p>
-            <p className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">Work hours 09:00 – 18:00 · 15 min grace period</p>
+            <p className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">Work hours 09:00 – 18:00 · 15 min grace period</p>
           </div>
         </div>
         {state === "none" && (
@@ -165,7 +165,7 @@ function CheckInCard({ att, setAtt, toast }) {
   );
 }
 
-const TASK_COLORS = { TODO: "#A9C2B3", IN_PROGRESS: "#0EA5E9", REVIEW: "#F59E0B", DONE: "#10B981" };
+const TASK_COLORS = { TODO: "#A9BACB", IN_PROGRESS: "#0EA5E9", REVIEW: "#F59E0B", DONE: "#10B981" };
 
 function TaskBar({ tasks }) {
   const total = tasks.length || 1;
@@ -176,11 +176,11 @@ function TaskBar({ tasks }) {
           <div key={k} style={{ width: `${(tasks.filter((t) => t.status === k).length / total) * 100}%`, background: TASK_COLORS[k] }} />
         ))}
       </div>
-      <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">
+      <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">
         {D.TASK_COLUMNS.map((k) => (
           <span key={k} className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full" style={{ background: TASK_COLORS[k] }} />
-            {humanize(k)} <b className="text-[#0F2418] dark:text-[#EFFBF3]">{tasks.filter((t) => t.status === k).length}</b>
+            {humanize(k)} <b className="text-[#0B1B33] dark:text-[#EEF8FD]">{tasks.filter((t) => t.status === k).length}</b>
           </span>
         ))}
       </div>
@@ -188,7 +188,7 @@ function TaskBar({ tasks }) {
   );
 }
 
-const link = "text-[12px] text-[#09BF64] font-semibold";
+const link = "text-[12px] text-[#0088D1] font-semibold";
 
 /* ───────────────────────── Screens ───────────────────────── */
 
@@ -210,9 +210,9 @@ function Dashboard({ role, s, go }) {
           <Panel title="Leave Balance" subtitle={`Year ${new Date().getFullYear()}`} actions={<button className={link} onClick={() => go("leave")}>Request leave →</button>}>
             <div className="grid grid-cols-2 gap-3">
               {D.LEAVE_BALANCES.map((b) => (
-                <div key={b.name} className="rounded-lg border border-[#6F7C7426] p-3">
+                <div key={b.name} className="rounded-lg border border-[#6E7A8626] p-3">
                   <p className="text-[11px] text-[#8E8E9C] truncate">{b.name}</p>
-                  <p className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{b.unlimited ? "∞" : b.available}</p>
+                  <p className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{b.unlimited ? "∞" : b.available}</p>
                   <p className="text-[11px] text-[#8E8E9C]">
                     {b.used} used{b.pending ? ` · ${b.pending} pending` : ""}
                   </p>
@@ -222,14 +222,14 @@ function Dashboard({ role, s, go }) {
           </Panel>
           <Panel title="My Tasks" actions={<button className={link} onClick={() => go("tasks")}>Open tasks →</button>}>
             <TaskBar tasks={myTasks} />
-            <h3 className="text-[12px] font-semibold text-[#6F7C74] mt-4 mb-2">Due in the next 7 days</h3>
+            <h3 className="text-[12px] font-semibold text-[#6E7A86] mt-4 mb-2">Due in the next 7 days</h3>
             <ul className="space-y-2">
               {myTasks
                 .filter((t) => t.status !== "DONE")
                 .slice(0, 4)
                 .map((t) => (
                   <li key={t.id} className="flex items-center justify-between gap-2 text-[13px]">
-                    <span className="truncate text-[#0F2418] dark:text-[#EFFBF3]">{t.title}</span>
+                    <span className="truncate text-[#0B1B33] dark:text-[#EEF8FD]">{t.title}</span>
                     <span className="flex items-center gap-2 shrink-0">
                       <Badge value={t.priority} />
                       <span className="text-[11px] text-[#8E8E9C]">{fmtDate(t.due)}</span>
@@ -242,8 +242,8 @@ function Dashboard({ role, s, go }) {
             <ul className="space-y-3">
               {D.ANNOUNCEMENTS.map((a) => (
                 <li key={a.id}>
-                  <p className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] flex items-center gap-1">
-                    {a.pinned && <Icon icon="mdi:pin" className="text-[#09BF64]" />}
+                  <p className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] flex items-center gap-1">
+                    {a.pinned && <Icon icon="mdi:pin" className="text-[#0088D1]" />}
                     {a.title}
                   </p>
                   <p className="text-[11px] text-[#8E8E9C]">
@@ -265,7 +265,7 @@ function Dashboard({ role, s, go }) {
             <StatCard label="Not checked in" value={1} icon="mdi:account-clock-outline" tone="warning" onClick={() => go("attendance")} />
             <StatCard label="Pending leave approvals" value={pending} icon="mdi:calendar-clock" tone="primary" onClick={() => go("leave")} />
           </div>
-          <h3 className="text-[12px] font-semibold text-[#6F7C74] mt-4 mb-2">Team tasks</h3>
+          <h3 className="text-[12px] font-semibold text-[#6E7A86] mt-4 mb-2">Team tasks</h3>
           <TaskBar tasks={s.tasks} />
         </Panel>
       )}
@@ -282,29 +282,29 @@ function Dashboard({ role, s, go }) {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
             <div>
-              <h3 className="text-[12px] font-semibold text-[#6F7C74] mb-2">Headcount by department</h3>
+              <h3 className="text-[12px] font-semibold text-[#6E7A86] mb-2">Headcount by department</h3>
               <ul className="space-y-2">
                 {D.DEPARTMENTS.map((dep) => [dep, D.EMPLOYEES.filter((e) => e.department === dep).length])
                   .sort((a, b) => b[1] - a[1])
                   .map(([dep, n]) => (
                     <li key={dep} className="text-[12px]">
-                      <div className="flex justify-between text-[#0F2418] dark:text-[#EFFBF3]">
+                      <div className="flex justify-between text-[#0B1B33] dark:text-[#EEF8FD]">
                         <span>{dep}</span>
                         <b>{n}</b>
                       </div>
                       <div className="h-1.5 rounded-full bg-[#F4F6F9] dark:bg-gray-800 mt-1">
-                        <div className="h-1.5 rounded-full bg-[#09BF64]" style={{ width: `${(n / D.EMPLOYEES.length) * 100}%` }} />
+                        <div className="h-1.5 rounded-full bg-[#0088D1]" style={{ width: `${(n / D.EMPLOYEES.length) * 100}%` }} />
                       </div>
                     </li>
                   ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-[12px] font-semibold text-[#6F7C74] mb-2">Joined recently</h3>
+              <h3 className="text-[12px] font-semibold text-[#6E7A86] mb-2">Joined recently</h3>
               <ul className="space-y-2">
                 {D.EMPLOYEES.filter((e) => e.status === "PROBATION").map((e) => (
                   <li key={e.id} className="flex justify-between text-[13px]">
-                    <span className="text-[#0F2418] dark:text-[#EFFBF3]">
+                    <span className="text-[#0B1B33] dark:text-[#EEF8FD]">
                       {fullName(e)} <span className="text-[#8E8E9C]">· {e.designation}</span>
                     </span>
                     <span className="text-[11px] text-[#8E8E9C]">{fmtDate(e.joiningDate)}</span>
@@ -324,11 +324,11 @@ function Dashboard({ role, s, go }) {
             <StatCard label="Active sessions" value={9} icon="mdi:monitor-account" tone="success" />
             <StatCard label="Failed logins (24h)" value={2} icon="mdi:shield-alert-outline" tone="neutral" hint="Database: ok" />
           </div>
-          <h3 className="text-[12px] font-semibold text-[#6F7C74] mt-4 mb-2">Recent administrative activity</h3>
-          <ul className="divide-y divide-[#6F7C7426]">
+          <h3 className="text-[12px] font-semibold text-[#6E7A86] mt-4 mb-2">Recent administrative activity</h3>
+          <ul className="divide-y divide-[#6E7A8626]">
             {D.AUDIT.slice(0, 3).map((a) => (
               <li key={a.id} className="flex justify-between gap-2 py-1.5 text-[12px]">
-                <span className="text-[#0F2418] dark:text-[#EFFBF3]">
+                <span className="text-[#0B1B33] dark:text-[#EEF8FD]">
                   <b>{a.action}</b> <span className="text-[#8E8E9C]">on {a.entity}</span>
                 </span>
                 <span className="text-[#8E8E9C] shrink-0">{a.at}</span>
@@ -343,7 +343,7 @@ function Dashboard({ role, s, go }) {
           <ul className="space-y-2">
             {D.ACTIVITY.map((n) => (
               <li key={n.id} className="text-[13px]">
-                <p className="text-[#0F2418] dark:text-[#EFFBF3] font-semibold">{n.title}</p>
+                <p className="text-[#0B1B33] dark:text-[#EEF8FD] font-semibold">{n.title}</p>
                 <p className="text-[11px] text-[#8E8E9C]">{n.at}</p>
               </li>
             ))}
@@ -353,7 +353,7 @@ function Dashboard({ role, s, go }) {
           <ul className="space-y-2">
             {D.HOLIDAYS.map((h) => (
               <li key={h.id} className="flex justify-between text-[13px]">
-                <span className="text-[#0F2418] dark:text-[#EFFBF3]">{h.name}</span>
+                <span className="text-[#0B1B33] dark:text-[#EEF8FD]">{h.name}</span>
                 <span className="text-[#8E8E9C]">{fmtDate(h.date)}</span>
               </li>
             ))}
@@ -400,8 +400,8 @@ function Employees() {
           {sel ? (
             <div className="flex flex-col items-center text-center">
               <Avatar person={sel} size={64} />
-              <p className="mt-3 text-[16px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{fullName(sel)}</p>
-              <p className="text-[12px] text-[#6F7C74] dark:text-[#A9C2B3]">{sel.designation}</p>
+              <p className="mt-3 text-[16px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{fullName(sel)}</p>
+              <p className="text-[12px] text-[#6E7A86] dark:text-[#A9BACB]">{sel.designation}</p>
               <div className="mt-2">
                 <Badge value={sel.status} />
               </div>
@@ -412,9 +412,9 @@ function Employees() {
                   ["Email", sel.email],
                   ["Joined", fmtDate(sel.joiningDate)],
                 ].map(([k, v]) => (
-                  <div key={k} className="flex justify-between gap-3 border-b border-[#6F7C7414] pb-2">
+                  <div key={k} className="flex justify-between gap-3 border-b border-[#6E7A8614] pb-2">
                     <dt className="text-[#8E8E9C]">{k}</dt>
-                    <dd className="text-[#0F2418] dark:text-[#EFFBF3] font-medium truncate">{v}</dd>
+                    <dd className="text-[#0B1B33] dark:text-[#EEF8FD] font-medium truncate">{v}</dd>
                   </div>
                 ))}
               </dl>
@@ -459,7 +459,7 @@ function Attendance({ role, s }) {
               <div
                 key={d.date}
                 title={d.status ? humanize(d.status) : ""}
-                className={`aspect-square sm:aspect-auto sm:h-14 rounded-lg p-1.5 flex flex-col justify-between text-left ${d.status ? CAL_TONE[d.status] : "border border-dashed border-[#6F7C7426] text-[#8E8E9C]"}`}
+                className={`aspect-square sm:aspect-auto sm:h-14 rounded-lg p-1.5 flex flex-col justify-between text-left ${d.status ? CAL_TONE[d.status] : "border border-dashed border-[#6E7A8626] text-[#8E8E9C]"}`}
               >
                 <span className="text-[11px] font-bold">{d.day}</span>
                 {d.status && d.status !== "WEEKEND" && <span className="hidden sm:block text-[9px] font-semibold truncate">{humanize(d.status)}</span>}
@@ -469,7 +469,7 @@ function Attendance({ role, s }) {
         </Panel>
         {role !== "EMPLOYEE" && (
           <Panel title="Team today" subtitle="Live check-in status">
-            <ul className="divide-y divide-[#6F7C7414]">
+            <ul className="divide-y divide-[#6E7A8614]">
               {D.TEAM_TODAY.map(([p, time, st]) => (
                 <li key={p.id} className="flex items-center justify-between gap-2 py-2.5">
                   <PersonCell person={p} sub={time ? `Checked in ${time}` : p.designation} />
@@ -525,11 +525,11 @@ function Leave({ role, s }) {
             ) : (
               <ul className="space-y-3">
                 {pending.map((l) => (
-                  <li key={l.id} className="flex flex-col md:flex-row md:items-center justify-between gap-3 rounded-lg border border-[#6F7C7426] p-3">
+                  <li key={l.id} className="flex flex-col md:flex-row md:items-center justify-between gap-3 rounded-lg border border-[#6E7A8626] p-3">
                     <div className="flex items-center gap-3 min-w-0">
                       <Avatar person={l.employee} size={38} />
                       <div className="min-w-0">
-                        <p className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">
+                        <p className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">
                           {fullName(l.employee)} · {l.type}
                         </p>
                         <p className="text-[12px] text-[#8E8E9C] truncate">
@@ -620,8 +620,8 @@ function Tasks({ s }) {
             return (
               <Droppable droppableId={col} key={col}>
                 {(p, snap) => (
-                  <div ref={p.innerRef} {...p.droppableProps} className={`rounded-lg p-3 min-h-[160px] transition-colors ${snap.isDraggingOver ? "bg-[#09BF641A]" : "bg-white dark:bg-black"}`}>
-                    <p className="flex items-center gap-2 text-[13px] font-bold text-[#0F2418] dark:text-[#EFFBF3] mb-3">
+                  <div ref={p.innerRef} {...p.droppableProps} className={`rounded-lg p-3 min-h-[160px] transition-colors ${snap.isDraggingOver ? "bg-[#0088D11A]" : "bg-white dark:bg-black"}`}>
+                    <p className="flex items-center gap-2 text-[13px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] mb-3">
                       <span className="w-2.5 h-2.5 rounded-full" style={{ background: TASK_COLORS[col] }} />
                       {humanize(col)} <span className="text-[#8E8E9C] font-normal">{items.length}</span>
                     </p>
@@ -632,9 +632,9 @@ function Tasks({ s }) {
                             ref={dp.innerRef}
                             {...dp.draggableProps}
                             {...dp.dragHandleProps}
-                            className={`mb-2.5 rounded-lg border border-[#6F7C7426] bg-gray-50 dark:bg-[#141414] p-3 ${ds.isDragging ? "shadow-xl ring-1 ring-[#09BF64]" : ""}`}
+                            className={`mb-2.5 rounded-lg border border-[#6E7A8626] bg-gray-50 dark:bg-[#141414] p-3 ${ds.isDragging ? "shadow-xl ring-1 ring-[#0088D1]" : ""}`}
                           >
-                            <p className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">{t.title}</p>
+                            <p className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">{t.title}</p>
                             <div className="mt-2.5 flex items-center justify-between gap-2">
                               <span className="flex items-center gap-2">
                                 <Badge value={t.priority} />
@@ -668,14 +668,14 @@ function Announcements({ s }) {
             <Avatar person={a.author} size={40} />
             <div className="flex-1 min-w-0">
               <div className="flex flex-wrap items-center gap-2">
-                <h2 className="text-[15px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{a.title}</h2>
+                <h2 className="text-[15px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{a.title}</h2>
                 {a.pinned && <Badge tone="primary">Pinned</Badge>}
                 <Badge tone="neutral">{a.audience}</Badge>
               </div>
               <p className="text-[11px] text-[#8E8E9C] mt-0.5">
                 {fullName(a.author)} · {fmtDate(a.at)}
               </p>
-              <p className="mt-2.5 text-[13px] text-[#333] dark:text-[#C9D6CE] leading-relaxed">{a.body}</p>
+              <p className="mt-2.5 text-[13px] text-[#333] dark:text-[#C8D3DD] leading-relaxed">{a.body}</p>
               {a.ack &&
                 (s.acked.includes(a.id) ? (
                   <p className="mt-3 text-[12px] font-semibold text-[#059669] flex items-center gap-1">
@@ -723,24 +723,24 @@ function Chat({ s }) {
   return (
     <div className="h-full p-3 bg-gray-50 dark:bg-[#141414]">
       <div className="h-full grid grid-cols-[72px_1fr] md:grid-cols-[260px_1fr] rounded-lg overflow-hidden bg-white dark:bg-black">
-        <aside className="border-r border-[#6F7C7414] overflow-y-auto">
-          <p className="hidden md:block px-4 pt-4 pb-2 text-[14px] font-semibold text-[#09BF64]">Chats</p>
+        <aside className="border-r border-[#6E7A8614] overflow-y-auto">
+          <p className="hidden md:block px-4 pt-4 pb-2 text-[14px] font-semibold text-[#0088D1]">Chats</p>
           {s.chats.map((c) => (
             <button
               key={c.id}
               type="button"
               onClick={() => open(c.id)}
-              className={`w-full flex items-center gap-3 px-3 md:px-4 py-3 text-left ${c.id === activeId ? "bg-[#09BF641A]" : "hover:bg-gray-50 dark:hover:bg-[#141414]"}`}
+              className={`w-full flex items-center gap-3 px-3 md:px-4 py-3 text-left ${c.id === activeId ? "bg-[#0088D11A]" : "hover:bg-gray-50 dark:hover:bg-[#141414]"}`}
             >
               {c.group ? (
-                <span className="w-9 h-9 rounded-full grid place-items-center bg-[#0D0D0D] dark:bg-[#C4FF73] text-[#C4FF73] dark:text-black font-bold shrink-0">#</span>
+                <span className="w-9 h-9 rounded-full grid place-items-center bg-[#0D0D0D] dark:bg-[#7FF3FF] text-[#7FF3FF] dark:text-black font-bold shrink-0">#</span>
               ) : (
                 <Avatar person={c.person} size={36} />
               )}
               <span className="hidden md:block min-w-0 flex-1">
                 <span className="flex justify-between gap-2">
-                  <span className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] truncate">{c.group ? `# ${c.name}` : c.name}</span>
-                  {c.unread > 0 && <span className="bg-[#09BF64] text-white text-[10px] font-bold px-1.5 rounded-full self-center">{c.unread}</span>}
+                  <span className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] truncate">{c.group ? `# ${c.name}` : c.name}</span>
+                  {c.unread > 0 && <span className="bg-[#0088D1] text-white text-[10px] font-bold px-1.5 rounded-full self-center">{c.unread}</span>}
                 </span>
                 <span className="block text-[11px] text-[#8E8E9C] truncate">{c.messages.at(-1).text}</span>
               </span>
@@ -748,11 +748,11 @@ function Chat({ s }) {
           ))}
         </aside>
         <section className="flex flex-col min-w-0">
-          <div className="h-14 shrink-0 flex items-center gap-2 px-4 border-b border-[#6F7C7414]">
-            <p className="text-[14px] font-bold text-[#0F2418] dark:text-[#EFFBF3] truncate">{chat.group ? `# ${chat.name}` : chat.name}</p>
+          <div className="h-14 shrink-0 flex items-center gap-2 px-4 border-b border-[#6E7A8614]">
+            <p className="text-[14px] font-bold text-[#0B1B33] dark:text-[#EEF8FD] truncate">{chat.group ? `# ${chat.name}` : chat.name}</p>
             {chat.group && <span className="text-[11px] text-[#8E8E9C]">{chat.members} members</span>}
             <span className="ml-auto flex items-center gap-1.5 text-[11px] text-[#059669]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#09BF64]" /> Live
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0088D1]" /> Live
             </span>
           </div>
           <div className="flex-1 overflow-y-auto p-4 space-y-3">
@@ -765,14 +765,14 @@ function Chat({ s }) {
                     <p className="text-[11px] text-[#8E8E9C] mb-1">
                       {mine ? "You" : fullName(m.from)} · {m.at}
                     </p>
-                    <p className={`inline-block text-left text-[13px] px-3.5 py-2 rounded-2xl ${mine ? "bg-[#09BF64] text-white rounded-tr-sm" : "bg-[#F4F6F9] dark:bg-[#1A1A1A] text-[#0F2418] dark:text-[#EFFBF3] rounded-tl-sm"}`}>{m.text}</p>
+                    <p className={`inline-block text-left text-[13px] px-3.5 py-2 rounded-2xl ${mine ? "bg-[#0088D1] text-white rounded-tr-sm" : "bg-[#F4F6F9] dark:bg-[#1A1A1A] text-[#0B1B33] dark:text-[#EEF8FD] rounded-tl-sm"}`}>{m.text}</p>
                   </div>
                 </div>
               );
             })}
             <div ref={endRef} />
           </div>
-          <form onSubmit={send} className="p-3 border-t border-[#6F7C7414] flex gap-2">
+          <form onSubmit={send} className="p-3 border-t border-[#6E7A8614] flex gap-2">
             <Input value={text} onChange={(e) => setText(e.target.value)} placeholder="Type a message…" aria-label="Message" />
             <Btn type="submit" icon="mdi:send" label="" className="!px-3" title="Send" />
           </form>
@@ -813,11 +813,11 @@ function Reports({ s }) {
           <ul className="space-y-3">
             {D.DEPT_ATTENDANCE.map(([d, p]) => (
               <li key={d} className="grid grid-cols-[120px_1fr_44px] items-center gap-3 text-[12px]">
-                <span className="text-[#6F7C74] dark:text-[#A9C2B3] truncate">{d}</span>
+                <span className="text-[#6E7A86] dark:text-[#A9BACB] truncate">{d}</span>
                 <div className="h-2.5 rounded-full bg-[#F4F6F9] dark:bg-gray-800">
-                  <div className="h-2.5 rounded-full bg-gradient-to-r from-[#09BF64] to-[#81D959]" style={{ width: `${p}%` }} />
+                  <div className="h-2.5 rounded-full bg-gradient-to-r from-[#0088D1] to-[#01CEE9]" style={{ width: `${p}%` }} />
                 </div>
-                <b className="text-right text-[#0F2418] dark:text-[#EFFBF3]">{p}%</b>
+                <b className="text-right text-[#0B1B33] dark:text-[#EEF8FD]">{p}%</b>
               </li>
             ))}
           </ul>
@@ -826,8 +826,8 @@ function Reports({ s }) {
           <div className="flex items-end gap-4 h-[180px] pt-4">
             {leaveByType.map(([t, n]) => (
               <div key={t} className="flex-1 h-full flex flex-col items-center justify-end gap-2">
-                <b className="text-[12px] text-[#0F2418] dark:text-[#EFFBF3]">{n}</b>
-                <div className="w-full max-w-[56px] rounded-t-lg bg-gradient-to-t from-[#09BF64] to-[#C4FF73]" style={{ height: `${(n / maxLeave) * 75}%` }} />
+                <b className="text-[12px] text-[#0B1B33] dark:text-[#EEF8FD]">{n}</b>
+                <div className="w-full max-w-[56px] rounded-t-lg bg-gradient-to-t from-[#0088D1] to-[#7FF3FF]" style={{ height: `${(n / maxLeave) * 75}%` }} />
                 <span className="text-[11px] text-[#8E8E9C] text-center leading-tight">{t.replace(" Leave", "")}</span>
               </div>
             ))}
@@ -860,7 +860,7 @@ function Payroll({ s }) {
             { header: "Basic", body: (p) => money(p.basicSalary) },
             { header: "Allowances", body: (p) => money(p.earnings[0].amount) },
             { header: "Deductions", body: (p) => <span className="text-[#E5483A]">− {money(p.totalDeductions)}</span> },
-            { header: "Net pay", body: (p) => <b className="text-[#0F2418] dark:text-[#EFFBF3]">{money(p.netPay)}</b> },
+            { header: "Net pay", body: (p) => <b className="text-[#0B1B33] dark:text-[#EEF8FD]">{money(p.netPay)}</b> },
             {
               header: "",
               body: (p) => (
@@ -880,14 +880,14 @@ function Payroll({ s }) {
         />
       </Panel>
       <Panel title="Previous runs">
-        <ul className="divide-y divide-[#6F7C7414]">
+        <ul className="divide-y divide-[#6E7A8614]">
           {D.PAYROLL_HISTORY.map((r) => (
             <li key={`${r.year}-${r.month}`} className="flex items-center justify-between py-2.5 text-[13px]">
-              <span className="text-[#0F2418] dark:text-[#EFFBF3] font-semibold">
+              <span className="text-[#0B1B33] dark:text-[#EEF8FD] font-semibold">
                 {MONTHS[r.month - 1]} {r.year}
               </span>
               <span className="text-[#8E8E9C] hidden sm:inline">{r.employees} employees</span>
-              <span className="text-[#0F2418] dark:text-[#EFFBF3]">{money(r.net)}</span>
+              <span className="text-[#0B1B33] dark:text-[#EEF8FD]">{money(r.net)}</span>
               <Badge value="COMPLETED">Paid</Badge>
             </li>
           ))}
@@ -921,8 +921,8 @@ function Admin({ role }) {
                 </thead>
                 <tbody>
                   {D.ROLE_MATRIX.roles.map(([r, cells]) => (
-                    <tr key={r} className="border-t border-[#6F7C7414]">
-                      <td className="py-3 pr-3 font-semibold text-[#0F2418] dark:text-[#EFFBF3] whitespace-nowrap">{r}</td>
+                    <tr key={r} className="border-t border-[#6E7A8614]">
+                      <td className="py-3 pr-3 font-semibold text-[#0B1B33] dark:text-[#EEF8FD] whitespace-nowrap">{r}</td>
                       {cells.map((c, i) => (
                         <td key={i} className="py-3 px-2">
                           {c === "—" ? <span className="text-[#C4C4CC]">—</span> : <Badge tone={c.startsWith("All") || c.startsWith("Run") || c === "Manage" ? "primary" : c.startsWith("Own") ? "neutral" : "info"}>{c}</Badge>}
@@ -936,10 +936,10 @@ function Admin({ role }) {
             </div>
           )}
           {tab === "audit" && (
-            <ul className="divide-y divide-[#6F7C7414]">
+            <ul className="divide-y divide-[#6E7A8614]">
               {D.AUDIT.map((a) => (
                 <li key={a.id} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 py-2.5 text-[12px]">
-                  <span className="text-[#0F2418] dark:text-[#EFFBF3]">
+                  <span className="text-[#0B1B33] dark:text-[#EEF8FD]">
                     <b>{a.action}</b> <span className="text-[#8E8E9C]">on {a.entity}</span>
                   </span>
                   <span className="text-[#8E8E9C]">
@@ -991,7 +991,7 @@ export default function Demo() {
   }, [dark]);
 
   useEffect(() => {
-    document.title = "Markeltree · Live demo";
+    document.title = "Teamora · Live demo";
   }, []);
 
   const unread = chats.reduce((a, c) => a + (c.unread ?? 0), 0);

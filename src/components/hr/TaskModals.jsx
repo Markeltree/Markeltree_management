@@ -141,7 +141,7 @@ export function TaskDetailModal({ taskId, onChanged, closeModal, openModal }) {
     <div className="flex flex-col gap-4 max-h-[82vh]">
       <div className="pr-8">
         <div className="flex flex-wrap items-center gap-2">
-          <h2 className="text-[18px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">{t.title}</h2>
+          <h2 className="text-[18px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">{t.title}</h2>
           <Badge value={t.priority} />
           {overdue && <Badge value="ABSENT">Overdue</Badge>}
         </div>
@@ -159,7 +159,7 @@ export function TaskDetailModal({ taskId, onChanged, closeModal, openModal }) {
                 value={t.status}
                 disabled={busy}
                 onChange={(e) => run(() => api.patch(`/tasks/${t.id}`, { status: e.target.value }))}
-                className="mt-1 text-[12px] border border-[#6F7C7440] rounded px-2 py-1 bg-white dark:bg-[#0D0D0D] dark:text-[#EFFBF3]"
+                className="mt-1 text-[12px] border border-[#6E7A8640] rounded px-2 py-1 bg-white dark:bg-[#0D0D0D] dark:text-[#EEF8FD]"
               >
                 {STATUSES.map((s) => (
                   <option key={s} value={s}>
@@ -173,22 +173,22 @@ export function TaskDetailModal({ taskId, onChanged, closeModal, openModal }) {
           </div>
           <div>
             <p className="text-[11px] text-[#8E8E9C]">Assignee</p>
-            <p className="font-medium text-[#0F2418] dark:text-[#EFFBF3]">{t.assignee ? fullName(t.assignee) : "Unassigned"}</p>
+            <p className="font-medium text-[#0B1B33] dark:text-[#EEF8FD]">{t.assignee ? fullName(t.assignee) : "Unassigned"}</p>
           </div>
           <div>
             <p className="text-[11px] text-[#8E8E9C]">Due</p>
-            <p className={`font-medium ${overdue ? "text-[#E5483A]" : "text-[#0F2418] dark:text-[#EFFBF3]"}`}>{fmtDate(t.dueDate)}</p>
+            <p className={`font-medium ${overdue ? "text-[#E5483A]" : "text-[#0B1B33] dark:text-[#EEF8FD]"}`}>{fmtDate(t.dueDate)}</p>
           </div>
           <div>
             <p className="text-[11px] text-[#8E8E9C]">Completed</p>
-            <p className="font-medium text-[#0F2418] dark:text-[#EFFBF3]">{t.completedAt ? fmtDateTime(t.completedAt) : "—"}</p>
+            <p className="font-medium text-[#0B1B33] dark:text-[#EEF8FD]">{t.completedAt ? fmtDateTime(t.completedAt) : "—"}</p>
           </div>
         </div>
 
         {t.description && <p className="text-[14px] whitespace-pre-wrap text-[#333] dark:text-[#E5E5F5]">{t.description}</p>}
 
         <section>
-          <h3 className="text-[13px] font-bold text-[#09BF64] mb-2">
+          <h3 className="text-[13px] font-bold text-[#0088D1] mb-2">
             Checklist {t.subtasks.length > 0 && <span className="text-[#8E8E9C] font-normal">({doneCount}/{t.subtasks.length})</span>}
           </h3>
           <ul className="space-y-1">
@@ -196,12 +196,12 @@ export function TaskDetailModal({ taskId, onChanged, closeModal, openModal }) {
               <li key={s.id} className="flex items-center gap-2 text-[13px] group">
                 <input
                   type="checkbox"
-                  className="accent-[#09BF64]"
+                  className="accent-[#0088D1]"
                   checked={s.done}
                   disabled={!canWork || busy}
                   onChange={(e) => run(() => api.patch(`/tasks/${t.id}/subtasks/${s.id}`, { done: e.target.checked }))}
                 />
-                <span className={s.done ? "line-through text-[#8E8E9C]" : "text-[#0F2418] dark:text-[#EFFBF3]"}>{s.title}</span>
+                <span className={s.done ? "line-through text-[#8E8E9C]" : "text-[#0B1B33] dark:text-[#EEF8FD]"}>{s.title}</span>
                 {t.canManage && (
                   <button className="ml-auto opacity-0 group-hover:opacity-100 text-[#FF695B]" title="Remove" onClick={() => run(() => api.delete(`/tasks/${t.id}/subtasks/${s.id}`))}>
                     <Icon icon="mdi:close" />
@@ -225,18 +225,18 @@ export function TaskDetailModal({ taskId, onChanged, closeModal, openModal }) {
         </section>
 
         <section>
-          <h3 className="text-[13px] font-bold text-[#09BF64] mb-2">Comments ({t.comments.length})</h3>
+          <h3 className="text-[13px] font-bold text-[#0088D1] mb-2">Comments ({t.comments.length})</h3>
           <ul className="space-y-3">
             {t.comments.map((c) => (
               <li key={c.id} className="flex gap-2">
                 <Avatar person={c.user.employee} size={28} />
                 <div className="flex-1 bg-[#F4F6F9] dark:bg-gray-800 rounded-lg px-3 py-2">
-                  <p className="text-[12px] font-semibold text-[#0F2418] dark:text-[#EFFBF3]">
+                  <p className="text-[12px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD]">
                     {c.user.employee ? fullName(c.user.employee) : "User"} <span className="font-normal text-[#8E8E9C]">· {timeAgo(c.createdAt)}</span>
                   </p>
                   <p className="text-[13px] whitespace-pre-wrap text-[#333] dark:text-[#E5E5F5]">{c.comment}</p>
                   {c.mentions.length > 0 && (
-                    <p className="text-[11px] text-[#09BF64] mt-1">
+                    <p className="text-[11px] text-[#0088D1] mt-1">
                       @ {c.mentions.map((uid) => fullName((people ?? []).find((p) => p.userId === uid))).join(", ")}
                     </p>
                   )}
@@ -260,7 +260,7 @@ export function TaskDetailModal({ taskId, onChanged, closeModal, openModal }) {
               <select
                 value=""
                 onChange={(e) => e.target.value && !mentions.includes(e.target.value) && setMentions((m) => [...m, e.target.value])}
-                className="text-[12px] border border-[#6F7C7440] rounded px-2 h-9 bg-white dark:bg-[#0D0D0D] dark:text-[#EFFBF3] md:w-[220px]"
+                className="text-[12px] border border-[#6E7A8640] rounded px-2 h-9 bg-white dark:bg-[#0D0D0D] dark:text-[#EEF8FD] md:w-[220px]"
               >
                 <option value="">@ Mention someone…</option>
                 {(people ?? [])
@@ -285,7 +285,7 @@ export function TaskDetailModal({ taskId, onChanged, closeModal, openModal }) {
       </div>
 
       {t.canManage && (
-        <div className="flex justify-between pt-2 border-t border-[#6F7C7426]">
+        <div className="flex justify-between pt-2 border-t border-[#6E7A8626]">
           <Btn variant="ghost" icon="mdi:trash-can-outline" label="Delete" onClick={remove} />
           <Btn
             variant="outline"

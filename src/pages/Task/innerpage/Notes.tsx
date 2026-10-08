@@ -204,7 +204,7 @@ const Notes: React.FC = () => {
         <div className="grid grid-cols-3 lg:grid-cols-3 max-sm:grid-cols-1 items-center gap-3">
           <div className="flex items-center gap-3">
             <h1
-              className="text-[#09BF64] text-[14px] flex flex-row items-center gap-1 cursor-pointer hover:underline"
+              className="text-[#0088D1] text-[14px] flex flex-row items-center gap-1 cursor-pointer hover:underline"
               onClick={() => navigate(-1)}
             >
               <Icon icon="ion:arrow-back-outline" width="18" height="18" />
@@ -256,7 +256,7 @@ const Notes: React.FC = () => {
                   <div className="flex justify-end mt-4">
                     <button
                       onClick={handleAddNote}
-                      className="px-4 sm:px-6 py-2 bg-[#09BF64] text-white rounded-lg hover:bg-[#4a4cd1] transition-colors duration-200 font-medium text-sm sm:text-base"
+                      className="px-4 sm:px-6 py-2 bg-[#0088D1] text-white rounded-lg hover:bg-[#4a4cd1] transition-colors duration-200 font-medium text-sm sm:text-base"
                     >
                       Add
                     </button>

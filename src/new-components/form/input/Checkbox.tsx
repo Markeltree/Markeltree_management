@@ -27,7 +27,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
         <input
           id={id}
           type="checkbox"
-          className={`w-5 h-5 appearance-none cursor-pointer dark:border-gray-700 border-2 border-[#09BF64] checked:border-transparent rounded-md checked:bg-[#09BF64] disabled:opacity-60 
+          className={`w-5 h-5 appearance-none cursor-pointer dark:border-gray-700 border-2 border-[#0088D1] checked:border-transparent rounded-md checked:bg-[#0088D1] disabled:opacity-60 
           ${className}`}
           checked={checked}
           onChange={(e) => onChange(e.target.checked)}

@@ -60,8 +60,8 @@ const TabsMain = () => {
                   className={`w-1/2 py-1.5 text-[14px] font-regular border-b-2 border-[#E5E5E5]
                   ${
                     activeTab === key
-                      ? "text-[#0F2418] border-b-2 border-active-[#0F2418] focus:border-indigo-400 dark:text-[#B5E6C9]"
-                      : "text-[#0F2418] hover:text-[#0F2418] dark:text-[#B5E6C9]"
+                      ? "text-[#0B1B33] border-b-2 border-active-[#0B1B33] focus:border-indigo-400 dark:text-[#B5DEF2]"
+                      : "text-[#0B1B33] hover:text-[#0B1B33] dark:text-[#B5DEF2]"
                   }`}
                 >
                   {label}
@@ -103,7 +103,7 @@ const TabsMain = () => {
             {((activeTab === "manual" && currentStep < 4) ||
               (activeTab === "upload" && currentStep < 1)) && (
               <Button
-                className="w-full bg-[#09BF64] mx-5 my-1"
+                className="w-full bg-[#0088D1] mx-5 my-1"
                 size="sm"
                 onClick={() => setCurrentStep((s) => s + 1)}
               >
@@ -137,7 +137,7 @@ const TabsMain = () => {
             )}
             {stepSalesInvoice < 2 && (
               <Button
-                className="w-full bg-[#09BF64] mx-5 my-1"
+                className="w-full bg-[#0088D1] mx-5 my-1"
                 size="sm"
                 onClick={() => setStepSalesInvoice((s) => s + 1)}
               >

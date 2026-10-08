@@ -7,7 +7,7 @@ import { cached, invalidate, TAGS } from "./cache.js";
  * FRD §22 lists these as open business decisions — confirm with HR before go-live.
  */
 export const SETTING_DEFAULTS = {
-  "company.name": "Markeltree",
+  "company.name": "Teamora",
   "company.timezone": "UTC",
   "attendance.workStart": "09:00",
   "attendance.workEnd": "18:00",

@@ -49,7 +49,7 @@ const ReorderSuggestionChart: React.FC = () => {
       {/* Legend */}
       <div className="flex items-center gap-7 mb-3 mt-2">
         {legendOrder.map((urgency) => (
-          <div key={urgency} className="flex items-center gap-1 mb-5 text-[8px] text-[#6F7C74] font-medium">
+          <div key={urgency} className="flex items-center gap-1 mb-5 text-[8px] text-[#6E7A86] font-medium">
             <span className={`w-3 h-3 rounded-full ${urgencyDotColor[urgency]}`}></span>
             <span className="text-xs font-medium text-gray-500">{urgencyLabel[urgency]}</span>
           </div>
@@ -77,18 +77,18 @@ const ReorderSuggestionChart: React.FC = () => {
               </span> */}
             </div>
             {/* Category Label */}
-            <span className="mt-2 text-[8px] font-semibold text-[#6F7C74] text-center">{d.label}</span>
+            <span className="mt-2 text-[8px] font-semibold text-[#6E7A86] text-center">{d.label}</span>
           </div>
         ))}
       </div>
       {/* Y-axis labels (optional for visual hint) */}
       <div className="absolute left-0 top-[100px] flex flex-col items-end gap-7 h-[180px] pointer-events-none select-none">
-        <span className="text-[8px] text-[#6F7C74] font-semibold">100%</span>
-        <span className="text-[8px] text-[#6F7C74] font-semibold">80%</span>
-        <span className="text-[8px] text-[#6F7C74] font-semibold">60%</span>
-        <span className="text-[8px] text-[#6F7C74] font-semibold">40%</span>
-        <span className="text-[8px] text-[#6F7C74] font-semibold">20%</span>
-        <span className="text-[8px] text-[#6F7C74] font-semibold">0%</span>
+        <span className="text-[8px] text-[#6E7A86] font-semibold">100%</span>
+        <span className="text-[8px] text-[#6E7A86] font-semibold">80%</span>
+        <span className="text-[8px] text-[#6E7A86] font-semibold">60%</span>
+        <span className="text-[8px] text-[#6E7A86] font-semibold">40%</span>
+        <span className="text-[8px] text-[#6E7A86] font-semibold">20%</span>
+        <span className="text-[8px] text-[#6E7A86] font-semibold">0%</span>
       </div>
     </div>
   );

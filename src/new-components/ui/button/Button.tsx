@@ -30,11 +30,11 @@ const Button: React.FC<ButtonProps> = ({
   // Variant Classes
   const variantClasses = {
     primary:
-      "bg-[#09BF64] border-[1px] text-white shadow-theme-xs hover:bg-white hover:border-[#09BF64] hover:text-[#09BF64] disabled:bg-brand-300",
+      "bg-[#0088D1] border-[1px] text-white shadow-theme-xs hover:bg-white hover:border-[#0088D1] hover:text-[#0088D1] disabled:bg-brand-300",
     secondary:
-      "bg-white border-[1px] text-[#09BF64] border-indigo-500 shadow-theme-xs hover:bg-[#09BF64] hover:border-[#09BF64] hover:text-white disabled:bg-brand-300 dark:bg-[#0D0D0D] dark:text-[#A9C2B3] dark:hover:bg-[#fff] dark:hover:text-[#09BF64] dark:hover:border-[#09BF64] dark:hover:border-[1px] dark:ring-gray-700/50 dark:hover:ring-gray-700/50",    
+      "bg-white border-[1px] text-[#0088D1] border-indigo-500 shadow-theme-xs hover:bg-[#0088D1] hover:border-[#0088D1] hover:text-white disabled:bg-brand-300 dark:bg-[#0D0D0D] dark:text-[#A9BACB] dark:hover:bg-[#fff] dark:hover:text-[#0088D1] dark:hover:border-[#0088D1] dark:hover:border-[1px] dark:ring-gray-700/50 dark:hover:ring-gray-700/50",    
       outline:
-      "bg-white border-[1px] text-[#09BF64] ring-1 ring-inset ring-gray-300 hover:bg-[#09BF64] hover:text-white hover:border-[#09BF64] hover:border-[1px] dark:bg-[#0D0D0D] dark:text-[#A9C2B3] dark:hover:bg-[#0D0D0D] dark:hover:text-[#09BF64] dark:hover:border-[#09BF64] dark:hover:border-[1px] dark:ring-gray-700/50 dark:hover:ring-gray-700/50",
+      "bg-white border-[1px] text-[#0088D1] ring-1 ring-inset ring-gray-300 hover:bg-[#0088D1] hover:text-white hover:border-[#0088D1] hover:border-[1px] dark:bg-[#0D0D0D] dark:text-[#A9BACB] dark:hover:bg-[#0D0D0D] dark:hover:text-[#0088D1] dark:hover:border-[#0088D1] dark:hover:border-[1px] dark:ring-gray-700/50 dark:hover:ring-gray-700/50",
   };
 
   return (

@@ -11,18 +11,18 @@ import { PRIORITIES, STATUSES } from "@/components/hr/taskConstants";
 import { Avatar, Badge, Btn, ErrorNote, Page, PageHeader, Panel, SearchInput, Select, StatCard, Table, Tabs } from "@/components/hr/ui";
 import { fmtDate, fullName, humanize, useQuery, useDebounce } from "@/components/hr/utils";
 
-const COLUMN_TINT = { TODO: "#A9C2B3", IN_PROGRESS: "#0EA5E9", REVIEW: "#F59E0B", DONE: "#10B981" };
+const COLUMN_TINT = { TODO: "#A9BACB", IN_PROGRESS: "#0EA5E9", REVIEW: "#F59E0B", DONE: "#10B981" };
 const isOverdue = (t) => t.dueDate && t.status !== "DONE" && new Date(t.dueDate) < new Date();
 
 function TaskCard({ task, onOpen }) {
   const doneSubs = task.subtasks.filter((s) => s.done).length;
   return (
-    <div onClick={() => onOpen(task)} className="bg-white dark:bg-[#0D0D0D] rounded-lg p-3 border border-[#6F7C7426] hover:shadow-md cursor-pointer space-y-2">
+    <div onClick={() => onOpen(task)} className="bg-white dark:bg-[#0D0D0D] rounded-lg p-3 border border-[#6E7A8626] hover:shadow-md cursor-pointer space-y-2">
       <div className="flex items-start justify-between gap-2">
-        <p className="text-[13px] font-semibold text-[#0F2418] dark:text-[#EFFBF3] leading-snug">{task.title}</p>
+        <p className="text-[13px] font-semibold text-[#0B1B33] dark:text-[#EEF8FD] leading-snug">{task.title}</p>
         <Badge value={task.priority} />
       </div>
-      {task.project && <p className="text-[11px] text-[#09BF64] truncate">{task.project.name}</p>}
+      {task.project && <p className="text-[11px] text-[#0088D1] truncate">{task.project.name}</p>}
       <div className="flex items-center justify-between text-[11px] text-[#8E8E9C]">
         <span className={`flex items-center gap-1 ${isOverdue(task) ? "text-[#E5483A] font-semibold" : ""}`}>
           {task.dueDate && (
@@ -66,10 +66,10 @@ function Board({ tasks, onMove, onOpen }) {
                 <div
                   ref={provided.innerRef}
                   {...provided.droppableProps}
-                  className={`rounded-lg p-2 min-h-[200px] transition-colors ${snapshot.isDraggingOver ? "bg-[#09BF6414]" : "bg-[#F4F6F9] dark:bg-[#141414]"}`}
+                  className={`rounded-lg p-2 min-h-[200px] transition-colors ${snapshot.isDraggingOver ? "bg-[#0088D114]" : "bg-[#F4F6F9] dark:bg-[#141414]"}`}
                 >
                   <div className="flex items-center justify-between px-1 pb-2">
-                    <span className="flex items-center gap-2 text-[12px] font-bold text-[#0F2418] dark:text-[#EFFBF3]">
+                    <span className="flex items-center gap-2 text-[12px] font-bold text-[#0B1B33] dark:text-[#EEF8FD]">
                       <span className="w-2 h-2 rounded-full" style={{ background: COLUMN_TINT[status] }} />
                       {humanize(status)}
                     </span>
@@ -163,7 +163,7 @@ export default function Tasks() {
     { key: "visible", label: can("tasks.view_all") ? "All tasks" : can("tasks.view_team") ? "Team tasks" : "All I can see" },
   ];
   const columns = [
-    { header: "Task", body: (t) => <div className="max-w-[320px]"><p className="font-semibold text-[#0F2418] dark:text-[#EFFBF3] truncate">{t.title}</p>{t.project && <p className="text-[11px] text-[#09BF64]">{t.project.name}</p>}</div> },
+    { header: "Task", body: (t) => <div className="max-w-[320px]"><p className="font-semibold text-[#0B1B33] dark:text-[#EEF8FD] truncate">{t.title}</p>{t.project && <p className="text-[11px] text-[#0088D1]">{t.project.name}</p>}</div> },
     { header: "Assignee", body: (t) => (t.assignee ? <span className="flex items-center gap-2"><Avatar person={t.assignee} size={24} />{fullName(t.assignee)}</span> : "—") },
     { header: "Priority", body: (t) => <Badge value={t.priority} /> },
     { header: "Status", body: (t) => <Badge value={t.status} /> },
@@ -190,12 +190,12 @@ export default function Tasks() {
       <Panel>
         <Tabs tabs={tabs} active={view} onChange={(v) => setParams({ view: v })} />
         <div className="flex flex-col md:flex-row gap-2 md:items-center md:justify-between pt-4">
-          <div className="flex rounded-md overflow-hidden border border-[#09BF64] w-fit">
+          <div className="flex rounded-md overflow-hidden border border-[#0088D1] w-fit">
             {[
               ["board", "mdi:view-column-outline", "Board"],
               ["list", "mdi:format-list-bulleted", "List"],
             ].map(([k, icon, label]) => (
-              <button key={k} onClick={() => setLayout(k)} className={`flex items-center gap-1 px-3 h-9 text-[12px] font-semibold ${layout === k ? "bg-[#09BF64] text-white" : "text-[#09BF64]"}`}>
+              <button key={k} onClick={() => setLayout(k)} className={`flex items-center gap-1 px-3 h-9 text-[12px] font-semibold ${layout === k ? "bg-[#0088D1] text-white" : "text-[#0088D1]"}`}>
                 <Icon icon={icon} /> {label}
               </button>
             ))}

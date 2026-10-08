@@ -136,7 +136,7 @@ export default function EmployeeFormModal({ mode = "create", employee, onSaved, 
     >
       {!isSelf && (
         <>
-          <h3 className="text-[13px] font-bold text-[#09BF64]">Employment</h3>
+          <h3 className="text-[13px] font-bold text-[#0088D1]">Employment</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <Field label="First name" required>
               <Input value={form.firstName} onChange={set("firstName")} required maxLength={100} />
@@ -189,7 +189,7 @@ export default function EmployeeFormModal({ mode = "create", employee, onSaved, 
         </>
       )}
 
-      <h3 className="text-[13px] font-bold text-[#09BF64] pt-2">Contact</h3>
+      <h3 className="text-[13px] font-bold text-[#0088D1] pt-2">Contact</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <Field label="Phone">
           <Input value={form.phone} onChange={set("phone")} maxLength={30} />
@@ -218,7 +218,7 @@ export default function EmployeeFormModal({ mode = "create", employee, onSaved, 
 
       {showSensitive && (
         <>
-          <h3 className="text-[13px] font-bold text-[#09BF64] pt-2">Emergency contact</h3>
+          <h3 className="text-[13px] font-bold text-[#0088D1] pt-2">Emergency contact</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <Field label="Name">
               <Input value={form.emergencyContactName} onChange={set("emergencyContactName")} />

@@ -6,8 +6,8 @@ export default function SignIn() {
   return (
     <>
       <PageMeta
-        title="Markeltree | ERP - Admin Dashboard"
-        description="Markeltree | ERP - Admin Dashboard - ReactJs"
+        title="Teamora | ERP - Admin Dashboard"
+        description="Teamora | ERP - Admin Dashboard - ReactJs"
       />
       <AuthLayout imageSrc="/laptop.png">
   <SignInForm />
